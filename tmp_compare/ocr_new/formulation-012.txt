@@ -1,0 +1,18 @@
+: Model uncertainty ory f]
+
+Unmodeled dynamics is close to neglected dynamics, but it is
+not quite the same. In unmodeled dynamics we also include
+unknown dynamics of unknown or even infinite order.
+
+To represent such perturbation, we usually use a simple
+multiplicative weight of the form
+
+TS+T1O
+wi(s) = (T/roo)s +1
+
+where 7% is the relative uncertainty at steady-state, 1/7 is
+(approximately) the frequency at which the relative uncertainty
+reaches 100%, and r,, is the magnitude of the weight at high
+frequency (typically, ~, > 2).
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

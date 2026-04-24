@@ -1,0 +1,27 @@
+» Model uncertainty: examples ~ —, ial
+
+3. Multiplicative (relative) uncertainty. (preferred uncertainty
+form). At each frequency find the smallest radius 1;(w)
+which includes all possible plant I:
+
+, _ Gp(jw) — GGw)
+|wr(jw)| > rw) = pax - Gu)
+
+Example: consider again the set of plants with parametric
+uncertainty k
+
+II: G(s) = rapT?
+
+To simplify subsequent controller design, we select a delay-
+free nominal model
+
+» Vw
+
+88 29<k, 0,7 <3
+
+7]
+
+ko 2.5
+Fet+1 25s+1
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

@@ -1,0 +1,25 @@
+» Model uncertainty: MIMO casey —* |]
+
+Example 1: Assume the relative input uncertainty is 10%, that is,
+w, = 0.1, and the condition number is 141.7. Then we must
+select lp = wo = 0.1X141.7 = 14.2 to represent this as a
+multiplicative output uncertainty (this is larger than 1 and
+therefore not useful for controller design).
+
+Example 2: Let II be
+
+Gp=G+u| Z|. 6] <1 o=[R ees
+
+-—6 6 108.2 —109.6
+
+and w = 10. Then one plant G’ in this set (corresponding to 5 =
+1.
+
+10 10
+G=G+t Ee 10 |
+
+for which we have l, = &(G~1(G' — G)) = 14.3 (corresponding to
+a relative uncertainty of 1400%). By representing it as an output
+multiplicative uncertainty we have lg = a((G' — G)G~) = 0.1.
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

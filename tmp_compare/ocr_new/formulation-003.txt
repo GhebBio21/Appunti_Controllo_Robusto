@@ -1,0 +1,26 @@
+» Model uncertainty: examples ~ —, ial
+
+b. Multiplicative (relative) uncertainty. (preferred
+uncertainty form). At each frequency find the smallest
+radius l;(w) which includes all possible plant IT:
+
+Gp(jw) — GGw)
+G(jw)
+c. Inverse Multiplicative (relative) uncertainty. At each
+
+frequency find the smallest radius l;;(w) which includes
+all possible plant II:
+
+|wr(jw)| > Ur(w) = max
+
+|v
+
+Gp (jw) — G(jw)
+
+- Vu
+Gp(jw)
+
+in(Jw)| <h =
+wir (Ju)| < lir(w) = max
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

@@ -1,0 +1,19 @@
+» Model uncertainty: examples 7) — [7
+Example 2: Neglected lag. f(s) = 1/(t»s +1), where0 < 7) < Tmax
+
+Go(s ,;
+Gp(s) = o(8) = Go(s)(1+ wr(s)Ar(s))  |Ar(jw)| < 1, Vw
+Tps +1
+. 1
+max w) — 1] = 1 — ——_
+10' f(s)Elly FG ) | Tmax + 1
+o 0 .
+3° If we consider allt € [0,tmaxl, the
+> relative error bound is 1 at
+= 10 frequencies above 1/tTmax:
+2 1/Tmax
+10
+10° 10° 10° 1 Tmax$
+Frequency W 1(s) =1- =
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

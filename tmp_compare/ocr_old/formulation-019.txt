@@ -1,0 +1,19 @@
+Model uncertainty: MIMO casey —, |]
+
+Diagonal uncertainty
+
+By “diagonal uncertainty” we mean that the perturbation is a
+complex diagonal matrix that usually arises from a
+consideration of uncertainty or neglected dynamics in the
+individual input channels (actuators) or in the individual
+output channels (sensors):
+
+A(s) = diag{di(s)};  |d:(Jw)| < 1, Vw, Vi
+Let us consider uncertainty in the input channels
+we can represent this actuator uncertainty as multiplicative
+(relative) uncertainty given by
+hpi(s) = hi(s)(1 + wri(s)di(s));  [di(@w)| < 1, Vw
+
+G)(s) =GU+WyAr); Az = diag{d;}, Wr = diag{wzi}
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

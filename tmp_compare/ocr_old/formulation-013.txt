@@ -1,0 +1,26 @@
+We can state the following uncertainty
+
+| bounds:
+wo L G(E,) S Law) S |waGo)|
+ts ceecverersnivonoeeeeeneneeed G(E;) < L,;(w) s |w,Go)|
+
+@) G(Eo) < Lo(w) < |woGa)|
+eS hence obtaining:
+cs all ie ee II,: Gp=G+ Ey; FE, =wadg
+\, Tr: Gp = GI + En); E; = wrAr
+ane
+
+Po IIo: Gp = (I + Eo)G; Eo = woAo
+(b) where at each frequency any A(jw)
+
+porns satisfying g(A(jw)) < 1 is allowed. These
+
+gid “| ' are three feedforward forms: (a) additive
+
+uncertainty, (b) multiplicative input
+uncertainty and (c) multiplicative output
+
+©) uncertainty.
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris
+

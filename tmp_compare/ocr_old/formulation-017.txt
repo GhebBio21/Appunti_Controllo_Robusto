@@ -1,0 +1,23 @@
+: Model uncertainty: MIMO casey -—, [|
+
+Moving uncertainty from the input to the output
+
+For a scalar plant (SISO), we have G, = G(1 + w,A)) = (1 +
+WoAo)G and we may simply “move” the multiplicative
+uncertainty from the input to the output with w; = wo.
+However, for multivariable plants (MIMO) we usually need to
+multiply by the condition number y(G). Let G, = G(J + Ez)
+
+l;(w) = max a(G~'(G, — G)) = max a(E7)
+
+Ey Ey;
+lo(w) = max a((G, — G)G~") = max o(GE;G"")
+Ey E;
+
+which is much larger than l,(w) if the condition number of the
+plant is large.
+Let E; = wyA,, then
+
+low) = |wr| max o(GA;G~") = |w1(jw)| (Gu)
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

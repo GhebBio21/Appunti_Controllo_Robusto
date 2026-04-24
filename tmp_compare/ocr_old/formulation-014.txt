@@ -1,0 +1,23 @@
+Ilya : G,p =GU- E;aG)"'; Exa = wiadia
+
+Il;7 : Gp = GUI — E;1)7; Exr = wit Air
+
+Ilo: G, = (I — Eio)'G; Exo = wiohio
+These are three feedback or inverse
+forms: (d) inverse additive uncertainty,
+(e) inverse multiplicative input
+uncertainty and (f) inverse multiplicative
+output uncertainty.
+
+The negative sign in front of the E’s does
+not really matter, A can have any sign. A
+denotes the normalized perturbation
+and E the “actual” perturbation.
+Sometimes one may want to use matrix
+weights, E = W,AW,, where W, and
+
+W, are given transfer function matrices.
+
+Controllo dei Sistemi Incerti
+
+Robust Control Problem AA 2025/2026 Prof. Paolo Salaris

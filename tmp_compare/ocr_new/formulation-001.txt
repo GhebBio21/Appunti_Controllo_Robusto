@@ -1,0 +1,22 @@
+Model uncertainty: examples ~>, —, |]
+
+Example #5: Parametric zero uncertainty in zero form. Consider
+the following alternative form of parametric zero uncertainty
+
+G'p(s) = (s + Zp)Go(s); Zmin < Zp < Zmax
+
+This set of plants may be written as multiplicative (relative)
+uncertainty
+
+G,(s)=Go(s)\(st2[ltwrA] — |Al<1,
+e—“«—-_
+G(s)
+with
+
+wy = 2r,/(s+Z)
+
+Zp = 2(1+r.zA) r,= (Zmax — 2min)/2 Z = (Zmax + 2min)/2
+
+z
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

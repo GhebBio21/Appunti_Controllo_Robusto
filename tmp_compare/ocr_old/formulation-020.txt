@@ -1,0 +1,30 @@
+Model uncertainty: MIMO casey —, |]
+
+Representing uncertainty for MIMO plants: a summary
+
+1.
+
+2.
+
+Structured uncertainty. Represented by a diagonal real matrix
+and it comes from parametric uncertainty (as for SISO systems);
+Unstructured uncertainty: Represented by a “full” complex
+matrix (feedforward and feedback forms, input and output
+uncertainties);
+
+1, Moving uncertainties from the input to the output may introduce
+plants that are not in the original set (by the condition number of
+G);
+
+2. Combination of different forms of uncertainties gives rise to a
+block-diagonal matrix (each block is unstructured) and therefore is
+no longer truly unstructured;
+
+3. Diagonal unstructured uncertainty usually arises from unmodeled
+or neglected dynamic in the individual input or output;
+
+4, In case of unmodeled dynamics, as for SISO systems, we use
+(s) = _ TSO
+Oe) = (T/To)S +1
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

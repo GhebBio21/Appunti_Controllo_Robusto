@@ -1,0 +1,31 @@
+Model uncertainty: examples () -— ial
+
+max |f(jw) — 1] = Ip(w) =
+
+{ Vrz + 2(1 + rx)(1 — cos Omaxw)) forw <1/Omax
+f(s)ely
+
+24+7z for w > 7/Omax
+
+kmaxe om? —k & k(1 + rp 2 k=
+max ( ) + Bmax s Brun stl
+10! only the
+magnitude
+o
+3 matters!
+a
+Sb10
+2 (1+ %)@max$ + 1p
+wr(s) = 8
+“mex sg + 1
+10" :
+10” 10" 10° 10' 10°
+Frequency
+
+2
+(L+ #)Omax8 + 0K | (Snax) 5? + 2-0.838- S%5+1 To make sure that
+
+2
+mex)” 52 +2-0.685- Snars+1 lw Gol 2h)
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

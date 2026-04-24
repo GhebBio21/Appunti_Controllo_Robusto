@@ -1,0 +1,18 @@
+» Model uncertainty: MIMO casey —* |]
+
+The representation of parametric uncertainty, as discussed
+for SISO systems, carries straight over to MIMO systems.
+
+However, for MIMO systems we have to distinguish
+multiplicative uncertainty a the plant input (£,) and the plant
+output (Eg). The uncertainties E,; and Eg can be loosely
+interpreted as actuator and sensor uncertainty, respectively.
+
+The plant G, is related to the model G and the uncertainty in
+the following manner:
+
+Gy =G+ Ey, E, =G)—-G
+Gy = GUI + E;), E, = G~*(G, — G)
+Gy = (1 + Eo)G, Eo = (G, -G)G™
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

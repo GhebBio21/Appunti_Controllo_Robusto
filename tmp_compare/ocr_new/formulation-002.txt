@@ -1,0 +1,22 @@
+Model uncertainty: examples ~>, —, |]
+
+Consider a set of possible plants resulting, for example, from
+parametric uncertainty as
+
+k e 9s
+Tst+1
+
+, 2<k,0,7 <3
+We now want to describe this set of plants by a single (lumped)
+complex perturbation, A, or A;. This complex (disc-shaped)
+uncertainty description may be generated as follows:
+1. Select a nominal model G(s);
+2. Select the uncertainty model:
+
+a. Additive uncertainty. At each frequency find the smallest
+
+radius l,(w) which includes all possible plant I:
+
+lwa(jw)| 2 La(w) = max |Gpgw) — G(jw)| Ww
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

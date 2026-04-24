@@ -1,0 +1,16 @@
+©’; Model uncertainty: examples 7) — al
+
+Example 3: Multiplicative weight for gain and delay uncertainty.
+
+Gp(s )= a kpe ° *Go(s) 3 kmin; kmax|; Oy €E [Omin; Omax|
+‘bp. — Eoin Rmx
+G(s) = Go(s)kpe° = = kGo(s \a + wr(s )Ar(s )) |Ar(jw)| < 1,Vw
+
+. z+ 2(1 1 — c0S (Omax for w < 7/Omax
+max |f(jw) —1|= 1) = { yet (1+ r¢)(1 — cos (Omaxw)) ree ee
+
+k To derive a rational weight,
+This bound is irrational!! mm? we first approximate the
+delay by a first-order Pade.
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

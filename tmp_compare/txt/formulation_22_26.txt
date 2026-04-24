@@ -1,0 +1,53 @@
+                   Model uncertainty: examples
+           Example #5: Parametric zero uncertainty in zero form. Consider 
+           the following alternative form of parametric zero uncertainty 
+           This set of plants may be written as multiplicative (relative) 
+           uncertainty 
+           with 
+                   Controllo dei Sistemi Incerti  Robust Control Problem      AA 2025/2026      Prof. Paolo Salaris
+                   Model uncertainty: examples
+          Consider a set  of possible plants resulting, for example, from 
+          parametric uncertainty as
+          We now want to describe this set of plants by a single (lumped) 
+          complex perturbation, ‚àÜ  or ‚àÜ . This complex (disc-shaped) 
+                                                       '          2
+          uncertainty description may be generated as follows: 
+          1.    Select a nominal model Ì†µÌ∞∫(Ì†µÌ±†);
+          2.    Select the uncertainty model: 
+                a. Additive uncertainty. At each frequency Ô¨Ånd the smallest 
+                      radius Ì†µÌ±ô (Ì†µÌºî) which includes all possible plant Œ†:
+                                    '
+                   Controllo dei Sistemi Incerti  Robust Control Problem      AA 2025/2026      Prof. Paolo Salaris
+                                                                                                                   Model uncertainty: examples
+                                                                                                 b. Multiplicative (relative) uncertainty. (preferred 
+                                                                                                                                       uncertainty form). At each frequency find the smallest 
+                                                                                                                                       radius Ì†µÌ±ô2(Ì†µÌºî) which includes all possible plant Œ†:
+                                                                                                 c.                                    Inverse Multiplicative (relative) uncertainty. At each 
+                                                                                                                                       frequency find the smallest radius Ì†µÌ±ô"2(Ì†µÌºî) which includes 
+                                                                                                                                       all possible plant Œ†:
+                                                                                                                                                             <latexit sha1_base64="+P4+7ED4mnXkewErJNiCPCpvl5k=">AAACcnicbZFdb9MwFIad8LFRPtYxcQMSGCqkIbEqmaZtN0gTuxjcFYluk5oqOnFPWm92ktknsCrLD+Dvccev4IYfMLcNE9s4lqVX7+Pjj9dJoaSlIPjl+Xfu3ru/tPyg9fDR4ycr7dWnhzYvjcC+yFVujhOwqGSGfZKk8LgwCDpReJSc7s/40Tc0VubZV5oWONQwzmQqBZCz4vaPSGFKF9/jSn6u10+iXOMY3kVGjid04dgZVwvUkA+RhvO4OoiLqCfrRXOUGhAz66p/4+BK1tdA/XdnPh9pbkCpBYvbnaAbzIvfFmEjOqypXtz+GY1yUWrMSCiwdhAGBQ0rMCSFwroVlRYLEKcwxoGTGWi0w2oeWc3fOmfE3fluZsTn7r8dFWhrpzpxKzXQxN5kM/N/bFBSujusZFaUhJlYHJSWilPOZ/nzkTQoSE2dAGGkuysXE3ABkvullgshvPnk2+Jwsxtud7e/bHX2PjZxLLMX7A1bZyHbYXvsE+uxPhPst/fMe+m98v74z/3XfpOd7zU9a+xa+e8vAZR3vpA=</latexit>!!
+                                                                                                                                                                                                                                                                                                                                                                                                                                                             !Gp(jœâ)‚ÜëG(jœâ)!
+                                                                                                                                                          |w (jœâ)| ‚Üí l (œâ) = max!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    !                                      ‚Üìœâ
+                                                                                                                                                                                    iI                                                                                                                     iI                                                                                              G ! !                                                                                                            G (jœâ)                                                                                                                                   !
+                                                                                                                                                                                                                                                                                                                                                                                                                           p                                                                                                                     p
+                                                                                                                 Controllo dei Sistemi Incerti                                                                                                                                                                      Robust Control Problem                                                                                                                                                    AA 2025/2026                                                                                                   Prof. Paolo Salaris
+                   Model uncertainty: examples
+          Example: consider again the set of plants with parametric 
+          uncertainty
+          To simplify subsequent controller design, we select a delay-
+          free nominal model 
+          This is not the only choice for the nominal model‚Ä¶
+                   Controllo dei Sistemi Incerti  Robust Control Problem      AA 2025/2026      Prof. Paolo Salaris
+                  Model uncertainty
+          Choice of the nominal model. With parametric uncertainty 
+          represented as complex perturbations there are three main 
+          options for the choice of the nominal model:
+          1.    A simpliÔ¨Åed model, e.g., a low-order, delay-free model;
+                                                                                                    ÃÖ
+          2.    A model of mean parameter values, Ì†µÌ∞∫ Ì†µÌ±† = Ì†µÌ∞∫(Ì†µÌ±†);
+          3.    The central plant obtained from a Nyquist plot (yielding the 
+                smallest discs). 
+          Example: 
+          For option 3 the nominal model is not 
+          rational. 
+                   Controllo dei Sistemi Incerti  Robust Control Problem      AA 2025/2026      Prof. Paolo Salaris

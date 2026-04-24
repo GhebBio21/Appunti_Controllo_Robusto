@@ -1,0 +1,15 @@
+Model uncertainty: examples ~>, —, |]
+
+We want to represent this set using
+multiplicative uncertainty with a rational w;(s) = w71(s) —————
+weight w,(s). s?4+1.4s+4+1
+
+Magnitude
+
+0 a Ey
+10° 10" 10° \ 10°
+Frequency Ts +0.2
+— _-?Te* f=4
+wri(s) (T/2.5)s+1’
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

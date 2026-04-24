@@ -1,0 +1,20 @@
+: Model uncertainty ory f]
+
+Choice of the nominal model. With parametric uncertainty
+represented as complex perturbations there are three main
+options for the choice of the nominal model:
+
+1. Asimplified model, e.g., a low-order, delay-free model;
+2. A model of mean parameter values, G(s) = G(s);
+3. The central plant obtained from a Nyquist plot (yielding 1 the
+
+smallest discs). 2
+Example: «1: G,(s) = — “S29 <kO7 <3,
+k kg HEN ys
+G _ , GC _ s {223}
+(8) = 24 a(s) = =e a
+
+For option 3 the nominal model is not
+rational. 4S
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

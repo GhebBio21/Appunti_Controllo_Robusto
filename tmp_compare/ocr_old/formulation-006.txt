@@ -1,0 +1,24 @@
+=); Model uncertainty anaes [|
+
+Neglected dynamics as uncertainty. Consider the set of plants:
+Gp(s) = Go(s) f(s)
+where Go(s) is fixed (and certain).
+
+Objective: We want to neglect the term f(s) (which may be
+fixed or may be an uncertain set Il) and represent G,, by
+
+multiplicative uncertainty with a nominal model G = Gog.
+
+The magnitude of the relative uncertainty caused by
+neglecting the dynamics in f(s) is
+
+l7(w) = max
+
+: = max. |f(jv) —1|
+
+f(s)ells
+
+Gp-G
+G
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

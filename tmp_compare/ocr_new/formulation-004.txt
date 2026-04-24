@@ -1,0 +1,22 @@
+Model uncertainty: examples ~>, —, |]
+
+Example: consider again the set of plants with parametric
+uncertainty k
+
+tr Gols) = Toy
+
+To simplify subsequent controller design, we select a delay-
+free nominal model
+
+G(s) =
+
+e "8 2<k,0,7<3
+
+)
+
+ko 2.5
+Fet+1 25s+1
+
+This is not the only choice for the nominal model...
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

@@ -1,0 +1,9 @@
+Model uncertainty: MIMO casey —, |]
+
+Lumping uncertainty into a single perturbation
+Multiplicative input uncertainty with a scalar weight w,(s):
+Gp =G(I+wrAr),  ||Arlo <1
+
+In(w) = max a (G-"(Gp—G)(w)) 5 fwr(je)| > (w) We
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

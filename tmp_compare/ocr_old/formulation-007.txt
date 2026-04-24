@@ -1,0 +1,23 @@
+Model uncertainty: examples () -— ial
+
+Example 1: Neglected delay. f(s) = e~°*. where 0 < 4) < max.
+
+4343
+
+Gp = Go(s)e~°* =Go(s)(1 + wr(s)Ar(s)); |Ar(jw)| <1, Vw
+
+10
+. —jwd
+- max |f(jw) — 1|=|L-e Jemax|
+810° f(s)els
+& If we consider all @ € [0, A@nax|, the
+A191 relative error bound is 2 at
+ve frequencies above 1/Onax:
+Oe “e aya { Poem os aon
+Frequency " 2 w > 1/Omax
+Ormnax )? Omar
+wr(s) = _Omaxs_ wr(s) = Pmaxs (pie) 8° + 2- 0.838 - abs + 1
+2
+Pmaz gs + J Omang +] (Snax)? 52 42. 0,685 - Snax s +1
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

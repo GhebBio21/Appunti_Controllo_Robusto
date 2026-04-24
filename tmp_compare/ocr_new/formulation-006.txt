@@ -1,0 +1,13 @@
+Model uncertainty: examples ~>, —, |]
+
+We want to represent this set using multiplicative uncertainty
+with a rational weight w,(s).
+
+Magnitude
+S
+
+Frequency Ts+0.2
+= —__ J = 4
+wnls) = Crip 5ys 41?
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

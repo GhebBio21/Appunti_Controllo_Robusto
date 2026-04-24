@@ -1,0 +1,20 @@
+> Model uncertainty: MIMO casey —, |]
+Multiplicative input uncertainty with a scalar weight w;,(s):
+Gp=G(I+wiAr), ||Arllo <1
+
+Ir(w) = max o(G~'(Gp — G)(jw)); |wr(jw)| 2 (w) Ww
+
+Similarly to the SISO case for the inverse additive and inverse
+multiplicative input/output uncertainty models:
+Gp, =GUI- WiaAiaG)", ||Acalloo <1 inverse additive
+
+Jwia(jw)| < Ga(w) = max |G, ' (jw) — G7" (ju)| Vu
+
+G, =(I- Wiodio) 'G, |Aio|loo <1 inverse multiplicative output
+|wio(Jw)| < Lo(w) = max (Gp (jw) — G(jw))Gp(ju) "| Yur
+
+G, = GU - Wi Air), |Aizlloo <1 inverse Multiplicative input
+
+Jwir(Jw)| < hir(w) = max |Gp(jw)" (GpGw) — G(jw))| Vw
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris

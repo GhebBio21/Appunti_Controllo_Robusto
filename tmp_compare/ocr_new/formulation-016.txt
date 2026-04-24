@@ -1,0 +1,22 @@
+Model uncertainty: MIMO casey —, |]
+
+Lumping uncertainty into a single perturbation
+
+For SISO systems, we usually lump multiple sources of
+uncertainty into a single complex perturbation, often in
+multiplicative form. This may also be done for MIMO systems,
+but then it makes a difference whether the perturbation is at
+the input or the output.
+
+Additive uncertainty with a scalar weight w,(s):
+
+G,=G+t+waAg, ||Aalloo <1
+
+l4 = max a(Gp —G(jw)); |wa(jw)| 2 La(w)
+Gy»ell
+Multiplicative output uncertainty with a scalar weight wo(s)
+Gp = (I + woAo)G, | Ao |loo <1
+
+lo(w) = max a ((Gp— G)E“*(Jw)) + |wojw)| Flow) Yo
+
+Controllo dei Sistemi Incerti Robust Control Problem AA 2025/2026 — Prof. Paolo Salaris
