@@ -7686,4 +7686,570 @@ Le idee da portare avanti sono quattro:
 
 Questa parte del documento \`e una traduzione e rielaborazione estesa delle slide 42--55 del PDF ``Formulation of Control Problems'', caricato dall'utente come materiale di partenza nella directory \texttt{dioporco}.
 
+\begin{coverpage}
+\centering
+{\Huge\bfseries Controllo Robusto\par}
+\vspace{0.4em}
+{\LARGE Traduzione in italiano e approfondimento\par}
+\vspace{0.5em}
+{\Large Prestazione nominale, sensibilit\`a pesata e mixed sensitivity\par}
+\vfill
+\includegraphics[width=0.78\textwidth]{images14/formulation-56-71-011.png}
+\vfill
+\begin{focusbox}
+\textbf{Obiettivo del documento.} Questa parte completa la formulazione delle specifiche di prestazione. Si chiude il discorso sulla performance nominale SISO e MIMO, si spiega come interpretare il vincolo $\|SW\|_\infty\le 1$ e si introducono i pesi di prestazione $w_P$, $w_T$ e $w_u$, che porteranno naturalmente al problema di \emph{mixed sensitivity}.
+\end{focusbox}
+\vfill
+{\large Basato sulle slide del corso AA 2025/2026\par}
+\end{coverpage}
+
+\section{Lezione 14}
+
+\subsection{Visione d'insieme della lezione}
+
+La Lezione 13 ha introdotto l'idea chiave secondo cui le specifiche di progetto si possono esprimere attraverso un prodotto pesato, per esempio $SW$, dove:
+\begin{itemize}
+    \item $S$ descrive come gli ingressi esterni si riflettono sull'errore;
+    \item $W$ descrive quali segnali esterni consideriamo davvero importanti.
+\end{itemize}
+
+La Lezione 14 fa un passo decisivo: trasforma questa idea in uno strumento di progetto vero e proprio. Il punto non \`e pi\`u solo dire che il controllore deve essere ``buono'', ma specificare con precisione:
+\begin{itemize}
+    \item quanto piccola deve essere la sensibilit\`a $S$;
+    \item in quali bande di frequenza;
+    \item con quale compromesso rispetto al roll-off ad alta frequenza e allo sforzo di controllo.
+\end{itemize}
+
+Per questo motivo la lezione si divide naturalmente in tre blocchi:
+\begin{enumerate}
+    \item completamento della lettura $\mathcal{H}_\infty$ della prestazione nominale SISO;
+    \item estensione al caso MIMO;
+    \item passaggio alla formulazione moderna tramite \emph{weighted sensitivity} e poi \emph{mixed sensitivity}.
+\end{enumerate}
+
+\begin{keybox}
+\textbf{Idea guida.} Un buon peso di prestazione non descrive il sistema, ma descrive \emph{che cosa vogliamo dal sistema}. In altre parole, i pesi sono il linguaggio con cui traduciamo desideri qualitativi come ``errore piccolo a bassa frequenza'', ``niente picchi eccessivi'' o ``controllo non troppo aggressivo'' in vincoli quantitativi.
+\end{keybox}
+
+\subsection{Dalla norma \texorpdfstring{$\mathcal{H}_\infty$}{Hinf} alla specifica su \texorpdfstring{$S$}{S}}
+
+La prima slide di questa lezione riprende e completa il discorso finale della Lezione 13. Nel caso SISO, il problema di prestazione nominale in senso $\mathcal{H}_\infty$ pu\`o essere scritto come
+$$
+\min_C \|SW\|_\infty
+=
+\min_C \sup_\omega |S(j\omega)W(j\omega)|.
+$$
+Le slide mostrano anche una scrittura con il quadrato del modulo; concettualmente non cambia nulla, perch\'e minimizzare il picco di una quantit\`a positiva o il picco del suo quadrato porta allo stesso controllore.
+
+Il punto importante \`e un altro. Se il valore ottimo del problema \`e $k$, allora
+$$
+|S(j\omega)W(j\omega)|\le k,
+\qquad
+\forall\omega,
+$$
+e quindi
+$$
+|S(j\omega)|\le k\,|W(j\omega)|^{-1},
+\qquad
+\forall\omega.
+$$
+Questo suggerisce subito come usare il peso: invece di pensarlo come un oggetto astratto, possiamo pensarlo come l'inverso del bound desiderato su $S$.
+
+Quando si normalizza la specifica in modo che il livello ammissibile sia $1$, si ottiene la forma standard
+$$
+\|SW\|_\infty\le1.
+$$
+Questa \`e la forma con cui le specifiche di prestazione vengono quasi sempre scritte nella pratica del controllo robusto.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\linewidth]{images14/formulation-56-71-001.png}
+        \caption{La prestazione $\mathcal{H}_\infty$ si legge come minimizzazione del picco del prodotto $SW$.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\linewidth]{images14/formulation-56-71-002.png}
+        \caption{La specifica normalizzata diventa $\|S(j\omega)W(j\omega)\|_\infty\le1$.}
+    \end{subfigure}
+    \caption{Il peso di prestazione determina un bound desiderato per la sensibilit\`a.}
+\end{figure}
+
+\subsection{Significato pratico del vincolo \texorpdfstring{$\|SW\|_\infty\le1$}{||SW||∞≤1}}
+
+Dire
+$$
+\|SW\|_\infty\le1
+$$
+significa imporre che, a ogni frequenza, l'errore sia limitato dalla dimensione massima dell'ingresso ammesso in quella stessa banda. \`E una specifica molto naturale:
+\begin{itemize}
+    \item se il peso ammette segnali lenti e importanti, allora chiederemo $S$ piccola a bassa frequenza;
+    \item se il peso ammette poco contenuto ad alta frequenza, la specifica diventa meno severa in quella regione.
+\end{itemize}
+
+Le slide sottolineano anche un fatto fondamentale di loop-shaping. Per frequenze alte, in genere $|PC|$ \`e piccolo, quindi
+$$
+|S(j\omega)|\simeq1.
+$$
+Di conseguenza, specifiche di performance stringenti hanno senso soprattutto a bassa e media frequenza, cio\`e dove l'anello aperto \`e ancora grande e il controllore pu\`o davvero modificare il comportamento del sistema.
+
+Per $\omega$ piccola, quando $|PC|$ \`e grande, vale approssimativamente
+$$
+|S(j\omega)|\simeq |PC(j\omega)|^{-1},
+$$
+e quindi la specifica si riduce alla richiesta intuitiva
+$$
+|PC(j\omega)| > |W(j\omega)|.
+$$
+In altre parole: se vogliamo errore piccolo a una certa frequenza, il guadagno d'anello deve essere sufficientemente grande proprio in quella banda.
+
+\begin{focusbox}
+\textbf{Lettura operativa.} Il vincolo su $SW$ non dice direttamente come debba essere fatto il controllore. Dice per\`o quale deve essere il profilo dell'anello aperto $L=PC$: grande dove vogliamo rigettare bene i disturbi e inseguire bene i riferimenti, piccolo dove conviene lasciare il sistema tranquillo.
+\end{focusbox}
+
+\subsection{Interpretazione geometrica sul diagramma di Nyquist}
+
+Supponiamo che il progettista conosca gi\`a un bound desiderato sul modulo della sensibilit\`a, per esempio
+$$
+|S(j\omega)|<|R(j\omega)|,
+\qquad
+\forall\omega>0.
+$$
+Se definiamo
+$$
+w_P(s)=R(s)^{-1},
+$$
+allora la condizione precedente si riscrive come
+$$
+\|w_P S\|_\infty<1.
+$$
+
+Le slide mostrano che questa condizione ha una lettura grafica immediata:
+$$
+\|w_P S\|_\infty<1
+\iff
+|w_P(j\omega)S(j\omega)|<1
+\iff
+\left|
+\frac{w_P(j\omega)}{1+L(j\omega)}
+\right|<1,
+$$
+da cui segue
+$$
+|w_P(j\omega)|<|1+L(j\omega)|.
+$$
+Geometricamente, il punto $L(j\omega)$ del Nyquist deve restare \textbf{all'esterno} del disco chiuso di centro $-1+j0$ e raggio $|w_P(j\omega)|$.
+
+Questa lettura \`e molto utile perch\'e collega un vincolo astratto su $S$ a una figura concreta nel piano complesso. Inoltre la stessa logica vale anche per altre specifiche, per esempio:
+$$
+\|w_T T\|_\infty<1,
+\qquad
+\|w_u K S\|_\infty<1,
+\qquad
+\|w_P G_d S\|_\infty<1.
+$$
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\linewidth]{images14/formulation-56-71-004.png}
+        \caption{Se si conosce un bound desiderato $R$, basta porre $w_P=R^{-1}$.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\linewidth]{images14/formulation-56-71-005.png}
+        \caption{Il vincolo su $w_P S$ equivale a tenere il Nyquist fuori da un disco centrato in $-1$.}
+    \end{subfigure}
+    \caption{La sensibilit\`a pesata si traduce in una condizione geometrica sul diagramma di Nyquist.}
+\end{figure}
+
+\subsection{Prestazione nominale nel caso MIMO}
+
+La lezione passa poi al caso MIMO. La struttura concettuale non cambia, ma cambiano le quantit\`a matematiche con cui misuriamo l'errore.
+
+Nel caso MIMO, con rumore nullo, l'errore rispetto a riferimento e disturbo pu\`o essere scritto come
+$$
+e=(I+PC)^{-1}(d-r)=S_o(d-r),
+\qquad n=0,
+$$
+mentre, in assenza di disturbo,
+$$
+y=PC(I+PC)^{-1}(r-n)=T_o(r-n),
+\qquad d=0.
+$$
+Qui:
+\begin{itemize}
+    \item $S_o=(I+PC)^{-1}$ \`e la sensibilit\`a ``in uscita'';
+    \item $T_o=PC(I+PC)^{-1}$ \`e la sensibilit\`a complementare.
+\end{itemize}
+
+Per un ingresso specifico, il criterio $\mathcal{H}_2$ si scrive in termini di energia dell'errore:
+$$
+\|e\|_2^2
+=
+\frac{1}{2\pi}
+\int_{-\infty}^{\infty}
+e(j\omega)^H e(j\omega)\,d\omega.
+$$
+Se vogliamo pesare l'errore in uscita, introduciamo una matrice di peso $W_2$ e otteniamo
+$$
+\|e\|_2^2
+=
+\frac{1}{2\pi}
+\int_{-\infty}^{\infty}
+\bigl(W_2 e(j\omega)\bigr)^H
+\bigl(W_2 e(j\omega)\bigr)\,d\omega.
+$$
+
+Questa \`e la versione MIMO naturale della norma energetica gi\`a vista in SISO: non si guarda pi\`u a un modulo scalare, ma all'energia complessiva del vettore di errore, eventualmente pesata per dare pi\`u importanza ad alcuni canali o ad alcune frequenze.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images14/formulation-56-71-006.png}
+    \caption{Nel caso MIMO la performance nominale viene espressa in termini di energia del vettore d'errore, eventualmente pesata da $W_2$.}
+\end{figure}
+
+\subsection{Interpretazione sperimentale del criterio \texorpdfstring{$\mathcal{H}_2$}{H2} MIMO}
+
+Una delle slide pi\`u didattiche della sequenza propone una lettura molto concreta del problema $\mathcal{H}_2$ MIMO:
+\begin{quote}
+``Eccitare il sistema in esperimenti separati con $n$ ingressi linearmente indipendenti e scegliere il controllore che minimizza la somma dei quadrati delle norme 2 degli errori generati''.
+\end{quote}
+
+Se indichiamo con $v_i$ gli ingressi di prova e raccogliamo le loro trasformate in
+$$
+W_1=[\,v_1\ \ v_2\ \ \dots\ \ v_n\,],
+$$
+allora le colonne di $E W_1$ sono proprio gli errori prodotti nei singoli esperimenti. Di conseguenza minimizzare
+$$
+\|W_2 E W_1\|_2^2
+$$
+equivale a minimizzare la somma delle energie degli errori pesati.
+
+Questa osservazione \`e molto utile perch\'e chiarisce il ruolo dei due pesi:
+\begin{itemize}
+    \item $W_1$ pesa gli ingressi che usiamo per ``stressare'' il sistema;
+    \item $W_2$ pesa gli errori che osserviamo in uscita.
+\end{itemize}
+
+Quindi il criterio $\mathcal{H}_2$ MIMO non \`e altro che una generalizzazione naturale del concetto di media pesata gi\`a visto in SISO.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images14/formulation-56-71-007.png}
+    \caption{Il criterio $\mathcal{H}_2$ MIMO si pu\`o leggere come somma delle energie degli errori ottenuti con diversi ingressi di prova.}
+\end{figure}
+
+\subsection{Prestazione nominale \texorpdfstring{$\mathcal{H}_\infty$}{Hinf} nel caso MIMO}
+
+Nel caso peggiore, il problema MIMO assume la forma
+$$
+\min_C \max_{v\in\mathcal V}\|e\|_2
+=
+\min_C \max_{v'\in\mathcal V'}\|W_2 E W_1 v'\|_2,
+$$
+dove
+$$
+\mathcal V'=
+\{v' : \|v'\|_2^2\le1\},
+\qquad
+v'=W_1^{-1}v.
+$$
+Passando all'interpretazione in frequenza, questo diventa
+$$
+\min_C \|W_2 E W_1\|_\infty
+=
+\min_C \sup_\omega \bar{\sigma}\bigl(W_2 E W_1(j\omega)\bigr).
+$$
+
+La differenza rispetto al caso SISO \`e tutta qui:
+\begin{itemize}
+    \item in SISO si minimizza il picco del modulo di $SW$;
+    \item in MIMO si minimizza il picco del \textbf{massimo valore singolare} della matrice pesata $W_2EW_1$.
+\end{itemize}
+
+Questo massimo valore singolare \`e la misura corretta del ``peggior amplificatore direzionale'' del sistema alla frequenza $\omega$: dice quanto una particolare direzione di ingresso pu\`o essere amplificata sull'errore.
+
+Le slide concludono bene il confronto:
+\begin{itemize}
+    \item il criterio $\mathcal{H}_2$ minimizza una misura \emph{media} della sensibilit\`a pesata;
+    \item il criterio $\mathcal{H}_\infty$ ne minimizza il \emph{picco}.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\linewidth]{images14/formulation-56-71-008.png}
+        \caption{Il problema worst-case MIMO porta naturalmente a $\|W_2 E W_1\|_\infty$.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\linewidth]{images14/formulation-56-71-009.png}
+        \caption{La differenza concettuale resta la stessa: $\mathcal{H}_2$ media, $\mathcal{H}_\infty$ picco.}
+    \end{subfigure}
+    \caption{Nel caso MIMO il ruolo del modulo viene sostituito dal massimo valore singolare.}
+\end{figure}
+
+\subsection{Forma standard della specifica MIMO}
+
+Se per semplicit\`a immaginiamo $W_1$ e $W_2$ scalari e indichiamo con $k$ il valore ottimo del problema, allora
+$$
+\|E\|_\infty
+=
+\sup_\omega \bar{\sigma}\bigl(E(j\omega)\bigr)
+<
+k\,|W_1W_2|^{-1}.
+$$
+Quindi il massimo valore singolare della sensibilit\`a deve stare al di sotto del bound desiderato. Normalizzando, si arriva alla forma standard:
+$$
+\|W_2 E W_1\|_\infty<1.
+$$
+
+Anche qui compare lo stesso ragionamento visto in SISO. Per alte frequenze, in genere $\bar{\sigma}(PC)$ \`e piccola, e quindi
+$$
+\bar{\sigma}(E)
+=
+\bar{\sigma}\bigl((I+PC)^{-1}\bigr)
+\simeq 1.
+$$
+Per questo, specifiche strette hanno senso soprattutto a bassa frequenza, dove il guadagno d'anello multivariabile \`e ancora grande. In quel regime, la richiesta si legge approssimativamente come
+$$
+\underline{\sigma}(PC)\gtrsim |W_1W_2|,
+\qquad
+\omega\ \text{piccola}.
+$$
+
+Il messaggio da ricordare \`e che, sia in SISO sia in MIMO, la prestazione nominale severa \`e sempre una storia di bassa frequenza. Ad alta frequenza, invece, il sistema tende inevitabilmente a ``perdere presa'' sugli ingressi.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images14/formulation-56-71-010.png}
+    \caption{Nel caso MIMO la specifica standard di prestazione nominale \`e $\|W_2EW_1\|_\infty<1$.}
+\end{figure}
+
+\subsection{Perch\'e la sensibilit\`a \texorpdfstring{$S$}{S} \`e l'oggetto giusto}
+
+La seconda met\`a della lezione cambia linguaggio e diventa ancora pi\`u progettuale. Le slide dicono esplicitamente che la funzione di sensibilit\`a $S$ \`e un ottimo indicatore della prestazione in anello chiuso, sia per sistemi SISO sia per sistemi MIMO. Il motivo \`e semplice:
+\begin{itemize}
+    \item ci interessa soprattutto il suo modulo;
+    \item idealmente vogliamo $S$ piccola;
+    \item molte richieste progettuali si possono esprimere direttamente come vincoli sulla forma di $S$.
+\end{itemize}
+
+Le specifiche tipiche elencate dalle slide sono:
+\begin{enumerate}
+    \item frequenza minima di banda $\omega_B^\ast$;
+    \item errore massimo di tracking a frequenze assegnate;
+    \item tipo del sistema oppure errore a regime massimo $A$;
+    \item forma desiderata di $S$ in certe bande;
+    \item picco massimo di sensibilit\`a
+    $$
+    \|S(j\omega)\|_\infty\le M,
+    \qquad
+    \text{spesso con } M\simeq2.
+    $$
+\end{enumerate}
+
+Tutte queste richieste possono essere catturate imponendo un bound superiore del tipo
+$$
+|S(j\omega)| \le \frac{1}{|w_P(j\omega)|},
+\qquad
+\forall\omega,
+$$
+ossia, in forma compatta,
+$$
+\|w_P S\|_\infty\le1.
+$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images14/formulation-56-71-011.png}
+    \caption{La sensibilit\`a raccoglie in una sola funzione molte specifiche classiche di prestazione.}
+\end{figure}
+
+\subsection{Come si legge un peso di prestazione \texorpdfstring{$w_P$}{wP}}
+
+La slide successiva rende molto chiara la relazione tra il vincolo puntuale su $S$ e la norma $\mathcal{H}_\infty$:
+$$
+|S(j\omega)| < \frac{1}{|w_P(j\omega)|},
+\qquad \forall\omega
+\iff
+|w_P(j\omega)S(j\omega)|<1,
+\qquad \forall\omega
+\iff
+\|w_P S\|_\infty<1.
+$$
+
+Il grafico mostra anche un caso in cui il bound viene violato: quando $|S|$ supera la curva $1/|w_P|$, il prodotto pesato $|w_P S|$ supera $1$ e quindi la specifica non \`e soddisfatta.
+
+Questo \`e il grande vantaggio del formalismo a pesi: si pu\`o guardare direttamente un diagramma di Bode e capire subito se la specifica \`e rispettata oppure no, senza dover tornare ogni volta alla formulazione astratta.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images14/formulation-56-71-012.png}
+    \caption{Il vincolo $\|w_P S\|_\infty<1$ equivale a chiedere che la curva di $S$ resti sotto il bound $1/|w_P|$ a tutte le frequenze.}
+\end{figure}
+
+\subsection{Peso tipico di prestazione}
+
+Le slide propongono un peso standard estremamente importante:
+$$
+w_P(s)=\frac{s/M+\omega_B^\ast}{s+\omega_B^\ast A}.
+$$
+Qui i parametri hanno un significato molto trasparente:
+\begin{itemize}
+    \item $A$ controlla il livello di errore ammesso a bassa frequenza;
+    \item $\omega_B^\ast$ impone una banda minima desiderata;
+    \item $M$ fissa il picco massimo accettabile della sensibilit\`a.
+\end{itemize}
+
+Vale la pena leggere questo peso nei due estremi:
+$$
+w_P(0)=\frac{1}{A},
+\qquad
+\lim_{s\to\infty}w_P(s)=\frac{1}{M}.
+$$
+Quindi il bound corrispondente su $S$ diventa:
+\begin{itemize}
+    \item a bassa frequenza: $|S(0)|\lesssim A$, quindi buon errore a regime se $A$ \`e piccolo;
+    \item ad alta frequenza: $|S|\lesssim M$, quindi il picco della sensibilit\`a non pu\`o crescere arbitrariamente.
+\end{itemize}
+
+Se si vuole una pendenza pi\`u ripida sotto la banda, le slide propongono la generalizzazione
+$$
+w_P(s)=
+\frac{\bigl(s/M^{1/n}+\omega_B^\ast\bigr)^n}
+{\bigl(s+\omega_B^\ast A^{1/n}\bigr)^n}.
+$$
+Questa forma rende pi\`u marcata la sagomatura desiderata per l'anello aperto $L$, e di riflesso per $S$.
+
+Le slide collegano inoltre il peso di prestazione alla reiezione dei disturbi. Se, per esempio, vogliamo
+$$
+|S(j\omega)G_d(j\omega)|<1,
+$$
+allora nelle frequenze in cui $|G_d|>1$ conviene scegliere
+$$
+|w_P(j\omega)|\approx |G_d(j\omega)|.
+$$
+Questo chiarisce che il peso di performance pu\`o essere costruito non solo in base a criteri ``astratti'', ma anche in base alla reale struttura dei disturbi da rigettare.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images14/formulation-56-71-013.png}
+    \caption{Peso tipico di prestazione: i parametri $A$, $M$ e $\omega_B^\ast$ controllano rispettivamente errore a regime, picco massimo e banda desiderata.}
+\end{figure}
+
+\subsection{Perch\'e \texorpdfstring{$w_P S$}{wP S} da solo non basta}
+
+La slide successiva fa un'osservazione molto importante: imporre soltanto
+$$
+\|w_P S\|_\infty<1
+$$
+mette un \textbf{limite inferiore} sulla banda chiusa, ma non impone un vero limite superiore. In altre parole, costringe il controllore a essere abbastanza aggressivo dove serve, ma non gli impedisce di restare troppo aggressivo ad alta frequenza.
+
+Questo pu\`o essere un problema serio. Se l'anello aperto $L(s)$ non decade abbastanza rapidamente oltre la banda:
+\begin{itemize}
+    \item il rumore di misura pu\`o essere amplificato;
+    \item la sensibilit\`a rispetto a dinamiche non modellate pu\`o peggiorare;
+    \item il controllore pu\`o diventare inutilmente fragile.
+\end{itemize}
+
+Questa \`e la ragione per cui la sola sensibilit\`a pesata non basta a esprimere una specifica completa. Serve una specifica \emph{mista} che tenga sotto controllo anche altre funzioni di trasferimento.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images14/formulation-56-71-014.png}
+    \caption{Il solo vincolo su $w_P S$ impone una banda minima, ma non controlla il roll-off dell'anello aperto alle alte frequenze.}
+\end{figure}
+
+\subsection{Dal weighted sensitivity al mixed sensitivity}
+
+Per completare le specifiche, le ultime due slide introducono gli altri due pesi fondamentali.
+
+Il primo \`e $w_T$, associato alla sensibilit\`a complementare:
+$$
+\|w_T T\|_\infty<1.
+$$
+Imporre un bound superiore su $T$ significa chiedere che $L(s)$ decada abbastanza rapidamente ad alta frequenza. In pratica:
+\begin{itemize}
+    \item si limita l'inseguimento del rumore;
+    \item si evita che il controllore mantenga guadagno troppo alto oltre la banda utile;
+    \item si favorisce un comportamento pi\`u robusto rispetto alle dinamiche trascurate.
+\end{itemize}
+
+Il secondo \`e $w_u$, associato all'azione di controllo:
+$$
+\|w_u K S\|_\infty<1.
+$$
+Poich\'e
+$$
+u=KS(r-G_d d),
+$$
+questo vincolo serve a limitare l'ampiezza del comando, evitare richieste irrealistiche agli attuatori e contenere l'aggressivit\`a del controllore.
+
+Raccogliendo tutto insieme, si arriva alla formulazione classica di \textbf{mixed sensitivity}:
+$$
+\left\|
+\begin{bmatrix}
+w_P S\\
+w_u K S\\
+w_T T
+\end{bmatrix}
+\right\|_\infty
+<1.
+$$
+Nel caso MIMO i pesi diventano matriciali, ma la logica resta identica: un peso per l'errore, uno per il comando e uno per l'uscita ad alta frequenza.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\linewidth]{images14/formulation-56-71-015.png}
+        \caption{Il peso $w_T$ serve a imporre il roll-off di $T$ alle alte frequenze.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\linewidth]{images14/formulation-56-71-016.png}
+        \caption{Il peso $w_u$ limita l'azione di controllo e quindi lo sforzo sugli attuatori.}
+    \end{subfigure}
+    \caption{La specifica completa nasce dalla combinazione di vincoli su $S$, $T$ e $KS$.}
+\end{figure}
+
+\begin{keybox}
+\textbf{Messaggio da portare avanti.} Il mixed sensitivity non \`e un artificio formale. \`E il modo pi\`u diretto per codificare il compromesso fondamentale del controllo: errore piccolo a bassa frequenza, buon roll-off ad alta frequenza e sforzo di controllo non eccessivo.
+\end{keybox}
+
+\subsection{Sintesi conclusiva della lezione}
+
+La Lezione 14 chiude il passaggio dalla prestazione nominale astratta alla scelta concreta dei pesi di progetto. I passaggi essenziali sono:
+\begin{itemize}
+    \item la performance nominale $\mathcal{H}_\infty$ si interpreta come un bound sul prodotto pesato tra sensibilit\`a e ingresso atteso;
+    \item nel caso MIMO il modulo viene sostituito dal massimo valore singolare e la specifica naturale diventa $\|W_2 E W_1\|_\infty<1$;
+    \item molte richieste pratiche sul comportamento del sistema possono essere raccolte in un peso di prestazione $w_P$;
+    \item il solo vincolo su $w_P S$ non basta: per una specifica completa servono anche vincoli su $T$ e su $KS$.
+\end{itemize}
+
+Le tre idee davvero importanti da ricordare sono queste:
+\begin{enumerate}
+    \item il peso $w_P$ serve a sagomare il comportamento desiderato di $S$;
+    \item il peso $w_T$ serve a imporre il decadimento dell'anello alle alte frequenze;
+    \item il peso $w_u$ serve a evitare uno sforzo di controllo eccessivo.
+\end{enumerate}
+
+Questa tripla specifica \`e il ponte verso la formulazione standard dei problemi di controllo robusto che useremo nel seguito.
+
+\begin{focusbox}
+\textbf{Conclusione concettuale.} La robustezza non si ottiene chiedendo solo ``errore piccolo''. Bisogna chiedere errore piccolo nelle frequenze giuste, uscita poco sensibile alle alte frequenze e controllo fisicamente realizzabile. I tre pesi $w_P$, $w_T$ e $w_u$ sono proprio il modo sistematico con cui il controllo robusto esprime questo compromesso.
+\end{focusbox}
+
+\clearpage
+\phantomsection
+\section*{Appendice}
+\addcontentsline{toc}{section}{Appendice}
+
+\subsection*{Riferimento al materiale originale}
+\phantomsection
+\addcontentsline{toc}{subsection}{Riferimento al materiale originale}
+
+Questa parte del documento \`e una traduzione e rielaborazione estesa delle slide 56--71 del PDF ``Formulation of Control Problems'', caricato dall'utente come materiale di partenza nella directory \texttt{Slide}.
+
 \end{document}
