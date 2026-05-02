@@ -152,120 +152,120 @@
 \contentsline {subsubsection}{\numberline {8.2.1}Dalla rappresentazione di stato alla risposta impulsiva}{123}{subsubsection.8.2.1}%
 \contentsline {subsubsection}{\numberline {8.2.2}Formula della norma $H_2$ tramite gramiano di controllabilit\`a}{124}{subsubsection.8.2.2}%
 \contentsline {subsubsection}{\numberline {8.2.3}Formula tramite gramiano di osservabilit\`a}{125}{subsubsection.8.2.3}%
-\contentsline {subsubsection}{\numberline {8.2.4}Equazioni di Lyapunov}{125}{subsubsection.8.2.4}%
-\contentsline {subsection}{\numberline {8.3}Lo spazio di Hardy $H_\infty $}{126}{subsection.8.3}%
-\contentsline {subsubsection}{\numberline {8.3.1}Norma $H_\infty $ come guadagno peggiore}{126}{subsubsection.8.3.1}%
-\contentsline {subsubsection}{\numberline {8.3.2}Interpretazione come norma indotta da $L_2$ a $L_2$}{127}{subsubsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.4}Perch\'e la norma $H_\infty $ \`e pi\`u difficile da calcolare}{128}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Il test con la matrice Hamiltoniana}{129}{subsection.8.5}%
-\contentsline {subsubsection}{\numberline {8.5.1}Dalla soglia $\gamma $ alla funzione $Q(s)$}{129}{subsubsection.8.5.1}%
-\contentsline {subsubsection}{\numberline {8.5.2}Da positivit\`a a invertibilit\`a}{131}{subsubsection.8.5.2}%
-\contentsline {subsubsection}{\numberline {8.5.3}Da invertibilit\`a ad assenza di poli sull'asse immaginario}{132}{subsubsection.8.5.3}%
-\contentsline {subsubsection}{\numberline {8.5.4}Comparsa della matrice Hamiltoniana}{133}{subsubsection.8.5.4}%
-\contentsline {subsubsection}{\numberline {8.5.5}Perch\'e compare $G^T(-s)$}{134}{subsubsection.8.5.5}%
-\contentsline {subsection}{\numberline {8.6}Sintesi conclusiva della lezione}{136}{subsection.8.6}%
-\contentsline {section}{Appendice}{137}{section*.126}%
-\contentsline {subsection}{Nota sulle convenzioni per la matrice Hamiltoniana}{137}{section*.127}%
-\contentsline {subsection}{Riferimento al materiale originale}{137}{section*.128}%
-\contentsline {section}{\numberline {9}Lezione 9}{139}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Visione d'insieme della lezione}{139}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Il lemma di Kalman--Yakubovich--Popov}{139}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Complemento di Schur e passaggio a Riccati}{140}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Bounded real lemma nel caso strettamente proprio}{141}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Formulazione LMI per sistemi propri}{142}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}Forma di Riccati del bounded real lemma}{143}{subsection.9.6}%
-\contentsline {subsection}{\numberline {9.7}Forma Hamiltoniana generale}{144}{subsection.9.7}%
-\contentsline {subsection}{\numberline {9.8}Sintesi conclusiva della lezione}{145}{subsection.9.8}%
-\contentsline {section}{Appendice}{146}{section*.135}%
-\contentsline {subsection}{Nota sulle convenzioni di segno nelle LMI}{146}{section*.136}%
-\contentsline {subsection}{Riferimento al materiale originale}{146}{section*.137}%
-\contentsline {section}{\numberline {10}Lezione 10}{148}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Visione d'insieme della lezione}{148}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Calcolo della norma $H_\infty $ tramite bisezione}{148}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Metodo di Routh--Hurwitz sul polinomio della Hamiltoniana}{149}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Esempio scalare: $G(s)=1/(s+2)$}{150}{subsection.10.4}%
-\contentsline {subsection}{\numberline {10.5}Esempio vettoriale: due canali di uscita}{151}{subsection.10.5}%
-\contentsline {subsection}{\numberline {10.6}Esempio scalare generale e legame con Riccati}{153}{subsection.10.6}%
-\contentsline {subsection}{\numberline {10.7}Confronto tra norme $H_\infty $ e $H_2$}{154}{subsection.10.7}%
-\contentsline {subsection}{\numberline {10.8}Perch\`e la norma $H_\infty $ \`e cos\`i usata}{156}{subsection.10.8}%
-\contentsline {subsection}{\numberline {10.9}Norma di Hankel}{157}{subsection.10.9}%
-\contentsline {subsection}{\numberline {10.10}Esempio finale: tutte le norme per $G(s)=1/(s+a)$}{159}{subsection.10.10}%
-\contentsline {subsection}{\numberline {10.11}Sintesi conclusiva della lezione}{160}{subsection.10.11}%
-\contentsline {section}{Appendice}{161}{section*.150}%
-\contentsline {subsection}{Riferimento al materiale originale}{161}{section*.151}%
-\contentsline {section}{\numberline {11}Lezione 11}{163}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Visione d'insieme della lezione}{163}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}I quattro ingredienti di un problema di controllo}{163}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Modello del processo}{164}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}Incertezza di modello e obiettivi robusti}{165}{subsection.11.4}%
-\contentsline {subsection}{\numberline {11.5}Da dove nasce l'incertezza}{166}{subsection.11.5}%
-\contentsline {subsection}{\numberline {11.6}Incertezza parametrica e incertezza dinamica}{167}{subsection.11.6}%
-\contentsline {subsection}{\numberline {11.7}Famiglie di piante e bande di Nyquist}{168}{subsection.11.7}%
-\contentsline {subsection}{\numberline {11.8}Dal reale al complesso: conservativit\`a e lumping}{169}{subsection.11.8}%
-\contentsline {subsection}{\numberline {11.9}Approssimazione a dischi delle regioni di incertezza}{169}{subsection.11.9}%
-\contentsline {subsection}{\numberline {11.10}Incertezza additiva}{170}{subsection.11.10}%
-\contentsline {subsection}{\numberline {11.11}Incertezza moltiplicativa}{171}{subsection.11.11}%
-\contentsline {subsection}{\numberline {11.12}Incertezza inversa moltiplicativa}{172}{subsection.11.12}%
-\contentsline {subsection}{\numberline {11.13}Esempio 1: incertezza di guadagno}{173}{subsection.11.13}%
-\contentsline {subsection}{\numberline {11.14}Esempio 2: incertezza sulla costante di tempo}{174}{subsection.11.14}%
-\contentsline {subsection}{\numberline {11.15}Esempio 3: incertezza sulla posizione di un polo}{175}{subsection.11.15}%
-\contentsline {subsection}{\numberline {11.16}Esempio 4: incertezza sulla posizione di uno zero}{176}{subsection.11.16}%
-\contentsline {subsection}{\numberline {11.17}Sintesi conclusiva della lezione}{177}{subsection.11.17}%
-\contentsline {section}{Appendice}{179}{section*.167}%
-\contentsline {subsection}{Riferimento al materiale originale}{179}{section*.168}%
-\contentsline {section}{\numberline {12}Lezione 12}{181}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Visione d'insieme della lezione}{181}{subsection.12.1}%
-\contentsline {subsection}{\numberline {12.2}Incertezza parametrica su uno zero: forma $s+z$}{181}{subsection.12.2}%
-\contentsline {subsection}{\numberline {12.3}Da una famiglia parametrica a una perturbazione complessa}{182}{subsection.12.3}%
-\contentsline {subsection}{\numberline {12.4}Esempio: scelta di un nominale semplificato}{183}{subsection.12.4}%
-\contentsline {subsection}{\numberline {12.5}Scelta del modello nominale}{184}{subsection.12.5}%
-\contentsline {subsection}{\numberline {12.6}Costruzione di un peso razionale}{185}{subsection.12.6}%
-\contentsline {subsection}{\numberline {12.7}Dinamiche trascurate come incertezza}{186}{subsection.12.7}%
-\contentsline {subsection}{\numberline {12.8}Esempio: ritardo trascurato}{187}{subsection.12.8}%
-\contentsline {subsection}{\numberline {12.9}Esempio: lag trascurato}{188}{subsection.12.9}%
-\contentsline {subsection}{\numberline {12.10}Esempio: incertezza con guadagno e ritardo}{189}{subsection.12.10}%
-\contentsline {subsection}{\numberline {12.11}Dinamiche non modellate}{190}{subsection.12.11}%
-\contentsline {subsection}{\numberline {12.12}Passaggio al caso MIMO}{191}{subsection.12.12}%
-\contentsline {subsection}{\numberline {12.13}Forme inverse nel caso MIMO}{192}{subsection.12.13}%
-\contentsline {subsection}{\numberline {12.14}Lumping MIMO in una sola perturbazione}{193}{subsection.12.14}%
-\contentsline {subsection}{\numberline {12.15}Spostare l'incertezza dall'ingresso all'uscita}{194}{subsection.12.15}%
-\contentsline {subsection}{\numberline {12.16}Esempi sull'effetto del condizionamento}{195}{subsection.12.16}%
-\contentsline {subsection}{\numberline {12.17}Incertezza diagonale}{196}{subsection.12.17}%
-\contentsline {subsection}{\numberline {12.18}Sintesi conclusiva della lezione}{197}{subsection.12.18}%
-\contentsline {section}{Appendice}{198}{section*.185}%
-\contentsline {subsection}{Riferimento al materiale originale}{198}{section*.186}%
-\contentsline {section}{\numberline {13}Lezione 13}{200}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Raccordo con la lezione precedente}{200}{subsection.13.1}%
-\contentsline {subsection}{\numberline {13.2}Dalla modellazione al problema di controllo}{200}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Che cosa si intende per input}{201}{subsection.13.3}%
-\contentsline {subsection}{\numberline {13.4}Due modi di specificare gli ingressi normalizzati}{202}{subsection.13.4}%
-\contentsline {subsection}{\numberline {13.5}Ingresso specifico atteso}{203}{subsection.13.5}%
-\contentsline {subsection}{\numberline {13.6}Insieme di ingressi attesi limitati}{204}{subsection.13.6}%
-\contentsline {subsection}{\numberline {13.7}Interpretazione frequenziale del peso di ingresso}{205}{subsection.13.7}%
-\contentsline {subsection}{\numberline {13.8}Esempio: come inserire un gradino nel set atteso}{206}{subsection.13.8}%
-\contentsline {subsection}{\numberline {13.9}Quali altri segnali sono contenuti nello stesso set}{207}{subsection.13.9}%
-\contentsline {subsection}{\numberline {13.10}Prestazione nominale: ruolo di $S$ e $T$}{208}{subsection.13.10}%
-\contentsline {subsection}{\numberline {13.11}Prestazione nominale in senso $\mathcal {H}_2$}{209}{subsection.13.11}%
-\contentsline {subsection}{\numberline {13.12}Dal segnale atteso al prodotto pesato $SW$}{210}{subsection.13.12}%
-\contentsline {subsection}{\numberline {13.13}Prestazione nominale in senso $\mathcal {H}_\infty $}{211}{subsection.13.13}%
-\contentsline {subsection}{\numberline {13.14}Confronto tra criteri $\mathcal {H}_2$ e $\mathcal {H}_\infty $}{212}{subsection.13.14}%
-\contentsline {subsection}{\numberline {13.15}Sintesi conclusiva della lezione}{212}{subsection.13.15}%
-\contentsline {section}{Appendice}{214}{section*.200}%
-\contentsline {subsection}{Riferimento al materiale originale}{214}{section*.201}%
-\contentsline {section}{\numberline {14}Lezione 14}{216}{section.14}%
-\contentsline {subsection}{\numberline {14.1}Visione d'insieme della lezione}{216}{subsection.14.1}%
-\contentsline {subsection}{\numberline {14.2}Dalla norma $\mathcal {H}_\infty $ alla specifica su $S$}{216}{subsection.14.2}%
-\contentsline {subsection}{\numberline {14.3}Significato pratico del vincolo $\|SW\|_\infty \le 1$}{217}{subsection.14.3}%
-\contentsline {subsection}{\numberline {14.4}Interpretazione geometrica sul diagramma di Nyquist}{218}{subsection.14.4}%
-\contentsline {subsection}{\numberline {14.5}Prestazione nominale nel caso MIMO}{218}{subsection.14.5}%
-\contentsline {subsection}{\numberline {14.6}Interpretazione sperimentale del criterio $\mathcal {H}_2$ MIMO}{219}{subsection.14.6}%
-\contentsline {subsection}{\numberline {14.7}Prestazione nominale $\mathcal {H}_\infty $ nel caso MIMO}{220}{subsection.14.7}%
-\contentsline {subsection}{\numberline {14.8}Forma standard della specifica MIMO}{221}{subsection.14.8}%
-\contentsline {subsection}{\numberline {14.9}Perch\'e la sensibilit\`a $S$ \`e l'oggetto giusto}{222}{subsection.14.9}%
-\contentsline {subsection}{\numberline {14.10}Come si legge un peso di prestazione $w_P$}{223}{subsection.14.10}%
-\contentsline {subsection}{\numberline {14.11}Peso tipico di prestazione}{224}{subsection.14.11}%
-\contentsline {subsection}{\numberline {14.12}Perch\'e $w_P S$ da solo non basta}{225}{subsection.14.12}%
-\contentsline {subsection}{\numberline {14.13}Dal weighted sensitivity al mixed sensitivity}{226}{subsection.14.13}%
-\contentsline {subsection}{\numberline {14.14}Sintesi conclusiva della lezione}{227}{subsection.14.14}%
-\contentsline {section}{Appendice}{228}{section*.213}%
-\contentsline {subsection}{Riferimento al materiale originale}{228}{section*.214}%
+\contentsline {subsubsection}{\numberline {8.2.4}Equazioni di Lyapunov}{126}{subsubsection.8.2.4}%
+\contentsline {subsection}{\numberline {8.3}Lo spazio di Hardy $H_\infty $}{127}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}Norma $H_\infty $ come guadagno peggiore}{127}{subsubsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.2}Interpretazione come norma indotta da $L_2$ a $L_2$}{128}{subsubsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.4}Perch\'e la norma $H_\infty $ \`e pi\`u difficile da calcolare}{129}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Il test con la matrice Hamiltoniana}{130}{subsection.8.5}%
+\contentsline {subsubsection}{\numberline {8.5.1}Dalla soglia $\gamma $ alla funzione $Q(s)$}{130}{subsubsection.8.5.1}%
+\contentsline {subsubsection}{\numberline {8.5.2}Da positivit\`a a invertibilit\`a}{132}{subsubsection.8.5.2}%
+\contentsline {subsubsection}{\numberline {8.5.3}Da invertibilit\`a ad assenza di poli sull'asse immaginario}{134}{subsubsection.8.5.3}%
+\contentsline {subsubsection}{\numberline {8.5.4}Comparsa della matrice Hamiltoniana}{134}{subsubsection.8.5.4}%
+\contentsline {subsubsection}{\numberline {8.5.5}Perch\'e compare $G^T(-s)$}{136}{subsubsection.8.5.5}%
+\contentsline {subsection}{\numberline {8.6}Sintesi conclusiva della lezione}{137}{subsection.8.6}%
+\contentsline {section}{Appendice}{139}{section*.126}%
+\contentsline {subsection}{Nota sulle convenzioni per la matrice Hamiltoniana}{139}{section*.127}%
+\contentsline {subsection}{Riferimento al materiale originale}{139}{section*.128}%
+\contentsline {section}{\numberline {9}Lezione 9}{141}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Visione d'insieme della lezione}{141}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Il lemma di Kalman--Yakubovich--Popov}{141}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Complemento di Schur e passaggio a Riccati}{142}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Bounded real lemma nel caso strettamente proprio}{143}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Formulazione LMI per sistemi propri}{144}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Forma di Riccati del bounded real lemma}{145}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}Forma Hamiltoniana generale}{146}{subsection.9.7}%
+\contentsline {subsection}{\numberline {9.8}Sintesi conclusiva della lezione}{147}{subsection.9.8}%
+\contentsline {section}{Appendice}{148}{section*.135}%
+\contentsline {subsection}{Nota sulle convenzioni di segno nelle LMI}{148}{section*.136}%
+\contentsline {subsection}{Riferimento al materiale originale}{148}{section*.137}%
+\contentsline {section}{\numberline {10}Lezione 10}{150}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Visione d'insieme della lezione}{150}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Calcolo della norma $H_\infty $ tramite bisezione}{150}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Metodo di Routh--Hurwitz sul polinomio della Hamiltoniana}{151}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Esempio scalare: $G(s)=1/(s+2)$}{152}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}Esempio vettoriale: due canali di uscita}{153}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}Esempio scalare generale e legame con Riccati}{155}{subsection.10.6}%
+\contentsline {subsection}{\numberline {10.7}Confronto tra norme $H_\infty $ e $H_2$}{156}{subsection.10.7}%
+\contentsline {subsection}{\numberline {10.8}Perch\`e la norma $H_\infty $ \`e cos\`i usata}{158}{subsection.10.8}%
+\contentsline {subsection}{\numberline {10.9}Norma di Hankel}{159}{subsection.10.9}%
+\contentsline {subsection}{\numberline {10.10}Esempio finale: tutte le norme per $G(s)=1/(s+a)$}{161}{subsection.10.10}%
+\contentsline {subsection}{\numberline {10.11}Sintesi conclusiva della lezione}{162}{subsection.10.11}%
+\contentsline {section}{Appendice}{163}{section*.150}%
+\contentsline {subsection}{Riferimento al materiale originale}{163}{section*.151}%
+\contentsline {section}{\numberline {11}Lezione 11}{165}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Visione d'insieme della lezione}{165}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}I quattro ingredienti di un problema di controllo}{165}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Modello del processo}{166}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Incertezza di modello e obiettivi robusti}{167}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}Da dove nasce l'incertezza}{168}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Incertezza parametrica e incertezza dinamica}{169}{subsection.11.6}%
+\contentsline {subsection}{\numberline {11.7}Famiglie di piante e bande di Nyquist}{170}{subsection.11.7}%
+\contentsline {subsection}{\numberline {11.8}Dal reale al complesso: conservativit\`a e lumping}{171}{subsection.11.8}%
+\contentsline {subsection}{\numberline {11.9}Approssimazione a dischi delle regioni di incertezza}{171}{subsection.11.9}%
+\contentsline {subsection}{\numberline {11.10}Incertezza additiva}{172}{subsection.11.10}%
+\contentsline {subsection}{\numberline {11.11}Incertezza moltiplicativa}{173}{subsection.11.11}%
+\contentsline {subsection}{\numberline {11.12}Incertezza inversa moltiplicativa}{174}{subsection.11.12}%
+\contentsline {subsection}{\numberline {11.13}Esempio 1: incertezza di guadagno}{175}{subsection.11.13}%
+\contentsline {subsection}{\numberline {11.14}Esempio 2: incertezza sulla costante di tempo}{176}{subsection.11.14}%
+\contentsline {subsection}{\numberline {11.15}Esempio 3: incertezza sulla posizione di un polo}{177}{subsection.11.15}%
+\contentsline {subsection}{\numberline {11.16}Esempio 4: incertezza sulla posizione di uno zero}{178}{subsection.11.16}%
+\contentsline {subsection}{\numberline {11.17}Sintesi conclusiva della lezione}{179}{subsection.11.17}%
+\contentsline {section}{Appendice}{181}{section*.167}%
+\contentsline {subsection}{Riferimento al materiale originale}{181}{section*.168}%
+\contentsline {section}{\numberline {12}Lezione 12}{183}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Visione d'insieme della lezione}{183}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Incertezza parametrica su uno zero: forma $s+z$}{183}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Da una famiglia parametrica a una perturbazione complessa}{184}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Esempio: scelta di un nominale semplificato}{185}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}Scelta del modello nominale}{186}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6}Costruzione di un peso razionale}{187}{subsection.12.6}%
+\contentsline {subsection}{\numberline {12.7}Dinamiche trascurate come incertezza}{188}{subsection.12.7}%
+\contentsline {subsection}{\numberline {12.8}Esempio: ritardo trascurato}{189}{subsection.12.8}%
+\contentsline {subsection}{\numberline {12.9}Esempio: lag trascurato}{190}{subsection.12.9}%
+\contentsline {subsection}{\numberline {12.10}Esempio: incertezza con guadagno e ritardo}{191}{subsection.12.10}%
+\contentsline {subsection}{\numberline {12.11}Dinamiche non modellate}{192}{subsection.12.11}%
+\contentsline {subsection}{\numberline {12.12}Passaggio al caso MIMO}{193}{subsection.12.12}%
+\contentsline {subsection}{\numberline {12.13}Forme inverse nel caso MIMO}{194}{subsection.12.13}%
+\contentsline {subsection}{\numberline {12.14}Lumping MIMO in una sola perturbazione}{195}{subsection.12.14}%
+\contentsline {subsection}{\numberline {12.15}Spostare l'incertezza dall'ingresso all'uscita}{196}{subsection.12.15}%
+\contentsline {subsection}{\numberline {12.16}Esempi sull'effetto del condizionamento}{197}{subsection.12.16}%
+\contentsline {subsection}{\numberline {12.17}Incertezza diagonale}{198}{subsection.12.17}%
+\contentsline {subsection}{\numberline {12.18}Sintesi conclusiva della lezione}{199}{subsection.12.18}%
+\contentsline {section}{Appendice}{200}{section*.185}%
+\contentsline {subsection}{Riferimento al materiale originale}{200}{section*.186}%
+\contentsline {section}{\numberline {13}Lezione 13}{202}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Raccordo con la lezione precedente}{202}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Dalla modellazione al problema di controllo}{202}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Che cosa si intende per input}{203}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}Due modi di specificare gli ingressi normalizzati}{204}{subsection.13.4}%
+\contentsline {subsection}{\numberline {13.5}Ingresso specifico atteso}{205}{subsection.13.5}%
+\contentsline {subsection}{\numberline {13.6}Insieme di ingressi attesi limitati}{206}{subsection.13.6}%
+\contentsline {subsection}{\numberline {13.7}Interpretazione frequenziale del peso di ingresso}{207}{subsection.13.7}%
+\contentsline {subsection}{\numberline {13.8}Esempio: come inserire un gradino nel set atteso}{208}{subsection.13.8}%
+\contentsline {subsection}{\numberline {13.9}Quali altri segnali sono contenuti nello stesso set}{209}{subsection.13.9}%
+\contentsline {subsection}{\numberline {13.10}Prestazione nominale: ruolo di $S$ e $T$}{210}{subsection.13.10}%
+\contentsline {subsection}{\numberline {13.11}Prestazione nominale in senso $\mathcal {H}_2$}{211}{subsection.13.11}%
+\contentsline {subsection}{\numberline {13.12}Dal segnale atteso al prodotto pesato $SW$}{212}{subsection.13.12}%
+\contentsline {subsection}{\numberline {13.13}Prestazione nominale in senso $\mathcal {H}_\infty $}{213}{subsection.13.13}%
+\contentsline {subsection}{\numberline {13.14}Confronto tra criteri $\mathcal {H}_2$ e $\mathcal {H}_\infty $}{214}{subsection.13.14}%
+\contentsline {subsection}{\numberline {13.15}Sintesi conclusiva della lezione}{214}{subsection.13.15}%
+\contentsline {section}{Appendice}{216}{section*.200}%
+\contentsline {subsection}{Riferimento al materiale originale}{216}{section*.201}%
+\contentsline {section}{\numberline {14}Lezione 14}{218}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Visione d'insieme della lezione}{218}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}Dalla norma $\mathcal {H}_\infty $ alla specifica su $S$}{218}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}Significato pratico del vincolo $\|SW\|_\infty \le 1$}{219}{subsection.14.3}%
+\contentsline {subsection}{\numberline {14.4}Interpretazione geometrica sul diagramma di Nyquist}{220}{subsection.14.4}%
+\contentsline {subsection}{\numberline {14.5}Prestazione nominale nel caso MIMO}{220}{subsection.14.5}%
+\contentsline {subsection}{\numberline {14.6}Interpretazione sperimentale del criterio $\mathcal {H}_2$ MIMO}{221}{subsection.14.6}%
+\contentsline {subsection}{\numberline {14.7}Prestazione nominale $\mathcal {H}_\infty $ nel caso MIMO}{222}{subsection.14.7}%
+\contentsline {subsection}{\numberline {14.8}Forma standard della specifica MIMO}{223}{subsection.14.8}%
+\contentsline {subsection}{\numberline {14.9}Perch\'e la sensibilit\`a $S$ \`e l'oggetto giusto}{224}{subsection.14.9}%
+\contentsline {subsection}{\numberline {14.10}Come si legge un peso di prestazione $w_P$}{225}{subsection.14.10}%
+\contentsline {subsection}{\numberline {14.11}Peso tipico di prestazione}{226}{subsection.14.11}%
+\contentsline {subsection}{\numberline {14.12}Perch\'e $w_P S$ da solo non basta}{227}{subsection.14.12}%
+\contentsline {subsection}{\numberline {14.13}Dal weighted sensitivity al mixed sensitivity}{228}{subsection.14.13}%
+\contentsline {subsection}{\numberline {14.14}Sintesi conclusiva della lezione}{229}{subsection.14.14}%
+\contentsline {section}{Appendice}{230}{section*.213}%
+\contentsline {subsection}{Riferimento al materiale originale}{230}{section*.214}%

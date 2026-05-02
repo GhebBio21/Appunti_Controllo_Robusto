@@ -3992,7 +3992,7 @@ Questa parte del documento \`e una traduzione e rielaborazione estesa delle slid
 \includegraphics[width=0.78\textwidth]{images8/norms-new-33-53-005.png}
 \vfill
 \begin{focusbox}
-\textbf{Obiettivo del documento.} Questa parte del testo sviluppa la Lezione 8 a partire dalle slide 33--53 del PDF aggiornato ``Norms for signals and systems''. Il primo obiettivo \`e mostrare che la norma $H_2$ pu\`o essere calcolata in modo molto efficiente tramite la rappresentazione di stato e i gramiani di controllabilit\`a e osservabilit\`a. Il secondo obiettivo \`e introdurre la norma $H_\infty$ come misura del guadagno peggiore del sistema, per poi arrivare al criterio numerico basato sulla matrice Hamiltoniana che permette di testare se $\|G\|_{H_\infty}<\gamma$. Rispetto alla versione precedente del PDF, la parte finale \`e stata ampliata con passaggi intermedi che chiariscono il ruolo di $Q(j\omega)$, della positivit\`a definita e degli autovalori della Hamiltoniana.
+\textbf{Obiettivo del documento.} Questa parte del testo segue le slide 33--53 del PDF aggiornato ``Norms for signals and systems''. La lezione completa prima il calcolo della norma $H_2$ tramite gramiani ed equazioni di Lyapunov; poi introduce la norma $H_\infty$ come guadagno energetico peggiore; infine sviluppa, passo dopo passo, il test Hamiltoniano per verificare se $\|G\|_{H_\infty}<\gamma$. Il filo conduttore resta quello delle slide: ogni formula nuova nasce dalla precedente e serve a trasformare un controllo su infinite frequenze in un problema matriciale finito.
 \end{focusbox}
 \vfill
 {\large Basato sulle slide del corso AA 2025/2026\par}
@@ -4002,21 +4002,27 @@ Questa parte del documento \`e una traduzione e rielaborazione estesa delle slid
 
 \subsection{Visione d'insieme della lezione}
 
-La Lezione 8 raccoglie due idee che in controllo robusto sono strettamente collegate, anche se a prima vista sembrano appartenere a mondi diversi. La prima \`e che la norma $H_2$, gi\`a introdotta nella lezione precedente come energia della risposta impulsiva, pu\`o essere calcolata senza passare n\'e da integrali in frequenza n\'e da somme di residui, ma direttamente dalla rappresentazione di stato del sistema. La seconda \`e che la norma $H_\infty$, che misura invece il guadagno massimo nel caso peggiore, richiede strumenti diversi: non si presta in generale a formule chiuse semplici e viene affrontata tramite test numerici e risultati strutturali.
+La Lezione 8 non introduce una lista di risultati indipendenti: costruisce una catena. Le prime slide chiudono il discorso sulla norma $H_2$ mostrando come passare dalla definizione integrale, gi\`a vista nella lezione precedente, a formule calcolabili tramite la rappresentazione di stato. Le slide successive cambiano metrica e introducono la norma $H_\infty$, cio\`e la misura del massimo guadagno energetico del sistema. L'ultimo blocco spiega perch\'e il test
+$$
+\|G\|_{H_\infty}<\gamma
+$$
+pu\`o essere trasformato in un controllo sugli autovalori di una matrice Hamiltoniana.
 
-Il blocco iniziale della lezione completa quindi il quadro dell'$H_2$ introducendo i gramiani. Questo passaggio \`e importante non solo per il calcolo numerico, ma anche perch\'e mette in luce una connessione profonda tra energia, raggiungibilit\`a degli stati e osservabilit\`a delle uscite. Nel linguaggio dei sistemi lineari, i gramiani non sono un semplice artificio algebrico: sono l'oggetto che sintetizza come il sistema accumula e restituisce energia.
-
-Il secondo blocco entra invece nel mondo della norma $H_\infty$. Qui il punto di vista cambia: non interessa pi\`u l'energia media o complessiva della risposta, ma la massima amplificazione possibile di un ingresso a energia unitaria. Per questo l'$H_\infty$ \`e la norma naturale del \emph{worst case}. Le slide la introducono dapprima come norma nello spazio di Hardy $H_\infty$, poi come norma indotta da $L_2$ a $L_2$, e infine mostrano perch\'e il suo calcolo richiede un test pi\`u sofisticato, basato sulla matrice Hamiltoniana.
+L'ordine delle slide \`e importante. Prima si vede che l'$H_2$ \`e una norma ``di accumulo'': integra l'energia della risposta impulsiva e per questo si collega naturalmente ai gramiani. Poi si vede che l'$H_\infty$ \`e una norma ``di picco'': cerca la frequenza e la direzione d'ingresso che producono l'amplificazione maggiore. Infine, proprio perch\'e cercare un massimo su tutte le frequenze \`e poco pratico, le slide costruiscono un criterio alternativo: fissata una soglia $\gamma$, si verifica se il grafico dei valori singolari resta sempre sotto quella soglia senza campionare direttamente tutte le frequenze.
 
 \begin{keybox}
-La lezione chiarisce in modo definitivo la differenza di filosofia tra $H_2$ e $H_\infty$: la prima \`e una misura energetica media, la seconda una misura di picco nel caso peggiore. Nel controllo robusto entrambe sono fondamentali, ma rispondono a domande progettuali diverse.
+La domanda dell'$H_2$ \`e: quanta energia complessiva trasferisce il sistema quando viene eccitato impulsivamente? La domanda dell'$H_\infty$ \`e: qual \`e il massimo guadagno possibile, nella frequenza e nella direzione peggiore? Il resto della lezione serve a rendere calcolabili queste due domande.
 \end{keybox}
 
 \subsection{Norma \texorpdfstring{$H_2$}{H2} e gramiani}
 
 \subsubsection{Dalla rappresentazione di stato alla risposta impulsiva}
 
-Le slide ripartono da un sistema stabile e strettamente proprio con rappresentazione di stato
+La slide 33 riparte dalla definizione frequenziale della norma $H_2$. Nel caso SISO si integra il modulo quadro di $G(j\omega)$, mentre nel caso MIMO si integra la traccia del prodotto
+$$
+G^T(-j\omega)G(j\omega),
+$$
+che, sull'asse immaginario e per sistemi reali, gioca il ruolo di $G^*(j\omega)G(j\omega)$. Queste formule sono corrette, ma non sempre comode: richiedono un integrale su tutte le frequenze. La slide propone quindi di calcolare la stessa quantit\`a nel dominio del tempo, partendo da una realizzazione di stato stabile e strettamente propria:
 $$
 \dot x(t)=Ax(t)+Bu(t),
 \qquad
@@ -4026,13 +4032,17 @@ e matrice di trasferimento
 $$
 G(s)=C(sI-A)^{-1}B.
 $$
-Nel seguito si assume che $A$ sia di Hurwitz, cio\`e che tutti i modi naturali del sistema decadano per $t\to\infty$.
+L'ipotesi di stabilit\`a significa che $A$ \`e di Hurwitz: tutti i modi naturali decadono e gli integrali che compariranno sono finiti.
 
 Integrando l'equazione di stato fra $0$ e $t$ si ottiene
 $$
+x(t)=e^{At}x(0)+\int_0^t e^{A(t-\tau)}Bu(\tau)\,d\tau,
+$$
+e quindi
+$$
 z(t)=Ce^{At}x(0)+\int_0^t Ce^{A(t-\tau)}Bu(\tau)\,d\tau.
 $$
-Le slide indicano con $H(t)$ la risposta impulsiva del sistema:
+La parte che moltiplica l'ingresso sotto integrale \`e il nucleo di convoluzione del sistema. Per questo le slide definiscono la risposta impulsiva
 $$
 H(t)=
 \begin{cases}
@@ -4040,9 +4050,7 @@ Ce^{At}B, & t>0,\\
 0, & t<0.
 \end{cases}
 $$
-Questa notazione \`e del tutto equivalente alla $g(t)$ usata nella lezione precedente; qui viene preferita perch\'e si collega in modo diretto alle formule matriciali sui gramiani.
-
-Il vantaggio di questa scrittura \`e che la norma $H_2$ pu\`o essere letta direttamente in termini di esponenziale di matrice. Invece di calcolare un integrale lungo l'asse delle frequenze o lavorare con i poli della funzione di trasferimento, si passa a un problema completamente nel dominio dello stato.
+La notazione $H(t)$ \`e la stessa risposta impulsiva indicata altrove con $g(t)$; qui \`e utile perch\'e rende subito visibile il legame con $A$, $B$ e $C$. Il passaggio concettuale della slide \`e questo: se $H(t)=Ce^{At}B$, allora l'energia della risposta impulsiva pu\`o essere riscritta come un integrale di matrici di stato.
 
 \begin{figure}[H]
     \centering
@@ -4052,19 +4060,31 @@ Il vantaggio di questa scrittura \`e che la norma $H_2$ pu\`o essere letta diret
 
 \subsubsection{Formula della norma \texorpdfstring{$H_2$}{H2} tramite gramiano di controllabilit\`a}
 
-Partendo dalla definizione
+La slide 34 sostituisce $H(t)=Ce^{At}B$ nella definizione temporale della norma:
 $$
 \|G\|_{H_2}^2
 =
 \int_0^\infty \operatorname{tr}\!\bigl(H(t)H^T(t)\bigr)\,dt,
 $$
-e sostituendo $H(t)=Ce^{At}B$, le slide ottengono
+ottenendo
 $$
 \|G\|_{H_2}^2
 =
 \int_0^\infty \operatorname{tr}\!\bigl(Ce^{At}BB^Te^{A^Tt}C^T\bigr)\,dt.
 $$
-Usando la ciclicit\`a della traccia si porta fuori il termine $C$ e si riconosce il \emph{gramiano di controllabilit\`a}
+Ora si usa la propriet\`a ciclica della traccia: dentro una traccia i fattori possono essere ruotati senza cambiare il valore. Quindi l'integrale pu\`o essere letto come
+$$
+\|G\|_{H_2}^2
+=
+\operatorname{tr}\!\left(
+C
+\left[
+\int_0^\infty e^{At}BB^Te^{A^Tt}\,dt
+\right]
+C^T
+\right).
+$$
+Il termine tra parentesi quadre \`e il gramiano di controllabilit\`a:
 $$
 W_c
 =
@@ -4075,11 +4095,11 @@ $$
 \|G\|_{H_2}^2=\operatorname{tr}(CW_cC^T).
 $$
 
-Questa scrittura ha un significato fisico molto bello. Il gramiano $W_c$ misura quanto facilmente l'energia di ingresso pu\`o essere trasferita nello stato del sistema. La norma $H_2$ si ottiene poi osservando come questo contenuto energetico viene proiettato all'uscita attraverso $C$. In altre parole, la norma $H_2$ non dipende solo dal fatto che il sistema sia controllabile o osservabile: dipende da \emph{come} lo \`e, in termini quantitativi ed energetici.
+Questa non \`e solo una scorciatoia algebrica. Il gramiano $W_c$ misura quanta energia di stato pu\`o essere generata dagli ingressi attraverso $B$, tenendo conto della dinamica $e^{At}$. La matrice $C$ prende poi quella energia di stato e la proietta sull'uscita $z$. Per questo la formula dice esattamente: energia immessa nello stato, filtrata dalla dinamica, osservata in uscita.
 
 \subsubsection{Formula tramite gramiano di osservabilit\`a}
 
-La stessa quantit\`a pu\`o essere riscritta in forma duale. Introducendo il \emph{gramiano di osservabilit\`a}
+La stessa slide mostra subito la forma duale. Invece di raggruppare l'integrale attorno a $BB^T$, si ruotano i fattori della traccia in modo da isolare $C^TC$:
 $$
 W_o
 =
@@ -4096,7 +4116,7 @@ $$
 \qquad\text{e}\qquad
 \|G\|_{H_2}^2=\operatorname{tr}(B^TW_oB)
 $$
-sono perfettamente equivalenti. La prima enfatizza il lato dell'ingresso e della raggiungibilit\`a; la seconda enfatizza il lato dell'uscita e della osservabilit\`a. Questa dualit\`a \`e tipica della teoria dei sistemi lineari e torner\`a continuamente anche nelle formule di sintesi robusta.
+sono la stessa quantit\`a vista da due lati. La formula con $W_c$ dice: guarda quanto gli ingressi riescono a riempire lo stato e poi osserva quello stato con $C$. La formula con $W_o$ dice: guarda quanto ogni stato sarebbe visibile in uscita e poi pesa gli stati effettivamente eccitati da $B$. Le slide stanno preparando cos\`\i\ l'idea che le norme di sistema non dipendono solo dai poli, ma anche da come ingressi e uscite si accoppiano ai modi interni.
 
 \begin{figure}[H]
     \centering
@@ -4105,23 +4125,64 @@ sono perfettamente equivalenti. La prima enfatizza il lato dell'ingresso e della
 \end{figure}
 
 \begin{focusbox}
-\textbf{Lettura strutturale.} Se un modo del sistema \`e facile da eccitare ma difficile da osservare, o viceversa, il suo contributo alla norma $H_2$ viene pesato in modo diverso. I gramiani servono proprio a quantificare questo bilanciamento.
+\textbf{Lettura strutturale.} Un modo interno pu\`o essere molto stabile ma quasi invisibile in uscita, oppure facile da osservare ma poco eccitabile dagli ingressi. I gramiani quantificano proprio questa geometria: raggiungibilit\`a e osservabilit\`a diventano grandezze energetiche, non solo propriet\`a booleane.
 \end{focusbox}
 
 \subsubsection{Equazioni di Lyapunov}
 
-Le slide mostrano poi come i gramiani non debbano essere necessariamente calcolati tramite integrali impropri. Se $A$ \`e di Hurwitz, i gramiani sono le soluzioni delle equazioni di Lyapunov
+Le slide 35 e 36 spiegano il passaggio successivo: i gramiani non si calcolano necessariamente tramite integrali impropri. Se $A$ \`e di Hurwitz, essi sono le soluzioni delle equazioni di Lyapunov
 $$
 A^TW_o+W_oA+C^TC=0,
 $$
 $$
 AW_c+W_cA^T+BB^T=0.
 $$
-La derivazione viene svolta in slide a partire, ad esempio, dalla definizione integrale di $W_o$. Si moltiplica l'integrale opportunamente per gli esponenziali di stato, si differenzia rispetto al tempo e si sfrutta il fatto che, essendo $A$ stabile, il contributo al bordo per $t\to\infty$ si annulla.
+Vediamo il passaggio per $W_o$, che \`e quello mostrato nelle slide. Dalla definizione
+$$
+W_o=\int_0^\infty e^{A^T\tau}C^TCe^{A\tau}\,d\tau
+$$
+si moltiplica a sinistra per $e^{A^Tt_0}$ e a destra per $e^{At_0}$:
+$$
+e^{A^Tt_0}W_oe^{At_0}
+=
+\int_0^\infty e^{A^T(t_0+\tau)}C^TCe^{A(t_0+\tau)}\,d\tau.
+$$
+Cambiando variabile $\theta=t_0+\tau$, questa diventa
+$$
+e^{A^Tt_0}W_oe^{At_0}
+=
+\int_{t_0}^\infty e^{A^T\theta}C^TCe^{A\theta}\,d\theta.
+$$
+Ora si differenzia rispetto a $t_0$. Il lato sinistro d\`a
+$$
+A^Te^{A^Tt_0}W_oe^{At_0}
++e^{A^Tt_0}W_oe^{At_0}A,
+$$
+mentre il lato destro, per la regola di derivazione di un integrale con estremo variabile, d\`a
+$$
+-e^{A^Tt_0}C^TCe^{At_0}.
+$$
+Ponendo $t_0=0$ si ottiene
+$$
+A^TW_o+W_oA=-C^TC,
+$$
+cio\`e
+$$
+A^TW_o+W_oA+C^TC=0.
+$$
+Il ragionamento per $W_c$ \`e analogo e produce
+$$
+AW_c+W_cA^T+BB^T=0.
+$$
 
-Il punto concettuale \`e essenziale: la stabilit\`a di $A$ consente di trasformare un problema integrale infinito in un problema algebrico lineare matriciale. Questo \`e il motivo per cui, in pratica, la norma $H_2$ si calcola spesso risolvendo un'equazione di Lyapunov invece di eseguire integrali numerici in frequenza.
+Il punto concettuale \`e essenziale: la stabilit\`a di $A$ permette di sostituire un integrale infinito con un'equazione matriciale lineare. In pratica, quindi, il calcolo di $\|G\|_{H_2}$ diventa:
+\begin{enumerate}
+    \item risolvere una Lyapunov per $W_c$ oppure per $W_o$;
+    \item calcolare la traccia corrispondente;
+    \item prendere la radice quadrata.
+\end{enumerate}
 
-Le slide ricordano anche che in \textsc{Matlab} questo problema si affronta con il comando `lyap`. \`E un dettaglio pratico semplice, ma importante: segnala che la teoria qui introdotta non resta formale, bens\`\i\ \`e immediatamente traducibile in strumenti computazionali standard.
+La slide 36 richiama anche il comando \texttt{lyap} di \textsc{Matlab}. Il dettaglio \`e pratico ma significativo: l'obiettivo di questo blocco non \`e solo dare una formula elegante, ma arrivare a un metodo di calcolo stabile e standard.
 
 \begin{figure}[H]
     \centering
@@ -4141,23 +4202,36 @@ Le slide ricordano anche che in \textsc{Matlab} questo problema si affronta con 
 
 \subsubsection{Norma \texorpdfstring{$H_\infty$}{Hinf} come guadagno peggiore}
 
-La seconda parte della lezione introduce la norma $H_\infty$, che svolge per il caso peggiore il ruolo che la norma $H_2$ svolge per il caso energetico medio. Le slide partono dallo spazio di Hardy $H_\infty$, formato dalle funzioni analitiche nel semipiano considerato dalla convenzione adottata e limitate in quel semipiano.
+La slide 37 apre la seconda parte con una frase molto precisa: per sistemi dinamici SISO e MIMO, la norma $H_\infty$ misura il \emph{worst-case system gain}. Quindi non stiamo pi\`u chiedendo quanta energia complessiva compare nella risposta impulsiva, come per l'$H_2$; stiamo chiedendo quanto il sistema pu\`o amplificare nel caso pi\`u sfavorevole.
 
-Per una matrice di trasferimento $G(s)$ la definizione astratta \`e
+Le slide introducono questa idea passando dallo spazio di Hardy $H_\infty$. Con la convenzione usata nel corso, si considerano funzioni analitiche nel semipiano destro aperto e limitate in quel semipiano. Per una matrice di trasferimento $G(s)$ si definisce
 $$
 \|G\|_{H_\infty}
 =
 \sup_{a>0}\sup_{\omega}\,\bar{\sigma}\!\bigl(G(a+j\omega)\bigr),
 $$
-dove $\bar{\sigma}$ indica il massimo valore singolare. Nel caso di una funzione di trasferimento stabile e razionale, la norma si riduce alla forma pi\`u familiare
+dove $\bar{\sigma}$ \`e il massimo valore singolare. Il parametro $a>0$ serve a guardare le rette verticali interne al dominio di analiticit\`a; poi, per funzioni stabili, il valore della norma pu\`o essere letto sul bordo. Infatti la slide successiva dice che, se $G\in H_\infty$, allora il limite
+$$
+G(j\omega)=\lim_{a\to 0^+}G(a+j\omega)
+$$
+esiste per quasi ogni $\omega$ e
 $$
 \|G\|_{H_\infty}
 =
 \sup_{\omega\in\mathbb{R}} \bar{\sigma}\!\bigl(G(j\omega)\bigr).
 $$
-Quando il massimo \`e effettivamente raggiunto, si pu\`o anche scrivere `max`.
+Quando il massimo \`e raggiunto, come accade nei casi razionali stabili pi\`u comuni, si pu\`o sostituire il sup con un max.
 
-Il significato operativo di questa formula \`e immediato: la norma $H_\infty$ \`e il massimo guadagno del sistema su tutte le frequenze e su tutte le direzioni di ingresso. Nel caso SISO si riduce semplicemente al picco del modulo di $G(j\omega)$; nel caso MIMO seleziona, a ogni frequenza, la direzione di ingresso pi\`u amplificata.
+Il motivo della definizione si vede dalla disuguaglianza scritta nelle slide. Se $z=Gw$, allora, in frequenza,
+$$
+\|z\|_2^2
+\le
+\left(
+\sup_{a>0}\sup_\omega \bar{\sigma}^2(G(a+j\omega))
+\right)
+\|w\|_2^2.
+$$
+Quindi la quantit\`a $\|G\|_{H_\infty}$ \`e proprio il numero che limita dall'alto il guadagno energetico del sistema. Nel caso SISO \`e il picco di $|G(j\omega)|$; nel caso MIMO \`e il picco, su tutte le frequenze, del massimo valore singolare, cio\`e della direzione d'ingresso amplificata di pi\`u.
 
 \begin{figure}[H]
     \centering
@@ -4175,7 +4249,9 @@ Il significato operativo di questa formula \`e immediato: la norma $H_\infty$ \`
 
 \subsubsection{Interpretazione come norma indotta da \texorpdfstring{$L_2$}{L2} a \texorpdfstring{$L_2$}{L2}}
 
-Le slide danno poi la lettura pi\`u importante per il controllo robusto. Per un sistema stabile,
+La slide 39 traduce la definizione in una forma direttamente operativa. Se $G$ \`e razionale, allora $G\in H_\infty$ se e solo se non ha poli nel semipiano destro chiuso. In altre parole, per i sistemi razionali del corso la condizione di appartenenza a $H_\infty$ coincide con la stabilit\`a del sistema.
+
+Per un sistema stabile, la norma $H_\infty$ \`e la norma indotta da $L_2$ a $L_2$:
 $$
 \|G\|_{H_\infty}
 =
@@ -4188,17 +4264,15 @@ $$
 =
 \sup_{w\neq 0}\frac{\|z\|_2}{\|w\|_2}.
 $$
-Questa \`e la norma indotta dell'operatore lineare che manda l'ingresso $w$ nell'uscita $z$.
+La frase ``energia gain'' della slide va letta cos\`\i: si considerano tutti gli ingressi a energia finita, si normalizza la loro energia a uno, e si cerca l'uscita a energia massima. Il rapporto peggiore \`e $\|G\|_{H_\infty}$.
 
-La differenza rispetto all'$H_2$ \`e ora chiarissima:
+La differenza rispetto all'$H_2$ \`e quindi netta:
 \begin{itemize}
-    \item l'$H_2$ somma l'energia distribuita su tutte le frequenze e su tutte le direzioni;
-    \item l'$H_\infty$ isola la direzione e la frequenza pi\`u sfavorevoli e ne misura l'amplificazione massima.
+    \item l'$H_2$ misura una risposta energetica complessiva, ottenuta integrando la risposta impulsiva;
+    \item l'$H_\infty$ misura un limite uniforme: nessun ingresso $L_2$ pu\`o essere amplificato pi\`u di quel fattore.
 \end{itemize}
 
-Per questo il linguaggio dell'\emph{$H_\infty$ control} nasce proprio da qui: si cerca di progettare un controllo che mantenga piccolo il guadagno massimo di certi canali chiusi, assicurando nello stesso tempo la stabilit\`a interna del sistema.
-
-Le slide osservano anche che, nel caso razionale, appartenere a $H_\infty$ equivale a non avere poli nel semipiano destro chiuso. Ancora una volta compare il piccolo scarto di convenzione gi\`a visto per $H_2$: al netto del segno nella variabile complessa, il messaggio operativo \`e semplicemente che il sistema dev'essere stabile.
+Da qui nasce il nome \emph{$H_\infty$ control}: si vogliono imporre obiettivi del tipo ``tieni piccola la norma $H_\infty$ di questo canale chiuso'', naturalmente sotto il vincolo che il ciclo chiuso sia internamente stabile.
 
 \begin{figure}[H]
     \centering
@@ -4207,31 +4281,55 @@ Le slide osservano anche che, nel caso razionale, appartenere a $H_\infty$ equiv
 \end{figure}
 
 \begin{focusbox}
-\textbf{Punto chiave per il controllo robusto.} Minimizzare una norma $H_\infty$ significa controllare il peggior caso tra tutti i segnali a energia unitaria. \`E per questo che l'$H_\infty$ \`e la metrica naturale quando si vogliono imporre specifiche robuste con garanzie uniformi.
+\textbf{Punto chiave per il controllo robusto.} Una specifica $H_\infty$ non dice che il sistema va bene ``in media'': dice che nessuna frequenza e nessuna direzione d'ingresso pu\`o superare il guadagno imposto. Per questo \`e la metrica naturale delle garanzie di caso peggiore.
 \end{focusbox}
 
 \subsection{Perch\'e la norma \texorpdfstring{$H_\infty$}{Hinf} \`e pi\`u difficile da calcolare}
 
-Le slide mettono subito in evidenza una differenza pratica importante: a differenza della norma $H_2$, la norma $H_\infty$ non si lascia quasi mai calcolare in forma chiusa. In generale si ricorre a metodi numerici.
+La slide 40 mette in evidenza il salto pratico rispetto all'$H_2$. Per l'$H_2$ abbiamo appena ottenuto una Lyapunov, quindi una procedura algebrica diretta. Per l'$H_\infty$, invece, la norma coincide con il massimo di una funzione di frequenza:
+$$
+\omega\mapsto \bar{\sigma}(G(j\omega)).
+$$
+In generale questo massimo non si calcola analiticamente.
 
-Vengono indicate tre strategie concettuali:
+Le slide elencano tre strategie:
 \begin{enumerate}
     \item tracciare $\bar{\sigma}(G(j\omega))$ in funzione di $\omega$ e cercarne il massimo per ispezione;
-    \item eseguire una ricerca numerica su $\omega$, cio\`e scandire la frequenza e stimare il massimo;
-    \item trasformare il problema in un test del tipo ``\(\|G\|_{H_\infty}<\gamma\)?'' e poi cercare la soglia minima $\gamma$ tramite bisezione.
+    \item scandire numericamente $\omega$ con un calcolatore;
+    \item trasformare il problema in una famiglia di test: fissato $\gamma>0$, decidere se $\|G\|_{H_\infty}<\gamma$.
 \end{enumerate}
 
-Le prime due strategie sono intuitive, ma hanno un limite evidente: campionare la frequenza non garantisce da solo di aver trovato il massimo esatto. La terza strategia \`e invece pi\`u robusta dal punto di vista numerico, perch\'e trasforma il calcolo della norma in una successione di test booleani.
+Le prime due strategie sono intuitive, ma la slide insiste su un limite: valutare $\bar{\sigma}(G(j\omega_0))$ in un punto dice solo che
+$$
+\|G\|_{H_\infty}\ge \bar{\sigma}(G(j\omega_0)).
+$$
+Non certifica che non esista un picco pi\`u alto tra due frequenze campionate. Per questo la terza strategia \`e pi\`u importante: se sappiamo rispondere in modo affidabile alla domanda ``$\|G\|_{H_\infty}<\gamma$?'', allora possiamo trovare la norma con una ricerca su $\gamma$, ad esempio per bisezione, mantenendo sempre un intervallo
+$$
+\gamma_{\mathrm{low}}<\|G\|_{H_\infty}<\gamma_{\mathrm{high}}.
+$$
 
-Dal punto di vista temporale, la disuguaglianza
+La slide 41 spiega anche la lettura nel dominio del tempo. Per il teorema di Parseval, la norma $H_\infty$ pu\`o essere caratterizzata come
 $$
-\|G\|_{H_\infty}<\gamma
+\|G\|_{H_\infty}
+=
+\sup_{v\neq 0}\frac{\|z\|_2}{\|v\|_2},
+\qquad z=Gv.
 $$
-equivale a chiedere che, per ogni ingresso non nullo,
+Quindi, fissato $\gamma>0$, la condizione $\|G\|_{H_\infty}<\gamma$ equivale a dire che per ogni ingresso non nullo
 $$
-\|z\|_2^2-\gamma^2\|w\|_2^2<0.
+\|z\|_2^2-\gamma^2\|v\|_2^2<0.
 $$
-Questa formula chiarisce bene il senso di $\gamma$: \`e un tetto uniforme sul guadagno energetico del sistema. Se la disuguaglianza vale, nessun ingresso a energia unitaria pu\`o produrre un'uscita con energia superiore a $\gamma^2$.
+Le slide lo scrivono come funzionale
+$$
+J_\infty(G,\gamma)
+=
+\max_v
+\int_0^\infty
+\left[
+z^T(t)z(t)-\gamma^2v^T(t)v(t)
+\right]dt.
+$$
+Se questo massimo \`e negativo, allora nessun ingresso riesce a produrre un guadagno energetico maggiore di $\gamma$. Il blocco successivo della lezione cerca proprio un test pratico per stabilire questa disuguaglianza.
 
 \begin{figure}[H]
     \centering
@@ -4251,40 +4349,49 @@ Questa formula chiarisce bene il senso di $\gamma$: \`e un tetto uniforme sul gu
 
 \subsubsection{Dalla soglia \texorpdfstring{$\gamma$}{gamma} alla funzione \texorpdfstring{$Q(s)$}{Q(s)}}
 
-Il cuore della lezione \`e il criterio che consente di decidere se $\|G\|_{H_\infty}<\gamma$ senza scandire esplicitamente tutte le frequenze. Nella versione aggiornata delle slide, questo passaggio viene spiegato con pi\`u gradualit\`a: prima si traduce la disuguaglianza sulla norma $H_\infty$ in una disuguaglianza sui valori singolari, poi in una condizione di positivit\`a matriciale, e solo alla fine in una condizione sugli autovalori di una matrice Hamiltoniana.
+La slide 42 anticipa l'intera pipeline. Per calcolare la norma $H_\infty$ non si cerca direttamente il massimo di $\bar{\sigma}(G(j\omega))$; si fissa una soglia $\gamma$ e si testa se il sistema resta sempre sotto tale soglia. Il risultato attribuito nelle slide a Doyle et al. dice che, per un sistema stabile, la condizione
+$$
+\|G\|_{H_\infty}<\gamma
+$$
+pu\`o essere ricondotta alla funzione
+$$
+Q(s)=I-\frac{1}{\gamma^2}G^T(-s)G(s).
+$$
+L'idea \`e: se $\gamma$ \`e pi\`u grande del massimo guadagno del sistema, allora $Q(j\omega)$ deve restare positiva per ogni frequenza; se invece il grafico dei valori singolari tocca o supera $\gamma$, da qualche parte $Q(j\omega)$ perde positivit\`a.
 
-Il punto di partenza \`e
-$$
-\|G\|_{H_\infty}<\gamma.
-$$
-Poich\'e
+Le slide 43 e 44 esplicitano questo passaggio. Per definizione,
 $$
 \|G\|_{H_\infty}
 =
-\sup_{\omega\in\mathbb{R}}\bar{\sigma}\!\bigl(G(j\omega)\bigr),
+\sup_{\omega\in\mathbb{R}}\bar{\sigma}\!\bigl(G(j\omega)\bigr).
 $$
-questa condizione equivale a chiedere che
+Quindi
 $$
+\|G\|_{H_\infty}<\gamma
+\quad\Longleftrightarrow\quad
 \bar{\sigma}\!\bigl(G(j\omega)\bigr)<\gamma
 \qquad
 \forall\,\omega\in\mathbb{R}.
 $$
-Il massimo valore singolare pu\`o essere scritto come
+Per sistemi reali, sull'asse immaginario vale
 $$
 \bar{\sigma}\!\bigl(G(j\omega)\bigr)
 =
 \sqrt{\lambda_{\max}\!\bigl(G^T(-j\omega)G(j\omega)\bigr)}.
 $$
-Quindi la richiesta $\bar{\sigma}(G(j\omega))<\gamma$ \`e equivalente a
+Qui $G^T(-j\omega)$ \`e il modo usato nelle slide per scrivere l'aggiunto frequenziale: nel caso reale coincide con il complesso coniugato trasposto di $G(j\omega)$.
+
+La disuguaglianza sui valori singolari diventa allora
 $$
 \lambda_{\max}\!\bigl(G^T(-j\omega)G(j\omega)\bigr)<\gamma^2.
 $$
-
-Per una matrice hermitiana $M$, la condizione $\lambda_{\max}(M)<c$ equivale a
+Ora entra un fatto elementare di algebra lineare: per una matrice hermitiana $M$,
 $$
-cI-M>0,
+\lambda_{\max}(M)<c
+\quad\Longleftrightarrow\quad
+cI-M>0.
 $$
-cio\`e alla positivit\`a definita della matrice $cI-M$. Applicando questa osservazione a
+Infatti gli autovalori di $cI-M$ sono $c-\lambda_i(M)$, tutti positivi se e solo se ogni $\lambda_i(M)$ \`e minore di $c$. Applicandolo a
 $$
 M=G^T(-j\omega)G(j\omega),
 \qquad c=\gamma^2,
@@ -4293,9 +4400,11 @@ si ottiene
 $$
 \gamma^2I-G^T(-j\omega)G(j\omega)>0.
 $$
-Normalizzando per $\gamma^2$, le slide introducono quindi
+Dividendo per $\gamma^2$ si ottiene esattamente la matrice delle slide:
 $$
-Q(s)=I-\frac{1}{\gamma^2}G^T(-s)G(s),
+Q(j\omega)
+=
+I-\frac{1}{\gamma^2}G^T(-j\omega)G(j\omega),
 $$
 per cui
 $$
@@ -4328,15 +4437,24 @@ $$
 
 \subsubsection{Da positivit\`a a invertibilit\`a}
 
-Se $Q(j\omega)>0$ per ogni $\omega$, allora $Q(j\omega)$ \`e certamente invertibile per ogni $\omega$, perch\'e tutti i suoi autovalori sono positivi. Questa direzione \`e immediata.
+Le slide 45 e 46 fanno un passaggio che a prima vista pu\`o sembrare minore, ma \`e il punto che permette di abbandonare la disuguaglianza matriciale. Abbiamo ottenuto
+$$
+Q(j\omega)>0\qquad\forall \omega.
+$$
+Una matrice positiva definita ha tutti gli autovalori positivi, quindi determinante non nullo, quindi \`e invertibile. Dunque
+$$
+Q(j\omega)>0\ \forall\omega
+\quad\Longrightarrow\quad
+Q(j\omega)\ \text{invertibile}\ \forall\omega.
+$$
 
-La direzione opposta richiede invece il ragionamento di continuit\`a introdotto dalle nuove slide. Poich\'e $Q(j\omega)$ \`e hermitiana, i suoi autovalori sono reali. Consideriamo l'autovalore minimo
+La direzione opposta richiede la piccola argomentazione di continuit\`a mostrata nella slide 46. Poich\'e $Q(j\omega)$ \`e hermitiana, i suoi autovalori sono reali. Consideriamo l'autovalore minimo
 $$
 \lambda_{\min}\!\bigl(Q(j\omega)\bigr).
 $$
-Al variare di $\omega$, questo autovalore \`e una funzione continua. Se $Q(j\omega)$ \`e invertibile per ogni $\omega$, nessun autovalore pu\`o mai annullarsi. Se inoltre, per frequenze sufficientemente alte, $Q(j\omega)$ \`e positiva, allora l'autovalore minimo parte positivo e non pu\`o diventare negativo senza attraversare lo zero.
+Al variare di $\omega$, questa quantit\`a \`e continua. Se $Q(j\omega)$ \`e invertibile per ogni $\omega$, nessun autovalore pu\`o annullarsi. Se inoltre $Q(j\omega)$ \`e positiva per frequenze molto alte, allora $\lambda_{\min}$ parte positiva e non pu\`o diventare negativa senza attraversare lo zero. Ma lo zero \`e escluso dall'invertibilit\`a. Quindi, sotto la condizione corretta all'infinito, l'invertibilit\`a per ogni $\omega$ equivale alla positivit\`a per ogni $\omega$.
 
-Nel caso strettamente proprio, cio\`e
+La slide 47 distingue proprio la condizione all'infinito. Se $G$ \`e strettamente propria,
 $$
 G(s)=C(sI-A)^{-1}B,
 \qquad D=0,
@@ -4347,21 +4465,21 @@ G(j\infty)=0,
 \qquad
 Q(j\infty)=I>0.
 $$
-Nel caso solo proprio, con
+Quindi la positivit\`a ad alta frequenza \`e automatica. Se invece $G$ \`e propria ma non strettamente propria,
 $$
 G(s)=C(sI-A)^{-1}B+D,
 $$
-invece
+allora
 $$
 G(j\infty)=D,
 \qquad
 Q(j\infty)=I-\frac{1}{\gamma^2}D^TD.
 $$
-In questo caso bisogna verificare separatamente che
+Questa matrice \`e positiva definita se e solo se
 $$
 \bar{\sigma}(D)<\gamma.
 $$
-Se questa condizione fallisce, la soglia $\gamma$ \`e gi\`a troppo bassa alla frequenza infinita.
+La slide dice giustamente che questa condizione va verificata separatamente: se fallisce, la soglia $\gamma$ \`e gi\`a violata alla frequenza infinita e il test si ferma.
 
 \begin{figure}[H]
     \centering
@@ -4385,14 +4503,18 @@ Se questa condizione fallisce, la soglia $\gamma$ \`e gi\`a troppo bassa alla fr
 
 \subsubsection{Da invertibilit\`a ad assenza di poli sull'asse immaginario}
 
-Poich\'e $Q(s)$ \`e una matrice razionale, i poli di $Q^{-1}(s)$ sono esattamente gli zeri di $\det Q(s)$. Valutando sull'asse immaginario, si ottiene quindi
+La slide 48 traduce l'invertibilit\`a frequenziale in una frase sui poli. Poich\'e $Q(s)$ \`e una matrice razionale, $Q^{-1}(s)$ ha poli nei punti in cui $Q(s)$ perde rango, cio\`e dove
+$$
+\det Q(s)=0.
+$$
+Sull'asse immaginario poniamo $s=j\omega$, quindi
 $$
 Q(j\omega)\ \text{invertibile per ogni }\omega
 \qquad\Longleftrightarrow\qquad
 Q^{-1}(s)\ \text{non ha poli su }j\mathbb{R}.
 $$
 
-Riassumendo, nel caso strettamente proprio la catena logica diventa
+Nel caso strettamente proprio, o nel caso proprio dopo aver verificato $\bar{\sigma}(D)<\gamma$, la catena logica costruita fin qui \`e:
 $$
 \|G\|_{H_\infty}<\gamma
 \Longleftrightarrow
@@ -4402,7 +4524,7 @@ Q(j\omega)\ \text{invertibile}\ \forall\omega
 \Longleftrightarrow
 Q^{-1}(s)\ \text{senza poli su }j\mathbb{R}.
 $$
-Questo \`e il punto esatto in cui il problema passa dalla frequenza agli autovalori: se riusciamo a realizzare dinamicamente $Q^{-1}(s)$, allora i suoi poli saranno gli autovalori della matrice dinamica di quella realizzazione.
+Questo \`e il punto esatto in cui la lezione cambia linguaggio. Non stiamo pi\`u cercando il massimo di una curva frequenziale; stiamo cercando i poli di una funzione razionale. Se costruiamo una realizzazione di $Q^{-1}(s)$, quei poli saranno autovalori della matrice dinamica della realizzazione.
 
 \begin{figure}[H]
     \centering
@@ -4411,17 +4533,17 @@ Questo \`e il punto esatto in cui il problema passa dalla frequenza agli autoval
 \end{figure}
 
 \begin{focusbox}
-\textbf{Perch\'e questo passaggio \`e utile.} Cercare il massimo di $\bar{\sigma}(G(j\omega))$ richiede un controllo su infinite frequenze. Cercare poli di $Q^{-1}(s)$ sull'asse immaginario diventa invece un problema sugli autovalori di una matrice finita, quindi numericamente molto pi\`u gestibile.
+\textbf{Perch\'e questo passaggio \`e utile.} Il controllo robusto lavora spesso con vincoli validi per ogni frequenza. La costruzione di $Q^{-1}$ trasforma un vincolo infinito in un controllo spettrale: esistono o no autovalori su $j\mathbb{R}$?
 \end{focusbox}
 
 \subsubsection{Comparsa della matrice Hamiltoniana}
 
-Nel blocco di slide il sistema \`e assunto strettamente proprio, quindi
+La slide 49 mostra il passo finale della costruzione. Per semplicit\`a si assume prima il caso strettamente proprio
 $$
 G(s)=C(sI-A)^{-1}B,
 \qquad D=0.
 $$
-In questo caso la realizzazione di $Q(s)^{-1}$ conduce alla matrice Hamiltoniana
+Allora una realizzazione di $Q^{-1}(s)$ ha come matrice dinamica
 $$
 \mathcal{H}_\gamma
 =
@@ -4430,7 +4552,7 @@ A & \gamma^{-2}BB^T\\
 -C^TC & -A^T
 \end{bmatrix}.
 $$
-La formula centrale pu\`o essere letta nella forma
+La formula scritta nelle slide si pu\`o leggere come
 $$
 Q^{-1}(s)
 =
@@ -4440,17 +4562,24 @@ I+
 (sI-\mathcal{H}_\gamma)^{-1}
 \begin{bmatrix}B\\0\end{bmatrix}.
 $$
-Quindi i poli di $Q^{-1}(s)$ coincidono con gli autovalori della Hamiltoniana $\mathcal{H}_\gamma$.
+Poich\'e i poli della funzione di trasferimento realizzata sono contenuti negli autovalori della matrice dinamica, il test diventa:
+$$
+Q^{-1}(s)\ \text{senza poli su }j\mathbb{R}
+\quad\Longleftrightarrow\quad
+\mathcal{H}_\gamma\ \text{senza autovalori su }j\mathbb{R},
+$$
+al netto di eventuali cancellazioni non patologiche nella realizzazione.
 
-Il criterio pratico, nella forma usata in slide, \`e il seguente: per verificare se $\|G\|_{H_\infty}<\gamma$, si costruisce $\mathcal{H}_\gamma$ e si controlla se possiede autovalori sull'asse immaginario. Se compaiono autovalori puramente immaginari, la soglia \`e critica o troppo piccola; se non compaiono, la soglia pu\`o essere considerata ammissibile. Nel caso $D\neq0$ va inoltre verificata la condizione all'infinito $\bar{\sigma}(D)<\gamma$.
-
-Questa \`e l'idea che rende possibile una ricerca per bisezione su $\gamma$:
+Il criterio pratico coerente con le slide \`e quindi:
 \begin{enumerate}
-    \item si sceglie una soglia iniziale $\gamma$;
-    \item si costruisce la matrice Hamiltoniana corrispondente;
-    \item si controlla la presenza di autovalori sull'asse immaginario;
-    \item si aumenta o si diminuisce $\gamma$ e si ripete finch\'e l'intervallo non \`e sufficientemente stretto.
+    \item si fissa una soglia $\gamma$;
+    \item se $D\neq0$, si controlla prima $\bar{\sigma}(D)<\gamma$;
+    \item si costruisce la Hamiltoniana $\mathcal{H}_\gamma$;
+    \item si verifica se $\mathcal{H}_\gamma$ ha autovalori sull'asse immaginario.
 \end{enumerate}
+Se compaiono autovalori su $j\mathbb{R}$, la soglia $\gamma$ \`e stata raggiunta da qualche valore singolare del sistema. Se non compaiono e la condizione all'infinito \`e soddisfatta, la soglia \`e compatibile con $\|G\|_{H_\infty}<\gamma$.
+
+La bisezione su $\gamma$ nasce da qui: invece di massimizzare direttamente $\bar{\sigma}(G(j\omega))$, si restringe progressivamente l'intervallo delle soglie ammissibili testando la Hamiltoniana.
 
 \begin{figure}[H]
     \centering
@@ -4460,27 +4589,67 @@ Questa \`e l'idea che rende possibile una ricerca per bisezione su $\gamma$:
 
 \subsubsection{Perch\'e compare \texorpdfstring{$G^T(-s)$}{G trasposto(-s)}}
 
-Le ultime slide spiegano da dove nasce la struttura precedente. Se
+Le slide 50 e 51 non si limitano a dare la Hamiltoniana: mostrano da dove arriva. Partiamo da
 $$
 G(s)=C(sI-A)^{-1}B,
 $$
-allora la funzione ``specchiata''
-$$
-G^T(-s)
-$$
-si ottiene dalla stessa realizzazione ribaltando opportunamente la dinamica:
+e calcoliamo la funzione riflessa che compare in $Q(s)$:
 $$
 G^T(-s)=-B^T(sI+A^T)^{-1}C^T.
 $$
-Questo passaggio \`e essenziale perch\'e $Q(s)$ contiene il prodotto $G^T(-s)G(s)$, cio\`e l'oggetto naturale che confronta il sistema con il suo riflesso rispetto all'asse immaginario.
+Quindi $G^T(-s)$ si realizza con matrice dinamica $-A^T$, ingresso attraverso $-C^T$ e uscita attraverso $B^T$. Questo spiega il blocco $-A^T$ nella Hamiltoniana.
 
-Le slide riscrivono poi la relazione tra il segnale di riferimento $r$ e il segnale $e$ nella forma
+La relazione chiusa della slide \`e
+$$
+e(s)=r(s)+\frac{1}{\gamma^2}G^T(-s)G(s)e(s).
+$$
+Portando il termine in $e$ a sinistra,
 $$
 e(s)
 =
 \left(I-\frac{1}{\gamma^2}G^T(-s)G(s)\right)^{-1}r(s).
 $$
-Costruendo esplicitamente l'interconnessione fra $G(s)$ e $G^T(-s)$ si ottengono due stati: uno associato al sistema originale e uno associato al sistema riflesso. La loro dinamica congiunta \`e proprio governata dalla Hamiltoniana
+Questa \`e proprio la funzione $Q^{-1}(s)$ applicata al segnale $r$.
+
+Scriviamo ora i due sottosistemi. Il primo, associato a $G(s)$, prende $e$ in ingresso:
+$$
+\dot x_1=Ax_1+Be,
+\qquad
+u=Cx_1.
+$$
+Il secondo, associato a $G^T(-s)$, prende $u$ in ingresso:
+$$
+\dot x_2=-A^Tx_2-C^Tu,
+\qquad
+y=B^Tx_2.
+$$
+La chiusura della slide \`e
+$$
+e=r+\frac{1}{\gamma^2}y
+=r+\frac{1}{\gamma^2}B^Tx_2.
+$$
+Sostituendo $e$ nella dinamica di $x_1$ e $u=Cx_1$ nella dinamica di $x_2$, si ottiene
+$$
+\begin{bmatrix}
+\dot x_1\\
+\dot x_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+A & \gamma^{-2}BB^T\\
+-C^TC & -A^T
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2
+\end{bmatrix}
++
+\begin{bmatrix}
+B\\
+0
+\end{bmatrix}r.
+$$
+La matrice dinamica dell'interconnessione \`e quindi esattamente
 $$
 \mathcal{H}_\gamma
 =
@@ -4490,22 +4659,37 @@ A & \gamma^{-2}BB^T\\
 \end{bmatrix}.
 $$
 
-Le ultime slide completano il calcolo nel dominio della frequenza e mostrano anche la relazione determinantalmente equivalente:
+La slide 52 riscrive la stessa realizzazione nel dominio della frequenza:
+$$
+e(s)
+=
+\left[
+I+
+\frac{1}{\gamma^2}
+\begin{bmatrix}0 & B^T\end{bmatrix}
+(sI-\mathcal{H}_\gamma)^{-1}
+\begin{bmatrix}B\\0\end{bmatrix}
+\right]r(s).
+$$
+Questo conferma che i poli di $Q^{-1}(s)$ sono governati dagli autovalori di $\mathcal{H}_\gamma$.
+
+La slide 53 chiude il cerchio con la forma determinantalmente equivalente:
 $$
 \det\!\left(I-\frac{1}{\gamma^2}G^T(-s)G(s)\right)=0
 \qquad\Longleftrightarrow\qquad
 \det\!\bigl(\gamma^2I-G^T(-s)G(s)\bigr)=0.
 $$
-Queste sono le frequenze complesse in cui la soglia $\gamma$ viene toccata. Quando tali punti cadono sull'asse immaginario, la curva del massimo valore singolare raggiunge il livello $\gamma$ e la Hamiltoniana mostra autovalori puramente immaginari.
+Questi sono i punti complessi in cui la soglia $\gamma$ viene toccata. Se uno di questi punti cade su $s=j\omega$, allora per quella frequenza un valore singolare di $G(j\omega)$ vale $\gamma$; corrispondentemente, la Hamiltoniana mostra un autovalore sull'asse immaginario.
 
-Per chiarezza, conviene leggere l'intero risultato in quattro passaggi:
+La catena completa delle slide \`e dunque:
 \begin{itemize}
-    \item il confronto con la soglia $\gamma$ produce la quantit\`a $Q(s)$;
-    \item la positivit\`a di $Q(j\omega)$ equivale, sotto le condizioni viste, all'invertibilit\`a su tutto l'asse immaginario;
-    \item l'invertibilit\`a di $Q(j\omega)$ equivale all'assenza di poli di $Q^{-1}(s)$ su $j\mathbb{R}$;
-    \item la realizzazione di $Q^{-1}(s)$ ha come matrice dinamica la Hamiltoniana $\mathcal{H}_\gamma$.
+    \item $\|G\|_{H_\infty}<\gamma$ impone $\bar{\sigma}(G(j\omega))<\gamma$ per ogni frequenza;
+    \item questa condizione equivale a $Q(j\omega)>0$;
+    \item la positivit\`a di $Q(j\omega)$ equivale, con la corretta condizione all'infinito, all'invertibilit\`a di $Q(j\omega)$;
+    \item l'invertibilit\`a su $j\mathbb{R}$ equivale all'assenza di poli di $Q^{-1}(s)$ su $j\mathbb{R}$;
+    \item una realizzazione di $Q^{-1}(s)$ ha matrice dinamica $\mathcal{H}_\gamma$.
 \end{itemize}
-Questo \`e il ponte concettuale tra analisi in frequenza e algebra lineare strutturata che sta alla base di molti algoritmi di controllo robusto.
+Questo \`e il ponte costruito dalla lezione: una disuguaglianza frequenziale per tutte le $\omega$ viene trasformata in un test sugli autovalori di una matrice finita.
 
 \begin{figure}[H]
     \centering
@@ -4537,18 +4721,32 @@ Questo \`e il ponte concettuale tra analisi in frequenza e algebra lineare strut
 
 \subsection{Sintesi conclusiva della lezione}
 
-La Lezione 8 completa e rafforza il discorso sulle norme di sistema iniziato nella lezione precedente. Da un lato mostra che la norma $H_2$ non \`e solo una definizione elegante, ma anche una quantit\`a numericamente accessibile tramite i gramiani e le equazioni di Lyapunov. Dall'altro introduce la norma $H_\infty$ come misura del massimo guadagno del sistema e chiarisce subito perch\'e il suo calcolo e il suo uso progettuale richiedano una struttura teorica pi\`u raffinata.
+La Lezione 8 ha due movimenti principali. Nel primo, le slide mostrano che la norma $H_2$ pu\`o essere calcolata senza integrare direttamente in frequenza: dalla realizzazione di stato si ottengono i gramiani $W_c$ e $W_o$, e questi si calcolano risolvendo equazioni di Lyapunov. Nel secondo, la norma $H_\infty$ viene letta come guadagno energetico peggiore e il suo calcolo viene trasformato in un test a soglia.
 
-Il contrasto tra i due casi \`e molto istruttivo. Per l'$H_2$ il cuore del problema \`e un accumulo energetico medio e la struttura dei gramiani fornisce un accesso diretto alla quantit\`a cercata. Per l'$H_\infty$, invece, il problema \`e dominato dal caso peggiore e il test numerico passa attraverso la soglia $\gamma$, la funzione $Q(s)$, la positivit\`a di $Q(j\omega)$ e infine la matrice Hamiltoniana. \`E proprio questo cambio di paradigma che prepara il terreno alle tecniche di sintesi robusta vere e proprie.
+Il punto pi\`u importante \`e la sequenza logica finale:
+$$
+\begin{aligned}
+\|G\|_{H_\infty}<\gamma
+&\Longleftrightarrow
+Q(j\omega)>0\quad\forall\omega,\\
+&\Longleftrightarrow
+Q(j\omega)\ \text{invertibile}\quad\forall\omega,\\
+&\Longleftrightarrow
+Q^{-1}(s)\ \text{senza poli su }j\mathbb{R},\\
+&\Longleftrightarrow
+\mathcal{H}_\gamma\ \text{senza autovalori su }j\mathbb{R}.
+\end{aligned}
+$$
+Questa catena \`e il vero contenuto della seconda met\`a della lezione: sostituisce un controllo su infinite frequenze con un controllo spettrale su una matrice costruita da $A$, $B$, $C$ e dalla soglia $\gamma$.
 
-Sul piano operativo, la lezione lascia in mano quattro risultati chiave:
+Sul piano operativo, la lezione lascia quattro risultati:
 \begin{itemize}
-    \item la formula della norma $H_2$ tramite gramiano di controllabilit\`a e di osservabilit\`a;
-    \item le equazioni di Lyapunov come strumento standard per il calcolo dei gramiani;
-    \item la definizione della norma $H_\infty$ come norma indotta e massimo valore singolare sul bordo;
-    \item il criterio Hamiltoniano per testare se $\|G\|_{H_\infty}<\gamma$, incluso il passaggio attraverso invertibilit\`a di $Q(j\omega)$ e poli di $Q^{-1}(s)$.
+    \item $\|G\|_{H_2}^2=\operatorname{tr}(CW_cC^T)=\operatorname{tr}(B^TW_oB)$;
+    \item $W_c$ e $W_o$ sono soluzioni di due equazioni di Lyapunov;
+    \item $\|G\|_{H_\infty}$ \`e il massimo guadagno indotto da $L_2$ a $L_2$;
+    \item il test $\|G\|_{H_\infty}<\gamma$ pu\`o essere eseguito tramite la Hamiltoniana $\mathcal{H}_\gamma$.
 \end{itemize}
-Le lezioni successive potranno cos\`\i\ usare questi strumenti come base per passare dall'analisi alla sintesi, cio\`e dal misurare prestazioni e robustezza al progettare controllori che le impongano.
+La lezione successiva potr\`a quindi formalizzare questi passaggi con il lemma KYP, il bounded real lemma e le formulazioni LMI/Riccati.
 
 \clearpage
 \phantomsection
@@ -4559,7 +4757,7 @@ Le lezioni successive potranno cos\`\i\ usare questi strumenti come base per pas
 \phantomsection
 \addcontentsline{toc}{subsection}{Nota sulle convenzioni per la matrice Hamiltoniana}
 
-Nel blocco di slide tradotto in questa lezione si lavora con la realizzazione strettamente propria
+Nel blocco Hamiltoniano delle slide si lavora inizialmente con la realizzazione strettamente propria
 $$
 G(s)=C(sI-A)^{-1}B,
 \qquad D=0.
@@ -4573,17 +4771,17 @@ A & \gamma^{-2}BB^T\\
 -C^TC & -A^T
 \end{bmatrix}.
 $$
-Nel caso pi\`u generale, con termine diretto $D\neq 0$, la formula si modifica e compare la versione completa del \emph{bounded real lemma}. Le slide aggiornate chiariscono per\`o gi\`a una condizione necessaria importante: all'infinito bisogna avere
+Nel caso pi\`u generale, con termine diretto $D\neq 0$, la forma della Hamiltoniana cambia e viene trattata pi\`u comodamente tramite il \emph{bounded real lemma}. Gi\`a in questa lezione, per\`o, compare la condizione preliminare all'infinito:
 $$
 Q(j\infty)=I-\frac{1}{\gamma^2}D^TD>0,
 $$
-cio\`e $\bar{\sigma}(D)<\gamma$. Nel testo si \`e mantenuta la forma della Hamiltoniana coerente con le slide, ma questa condizione all'infinito \`e stata esplicitata nella sezione principale.
+cio\`e $\bar{\sigma}(D)<\gamma$. Nel testo si \`e quindi mantenuta la Hamiltoniana strettamente propria delle slide, esplicitando separatamente il controllo sul termine diretto.
 
 \subsection*{Riferimento al materiale originale}
 \phantomsection
 \addcontentsline{toc}{subsection}{Riferimento al materiale originale}
 
-Questa parte del documento \`e una traduzione e rielaborazione estesa delle slide 33--53 del PDF aggiornato ``Norms for signals and systems'', caricato dall'utente come materiale di partenza. Il vecchio PDF \`e stato usato come confronto per individuare il punto in cui inserire le nuove slide e sostituire quelle modificate. Le slide 42--53 appartengono formalmente al blocco della Lezione 9 nel materiale aggiornato, ma sono state mantenute nella Lezione 8 perch\'e completano in modo naturale la costruzione della matrice Hamiltoniana gi\`a avviata l\`i.
+Questa parte del documento \`e una traduzione e rielaborazione estesa delle slide 33--53 del PDF aggiornato ``Norms for signals and systems'', caricato dall'utente come materiale di partenza. La riscrittura segue l'ordine delle slide: gramiani e Lyapunov per $H_2$, spazio di Hardy e norma indotta per $H_\infty$, test a soglia tramite $Q(s)$ e costruzione della matrice Hamiltoniana.
 
 \begin{coverpage}
 \centering
