@@ -8047,6 +8047,20 @@ significa imporre che, a ogni frequenza, l'errore sia limitato dalla dimensione 
     \item se il peso ammette poco contenuto ad alta frequenza, la specifica diventa meno severa in quella regione.
 \end{itemize}
 
+La slide 58 chiarisce per\`o un passaggio ulteriore. Fin qui il peso $W$ \`e stato scelto pensando agli ingressi attesi: secondo il principio del modello interno, la natura dei riferimenti e dei disturbi guida la forma del peso. In progetto, per\`o, spesso il controllista vuole imporre direttamente anche due propriet\`a del ciclo chiuso:
+\begin{itemize}
+    \item una \textbf{banda minima}, cio\`e una regione di bassa frequenza in cui la sensibilit\`a deve rimanere piccola;
+    \item un \textbf{limite al picco massimo} di $S$, per evitare amplificazioni eccessive dei disturbi vicino alla frequenza di attraversamento.
+\end{itemize}
+
+La domanda che chiude la slide \`e quindi naturale: come si scelgono pesi sulla sensibilit\`a che specifichino direttamente la prestazione desiderata in anello chiuso? La risposta arriva subito dopo, introducendo un peso di prestazione $w_P$ pensato come inverso del bound desiderato su $S$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images14/formulation-56-71-003.png}
+    \caption{La slide 58 evidenzia il passaggio dai pesi guidati dagli ingressi attesi ai pesi scelti per imporre banda minima e picco massimo della sensibilit\`a.}
+\end{figure}
+
 Le slide sottolineano anche un fatto fondamentale di loop-shaping. Per frequenze alte, in genere $|PC|$ \`e piccolo, quindi
 $$
 |S(j\omega)|\simeq1.
