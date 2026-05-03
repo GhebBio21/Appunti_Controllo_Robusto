@@ -1192,6 +1192,10 @@ INPUT ./images8/norms-new-33-53-002.png
 INPUT ./images8/norms-new-33-53-002.png
 INPUT ./images8/norms-new-33-53-002.png
 INPUT ./images8/norms-new-33-53-002.png
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
 INPUT ./images8/norms-new-33-53-003.png
 INPUT ./images8/norms-new-33-53-003.png
@@ -1515,10 +1519,6 @@ INPUT ./images11/formulation-01-21-021.png
 INPUT ./images11/formulation-01-21-021.png
 INPUT ./images11/formulation-01-21-021.png
 INPUT ./images11/formulation-01-21-021.png
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
 INPUT ./images12/formulation-22-41-001.png
 INPUT ./images12/formulation-22-41-001.png
 INPUT ./images12/formulation-22-41-001.png

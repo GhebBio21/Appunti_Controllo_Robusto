@@ -5147,7 +5147,7 @@ Questa parte del documento \`e una traduzione e rielaborazione estesa delle slid
 \includegraphics[width=0.78\textwidth]{images10/norms-new-60-76-001.png}
 \vfill
 \begin{focusbox}
-\textbf{Obiettivo del documento.} Questa parte degli appunti traduce e approfondisce le slide 60--76 del PDF aggiornato. Dopo il bounded real lemma, il problema diventa operativo: come si calcola davvero una norma $H_\infty$? La lezione presenta il metodo per bisezione basato sulla Hamiltoniana, una tecnica alternativa con Routh--Hurwitz, alcuni esempi espliciti, il confronto concettuale con la norma $H_2$ e l'introduzione della norma di Hankel.
+\textbf{Obiettivo del documento.} Questa parte degli appunti segue le slide 60--76 del PDF aggiornato. Dopo il bounded real lemma, la domanda diventa operativa: come si individua numericamente o analiticamente la soglia $\|G\|_{H_\infty}$? La lezione costruisce l'algoritmo di bisezione sulla Hamiltoniana, mostra come Routh--Hurwitz recupera la stessa soglia in esempi piccoli, chiarisce cosa distingue $H_\infty$ da $H_2$ e introduce la norma di Hankel come misura dell'energia immagazzinata nello stato.
 \end{focusbox}
 \vfill
 {\large Basato sulle slide del corso AA 2025/2026\par}
@@ -5157,29 +5157,35 @@ Questa parte del documento \`e una traduzione e rielaborazione estesa delle slid
 
 \subsection{Visione d'insieme della lezione}
 
-La Lezione 9 ha spiegato perch\'e il test
+La Lezione 9 ha chiuso il cerchio teorico sul bounded real lemma: il test
 $$
 \|G\|_{H_\infty}<\gamma
 $$
-pu\`o essere trasformato in una condizione matriciale: LMI, Riccati oppure assenza di autovalori sull'asse immaginario per una matrice Hamiltoniana. La Lezione 10 prende quel risultato e lo rende uno strumento di calcolo.
+pu\`o essere visto come LMI, come disequazione/equazione di Riccati oppure come assenza di autovalori sull'asse immaginario per una Hamiltoniana. La Lezione 10 usa questo risultato non pi\`u come teorema di esistenza, ma come procedura concreta di calcolo.
 
-Il filo logico \`e il seguente. Prima si mostra come calcolare numericamente la norma $H_\infty$ tramite una ricerca per bisezione sulla soglia $\gamma$. Poi si vede che, in esempi piccoli, lo stesso risultato pu\`o essere trovato analiticamente con il criterio di Routh--Hurwitz applicato al polinomio caratteristico della Hamiltoniana. Infine la lezione confronta tre modi diversi di misurare un sistema: $H_\infty$, $H_2$ e Hankel.
+Il filo delle slide \`e molto lineare:
+\begin{itemize}
+    \item la slide 60 trasforma il test Hamiltoniano in un algoritmo di bisezione su $\gamma$;
+    \item le slide 61--68 mostrano come, in sistemi piccoli, la soglia critica possa essere trovata con Routh--Hurwitz;
+    \item le slide 69--72 confrontano $H_\infty$ e $H_2$, chiarendo perch\'e non sono ordinabili in generale;
+    \item le slide 73--76 introducono la norma di Hankel e la collegano ai gramiani.
+\end{itemize}
 
 \begin{keybox}
-\textbf{Idea guida.} La norma $H_\infty$ misura il peggior picco di amplificazione: guarda la frequenza e la direzione pi\`u sfavorevoli. La norma $H_2$ misura invece una quantit\`a energetica distribuita su tutte le frequenze. La norma di Hankel misura quanta energia di uscita futura pu\`o essere generata da energia di ingresso passata. Sono tre lenti diverse sullo stesso sistema.
+\textbf{Idea guida.} In questa lezione non basta conoscere la definizione delle norme: bisogna capire quale domanda computazionale risolvono. $H_\infty$ porta a un test di soglia e quindi a una bisezione; $H_2$ porta a un integrale energetico o a una Lyapunov; Hankel porta ai gramiani e ai valori singolari di Hankel.
 \end{keybox}
 
 \subsection{Calcolo della norma \texorpdfstring{$H_\infty$}{H-infinito} tramite bisezione}
 
-Supponiamo di avere un sistema stabile e proprio
+La slide 60 parte dal risultato operativo della lezione precedente. Supponiamo di avere un sistema stabile e proprio
 $$
 G(s)=C(sI-A)^{-1}B+D.
 $$
-Il bounded real lemma consente di verificare, per una soglia fissata $\gamma>0$, se
+Per una soglia fissata $\gamma>0$, il bounded real lemma permette di rispondere alla domanda
 $$
 \|G\|_{H_\infty}<\gamma.
 $$
-Nel caso strettamente proprio, con $D=0$, la verifica pu\`o essere fatta controllando se la Hamiltoniana
+Nel caso strettamente proprio, $D=0$, questa domanda si traduce nel controllo della Hamiltoniana
 $$
 \mathcal{H}_\gamma=
 \begin{bmatrix}
@@ -5187,17 +5193,17 @@ A & \gamma^{-2}BB^T\\
 -C^TC & -A^T
 \end{bmatrix}
 $$
-ha autovalori sull'asse immaginario. Nel caso proprio generale bisogna includere anche il termine $D$, come visto nella Lezione 9, e verificare preliminarmente $\bar{\sigma}(D)<\gamma$.
+e, pi\`u precisamente, nell'assenza di autovalori su $j\mathbb{R}$. Nel caso proprio generale il termine diretto non pu\`o essere ignorato: prima bisogna verificare $\bar{\sigma}(D)<\gamma$, poi usare la forma Hamiltoniana generale vista con il bounded real lemma.
 
-La slide propone quindi un algoritmo per bisezione. Si scelgono due valori iniziali
+L'algoritmo usa questo test come una scatola booleana. Si scelgono due valori iniziali
 $$
 \gamma_l \le \|G\|_{H_\infty}\le \gamma_u,
 $$
-dove $\gamma_l$ \`e un limite inferiore e $\gamma_u$ un limite superiore. Se l'intervallo \`e gi\`a abbastanza piccolo,
+dove $\gamma_l$ \`e un limite inferiore e $\gamma_u$ un limite superiore. Se l'intervallo \`e gi\`a piccolo,
 $$
 \gamma_u-\gamma_l<\varepsilon,
 $$
-si arresta l'algoritmo e si usa
+ci si ferma e si prende come approssimazione
 $$
 \|G\|_{H_\infty}\simeq \frac{\gamma_l+\gamma_u}{2}.
 $$
@@ -5207,12 +5213,12 @@ $$
 $$
 e si testa la Hamiltoniana associata a $\gamma$.
 
-La logica dell'aggiornamento \`e questa:
+Il senso dell'aggiornamento \`e il seguente:
 \begin{itemize}
-    \item se la Hamiltoniana indica che la soglia $\gamma$ \`e troppo bassa, allora si aggiorna $\gamma_l=\gamma$;
-    \item se invece il test certifica $\|G\|_{H_\infty}<\gamma$, allora $\gamma$ \`e un nuovo limite superiore e si aggiorna $\gamma_u=\gamma$.
+    \item se la Hamiltoniana ha autovalori su $j\mathbb{R}$, la soglia $\gamma$ \`e stata raggiunta da qualche valore singolare; quindi $\gamma$ non \`e un limite superiore sicuro e si aggiorna $\gamma_l=\gamma$;
+    \item se la Hamiltoniana non ha autovalori su $j\mathbb{R}$ e le condizioni del test sono soddisfatte, allora $\|G\|_{H_\infty}<\gamma$; dunque $\gamma$ diventa il nuovo limite superiore e si aggiorna $\gamma_u=\gamma$.
 \end{itemize}
-Ripetendo il procedimento, l'intervallo si restringe fino a localizzare la norma.
+Ripetendo il procedimento, l'intervallo si restringe attorno alla soglia critica. Questa \`e la ragione per cui la norma $H_\infty$ viene spesso calcolata non massimizzando direttamente una curva, ma cercando il pi\`u piccolo $\gamma$ che supera il test.
 
 \begin{figure}[H]
     \centering
@@ -5222,21 +5228,21 @@ Ripetendo il procedimento, l'intervallo si restringe fino a localizzare la norma
 
 \subsection{Metodo di Routh--Hurwitz sul polinomio della Hamiltoniana}
 
-Per sistemi di ordine basso \`e possibile evitare un calcolo numerico degli autovalori e usare direttamente il criterio di Routh--Hurwitz. Si considera il polinomio caratteristico della Hamiltoniana
+La slide 61 propone un'alternativa utile quando la dimensione \`e piccola e il polinomio pu\`o essere manipolato a mano. Invece di calcolare gli autovalori di $\mathcal{H}_\gamma$, si considera il suo polinomio caratteristico
 $$
 \chi_\gamma(s)=\det(sI-\mathcal{H}_\gamma).
 $$
-Poich\'e le matrici Hamiltoniane hanno simmetrie particolari, spesso $\chi_\gamma(s)$ \`e un polinomio pari, cio\`e contiene solo potenze pari di $s$:
+Per una Hamiltoniana gli autovalori sono simmetrici rispetto all'origine: se $\lambda$ \`e autovalore, lo \`e anche $-\lambda$ con la struttura opportuna. Per questo, negli esempi delle slide, $\chi_\gamma(s)$ risulta pari:
 $$
 \chi_\gamma(s)=a_0s^{2n}+a_1s^{2n-2}+\cdots+a_n.
 $$
-Quando si costruisce la tabella di Routh di un polinomio pari, compare una riga di zeri. In quel caso non si conclude che il metodo fallisce: si sostituisce la riga nulla con i coefficienti della derivata del polinomio ausiliario associato alla riga precedente.
+Quando si costruisce la tabella di Routh di un polinomio pari, compare una riga di zeri. Non \`e un errore: \`e il caso speciale standard del criterio di Routh. Si prende il polinomio ausiliario associato alla riga precedente, lo si deriva rispetto a $s$, e si usano i coefficienti della derivata per sostituire la riga nulla.
 
-La slide riassume il criterio in questo modo. Sia $\{\gamma_i\}$ l'insieme dei valori $\gamma\ge 0$ per cui un coefficiente dipendente da $\gamma$ nella prima colonna della tabella di Routh si annulla. Allora
+La slide riassume poi il criterio nella forma pi\`u utile per il calcolo della norma. Sia $\{\gamma_i\}$ l'insieme dei valori $\gamma\ge0$ per cui un coefficiente dipendente da $\gamma$ nella prima colonna della tabella di Routh diventa zero. Tali valori sono soglie critiche: per essi il polinomio della Hamiltoniana ha radici sull'asse immaginario. La norma si ottiene prendendo la soglia critica pi\`u grande:
 $$
 \|G(s)\|_{H_\infty}=\sup_i\{\gamma_i\}.
 $$
-Il motivo \`e che l'annullamento di un elemento della prima colonna segnala il passaggio di radici sull'asse immaginario, cio\`e esattamente il confine tra $\|G\|_{H_\infty}<\gamma$ e $\|G\|_{H_\infty}\ge\gamma$.
+Questo punto \`e importante: non si prende il primo valore trovato, ma il massimo tra i valori critici, perch\'e la norma $H_\infty$ \`e il livello pi\`u alto raggiunto dalla curva dei valori singolari.
 
 \begin{figure}[H]
     \centering
@@ -5346,7 +5352,7 @@ $$
 =\frac{\sqrt{5}}{2}.
 $$
 
-La slide mostra anche il calcolo tramite valori singolari. Infatti
+La slide mostra anche il calcolo tramite valori singolari. Poich\'e $G(j\omega)$ \`e una colonna, il prodotto $G^H(j\omega)G(j\omega)$ \`e uno scalare:
 $$
 G^H(j\omega)G(j\omega)
 =
@@ -5354,7 +5360,7 @@ G^H(j\omega)G(j\omega)
 =
 \frac{2\omega^2+5}{(\omega^2+1)(\omega^2+4)}.
 $$
-Quindi l'unico autovalore non nullo di $G(j\omega)G^H(j\omega)$ \`e
+Il prodotto opposto $G(j\omega)G^H(j\omega)$ \`e invece una matrice $2\times2$ di rango uno. I due prodotti hanno gli stessi autovalori non nulli, quindi l'unico autovalore non nullo di $G(j\omega)G^H(j\omega)$ \`e
 $$
 \lambda(\omega)=
 \frac{2\omega^2+5}{(\omega^2+1)(\omega^2+4)},
@@ -5422,7 +5428,15 @@ $$
 s^4+\left(\frac{2}{\gamma^2}-5\right)s^2
 +4-\frac{5}{\gamma^2}.
 $$
-Applicando Routh--Hurwitz e sostituendo la riga nulla con la derivata del polinomio ausiliario, la prima colonna si annulla per
+Applicando Routh--Hurwitz e sostituendo la riga nulla con la derivata del polinomio ausiliario, le voci dipendenti da $\gamma$ nella prima colonna sono proporzionali a
+$$
+\frac{2}{\gamma^2}-5,
+\qquad
+\frac{88}{\gamma^2}-84,
+\qquad
+4-\frac{5}{\gamma^2}.
+$$
+Annullandole si ottiene
 $$
 \gamma\in
 \left\{
@@ -5468,6 +5482,16 @@ con realizzazione
 $$
 (A,B,C,D)=(a,1,1,0).
 $$
+Il risultato atteso, guardando direttamente la risposta in frequenza, \`e
+$$
+\|g\|_{H_\infty}
+=
+\sup_\omega\frac{1}{|j\omega-a|}
+=
+\frac{1}{|a|},
+$$
+perch\'e il denominatore \`e minimo in $\omega=0$. La slide usa questo esempio per mostrare che la stessa soglia emerge anche dalla Riccati e dalla Hamiltoniana.
+
 La Riccati del bounded real lemma diventa
 $$
 2ap+\frac{p^2}{\gamma^2}+1=0.
@@ -5731,7 +5755,9 @@ $$
 
 \subsection{Norma di Hankel}
 
-L'ultima parte della lezione introduce la norma di Hankel. Consideriamo un sistema stabile $G(s)$. La norma di Hankel misura il massimo rapporto tra:
+L'ultima parte della lezione introduce la norma di Hankel. Consideriamo un sistema stabile $G(s)$. Qui la domanda non \`e pi\`u ``quanto amplifico un ingresso sinusoidale?'' e nemmeno ``quanta energia ha la risposta impulsiva?''. La domanda \`e: quanta energia pu\`o essere immagazzinata nello stato dal passato e poi rilasciata nell'uscita futura?
+
+Per questo la norma di Hankel misura il massimo rapporto tra:
 \begin{itemize}
     \item l'energia dell'uscita futura $z(t)$ per $t>0$;
     \item l'energia dell'ingresso passato $w(t)$ applicato per $t<0$.
@@ -5751,7 +5777,7 @@ $$
 \right)^{1/2}
 }.
 $$
-L'interpretazione della slide \`e molto bella: \`e come spingere un'altalena prima di $t=0$ con energia limitata e poi misurare quanto grande pu\`o essere il moto libero dopo $t=0$. La norma di Hankel misura quindi quanto il sistema \`e capace di immagazzinare energia nel proprio stato e rilasciarla successivamente in uscita.
+L'interpretazione della slide \`e quella dell'altalena: si usa energia prima di $t=0$ per caricare lo stato del sistema, poi si guarda quanta uscita libera si ottiene dopo $t=0$. La norma di Hankel misura quindi il miglior compromesso possibile tra controllabilit\`a dal passato e osservabilit\`a nel futuro.
 
 \begin{figure}[H]
     \centering
@@ -5759,7 +5785,7 @@ L'interpretazione della slide \`e molto bella: \`e come spingere un'altalena pri
     \caption{Definizione energetica della norma di Hankel: ingresso nel passato, uscita nel futuro.}
 \end{figure}
 
-La norma di Hankel ha una formula molto importante in termini di gramiani. Siano $P$ e $Q$ rispettivamente il gramiano di controllabilit\`a e il gramiano di osservabilit\`a, cio\`e le soluzioni di
+La slide successiva d\`a la formula computazionale. Per una realizzazione stabile e minimale, siano $P$ e $Q$ rispettivamente il gramiano di controllabilit\`a e il gramiano di osservabilit\`a, cio\`e le soluzioni di
 $$
 AP+PA^T+BB^T=0,
 \qquad
@@ -5771,7 +5797,7 @@ $$
 =
 \sqrt{\rho(PQ)},
 $$
-dove $\rho(\cdot)$ \`e il raggio spettrale, cio\`e il massimo valore assoluto degli autovalori.
+dove $\rho(\cdot)$ \`e il raggio spettrale, cio\`e il massimo valore assoluto degli autovalori. Anche se $PQ$ non \`e in generale simmetrica, i suoi autovalori rilevanti coincidono con quelli della matrice simmetrica simile $P^{1/2}QP^{1/2}$ quando $P$ \`e definita positiva; per questo le quantit\`a sotto radice sono non negative nel caso minimale stabile.
 
 I numeri
 $$
@@ -5794,6 +5820,8 @@ $$
 2\sum_{i=1}^n\sigma_i.
 $$
 Questo legame spiega perch\'e la norma di Hankel sia importante nella riduzione di modello: i valori singolari di Hankel misurano quanto ciascuna direzione di stato sia insieme controllabile e osservabile.
+
+Una nota terminologica evita un possibile equivoco: il nome ``Hankel'' deriva dall'operatore che mappa ingressi passati in uscite future, la cui matrice ha struttura di Hankel. Nelle formule di stato usate qui, questa informazione viene condensata nei gramiani tramite il prodotto $PQ$.
 
 \begin{figure}[H]
     \centering
@@ -5879,9 +5907,9 @@ $$
 
 \subsection{Sintesi conclusiva della lezione}
 
-La Lezione 10 chiude il blocco sulle norme trasformando i risultati teorici in procedure operative. Il bounded real lemma non resta una formula astratta: diventa un algoritmo per calcolare $\|G\|_{H_\infty}$ tramite bisezione sulla soglia $\gamma$ e test sugli autovalori della Hamiltoniana. Negli esempi piccoli, la stessa soglia pu\`o essere trovata analiticamente usando Routh--Hurwitz.
+La Lezione 10 chiude il blocco sulle norme trasformando i risultati teorici in procedure operative. Il bounded real lemma diventa un algoritmo: si fissa una soglia $\gamma$, si testa la Hamiltoniana, e si restringe l'intervallo per bisezione fino a localizzare $\|G\|_{H_\infty}$. Negli esempi piccoli, la stessa soglia pu\`o essere trovata analiticamente con Routh--Hurwitz applicato al polinomio della Hamiltoniana.
 
-Il confronto tra $H_\infty$ e $H_2$ chiarisce perch\'e nel controllo robusto la norma $H_\infty$ sia cos\`i centrale. $H_\infty$ controlla il caso peggiore ed \`e compatibile con il piccolo guadagno; $H_2$ misura un'energia media e descrive bene fenomeni di rumore e risposta impulsiva, ma non fornisce da sola una garanzia moltiplicativa.
+Il confronto tra $H_\infty$ e $H_2$ chiarisce perch\'e nel controllo robusto la norma $H_\infty$ sia cos\`i centrale. $H_\infty$ controlla il caso peggiore ed \`e submoltiplicativa, quindi si combina bene con il piccolo guadagno e con l'incertezza non strutturata. $H_2$ misura invece un'energia distribuita, utilissima per rumore e risposta impulsiva, ma non sostituisce una garanzia di robustezza in cascata.
 
 La norma di Hankel aggiunge una terza prospettiva: non guarda soltanto il guadagno frequenziale o l'energia totale, ma la capacit\`a del sistema di immagazzinare energia nello stato e restituirla in uscita. Per questo collega naturalmente controllabilit\`a, osservabilit\`a e riduzione di modello.
 
@@ -5894,7 +5922,7 @@ La norma di Hankel aggiunge una terza prospettiva: non guarda soltanto il guadag
 \phantomsection
 \addcontentsline{toc}{subsection}{Riferimento al materiale originale}
 
-Questa parte del documento \`e una traduzione e rielaborazione estesa delle slide 60--76 del PDF aggiornato ``Norms for signals and systems'', caricato dall'utente come materiale di partenza.
+Questa parte del documento \`e una traduzione e rielaborazione estesa delle slide 60--76 del PDF aggiornato ``Norms for signals and systems'', caricato dall'utente come materiale di partenza. La riscrittura mantiene l'ordine delle slide: bisezione Hamiltoniana, Routh--Hurwitz, esempi, confronto $H_\infty/H_2$, submoltiplicativit\`a e norma di Hankel.
 
 \begin{coverpage}
 \centering

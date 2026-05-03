@@ -191,81 +191,81 @@
 \contentsline {subsection}{\numberline {10.9}Norma di Hankel}{159}{subsection.10.9}%
 \contentsline {subsection}{\numberline {10.10}Esempio finale: tutte le norme per $G(s)=1/(s+a)$}{161}{subsection.10.10}%
 \contentsline {subsection}{\numberline {10.11}Sintesi conclusiva della lezione}{162}{subsection.10.11}%
-\contentsline {section}{Appendice}{163}{section*.150}%
-\contentsline {subsection}{Riferimento al materiale originale}{163}{section*.151}%
-\contentsline {section}{\numberline {11}Lezione 11}{165}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Visione d'insieme della lezione}{165}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}I quattro ingredienti di un problema di controllo}{165}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Modello del processo}{166}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}Incertezza di modello e obiettivi robusti}{167}{subsection.11.4}%
-\contentsline {subsection}{\numberline {11.5}Da dove nasce l'incertezza}{168}{subsection.11.5}%
-\contentsline {subsection}{\numberline {11.6}Incertezza parametrica e incertezza dinamica}{169}{subsection.11.6}%
-\contentsline {subsection}{\numberline {11.7}Famiglie di piante e bande di Nyquist}{170}{subsection.11.7}%
-\contentsline {subsection}{\numberline {11.8}Dal reale al complesso: conservativit\`a e lumping}{171}{subsection.11.8}%
-\contentsline {subsection}{\numberline {11.9}Approssimazione a dischi delle regioni di incertezza}{171}{subsection.11.9}%
-\contentsline {subsection}{\numberline {11.10}Incertezza additiva}{172}{subsection.11.10}%
-\contentsline {subsection}{\numberline {11.11}Incertezza moltiplicativa}{173}{subsection.11.11}%
-\contentsline {subsection}{\numberline {11.12}Incertezza inversa moltiplicativa}{174}{subsection.11.12}%
-\contentsline {subsection}{\numberline {11.13}Esempio 1: incertezza di guadagno}{175}{subsection.11.13}%
-\contentsline {subsection}{\numberline {11.14}Esempio 2: incertezza sulla costante di tempo}{176}{subsection.11.14}%
-\contentsline {subsection}{\numberline {11.15}Esempio 3: incertezza sulla posizione di un polo}{177}{subsection.11.15}%
-\contentsline {subsection}{\numberline {11.16}Esempio 4: incertezza sulla posizione di uno zero}{178}{subsection.11.16}%
-\contentsline {subsection}{\numberline {11.17}Sintesi conclusiva della lezione}{179}{subsection.11.17}%
-\contentsline {section}{Appendice}{181}{section*.167}%
-\contentsline {subsection}{Riferimento al materiale originale}{181}{section*.168}%
-\contentsline {section}{\numberline {12}Lezione 12}{183}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Visione d'insieme della lezione}{183}{subsection.12.1}%
-\contentsline {subsection}{\numberline {12.2}Incertezza parametrica su uno zero: forma $s+z$}{183}{subsection.12.2}%
-\contentsline {subsection}{\numberline {12.3}Da una famiglia parametrica a una perturbazione complessa}{184}{subsection.12.3}%
-\contentsline {subsection}{\numberline {12.4}Esempio: scelta di un nominale semplificato}{185}{subsection.12.4}%
-\contentsline {subsection}{\numberline {12.5}Scelta del modello nominale}{186}{subsection.12.5}%
-\contentsline {subsection}{\numberline {12.6}Costruzione di un peso razionale}{187}{subsection.12.6}%
-\contentsline {subsection}{\numberline {12.7}Dinamiche trascurate come incertezza}{188}{subsection.12.7}%
-\contentsline {subsection}{\numberline {12.8}Esempio: ritardo trascurato}{189}{subsection.12.8}%
-\contentsline {subsection}{\numberline {12.9}Esempio: lag trascurato}{190}{subsection.12.9}%
-\contentsline {subsection}{\numberline {12.10}Esempio: incertezza con guadagno e ritardo}{191}{subsection.12.10}%
-\contentsline {subsection}{\numberline {12.11}Dinamiche non modellate}{192}{subsection.12.11}%
-\contentsline {subsection}{\numberline {12.12}Passaggio al caso MIMO}{193}{subsection.12.12}%
-\contentsline {subsection}{\numberline {12.13}Forme inverse nel caso MIMO}{194}{subsection.12.13}%
-\contentsline {subsection}{\numberline {12.14}Lumping MIMO in una sola perturbazione}{195}{subsection.12.14}%
-\contentsline {subsection}{\numberline {12.15}Spostare l'incertezza dall'ingresso all'uscita}{196}{subsection.12.15}%
-\contentsline {subsection}{\numberline {12.16}Esempi sull'effetto del condizionamento}{197}{subsection.12.16}%
-\contentsline {subsection}{\numberline {12.17}Incertezza diagonale}{198}{subsection.12.17}%
-\contentsline {subsection}{\numberline {12.18}Sintesi conclusiva della lezione}{199}{subsection.12.18}%
-\contentsline {section}{Appendice}{200}{section*.185}%
-\contentsline {subsection}{Riferimento al materiale originale}{200}{section*.186}%
-\contentsline {section}{\numberline {13}Lezione 13}{202}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Raccordo con la lezione precedente}{202}{subsection.13.1}%
-\contentsline {subsection}{\numberline {13.2}Dalla modellazione al problema di controllo}{202}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Che cosa si intende per input}{203}{subsection.13.3}%
-\contentsline {subsection}{\numberline {13.4}Due modi di specificare gli ingressi normalizzati}{204}{subsection.13.4}%
-\contentsline {subsection}{\numberline {13.5}Ingresso specifico atteso}{205}{subsection.13.5}%
-\contentsline {subsection}{\numberline {13.6}Insieme di ingressi attesi limitati}{206}{subsection.13.6}%
-\contentsline {subsection}{\numberline {13.7}Interpretazione frequenziale del peso di ingresso}{207}{subsection.13.7}%
-\contentsline {subsection}{\numberline {13.8}Esempio: come inserire un gradino nel set atteso}{208}{subsection.13.8}%
-\contentsline {subsection}{\numberline {13.9}Quali altri segnali sono contenuti nello stesso set}{209}{subsection.13.9}%
-\contentsline {subsection}{\numberline {13.10}Prestazione nominale: ruolo di $S$ e $T$}{210}{subsection.13.10}%
-\contentsline {subsection}{\numberline {13.11}Prestazione nominale in senso $\mathcal {H}_2$}{211}{subsection.13.11}%
-\contentsline {subsection}{\numberline {13.12}Dal segnale atteso al prodotto pesato $SW$}{212}{subsection.13.12}%
-\contentsline {subsection}{\numberline {13.13}Prestazione nominale in senso $\mathcal {H}_\infty $}{213}{subsection.13.13}%
-\contentsline {subsection}{\numberline {13.14}Confronto tra criteri $\mathcal {H}_2$ e $\mathcal {H}_\infty $}{214}{subsection.13.14}%
-\contentsline {subsection}{\numberline {13.15}Sintesi conclusiva della lezione}{214}{subsection.13.15}%
-\contentsline {section}{Appendice}{216}{section*.200}%
-\contentsline {subsection}{Riferimento al materiale originale}{216}{section*.201}%
-\contentsline {section}{\numberline {14}Lezione 14}{218}{section.14}%
-\contentsline {subsection}{\numberline {14.1}Visione d'insieme della lezione}{218}{subsection.14.1}%
-\contentsline {subsection}{\numberline {14.2}Dalla norma $\mathcal {H}_\infty $ alla specifica su $S$}{218}{subsection.14.2}%
-\contentsline {subsection}{\numberline {14.3}Significato pratico del vincolo $\|SW\|_\infty \le 1$}{219}{subsection.14.3}%
-\contentsline {subsection}{\numberline {14.4}Interpretazione geometrica sul diagramma di Nyquist}{220}{subsection.14.4}%
-\contentsline {subsection}{\numberline {14.5}Prestazione nominale nel caso MIMO}{220}{subsection.14.5}%
-\contentsline {subsection}{\numberline {14.6}Interpretazione sperimentale del criterio $\mathcal {H}_2$ MIMO}{221}{subsection.14.6}%
-\contentsline {subsection}{\numberline {14.7}Prestazione nominale $\mathcal {H}_\infty $ nel caso MIMO}{222}{subsection.14.7}%
-\contentsline {subsection}{\numberline {14.8}Forma standard della specifica MIMO}{223}{subsection.14.8}%
-\contentsline {subsection}{\numberline {14.9}Perch\'e la sensibilit\`a $S$ \`e l'oggetto giusto}{224}{subsection.14.9}%
-\contentsline {subsection}{\numberline {14.10}Come si legge un peso di prestazione $w_P$}{225}{subsection.14.10}%
-\contentsline {subsection}{\numberline {14.11}Peso tipico di prestazione}{226}{subsection.14.11}%
-\contentsline {subsection}{\numberline {14.12}Perch\'e $w_P S$ da solo non basta}{227}{subsection.14.12}%
-\contentsline {subsection}{\numberline {14.13}Dal weighted sensitivity al mixed sensitivity}{228}{subsection.14.13}%
-\contentsline {subsection}{\numberline {14.14}Sintesi conclusiva della lezione}{229}{subsection.14.14}%
-\contentsline {section}{Appendice}{230}{section*.213}%
-\contentsline {subsection}{Riferimento al materiale originale}{230}{section*.214}%
+\contentsline {section}{Appendice}{164}{section*.150}%
+\contentsline {subsection}{Riferimento al materiale originale}{164}{section*.151}%
+\contentsline {section}{\numberline {11}Lezione 11}{166}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Visione d'insieme della lezione}{166}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}I quattro ingredienti di un problema di controllo}{166}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Modello del processo}{167}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Incertezza di modello e obiettivi robusti}{168}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}Da dove nasce l'incertezza}{169}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Incertezza parametrica e incertezza dinamica}{170}{subsection.11.6}%
+\contentsline {subsection}{\numberline {11.7}Famiglie di piante e bande di Nyquist}{171}{subsection.11.7}%
+\contentsline {subsection}{\numberline {11.8}Dal reale al complesso: conservativit\`a e lumping}{172}{subsection.11.8}%
+\contentsline {subsection}{\numberline {11.9}Approssimazione a dischi delle regioni di incertezza}{172}{subsection.11.9}%
+\contentsline {subsection}{\numberline {11.10}Incertezza additiva}{173}{subsection.11.10}%
+\contentsline {subsection}{\numberline {11.11}Incertezza moltiplicativa}{174}{subsection.11.11}%
+\contentsline {subsection}{\numberline {11.12}Incertezza inversa moltiplicativa}{175}{subsection.11.12}%
+\contentsline {subsection}{\numberline {11.13}Esempio 1: incertezza di guadagno}{176}{subsection.11.13}%
+\contentsline {subsection}{\numberline {11.14}Esempio 2: incertezza sulla costante di tempo}{177}{subsection.11.14}%
+\contentsline {subsection}{\numberline {11.15}Esempio 3: incertezza sulla posizione di un polo}{178}{subsection.11.15}%
+\contentsline {subsection}{\numberline {11.16}Esempio 4: incertezza sulla posizione di uno zero}{179}{subsection.11.16}%
+\contentsline {subsection}{\numberline {11.17}Sintesi conclusiva della lezione}{180}{subsection.11.17}%
+\contentsline {section}{Appendice}{182}{section*.167}%
+\contentsline {subsection}{Riferimento al materiale originale}{182}{section*.168}%
+\contentsline {section}{\numberline {12}Lezione 12}{184}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Visione d'insieme della lezione}{184}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Incertezza parametrica su uno zero: forma $s+z$}{184}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Da una famiglia parametrica a una perturbazione complessa}{185}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Esempio: scelta di un nominale semplificato}{186}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}Scelta del modello nominale}{187}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6}Costruzione di un peso razionale}{188}{subsection.12.6}%
+\contentsline {subsection}{\numberline {12.7}Dinamiche trascurate come incertezza}{189}{subsection.12.7}%
+\contentsline {subsection}{\numberline {12.8}Esempio: ritardo trascurato}{190}{subsection.12.8}%
+\contentsline {subsection}{\numberline {12.9}Esempio: lag trascurato}{191}{subsection.12.9}%
+\contentsline {subsection}{\numberline {12.10}Esempio: incertezza con guadagno e ritardo}{192}{subsection.12.10}%
+\contentsline {subsection}{\numberline {12.11}Dinamiche non modellate}{193}{subsection.12.11}%
+\contentsline {subsection}{\numberline {12.12}Passaggio al caso MIMO}{194}{subsection.12.12}%
+\contentsline {subsection}{\numberline {12.13}Forme inverse nel caso MIMO}{195}{subsection.12.13}%
+\contentsline {subsection}{\numberline {12.14}Lumping MIMO in una sola perturbazione}{196}{subsection.12.14}%
+\contentsline {subsection}{\numberline {12.15}Spostare l'incertezza dall'ingresso all'uscita}{197}{subsection.12.15}%
+\contentsline {subsection}{\numberline {12.16}Esempi sull'effetto del condizionamento}{198}{subsection.12.16}%
+\contentsline {subsection}{\numberline {12.17}Incertezza diagonale}{199}{subsection.12.17}%
+\contentsline {subsection}{\numberline {12.18}Sintesi conclusiva della lezione}{200}{subsection.12.18}%
+\contentsline {section}{Appendice}{201}{section*.185}%
+\contentsline {subsection}{Riferimento al materiale originale}{201}{section*.186}%
+\contentsline {section}{\numberline {13}Lezione 13}{203}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Raccordo con la lezione precedente}{203}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Dalla modellazione al problema di controllo}{203}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Che cosa si intende per input}{204}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}Due modi di specificare gli ingressi normalizzati}{205}{subsection.13.4}%
+\contentsline {subsection}{\numberline {13.5}Ingresso specifico atteso}{206}{subsection.13.5}%
+\contentsline {subsection}{\numberline {13.6}Insieme di ingressi attesi limitati}{207}{subsection.13.6}%
+\contentsline {subsection}{\numberline {13.7}Interpretazione frequenziale del peso di ingresso}{208}{subsection.13.7}%
+\contentsline {subsection}{\numberline {13.8}Esempio: come inserire un gradino nel set atteso}{209}{subsection.13.8}%
+\contentsline {subsection}{\numberline {13.9}Quali altri segnali sono contenuti nello stesso set}{210}{subsection.13.9}%
+\contentsline {subsection}{\numberline {13.10}Prestazione nominale: ruolo di $S$ e $T$}{211}{subsection.13.10}%
+\contentsline {subsection}{\numberline {13.11}Prestazione nominale in senso $\mathcal {H}_2$}{212}{subsection.13.11}%
+\contentsline {subsection}{\numberline {13.12}Dal segnale atteso al prodotto pesato $SW$}{213}{subsection.13.12}%
+\contentsline {subsection}{\numberline {13.13}Prestazione nominale in senso $\mathcal {H}_\infty $}{214}{subsection.13.13}%
+\contentsline {subsection}{\numberline {13.14}Confronto tra criteri $\mathcal {H}_2$ e $\mathcal {H}_\infty $}{215}{subsection.13.14}%
+\contentsline {subsection}{\numberline {13.15}Sintesi conclusiva della lezione}{215}{subsection.13.15}%
+\contentsline {section}{Appendice}{217}{section*.200}%
+\contentsline {subsection}{Riferimento al materiale originale}{217}{section*.201}%
+\contentsline {section}{\numberline {14}Lezione 14}{219}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Visione d'insieme della lezione}{219}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}Dalla norma $\mathcal {H}_\infty $ alla specifica su $S$}{219}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}Significato pratico del vincolo $\|SW\|_\infty \le 1$}{220}{subsection.14.3}%
+\contentsline {subsection}{\numberline {14.4}Interpretazione geometrica sul diagramma di Nyquist}{221}{subsection.14.4}%
+\contentsline {subsection}{\numberline {14.5}Prestazione nominale nel caso MIMO}{221}{subsection.14.5}%
+\contentsline {subsection}{\numberline {14.6}Interpretazione sperimentale del criterio $\mathcal {H}_2$ MIMO}{222}{subsection.14.6}%
+\contentsline {subsection}{\numberline {14.7}Prestazione nominale $\mathcal {H}_\infty $ nel caso MIMO}{223}{subsection.14.7}%
+\contentsline {subsection}{\numberline {14.8}Forma standard della specifica MIMO}{224}{subsection.14.8}%
+\contentsline {subsection}{\numberline {14.9}Perch\'e la sensibilit\`a $S$ \`e l'oggetto giusto}{225}{subsection.14.9}%
+\contentsline {subsection}{\numberline {14.10}Come si legge un peso di prestazione $w_P$}{226}{subsection.14.10}%
+\contentsline {subsection}{\numberline {14.11}Peso tipico di prestazione}{227}{subsection.14.11}%
+\contentsline {subsection}{\numberline {14.12}Perch\'e $w_P S$ da solo non basta}{228}{subsection.14.12}%
+\contentsline {subsection}{\numberline {14.13}Dal weighted sensitivity al mixed sensitivity}{229}{subsection.14.13}%
+\contentsline {subsection}{\numberline {14.14}Sintesi conclusiva della lezione}{230}{subsection.14.14}%
+\contentsline {section}{Appendice}{231}{section*.213}%
+\contentsline {subsection}{Riferimento al materiale originale}{231}{section*.214}%
