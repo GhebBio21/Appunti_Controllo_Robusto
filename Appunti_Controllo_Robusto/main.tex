@@ -8526,4 +8526,362 @@ Questa tripla specifica \`e il ponte verso la formulazione standard dei problemi
 
 Questa parte del documento \`e una traduzione e rielaborazione estesa delle slide 56--71 del PDF ``Formulation of Control Problems'', caricato dall'utente come materiale di partenza nella directory \texttt{Slide}.
 
+\begin{coverpage}
+\centering
+{\Huge\bfseries Controllo Robusto\par}
+\vspace{0.4em}
+{\LARGE Traduzione in italiano e approfondimento\par}
+\vspace{0.5em}
+{\Large Mixed sensitivity, scelta dei pesi e limiti da zeri multivariabili\par}
+\vfill
+\includegraphics[width=0.78\textwidth]{images15/formulation-72-78-001.png}
+\vfill
+\begin{focusbox}
+\textbf{Obiettivo del documento.} Questa parte completa la discussione sulla \emph{mixed sensitivity}: si riscrive la specifica come norma $\mathcal{H}_\infty$ di uno stack di funzioni pesate, si chiarisce il problema $S/KS$, si discutono criteri pratici per scegliere $W_P$, $W_u$ e $W_T$, e si introduce il primo limite fondamentale dovuto agli zeri a parte reale positiva nei sistemi MIMO.
+\end{focusbox}
+\vfill
+{\large Basato sulle slide del corso AA 2025/2026\par}
+\end{coverpage}
+
+\section{Lezione 15}
+
+\subsection{Visione d'insieme della lezione}
+
+La Lezione 14 ha introdotto il motivo per cui la sola specifica
+$$
+\|w_P S\|_\infty<1
+$$
+non basta. Essa controlla bene l'errore, ma non dice tutto sullo sforzo di controllo e sul comportamento ad alta frequenza. La Lezione 15 prende questa osservazione e la trasforma nella formulazione standard di \emph{mixed sensitivity}.
+
+Il filo logico delle slide 72--78 \`e il seguente:
+\begin{enumerate}
+    \item si impilano pi\`u funzioni di trasferimento pesate in un'unica matrice $N$;
+    \item si minimizza la norma $\mathcal{H}_\infty$ di $N$, come fa anche la funzione \texttt{mixsyn} di Matlab;
+    \item si guarda in particolare al problema $S/KS$, cio\`e al compromesso fra errore e azione di controllo;
+    \item si discutono scelte pratiche per i pesi $W_P$, $W_u$ e $W_T$;
+    \item si mostra un esempio in cui cambiare il peso di prestazione modifica tracking e rigetto del disturbo;
+    \item si apre il tema dei limiti fondamentali imposti dagli zeri MIMO a parte reale positiva.
+\end{enumerate}
+
+\begin{keybox}
+\textbf{Idea guida.} La mixed sensitivity non aggiunge formule per complicare il problema: serve a dire contemporaneamente tre cose al controllore. Vogliamo errore piccolo, comando non eccessivo e bassa sensibilit\`a ad alta frequenza. Lo stack $N$ \`e il contenitore unico di queste richieste.
+\end{keybox}
+
+\subsection{Lo stack di mixed sensitivity}
+
+La prima slide della lezione mostra lo schema usato per imporre specifiche su pi\`u funzioni di trasferimento. Nel loop SISO di base, con controllore $K$ e processo $G$, si osservano tre segnali pesati:
+\begin{itemize}
+    \item l'errore, pesato da $w_P$;
+    \item l'azione di controllo $u$, pesata da $w_u$;
+    \item l'uscita $y$, o equivalentemente la sensibilit\`a complementare, pesata da $w_T$.
+\end{itemize}
+
+Le corrispondenti funzioni di trasferimento chiuse sono:
+$$
+S=\frac{1}{1+GK},
+\qquad
+T=\frac{GK}{1+GK},
+\qquad
+KS=\frac{K}{1+GK}.
+$$
+La specifica mista viene raccolta nella matrice colonna
+$$
+N=
+\begin{bmatrix}
+w_P S\\
+w_T T\\
+w_u K S
+\end{bmatrix}.
+$$
+Il requisito \`e
+$$
+\|N\|_\infty
+=
+\max_\omega \bar\sigma\bigl(N(j\omega)\bigr)
+<1.
+$$
+
+Nel caso SISO lo stack $N$ \`e una colonna di scalari complessi. Il suo massimo valore singolare coincide quindi con la norma euclidea della colonna:
+$$
+\bar\sigma(N)
+=
+\sqrt{
+|w_P S|^2+
+|w_T T|^2+
+|w_u K S|^2
+}.
+$$
+Questo dettaglio \`e importante. Non si sta chiedendo soltanto che ciascun termine sia minore di uno separatamente: si chiede che la combinazione complessiva resti sotto uno a ogni frequenza. Se due termini sono contemporaneamente grandi nella stessa banda, la norma dello stack lo vede.
+
+Il problema di progetto diventa allora
+$$
+\min_K \|N(K)\|_\infty.
+$$
+Questo \`e il problema risolto, nella pratica, da funzioni di sintesi come \texttt{mixsyn}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images15/formulation-72-78-001.png}
+    \caption{Specifiche miste: errore, uscita e comando vengono pesati e raccolti nello stack $N$.}
+\end{figure}
+
+\subsection{Il problema \texorpdfstring{$S/KS$}{S/KS}}
+
+La slide successiva considera una versione pi\`u semplice, ma molto usata, della mixed sensitivity: il problema $S/KS$. In questo caso si controllano solo due canali:
+$$
+N=
+\begin{bmatrix}
+W_P S\\
+W_u K S
+\end{bmatrix}.
+$$
+Il primo termine, $W_P S$, misura la prestazione sull'errore; il secondo, $W_uKS$, misura lo sforzo di controllo. La sintesi cerca un controllore che renda piccolo lo stack completo in norma $\mathcal{H}_\infty$.
+
+La slide ricorda che $S$ \`e la funzione di trasferimento fra il riferimento $r$ e
+$$
+-e=y-r.
+$$
+La convenzione di segno non cambia il contenuto della specifica: il punto \`e che $S$ misura quanto l'errore resta sensibile al riferimento e ai disturbi nella banda di interesse.
+
+Nel caso MIMO si sceglie spesso un peso diagonale
+$$
+W_P=\operatorname{diag}\{w_{P_i}\},
+$$
+con un peso per ciascun canale principale. Una scelta tipica \`e
+$$
+w_{P_i}(s)
+=
+\frac{s/M_i+\omega_{B_i}^\ast}
+{s+\omega_{B_i}^\ast A_i},
+\qquad
+A_i\ll1.
+$$
+Come nella Lezione 14, $A_i$ impone il livello di errore a bassa frequenza, $\omega_{B_i}^\ast$ impone una banda minima desiderata e $M_i$ limita il picco massimo ammesso della sensibilit\`a.
+
+La slide suggerisce anche una procedura pratica alternativa. Si pu\`o prima progettare un controllore con un altro metodo, poi tracciare il modulo degli elementi diagonali di $S$ e scegliere $w_{P_i}$ come approssimazione razionale di
+$$
+\frac{1}{S_{ii}(s)}.
+$$
+L'idea \`e costruire un peso che segua il bound desiderato sul canale corrispondente, ma in una forma razionale utilizzabile dagli algoritmi di sintesi.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images15/formulation-72-78-002.png}
+    \caption{Problema $S/KS$: si minimizza lo stack formato da sensibilit\`a pesata e sforzo di controllo pesato.}
+\end{figure}
+
+\subsection{Scelta del peso sul comando \texorpdfstring{$W_u$}{Wu} e disturbi espliciti}
+
+La terza slide interpreta il secondo canale dello stack. La funzione
+$$
+KS
+$$
+\`e la funzione di trasferimento dal riferimento $r$ all'ingresso di controllo $u$. In un sistema gi\`a scalato, una scelta semplice e ragionevole \`e
+$$
+W_u=I.
+$$
+Questa scelta significa che il comando \`e gi\`a espresso in unit\`a normalizzate e che si vuole limitarne direttamente la grandezza.
+
+Una scelta pi\`u informativa consiste nell'usare un peso dinamico del tipo
+$$
+W_u(s)=\frac{s}{s+\omega_1},
+$$
+dove $\omega_1$ \`e circa la banda chiusa desiderata. Questo peso \`e piccolo a bassa frequenza e tende a uno ad alta frequenza. In questo modo si evita di penalizzare troppo il comando lento, spesso necessario per inseguire e rigettare disturbi, ma si penalizza maggiormente l'azione di controllo rapida.
+
+La seconda parte della slide riguarda il rigetto dei disturbi. Se il disturbo entra attraverso una dinamica $G_d$, si potrebbe essere tentati di rendere pi\`u ripido il peso $w_{P_i}$ alle basse frequenze. Le slide suggeriscono per\`o una scelta pi\`u pulita: modellare il disturbo esplicitamente nello stack. Si pu\`o scrivere, ad esempio,
+$$
+N=
+\begin{bmatrix}
+W_P S & W_P S G_d\\
+W_u K S & W_u K S G_d
+\end{bmatrix},
+$$
+oppure in forma compatta
+$$
+N=
+\begin{bmatrix}
+W_P S W_d\\
+W_u K S W_d
+\end{bmatrix},
+\qquad
+W_d=
+\begin{bmatrix}
+I & G_d
+\end{bmatrix}.
+$$
+
+Il significato \`e chiaro: invece di nascondere il disturbo dentro un peso di prestazione troppo artificiale, si dichiara esplicitamente come il disturbo entra nel sistema.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images15/formulation-72-78-003.png}
+    \caption{Il peso $W_u$ limita il comando; se il disturbo ha una dinamica propria $G_d$, conviene inserirla esplicitamente nello stack.}
+\end{figure}
+
+\subsection{Il ruolo di \texorpdfstring{$T$}{T} e il roll-off ad alta frequenza}
+
+La slide successiva torna alla sensibilit\`a complementare. La funzione $T$ \`e la funzione di trasferimento da $-n$ a $y$, cio\`e descrive quanto il rumore di misura riesce a passare sull'uscita. Per ridurre sensibilit\`a a rumore e incertezza, vogliamo che $T$ sia piccola ad alta frequenza.
+
+Una possibilit\`a diretta \`e aggiungere il termine
+$$
+W_TT
+$$
+nello stack $N$, con
+$$
+W_T=\operatorname{diag}\{w_{T_i}\}.
+$$
+Il profilo tipico di $w_{T_i}$ \`e opposto a quello del peso di prestazione: piccolo a bassa frequenza, grande ad alta frequenza. Cos\`i il vincolo $\|W_TT\|_\infty<1$ diventa severo proprio dove vogliamo che $T$ decada.
+
+La slide propone anche un approccio pi\`u diretto, basato sullo \emph{shaping} della pianta. Si aggiunge una dinamica ad alta frequenza $W_1(s)$ al modello del processo, ottenendo la pianta sagomata
+$$
+G_s=G W_1.
+$$
+Si progetta poi un controllore $\mathcal{H}_\infty$ ottimo $K_s$ per questa pianta sagomata e, alla fine, si include $W_1$ nel controllore:
+$$
+K=W_1(s)K_s.
+$$
+Lo scopo \`e forzare il roll-off desiderato gi\`a nella pianta vista dalla procedura di sintesi.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images15/formulation-72-78-004.png}
+    \caption{Per controllare rumore e incertezza ad alta frequenza si pu\`o pesare $T$ oppure sagomare direttamente la pianta con una dinamica $W_1$.}
+\end{figure}
+
+\subsection{Esempio di progetto \texorpdfstring{$S/KS$}{S/KS}}
+
+Le slide propongono poi un esempio SISO. Il processo nominale e la dinamica del disturbo sono
+$$
+G(s)=
+\frac{200}{10s+1}\,
+\frac{1}{(0.05s+1)^2},
+\qquad
+G_d(s)=\frac{100}{10s+1}.
+$$
+Si considera una sintesi mixed sensitivity del tipo $S/KS$:
+$$
+N=
+\begin{bmatrix}
+w_P S\\
+w_u K S
+\end{bmatrix}.
+$$
+
+Si sceglie inizialmente
+$$
+w_u=1,
+$$
+cos\`i il comando normalizzato deve restare minore di uno in modulo. Per la prestazione si usa prima
+$$
+w_{P1}(s)
+=
+\frac{s/M+\omega_B^\ast}
+{s+\omega_B^\ast A},
+\qquad
+M=1.5,\quad
+\omega_B^\ast=10,\quad
+A=10^{-4}.
+$$
+Le slide annotano che questa scelta produce una cattiva risposta al disturbo. Il motivo \`e che il peso impone certe prestazioni su $S$, ma non rende abbastanza aggressivo il loop nella banda in cui il disturbo $G_d$ \`e rilevante.
+
+Per ottenere guadagni pi\`u elevati a bassa frequenza, si prova allora un peso con pendenza pi\`u ripida:
+$$
+w_{P2}(s)
+=
+\frac{\left(s/M^{1/2}+\omega_B^\ast\right)^2}
+{\left(s+\omega_B^\ast A^{1/2}\right)^2},
+\qquad
+M=1.5,\quad
+\omega_B^\ast=10,\quad
+A=10^{-4}.
+$$
+Questa scelta modifica il bound $1/w_P$ su $S$ e forza una sensibilit\`a pi\`u piccola alle basse frequenze, migliorando il rigetto del disturbo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images15/formulation-72-78-005.png}
+    \caption{Esempio SISO: due scelte del peso di prestazione producono comportamenti diversi rispetto al disturbo.}
+\end{figure}
+
+\subsection{Lettura dei risultati dell'esempio}
+
+La slide successiva mostra tre grafici. Il primo confronta le risposte di tracking, il secondo le risposte al disturbo, il terzo mostra i moduli di $S_1$, $S_2$ e dei bound $1/w_{P1}$, $1/w_{P2}$.
+
+La lettura qualitativa \`e questa:
+\begin{itemize}
+    \item con il primo peso, la risposta di tracking \`e regolare, ma il rigetto del disturbo \`e lento e poco soddisfacente;
+    \item con il secondo peso, la risposta al disturbo migliora molto, perch\'e la sensibilit\`a \`e costretta a essere pi\`u piccola alle basse frequenze;
+    \item il prezzo \`e un tracking pi\`u aggressivo, con maggiore sovraelongazione.
+\end{itemize}
+
+Il grafico in frequenza chiarisce il motivo. Il secondo bound $1/w_{P2}$ \`e pi\`u severo nella regione di bassa frequenza e quindi obbliga il progetto a ridurre di pi\`u $S$. Questo aumenta il guadagno d'anello nella banda utile per il rigetto del disturbo.
+
+Il messaggio didattico \`e importante: cambiare un peso non \`e un'operazione cosmetica. Significa cambiare il compromesso fisico fra inseguimento, rigetto dei disturbi, picchi dinamici e sforzo di controllo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images15/formulation-72-78-006.png}
+    \caption{Risultati dell'esempio: il peso pi\`u ripido migliora il rigetto del disturbo, ma rende il tracking pi\`u aggressivo.}
+\end{figure}
+
+\subsection{Limiti imposti dagli zeri MIMO a parte reale positiva}
+
+L'ultima slide del blocco cambia argomento e apre un tema fondamentale: le limitazioni imposte dagli zeri a parte reale positiva nei sistemi multivariabili. Nei sistemi SISO sappiamo gi\`a che zeri nel semipiano destro limitano prestazioni e robustezza. La slide dice che lo stesso accade nei sistemi MIMO, con una difficolt\`a in pi\`u: la presenza degli zeri pu\`o non essere evidente guardando i singoli elementi della matrice $G(s)$.
+
+Nel caso MIMO, uno zero \`e definito come un valore
+$$
+s=z
+$$
+per cui la matrice di trasferimento $G(s)$ perde rango:
+$$
+\operatorname{rank}G(z)<\operatorname{rank}G(s)
+\quad
+\text{genericamente}.
+$$
+In modo equivalente, esiste una direzione di ingresso non nulla $v_z$ tale che
+$$
+G(z)v_z=0.
+$$
+Questa direzione \`e detta direzione dello zero: \`e una combinazione di ingressi lungo cui, alla frequenza complessa $z$, la matrice $G(z)$ ha guadagno nullo.
+
+Questo punto \`e molto pi\`u sottile del caso SISO. In SISO uno zero si vede direttamente come radice del numeratore. In MIMO, invece, nessun singolo elemento della matrice deve necessariamente annullarsi in modo evidente; ci\`o che si annulla \`e una combinazione direzionale di ingressi e uscite. Per questo le limitazioni multivariabili devono essere lette con strumenti direzionali, non solo canale per canale.
+
+\begin{focusbox}
+\textbf{Idea da ricordare.} Uno zero MIMO non \`e semplicemente ``uno zero di un elemento'' di $G(s)$. \`E una perdita di rango della matrice di trasferimento, quindi una direzione in cui il sistema non riesce a trasmettere segnale. Se tale zero \`e nel semipiano destro, impone limiti fondamentali alle prestazioni ottenibili in quella direzione.
+\end{focusbox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images15/formulation-72-78-007.png}
+    \caption{Gli zeri MIMO si definiscono tramite perdita di rango di $G(z)$ e introducono limitazioni fondamentali al controllo.}
+\end{figure}
+
+\subsection{Sintesi conclusiva della lezione}
+
+La Lezione 15 completa il passaggio dalla scelta qualitativa dei pesi alla formulazione operativa del problema di sintesi. La mixed sensitivity costruisce uno stack $N$ che raccoglie pi\`u richieste:
+\begin{itemize}
+    \item $W_P S$ per controllare l'errore e la prestazione;
+    \item $W_u K S$ per limitare l'azione di controllo;
+    \item $W_T T$ per imporre roll-off e attenuazione del rumore ad alta frequenza.
+\end{itemize}
+
+Nel problema $S/KS$ ci si concentra sui primi due canali, scegliendo $W_P$ per sagomare la sensibilit\`a e $W_u$ per rendere fisicamente ragionevole il comando. Se i disturbi hanno una dinamica propria, \`e spesso meglio inserirla esplicitamente nello stack invece di forzare artificialmente il peso di prestazione.
+
+L'esempio mostra che i pesi cambiano davvero il comportamento del sistema: un peso pi\`u severo a bassa frequenza migliora il rigetto dei disturbi, ma pu\`o rendere il tracking pi\`u aggressivo. La lezione si chiude poi aprendo il tema degli zeri RHP multivariabili, che ricordano una cosa essenziale: non tutte le prestazioni desiderate sono realizzabili, anche con la migliore scelta dei pesi.
+
+\begin{keybox}
+\textbf{Messaggio operativo.} La sintesi $\mathcal{H}_\infty$ non sceglie da sola che cosa sia importante: lo leggiamo nei pesi. Per questo $W_P$, $W_u$ e $W_T$ devono essere scelti come specifiche di progetto, non come parametri decorativi.
+\end{keybox}
+
+\clearpage
+\phantomsection
+\section*{Appendice}
+\addcontentsline{toc}{section}{Appendice}
+
+\subsection*{Riferimento al materiale originale}
+\phantomsection
+\addcontentsline{toc}{subsection}{Riferimento al materiale originale}
+
+Questa parte del documento \`e una traduzione e rielaborazione estesa delle slide 72--78 del PDF ``Formulation of Control Problems'', caricato dall'utente come materiale di partenza nella directory \texttt{Slide}.
+
 \end{document}

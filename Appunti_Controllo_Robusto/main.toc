@@ -270,3 +270,15 @@
 \contentsline {subsection}{\numberline {14.14}Sintesi conclusiva della lezione}{232}{subsection.14.14}%
 \contentsline {section}{Appendice}{233}{section*.214}%
 \contentsline {subsection}{Riferimento al materiale originale}{233}{section*.215}%
+\contentsline {section}{\numberline {15}Lezione 15}{235}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Visione d'insieme della lezione}{235}{subsection.15.1}%
+\contentsline {subsection}{\numberline {15.2}Lo stack di mixed sensitivity}{235}{subsection.15.2}%
+\contentsline {subsection}{\numberline {15.3}Il problema $S/KS$}{236}{subsection.15.3}%
+\contentsline {subsection}{\numberline {15.4}Scelta del peso sul comando $W_u$ e disturbi espliciti}{237}{subsection.15.4}%
+\contentsline {subsection}{\numberline {15.5}Il ruolo di $T$ e il roll-off ad alta frequenza}{238}{subsection.15.5}%
+\contentsline {subsection}{\numberline {15.6}Esempio di progetto $S/KS$}{239}{subsection.15.6}%
+\contentsline {subsection}{\numberline {15.7}Lettura dei risultati dell'esempio}{240}{subsection.15.7}%
+\contentsline {subsection}{\numberline {15.8}Limiti imposti dagli zeri MIMO a parte reale positiva}{241}{subsection.15.8}%
+\contentsline {subsection}{\numberline {15.9}Sintesi conclusiva della lezione}{242}{subsection.15.9}%
+\contentsline {section}{Appendice}{243}{section*.223}%
+\contentsline {subsection}{Riferimento al materiale originale}{243}{section*.224}%
