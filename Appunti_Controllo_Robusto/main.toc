@@ -236,36 +236,37 @@
 \contentsline {subsection}{Riferimento al materiale originale}{201}{section*.186}%
 \contentsline {section}{\numberline {13}Lezione 13}{203}{section.13}%
 \contentsline {subsection}{\numberline {13.1}Raccordo con la lezione precedente}{203}{subsection.13.1}%
-\contentsline {subsection}{\numberline {13.2}Dalla modellazione al problema di controllo}{203}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Che cosa si intende per input}{204}{subsection.13.3}%
-\contentsline {subsection}{\numberline {13.4}Due modi di specificare gli ingressi normalizzati}{205}{subsection.13.4}%
-\contentsline {subsection}{\numberline {13.5}Ingresso specifico atteso}{206}{subsection.13.5}%
-\contentsline {subsection}{\numberline {13.6}Insieme di ingressi attesi limitati}{207}{subsection.13.6}%
-\contentsline {subsection}{\numberline {13.7}Interpretazione frequenziale del peso di ingresso}{208}{subsection.13.7}%
-\contentsline {subsection}{\numberline {13.8}Esempio: come inserire un gradino nel set atteso}{209}{subsection.13.8}%
-\contentsline {subsection}{\numberline {13.9}Quali altri segnali sono contenuti nello stesso set}{210}{subsection.13.9}%
-\contentsline {subsection}{\numberline {13.10}Prestazione nominale: ruolo di $S$ e $T$}{211}{subsection.13.10}%
-\contentsline {subsection}{\numberline {13.11}Prestazione nominale in senso $\mathcal {H}_2$}{212}{subsection.13.11}%
-\contentsline {subsection}{\numberline {13.12}Dal segnale atteso al prodotto pesato $SW$}{213}{subsection.13.12}%
-\contentsline {subsection}{\numberline {13.13}Prestazione nominale in senso $\mathcal {H}_\infty $}{214}{subsection.13.13}%
-\contentsline {subsection}{\numberline {13.14}Confronto tra criteri $\mathcal {H}_2$ e $\mathcal {H}_\infty $}{215}{subsection.13.14}%
-\contentsline {subsection}{\numberline {13.15}Sintesi conclusiva della lezione}{215}{subsection.13.15}%
-\contentsline {section}{Appendice}{217}{section*.200}%
-\contentsline {subsection}{Riferimento al materiale originale}{217}{section*.201}%
-\contentsline {section}{\numberline {14}Lezione 14}{219}{section.14}%
-\contentsline {subsection}{\numberline {14.1}Visione d'insieme della lezione}{219}{subsection.14.1}%
-\contentsline {subsection}{\numberline {14.2}Dalla norma $\mathcal {H}_\infty $ alla specifica su $S$}{219}{subsection.14.2}%
-\contentsline {subsection}{\numberline {14.3}Significato pratico del vincolo $\|SW\|_\infty \le 1$}{220}{subsection.14.3}%
-\contentsline {subsection}{\numberline {14.4}Interpretazione geometrica sul diagramma di Nyquist}{221}{subsection.14.4}%
-\contentsline {subsection}{\numberline {14.5}Prestazione nominale nel caso MIMO}{221}{subsection.14.5}%
-\contentsline {subsection}{\numberline {14.6}Interpretazione sperimentale del criterio $\mathcal {H}_2$ MIMO}{222}{subsection.14.6}%
-\contentsline {subsection}{\numberline {14.7}Prestazione nominale $\mathcal {H}_\infty $ nel caso MIMO}{223}{subsection.14.7}%
-\contentsline {subsection}{\numberline {14.8}Forma standard della specifica MIMO}{224}{subsection.14.8}%
-\contentsline {subsection}{\numberline {14.9}Perch\'e la sensibilit\`a $S$ \`e l'oggetto giusto}{225}{subsection.14.9}%
-\contentsline {subsection}{\numberline {14.10}Come si legge un peso di prestazione $w_P$}{226}{subsection.14.10}%
-\contentsline {subsection}{\numberline {14.11}Peso tipico di prestazione}{227}{subsection.14.11}%
-\contentsline {subsection}{\numberline {14.12}Perch\'e $w_P S$ da solo non basta}{228}{subsection.14.12}%
-\contentsline {subsection}{\numberline {14.13}Dal weighted sensitivity al mixed sensitivity}{229}{subsection.14.13}%
-\contentsline {subsection}{\numberline {14.14}Sintesi conclusiva della lezione}{230}{subsection.14.14}%
-\contentsline {section}{Appendice}{231}{section*.213}%
-\contentsline {subsection}{Riferimento al materiale originale}{231}{section*.214}%
+\contentsline {subsection}{\numberline {13.2}Dalla modellazione al problema di controllo}{204}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Che cosa si intende per input}{205}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}Due modi di specificare gli ingressi normalizzati}{206}{subsection.13.4}%
+\contentsline {subsection}{\numberline {13.5}Ingresso specifico atteso}{207}{subsection.13.5}%
+\contentsline {subsection}{\numberline {13.6}Insieme di ingressi attesi limitati}{208}{subsection.13.6}%
+\contentsline {subsection}{\numberline {13.7}Interpretazione frequenziale del peso di ingresso}{209}{subsection.13.7}%
+\contentsline {subsection}{\numberline {13.8}Esempio: come inserire un gradino nel set atteso}{210}{subsection.13.8}%
+\contentsline {subsection}{\numberline {13.9}Quali altri segnali sono contenuti nello stesso set}{211}{subsection.13.9}%
+\contentsline {subsection}{\numberline {13.10}Dagli ingressi agli obiettivi di prestazione}{212}{subsection.13.10}%
+\contentsline {subsection}{\numberline {13.11}Prestazione nominale SISO: ruolo di $S$ e $T$}{213}{subsection.13.11}%
+\contentsline {subsection}{\numberline {13.12}Prestazione nominale in senso $\mathcal {H}_2$}{214}{subsection.13.12}%
+\contentsline {subsection}{\numberline {13.13}Dal segnale atteso al prodotto pesato $SW$}{215}{subsection.13.13}%
+\contentsline {subsection}{\numberline {13.14}Prestazione nominale in senso $\mathcal {H}_\infty $}{215}{subsection.13.14}%
+\contentsline {subsection}{\numberline {13.15}Confronto tra criteri $\mathcal {H}_2$ e $\mathcal {H}_\infty $}{216}{subsection.13.15}%
+\contentsline {subsection}{\numberline {13.16}Sintesi conclusiva della lezione}{217}{subsection.13.16}%
+\contentsline {section}{Appendice}{218}{section*.200}%
+\contentsline {subsection}{Riferimento al materiale originale}{218}{section*.201}%
+\contentsline {section}{\numberline {14}Lezione 14}{220}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Visione d'insieme della lezione}{220}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}Dalla norma $\mathcal {H}_\infty $ alla specifica su $S$}{220}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}Significato pratico del vincolo $\|SW\|_\infty \le 1$}{221}{subsection.14.3}%
+\contentsline {subsection}{\numberline {14.4}Interpretazione geometrica sul diagramma di Nyquist}{222}{subsection.14.4}%
+\contentsline {subsection}{\numberline {14.5}Prestazione nominale nel caso MIMO}{222}{subsection.14.5}%
+\contentsline {subsection}{\numberline {14.6}Interpretazione sperimentale del criterio $\mathcal {H}_2$ MIMO}{223}{subsection.14.6}%
+\contentsline {subsection}{\numberline {14.7}Prestazione nominale $\mathcal {H}_\infty $ nel caso MIMO}{224}{subsection.14.7}%
+\contentsline {subsection}{\numberline {14.8}Forma standard della specifica MIMO}{225}{subsection.14.8}%
+\contentsline {subsection}{\numberline {14.9}Perch\'e la sensibilit\`a $S$ \`e l'oggetto giusto}{226}{subsection.14.9}%
+\contentsline {subsection}{\numberline {14.10}Come si legge un peso di prestazione $w_P$}{227}{subsection.14.10}%
+\contentsline {subsection}{\numberline {14.11}Peso tipico di prestazione}{228}{subsection.14.11}%
+\contentsline {subsection}{\numberline {14.12}Perch\'e $w_P S$ da solo non basta}{229}{subsection.14.12}%
+\contentsline {subsection}{\numberline {14.13}Dal weighted sensitivity al mixed sensitivity}{230}{subsection.14.13}%
+\contentsline {subsection}{\numberline {14.14}Sintesi conclusiva della lezione}{231}{subsection.14.14}%
+\contentsline {section}{Appendice}{232}{section*.213}%
+\contentsline {subsection}{Riferimento al materiale originale}{232}{section*.214}%

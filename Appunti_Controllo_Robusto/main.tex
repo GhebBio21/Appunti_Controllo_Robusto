@@ -7408,20 +7408,22 @@ Questa parte del documento \`e una traduzione e rielaborazione estesa delle slid
 
 \subsection{Raccordo con la lezione precedente}
 
-La prima slide richiesta per questa lezione \`e in realt\`a un riepilogo del materiale finale della Lezione 12. Vale la pena conservarla perch\'e fa da ponte naturale verso il passo successivo: una volta deciso \emph{come} modellare l'incertezza, bisogna decidere \emph{che cosa} chiediamo al controllore.
+La prima slide della lezione \`e un riepilogo del materiale finale della Lezione 12. Non \`e una ripetizione inutile: serve a chiudere il discorso sulla modellazione dell'incertezza MIMO prima di passare alla formulazione della prestazione. In altre parole, prima si chiarisce \emph{quale famiglia di piante} vogliamo coprire; subito dopo si chiarisce \emph{quali ingressi} ci aspettiamo e \emph{come} misureremo l'errore.
 
-Il riassunto MIMO mette in evidenza quattro idee che restano importanti anche nel seguito:
+Il riassunto MIMO mette in evidenza i seguenti punti.
 \begin{itemize}
-    \item l'incertezza \textbf{strutturata} nasce tipicamente da parametri reali incerti e viene rappresentata con matrici diagonali;
-    \item l'incertezza \textbf{non strutturata} usa invece matrici complesse piene, in forma additiva o moltiplicativa, diretta o inversa;
-    \item spostare un'incertezza dall'ingresso all'uscita non \`e innocuo nel caso MIMO, perch\'e il numero di condizionamento di $G$ pu\`o gonfiare molto il set di piante ottenuto;
-    \item per dinamiche non modellate si usa ancora la stessa logica vista in SISO, per esempio con un peso del tipo
+    \item L'incertezza \textbf{strutturata} \`e rappresentata da una matrice reale diagonale. Questo caso nasce tipicamente da incertezza parametrica: ogni parametro incerto produce un blocco o un elemento specifico, quindi non si permette alla perturbazione di mescolare arbitrariamente tutti i canali.
+    \item L'incertezza \textbf{non strutturata} \`e rappresentata da una matrice complessa piena. Pu\`o comparire nelle forme additive, moltiplicative, inverse, in ingresso o in uscita. \`E pi\`u semplice da trattare, ma spesso pi\`u conservativa.
+    \item Spostare un'incertezza dall'ingresso all'uscita, o viceversa, non \`e un'operazione innocua nel caso MIMO. Se la pianta $G$ \`e mal condizionata, il numero di condizionamento pu\`o allargare molto l'insieme di piante ottenuto e introdurre piante che non appartenevano alla famiglia iniziale.
+    \item Combinare forme diverse di incertezza porta a una matrice a blocchi diagonali. Ogni blocco pu\`o essere non strutturato, ma l'insieme complessivo non \`e pi\`u davvero non strutturato: possiede una struttura di blocco che conviene non ignorare.
+    \item L'incertezza diagonale non strutturata appare spesso quando si modellano dinamiche trascurate o non modellate sui singoli canali di ingresso o di uscita.
+    \item Nel caso di dinamiche non modellate si usa la stessa logica vista in SISO: si introduce un peso razionale che maggiora il profilo dell'errore, per esempio
     $$
     w(s)=\frac{\tau s+r_0}{(\tau/r_\infty)s+1}.
     $$
 \end{itemize}
 
-Il punto concettuale \`e che il problema di robustezza non finisce con la scelta del peso d'incertezza. Quella \`e solo la met\`a della storia. L'altra met\`a consiste nel dire quali ingressi ci aspettiamo e con quale metrica misuriamo l'errore.
+Il punto concettuale \`e questo: il problema di robustezza non finisce con la scelta del peso d'incertezza. Quella scelta dice quanto il modello pu\`o essere sbagliato; non dice ancora quali segnali entreranno nel sistema e che cosa consideriamo una buona risposta. La Lezione 13 comincia proprio da qui.
 
 \begin{figure}[H]
     \centering
@@ -7431,49 +7433,47 @@ Il punto concettuale \`e che il problema di robustezza non finisce con la scelta
 
 \subsection{Dalla modellazione al problema di controllo}
 
-Le due slide successive condensano il messaggio fondamentale dell'intero capitolo. Un problema di controllo ben posto richiede quattro ingredienti:
+La slide di formulazione del problema dice che una procedura di progetto produce un controllore capace di funzionare in un ambiente reale solo se vengono specificati quattro ingredienti:
 \begin{enumerate}
-    \item un \textbf{modello nominale} del processo;
-    \item un \textbf{bound sull'incertezza} di modello;
-    \item una descrizione del \textbf{tipo di ingressi} attesi;
-    \item un insieme di \textbf{obiettivi di prestazione}.
+    \item un \textbf{modello nominale} del processo, idealmente perfetto ma in pratica solo approssimato;
+    \item dei \textbf{bound sull'incertezza} di modello, che includono incertezza parametrica e dinamiche non modellate o trascurate;
+    \item il \textbf{tipo di ingressi} attesi, per esempio riferimenti, variazioni di set-point o disturbi;
+    \item gli \textbf{obiettivi di prestazione}, cio\`e la quantit\`a da rendere piccola e la metrica con cui la si misura.
 \end{enumerate}
 
-Le Lezioni 11 e 12 hanno lavorato soprattutto sui primi due punti. La Lezione 13 entra invece nel cuore dei punti 3 e 4. Le slide lo segnalano esplicitamente anche graficamente: prima viene evidenziato il punto sugli ingressi, poi quello sulle prestazioni. Il motivo \`e semplice. Se non diciamo quali segnali entreranno nel loop, parlare di ``buona prestazione'' resta ambiguo. E se non specifichiamo che cosa va minimizzato, non esiste un progetto sensato del controllore.
+Le Lezioni 11 e 12 hanno lavorato soprattutto sui primi due punti: modello nominale e descrizione dell'incertezza. Questa lezione si concentra invece sul terzo punto, cio\`e sulla descrizione degli ingressi attesi. La slide insiste sul fatto che omettere anche uno solo dei quattro ingredienti porta quasi sempre a controllori che falliscono in pratica. Il motivo \`e semplice: un controllore progettato senza sapere quali ingressi dovr\`a affrontare pu\`o essere ottimo per un segnale ideale, ma pessimo per i segnali che compaiono davvero durante l'esercizio.
 
 \begin{keybox}
-\textbf{Idea guida.} Robustezza e prestazione sono inseparabili ma non sono la stessa cosa. La robustezza descrive quanto il modello pu\`o sbagliare; la prestazione descrive quanto bene vogliamo regolare il sistema contro gli ingressi realmente rilevanti.
+\textbf{Idea guida.} Robustezza e prestazione sono inseparabili, ma non sono la stessa cosa. La robustezza descrive quanto il modello pu\`o sbagliare; la prestazione descrive quanto bene il sistema deve comportarsi rispetto agli ingressi realmente rilevanti.
 \end{keybox}
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}{0.48\textwidth}
-        \includegraphics[width=\linewidth]{images13/formulation-42-55-002.png}
-        \caption{Nella prima formulazione viene messo in evidenza il tipo di ingressi.}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.48\textwidth}
-        \includegraphics[width=\linewidth]{images13/formulation-42-55-010.png}
-        \caption{Nella seconda viene richiamato il ruolo degli obiettivi di prestazione.}
-    \end{subfigure}
-    \caption{Un progetto di controllo completo richiede modello, incertezza, ingressi attesi e criterio di prestazione.}
+    \includegraphics[width=0.82\textwidth]{images13/formulation-42-55-002.png}
+    \caption{La formulazione del problema di controllo: dopo modello e incertezza, la slide mette in evidenza la necessit\`a di specificare il tipo di ingressi.}
 \end{figure}
 
 \subsection{Che cosa si intende per input}
 
-Le slide usano il termine \emph{input} in un senso pi\`u ampio del solo segnale di controllo $u$. Ogni segnale esterno che entra nel loop in qualche punto va trattato come un ingresso ai fini della specifica di prestazione: il riferimento $r$, il disturbo $d$, il rumore di misura $n$, oppure altri segnali equivalenti in strutture diverse.
+La slide successiva chiarisce una convenzione importante. Con il termine \emph{input} non si intende solo il comando $u$ applicato al processo. Ai fini della formulazione del problema, chiamiamo input tutti i segnali esterni che entrano nel loop in qualche punto. Esempi tipici sono:
+\begin{itemize}
+    \item il riferimento o set-point $r$;
+    \item un disturbo $d$ applicato al processo o all'uscita;
+    \item il rumore di misura $n$;
+    \item eventuali altri segnali esterni equivalenti, a seconda dello schema considerato.
+\end{itemize}
 
-L'idea centrale \`e introdurre un \textbf{input normalizzato} $v'$ e generare l'ingresso fisico $v$ tramite un peso:
+L'idea della slide \`e introdurre un \textbf{input normalizzato} $v'$ e generare l'ingresso fisico $v$ facendolo passare attraverso un peso:
 $$
 V(s)=W(s)V'(s).
 $$
-Qui $W(s)$ \`e detto \emph{input weight}. Non \`e un dettaglio formale: \`e l'oggetto che traduce la frase ``mi aspetto ingressi di questo tipo'' in una descrizione matematica utilizzabile nel progetto.
+Il blocco $W(s)$ \`e chiamato \emph{input weight}. Non \`e un dettaglio grafico: \`e il modo con cui si codifica matematicamente la frase ``mi aspetto ingressi con questa forma, questa ampiezza e questa banda di frequenza''.
 
-In altre parole:
+Quindi bisogna leggere i tre oggetti cos\`i:
 \begin{itemize}
-    \item $v'$ \`e una variabile standardizzata, facile da vincolare;
-    \item $W(s)$ modella forma, banda e ampiezza degli ingressi fisici;
-    \item $v$ \`e il segnale reale che il loop dovr\`a sopportare bene.
+    \item $v'$ \`e un segnale standardizzato, scelto in modo da essere facile da vincolare;
+    \item $W(s)$ contiene la conoscenza pratica sugli ingressi attesi;
+    \item $v$ \`e il segnale fisico che entra davvero nel ciclo di controllo.
 \end{itemize}
 
 \begin{figure}[H]
@@ -7484,26 +7484,26 @@ In altre parole:
 
 \subsection{Due modi di specificare gli ingressi normalizzati}
 
-Le slide distinguono due impostazioni.
+Le slide distinguono due modi di specificare l'ingresso normalizzato $v'$. Questa distinzione \`e utile perch\'e separa il caso in cui conosciamo molto bene il segnale atteso dal caso, pi\`u realistico, in cui conosciamo solo una famiglia di segnali possibili.
 
-La prima \`e usare un \textbf{ingresso normalizzato specifico}, tipicamente
+La prima possibilit\`a \`e fissare un \textbf{ingresso normalizzato specifico}. Tipicamente, in SISO si usa un impulso, mentre in MIMO si usa un vettore di impulsi. Nel dominio di Laplace/Fourier questo viene scritto nella forma
 $$
 V'(s)=\text{costante},
 $$
-cio\`e un impulso in SISO oppure un vettore di impulsi in MIMO. In questo caso il peso $W(s)$ coincide sostanzialmente con la forma del segnale fisico desiderato.
+perch\'e l'impulso ha trasformata costante. In questa impostazione, il peso $W(s)$ diventa sostanzialmente il generatore del segnale fisico desiderato.
 
-La seconda \`e lavorare con un \textbf{insieme di ingressi normalizzati limitati}:
+La seconda possibilit\`a \`e lavorare con un \textbf{insieme di ingressi normalizzati limitati}. La slide considera tutti gli ingressi con norma $2$ non maggiore di uno:
 $$
 \mathcal{V}'=\left\{v' : \|v'\|_2\le 1\right\}.
 $$
-Nel caso SISO possiamo scrivere
+Nel caso SISO questa condizione si pu\`o leggere nel tempo come
 $$
 \|v'\|_2^2
 \triangleq
 \int_0^\infty v'^2(t)\,dt
 \le 1,
 $$
-mentre nel caso MIMO la stessa idea diventa
+cio\`e l'energia del segnale normalizzato \`e limitata. Nel caso MIMO la stessa idea si scrive in frequenza come
 $$
 \|v'\|_2^2
 =
@@ -7511,8 +7511,9 @@ $$
 V'^{H}(j\omega)V'(j\omega)\,d\omega
 \le 1.
 $$
+Qui $H$ indica il trasposto coniugato. La quantit\`a $V'^{H}V'$ somma l'energia dei vari canali, tenendo conto che i segnali possono essere complessi nel dominio della frequenza.
 
-Lavorare con un insieme invece che con un solo segnale \`e spesso pi\`u realistico. In pratica non sappiamo se in esercizio arriver\`a \emph{esattamente} un gradino ideale, un disturbo ideale o una sinusoide ideale; sappiamo per\`o che i segnali attesi avranno una certa banda e una certa forma dominante.
+Lavorare con un insieme invece che con un solo segnale \`e spesso pi\`u realistico. Nella pratica non sappiamo se in esercizio arriver\`a esattamente un gradino ideale, una rampa ideale o un disturbo con una forma prefissata. Sappiamo per\`o che i segnali plausibili hanno una certa banda, una certa energia e una certa forma dominante. Il formalismo con $v'$ e $W$ serve proprio a descrivere questa informazione senza fingere di conoscere il futuro segnale esatto.
 
 \begin{figure}[H]
     \centering
@@ -7522,21 +7523,24 @@ Lavorare con un insieme invece che con un solo segnale \`e spesso pi\`u realisti
 
 \subsection{Ingresso specifico atteso}
 
-Se conosciamo abbastanza bene il segnale da aspettarci, la strada pi\`u semplice \`e fissare $v'$ e usare $W$ per produrre il segnale fisico voluto. Le slide fanno l'esempio classico:
+La slide sugli ingressi specifici parte da un'osservazione molto pratica: nel controllo di processo spesso si conosce abbastanza bene il tipo di ingressi che compariranno. Le variazioni di set-point hanno spesso la forma di gradini o rampe; molti disturbi possono essere modellati come gradini, eventualmente filtrati da una dinamica lenta.
+
+In questo caso la strada pi\`u semplice \`e fissare l'ingresso normalizzato e scegliere $W$ in modo da ottenere il segnale fisico desiderato. La slide usa l'esempio
 $$
 V'(s)=1,
 $$
 cio\`e un impulso normalizzato. Allora:
 \begin{itemize}
-    \item se vogliamo un impulso fisico, basta scegliere $W(s)=1$;
-    \item se vogliamo un gradino, scegliamo $W(s)=1/s$;
+    \item se vogliamo un impulso fisico, scegliamo $V(s)=1$ e quindi $W(s)=1$;
+    \item se vogliamo un gradino, scegliamo $V(s)=1/s$ e quindi $W(s)=1/s$;
+    \item se volessimo una rampa, coerentemente con la stessa logica sceglieremmo $W(s)=1/s^2$;
     \item pi\`u in generale, per un ingresso specifico $V(s)$ possiamo scegliere direttamente
     $$
     W(s)=V(s).
     $$
 \end{itemize}
 
-Questa idea \`e molto intuitiva: il peso d'ingresso diventa una specie di \emph{generatore di forma}. Tuttavia \`e anche rigida, perch\'e descrive bene un solo segnale o un numero molto piccolo di segnali.
+Questa idea \`e molto intuitiva: il peso d'ingresso diventa un generatore di forma. Per\`o \`e anche rigida, perch\'e descrive bene un solo segnale, o comunque una classe molto piccola di segnali. Se il controllore deve essere robusto anche rispetto a ingressi simili ma non identici, conviene passare alla descrizione tramite insiemi.
 
 \begin{figure}[H]
     \centering
@@ -7546,7 +7550,9 @@ Questa idea \`e molto intuitiva: il peso d'ingresso diventa una specie di \emph{
 
 \subsection{Insieme di ingressi attesi limitati}
 
-Quando il controllore deve funzionare bene non per un solo segnale, ma per una famiglia di segnali simili, si considera l'insieme
+La slide successiva spiega perch\'e \`e spesso pi\`u significativo descrivere un \emph{set} di ingressi. La prestazione del loop pu\`o cambiare sensibilmente al variare dell'ingresso: un controllore che va bene per un gradino perfettamente ideale pu\`o comportarsi peggio per un gradino filtrato, per un disturbo leggermente pi\`u rapido o per una combinazione di canali nel caso MIMO. Per questo si considera un insieme che contenga l'ingresso pi\`u frequente insieme ad altri segnali simili.
+
+Partendo da $v=Wv'$ e imponendo $\|v'\|_2\le1$, si ottiene
 $$
 \mathcal{V}
 =
@@ -7555,7 +7561,7 @@ v:
 \|W^{-1}v\|_2\le 1
 \right\}.
 $$
-Nel caso SISO, usando Parseval, questa condizione si pu\`o scrivere come
+Nel caso SISO, usando il teorema di Parseval, questa condizione si scrive come
 $$
 \|W^{-1}v\|_2^2
 =
@@ -7570,7 +7576,7 @@ $$
 d\omega
 \le 1.
 $$
-Nel caso MIMO:
+Nel caso MIMO la forma corrispondente \`e
 $$
 \|W^{-1}v\|_2^2
 =
@@ -7581,7 +7587,9 @@ d\omega
 \le 1.
 $$
 
-Le slide richiamano anche la norma $\mathcal{H}_2$ di una matrice di trasferimento:
+Queste formule vanno lette con attenzione. Non stiamo imponendo direttamente che $v$ abbia energia piccola: stiamo imponendo che sia piccolo il segnale normalizzato $W^{-1}v$. Se $W$ \`e grande in una certa banda, allora in quella banda sono ammessi ingressi fisici pi\`u grandi. Se $W$ \`e piccolo, gli ingressi fisici ammessi sono pi\`u piccoli.
+
+La slide richiama anche la norma $\mathcal{H}_2$ di una matrice di trasferimento:
 $$
 \|G(s)\|_2
 =
@@ -7601,7 +7609,7 @@ G(j\omega)G^*(j\omega)\,d\omega
 \right)
 }.
 $$
-Questo richiama un fatto importante: sia i segnali sia le funzioni di trasferimento vengono misurati con norme energetiche compatibili. Per questo, pi\`u avanti, apparir\`a in modo naturale il prodotto $S(s)W(s)$.
+Qui $g(t)$ \`e la risposta impulsiva di $G(s)$. La formula dice che la norma $\mathcal{H}_2$ pu\`o essere vista sia come integrale in frequenza di $G(j\omega)G^*(j\omega)$ sia come energia della risposta impulsiva. Il richiamo non \`e casuale: le slide stanno preparando il passaggio alla prestazione nominale, dove l'errore sar\`a scritto come prodotto fra una funzione del sistema chiuso e il peso d'ingresso.
 
 \begin{figure}[H]
     \centering
@@ -7611,24 +7619,30 @@ Questo richiama un fatto importante: sia i segnali sia le funzioni di trasferime
 
 \subsection{Interpretazione frequenziale del peso di ingresso}
 
-La slide successiva spiega bene il significato del peso $W$ in frequenza. Se il segnale $v$ ha uno spettro stretto e concentrato attorno a una frequenza $\omega^\ast$, allora:
+La slide successiva d\`a l'interpretazione frequenziale del peso. Consideriamo un ingresso il cui spettro \`e molto stretto e concentrato attorno a una frequenza $\omega^\ast$. Nel caso SISO questo significa che il segnale assomiglia a una sinusoide $\sin(\omega^\ast t)$. Nel caso MIMO significa che il segnale assomiglia a
+$$
+\operatorname{Re}\{\bar v\,e^{j\omega^\ast t}\},
+$$
+dove $\bar v$ \`e un vettore complesso costante che fissa ampiezze e fasi relative dei canali.
+
+In questa situazione il vincolo sul set di ingressi ha una lettura quasi puntuale in frequenza:
 \begin{itemize}
-    \item in SISO la sua ampiezza \`e limitata da $|W(j\omega^\ast)|$;
-    \item in MIMO, per una direzione complessa $\bar{v}^{\,\prime}$, la condizione di ammissibilit\`a diventa
+    \item in SISO l'ampiezza dell'ingresso fisico \`e limitata, in prima approssimazione, da $|W(j\omega^\ast)|$;
+    \item in MIMO, per una direzione complessa $\bar v$, la condizione di ammissibilit\`a diventa
     $$
-    \bigl(W^{-1}(j\omega^\ast)\bar{v}^{\,\prime}\bigr)^H
-    \bigl(W^{-1}(j\omega^\ast)\bar{v}^{\,\prime}\bigr)
+    \bigl(W^{-1}(j\omega^\ast)\bar v\bigr)^H
+    \bigl(W^{-1}(j\omega^\ast)\bar v\bigr)
     \le 1.
     $$
 \end{itemize}
 
-Questo rende molto chiara la scelta di $W$:
+Questa \`e la lettura pi\`u importante della slide. Dove $W$ \`e grande, il set ammette ingressi fisici grandi; dove $W$ \`e piccolo, il set ammette solo ingressi fisici piccoli. Per questo le slide dicono che ci aspettiamo $W$ grande a bassa frequenza e piccolo ad alta frequenza:
 \begin{itemize}
-    \item $W$ \textbf{grande a bassa frequenza} significa che sono ammessi ingressi lenti di ampiezza significativa, come gradini e disturbi quasi costanti;
-    \item $W$ \textbf{piccolo ad alta frequenza} significa che non ci interessa, oppure non riteniamo realistico, dover inseguire segnali rapidi molto energici.
+    \item a bassa frequenza si trovano set-point, disturbi lenti e variazioni quasi costanti, quindi ha senso ammettere segnali importanti;
+    \item ad alta frequenza \`e meno realistico chiedere inseguimento accurato di segnali molto rapidi, e inoltre quei segnali rischiano di confondersi con rumore o dinamiche non modellate.
 \end{itemize}
 
-Questa rappresentazione \`e preziosa in progetto: non serve indovinare il segnale futuro esatto, ma basta costruire un contenitore realistico dei segnali plausibili.
+Questa rappresentazione \`e preziosa in progetto: non serve indovinare il segnale futuro esatto, ma bisogna costruire un contenitore realistico dei segnali plausibili.
 
 \begin{figure}[H]
     \centering
@@ -7638,17 +7652,19 @@ Questa rappresentazione \`e preziosa in progetto: non serve indovinare il segnal
 
 \subsection{Esempio: come inserire un gradino nel set atteso}
 
-Supponiamo ora di voler costruire un insieme di ingressi che contenga almeno un gradino unitario. Le slide propongono di scegliere
+Supponiamo ora di voler costruire un insieme di ingressi che contenga almeno un gradino unitario. Un gradino non ha energia finita, quindi non potrebbe essere inserito direttamente in un set del tipo $\|v\|_2\le1$. La soluzione delle slide \`e diversa: si impone energia finita al segnale normalizzato $v'=W^{-1}v$, scegliendo un peso $W$ con un integratore.
+
+Le slide propongono
 $$
 W(s)=\frac{s+\beta}{s\sqrt{2\beta}},
 \qquad
 \beta>0.
 $$
-Poi si prende come ingresso normalizzato
+Poi si sceglie l'ingresso normalizzato
 $$
 V'(s)=\frac{\sqrt{2\beta}}{s+\beta}.
 $$
-La sua energia vale esattamente uno:
+Questo ingresso normalizzato \`e stabile e ha energia unitaria:
 $$
 \|v'\|_2^2
 =
@@ -7664,7 +7680,7 @@ V(s)=W(s)V'(s)=\frac{1}{s},
 $$
 cio\`e un gradino unitario.
 
-L'esempio \`e molto istruttivo. Non stiamo dicendo che l'unico ingresso possibile \`e il gradino. Stiamo dicendo che il gradino appartiene all'insieme di segnali giudicati rilevanti. Questa \`e una modellazione molto pi\`u flessibile.
+L'esempio \`e istruttivo per due motivi. Primo: il peso pu\`o far entrare nel set fisico segnali che non hanno norma $L_2$ finita, come il gradino, purch\'e il segnale normalizzato abbia energia finita. Secondo: non stiamo dicendo che l'unico ingresso possibile sia il gradino. Stiamo dicendo che il gradino appartiene all'insieme dei segnali giudicati rilevanti.
 
 \begin{figure}[H]
     \centering
@@ -7674,7 +7690,7 @@ L'esempio \`e molto istruttivo. Non stiamo dicendo che l'unico ingresso possibil
 
 \subsection{Quali altri segnali sono contenuti nello stesso set}
 
-Lo stesso peso non contiene solo il gradino. Se scegliamo
+La slide successiva avverte che lo stesso peso non contiene solo il gradino. Se scegliamo un altro ingresso normalizzato stabile e a energia unitaria,
 $$
 V'(s)=\frac{\sqrt{2\alpha}}{s+\alpha},
 \qquad
@@ -7686,13 +7702,13 @@ V(s)=
 \sqrt{\frac{\alpha}{\beta}}
 \frac{s+\beta}{s(s+\alpha)}.
 $$
-Questa funzione di trasferimento rappresenta ancora un segnale di tipo ``quasi gradino'', ma deformato:
+Questa funzione ha ancora un polo nell'origine, quindi mantiene una componente di tipo gradino. Per\`o il rapporto tra lo zero $-\beta$ e il polo $-\alpha$ modifica la forma transitoria:
 \begin{itemize}
-    \item se $\alpha>\beta$, compare un effetto di \emph{lead};
-    \item se $\alpha<\beta$, compare un effetto di \emph{lag}.
+    \item se $\alpha>\beta$, il segnale \`e un gradino modificato da un effetto di \emph{lead};
+    \item se $\alpha<\beta$, il segnale \`e un gradino modificato da un effetto di \emph{lag}.
 \end{itemize}
 
-Il messaggio da studiare bene \`e questo: scegliere un peso $W$ equivale a definire una \emph{famiglia} di ingressi simili, non un singolo profilo temporale. Questo \`e esattamente il motivo per cui il formalismo dei pesi \`e utile.
+Il messaggio da studiare bene \`e questo: scegliere un peso $W$ equivale a definire una \emph{famiglia} di ingressi simili, non un singolo profilo temporale. Questo \`e esattamente il motivo per cui il formalismo dei pesi \`e utile nella formulazione robusta.
 
 \begin{figure}[H]
     \centering
@@ -7700,14 +7716,34 @@ Il messaggio da studiare bene \`e questo: scegliere un peso $W$ equivale a defin
     \caption{Lo stesso peso che include il gradino include anche segnali simili, per esempio gradini modificati da un lead o da un lag.}
 \end{figure}
 
-\subsection{Prestazione nominale: ruolo di \texorpdfstring{$S$}{S} e \texorpdfstring{$T$}{T}}
+\subsection{Dagli ingressi agli obiettivi di prestazione}
 
-Dopo avere specificato quali ingressi considerare rilevanti, bisogna dire che cosa significa ``andare bene''. Le slide passano allora al caso nominale SISO in retroazione unitaria e introducono le due funzioni classiche:
+Terminata la parte sugli ingressi, le slide tornano alla formulazione generale del problema e mettono in evidenza il quarto ingrediente: gli obiettivi di prestazione. A questo punto la sequenza logica \`e completa:
+\begin{enumerate}
+    \item si sceglie un modello nominale;
+    \item si descrive quanto il modello pu\`o sbagliare;
+    \item si descrivono gli ingressi attesi mediante un peso $W$;
+    \item si decide quale errore va minimizzato e con quale norma.
+\end{enumerate}
+
+La parte finale della lezione \`e dedicata proprio a quest'ultimo punto nel caso nominale SISO.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images13/formulation-42-55-010.png}
+    \caption{Dopo la specifica degli ingressi, la formulazione del problema richiama il quarto elemento: gli obiettivi di prestazione.}
+\end{figure}
+
+\subsection{Prestazione nominale SISO: ruolo di \texorpdfstring{$S$}{S} e \texorpdfstring{$T$}{T}}
+
+Le slide passano al caso nominale SISO in retroazione unitaria. Si considerano il controllore $C(s)$, il processo nominale $P(s)$ e il prodotto d'anello $C(s)P(s)$. Le due funzioni fondamentali sono:
 $$
 S(s)=\frac{1}{1+C(s)P(s)},
 \qquad
 T(s)=1-S(s)=\frac{C(s)P(s)}{1+C(s)P(s)}.
 $$
+La funzione $S$ \`e la \emph{sensibilit\`a}; la funzione $T$ \`e la \emph{sensibilit\`a complementare}. Nel contesto di queste slide interessa soprattutto $S$, perch\'e l'errore viene filtrato proprio da $S$.
+
 Se il rumore di misura \`e trascurabile, cio\`e $n\simeq0$, l'errore risulta
 $$
 e=r-y
@@ -7716,17 +7752,17 @@ r-\frac{P C}{1+P C}r-\frac{1}{1+P C}d
 =
 S(r-d).
 $$
-Questa formula \`e cruciale: ridurre l'errore significa rendere piccola la sensibilit\`a $S$ proprio nelle frequenze in cui vivono i riferimenti e i disturbi importanti.
+La convenzione di segno del disturbo dipende dallo schema, ma il messaggio non cambia: riferimenti e disturbi rilevanti arrivano all'errore attraverso la sensibilit\`a $S$. Ridurre l'errore significa quindi rendere piccola $S$ nelle frequenze in cui vivono gli ingressi importanti.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.82\textwidth]{images13/formulation-42-55-011.png}
-    \caption{Nel problema nominale SISO l'errore \`e governato dalla sensibilit\`a $S$, mentre il trasferimento riferimento-uscita \`e descritto da $T$.}
+    \caption{Nel problema nominale SISO compaiono $S$ e $T$; l'errore, trascurando il rumore di misura, \`e governato dalla sensibilit\`a $S$.}
 \end{figure}
 
 \subsection{Prestazione nominale in senso \texorpdfstring{$\mathcal{H}_2$}{H2}}
 
-Il primo criterio di prestazione \`e di tipo quadratico medio. Le slide lo presentano come controllo ottimo lineare quadratico in spazio di Hardy, cio\`e come minimizzazione dell'indice ISE:
+Il primo criterio di prestazione presentato dalle slide \`e di tipo quadratico medio. Viene descritto come controllo ottimo lineare quadratico nello spazio di Hardy, cio\`e come minimizzazione dell'indice ISE, \emph{Integral of Squared Error}:
 $$
 \min_C \|e\|_2^2
 =
@@ -7734,7 +7770,9 @@ $$
 =
 \min_C \frac{1}{2\pi}\int_{-\infty}^{\infty}|E(j\omega)|^2\,d\omega.
 $$
-Se usiamo la relazione $e=S(r-d)$, otteniamo
+Il passaggio dal tempo alla frequenza \`e ancora Parseval: l'energia del segnale nel tempo coincide con l'integrale del modulo quadro della sua trasformata.
+
+Usando la relazione $e=S(r-d)$, si ottiene
 $$
 \min_C \|S(r-d)\|_2^2
 =
@@ -7747,21 +7785,15 @@ S(j\omega)\bigl(R(j\omega)-D(j\omega)\bigr)
 d\omega.
 $$
 
-Questa scrittura chiarisce il senso del criterio $\mathcal{H}_2$: non guarda al picco massimo dell'errore, ma alla sua \textbf{energia complessiva}. Per questo viene spesso interpretato come un criterio di prestazione \emph{media}.
+Questa scrittura chiarisce il senso del criterio $\mathcal{H}_2$: non guarda al picco massimo dell'errore, ma alla sua energia complessiva. Per questo viene spesso interpretato come un criterio di prestazione media. Se una banda di frequenza contribuisce molto all'energia del segnale $R-D$, allora il progetto tender\`a a ridurre l'effetto di $S$ in quella banda.
 
 \begin{focusbox}
-\textbf{Interpretazione.} Minimizzare una quantit\`a di tipo $\mathcal{H}_2$ significa ridurre l'errore in media sulle frequenze, pesando di pi\`u le bande in cui l'ingresso reale ha pi\`u energia.
+\textbf{Interpretazione.} Minimizzare una quantit\`a di tipo $\mathcal{H}_2$ significa ridurre l'errore in media energetica. Non si impone necessariamente un limite punto per punto in frequenza: si minimizza l'energia complessiva dell'errore.
 \end{focusbox}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.82\textwidth]{images13/formulation-42-55-011.png}
-    \caption{La formulazione $\mathcal{H}_2$ parte dall'indice ISE e porta a minimizzare l'energia dell'errore.}
-\end{figure}
 
 \subsection{Dal segnale atteso al prodotto pesato \texorpdfstring{$SW$}{SW}}
 
-Se, invece di lavorare direttamente con $r$ o $d$, descriviamo l'ingresso rilevante mediante un peso
+La slide successiva sostituisce $r$ o $d$ con l'ingresso generico $v$ descritto tramite il peso $W$. Se consideriamo un solo ingresso specifico e scegliamo
 $$
 V(s)=W(s)V'(s),
 \qquad
@@ -7779,7 +7811,7 @@ $$
 |S(j\omega)W(j\omega)|^2\,d\omega.
 $$
 
-Questa \`e una delle formule pi\`u importanti della lezione. Dice che il peso $W$ seleziona le frequenze dove ci interessa davvero rendere piccola $S$. Se $W$ \`e grande a bassa frequenza, stiamo chiedendo buona reiezione dei disturbi lenti e buon inseguimento dei riferimenti lenti. Se $W$ \`e grande in una banda intermedia, stiamo mettendo l'accento l\`i.
+Questa \`e una delle formule pi\`u importanti della lezione. Il peso $W$ seleziona le frequenze dove ci interessa davvero rendere piccola $S$. Se $W$ \`e grande a bassa frequenza, la norma di $SW$ penalizza molto una sensibilit\`a grande a bassa frequenza; quindi chiede buon inseguimento dei riferimenti lenti e buon rigetto dei disturbi lenti. Se $W$ \`e grande in una banda intermedia, la specifica concentra l'attenzione proprio su quella banda.
 
 In breve:
 \begin{itemize}
@@ -7787,6 +7819,8 @@ In breve:
     \item $W$ descrive quali di quegli ingressi sono davvero importanti;
     \item il prodotto $SW$ \`e quindi la quantit\`a naturale da minimizzare.
 \end{itemize}
+
+Le slide riassumono questo dicendo che il controllore $\mathcal{H}_2$-ottimo minimizza la grandezza media, cio\`e la norma $2$, della sensibilit\`a pesata da $W$.
 
 \begin{figure}[H]
     \centering
@@ -7805,13 +7839,13 @@ v:
 \|W^{-1}v\|_2\le1
 \right\}.
 $$
-Il criterio di progetto diventa allora
+Il criterio di progetto diventa allora una minimizzazione del peggior errore possibile:
 $$
 \min_C \sup_{v\in\mathcal{V}}\|e\|_2
 =
 \min_C \sup_{v'\in\mathcal{V}'}\|S W v'\|_2.
 $$
-Per ogni $v'$ ammesso vale
+Per ogni $v'$ ammesso vale la stima
 $$
 \|S W v'\|_2^2
 =
@@ -7825,7 +7859,7 @@ $$
 \int_{-\infty}^{\infty}
 |V'(j\omega)|^2\,d\omega.
 $$
-Poich\'e per definizione $\|v'\|_2\le1$, si ottiene
+Poich\'e per definizione $\|v'\|_2\le1$, il peggior errore \`e limitato dal picco massimo di $|S(j\omega)W(j\omega)|$. Nel caso SISO, questo porta alla norma $\mathcal{H}_\infty$:
 $$
 \sup_{v'\in\mathcal{V}'}\|S W v'\|_2
 =
@@ -7840,7 +7874,7 @@ $$
 \min_C \sup_\omega |S(j\omega)W(j\omega)|.
 $$
 
-Questa volta non stiamo pi\`u minimizzando un'energia media, ma il \textbf{caso peggiore} tra tutti gli ingressi appartenenti al set ammesso.
+Questa volta non stiamo pi\`u minimizzando un'energia media, ma il \textbf{caso peggiore} tra tutti gli ingressi appartenenti al set ammesso. Dal punto di vista frequenziale, il controllore cerca di abbassare il picco massimo della sensibilit\`a pesata.
 
 \begin{figure}[H]
     \centering
@@ -7862,22 +7896,22 @@ Vale la pena fermarsi un momento perch\'e qui emerge una distinzione che torner\
 
 Il criterio $\mathcal{H}_2$:
 \begin{itemize}
-    \item misura un errore \textbf{medio} o energetico;
-    \item \`e adatto quando abbiamo un ingresso specifico oppure una statistica implicita dell'ingresso;
-    \item produce controllori che tendono a comportarsi bene ``in media''.
+    \item parte da un ingresso specifico, o da una descrizione media dell'ingresso;
+    \item minimizza l'energia complessiva dell'errore;
+    \item pu\`o tollerare picchi locali se questi non pesano troppo sull'integrale complessivo.
 \end{itemize}
 
 Il criterio $\mathcal{H}_\infty$:
 \begin{itemize}
-    \item misura il \textbf{caso peggiore};
-    \item \`e adatto quando vogliamo garantire prestazione per tutti gli ingressi nel set;
-    \item produce controllori pi\`u cauti, perch\'e protegge dal picco massimo del prodotto $SW$.
+    \item parte da un insieme di ingressi ammessi;
+    \item minimizza il peggior errore energetico generabile da quel set;
+    \item coincide, nel caso SISO, con la minimizzazione del picco massimo di $|SW|$.
 \end{itemize}
 
-Nessuno dei due criteri \`e ``migliore'' in assoluto. Dipende dal problema. Se ci interessa il comportamento medio rispetto a segnali tipici, $\mathcal{H}_2$ \`e naturale. Se vogliamo una garanzia uniforme su una famiglia di ingressi, allora $\mathcal{H}_\infty$ \`e la scelta giusta.
+Nessuno dei due criteri \`e migliore in assoluto. Dipende dal problema. Se ci interessa il comportamento medio rispetto a segnali tipici, $\mathcal{H}_2$ \`e naturale. Se vogliamo una garanzia uniforme su una famiglia di ingressi, allora $\mathcal{H}_\infty$ \`e la scelta giusta.
 
 \begin{keybox}
-\textbf{Messaggio operativo.} Il peso $W(s)$ compare sia nella prestazione media sia nella prestazione worst-case. Questo non \`e casuale: una buona specifica di progetto non dice solo ``riduci l'errore'', ma dice \emph{rispetto a quali segnali}, \emph{in quali bande di frequenza} e \emph{con quale criterio di confronto}.
+\textbf{Messaggio operativo.} Il peso $W(s)$ compare sia nella prestazione media sia nella prestazione worst-case. Questo non \`e casuale: una buona specifica di progetto non dice solo ``riduci l'errore'', ma dice rispetto a quali segnali, in quali bande di frequenza e con quale criterio di confronto.
 \end{keybox}
 
 \subsection{Sintesi conclusiva della lezione}
@@ -7891,14 +7925,14 @@ La Lezione 13 segna il passaggio dalla sola modellazione dell'incertezza alla fo
 
 Le idee da portare avanti sono quattro:
 \begin{itemize}
-    \item il peso d'ingresso $W(s)$ costruisce un insieme di segnali plausibili, non un singolo segnale rigido;
-    \item la funzione di sensibilit\`a $S(s)$ \`e la quantit\`a naturale che lega ingresso esterno ed errore;
-    \item il criterio $\mathcal{H}_2$ porta a minimizzare l'energia del prodotto $SW$;
-    \item il criterio $\mathcal{H}_\infty$ porta a minimizzare il suo picco massimo in frequenza.
+    \item il peso d'ingresso $W(s)$ costruisce un insieme di segnali plausibili, non necessariamente un singolo segnale rigido;
+    \item un peso grande in una certa banda significa che in quella banda si ammettono ingressi fisici importanti;
+    \item la funzione di sensibilit\`a $S(s)$ \`e la quantit\`a naturale che lega ingresso esterno ed errore nel problema nominale SISO;
+    \item il criterio $\mathcal{H}_2$ minimizza l'energia media di $SW$, mentre il criterio $\mathcal{H}_\infty$ minimizza il picco peggiore di $SW$.
 \end{itemize}
 
 \begin{focusbox}
-\textbf{Conclusione concettuale.} Modellare bene l'incertezza non basta. Bisogna anche dire contro che cosa il controllore deve essere bravo. La coppia ``peso d'ingresso + funzione di sensibilit\`a'' \`e proprio il linguaggio con cui il controllo robusto traduce questa richiesta in formule precise.
+\textbf{Conclusione concettuale.} Modellare bene l'incertezza non basta. Bisogna anche dire contro che cosa il controllore deve essere bravo. La coppia ``peso d'ingresso + funzione di sensibilit\`a'' \`e il linguaggio con cui il controllo robusto traduce questa richiesta in formule precise.
 \end{focusbox}
 
 \clearpage

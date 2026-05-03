@@ -2,7 +2,7 @@ PWD /Users/gab/Appunti_Controllo_Robusto/Appunti_Controllo_Robusto
 INPUT /usr/local/texlive/2026/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/gab/Appunti_Controllo_Robusto/Appunti_Controllo_Robusto/main.tex
+INPUT main.tex
 OUTPUT main.log
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -1637,11 +1637,6 @@ INPUT ./images13/formulation-42-55-002.png
 INPUT ./images13/formulation-42-55-002.png
 INPUT ./images13/formulation-42-55-002.png
 INPUT ./images13/formulation-42-55-002.png
-INPUT ./images13/formulation-42-55-010.png
-INPUT ./images13/formulation-42-55-010.png
-INPUT ./images13/formulation-42-55-010.png
-INPUT ./images13/formulation-42-55-010.png
-INPUT ./images13/formulation-42-55-010.png
 INPUT ./images13/formulation-42-55-003.png
 INPUT ./images13/formulation-42-55-003.png
 INPUT ./images13/formulation-42-55-003.png
@@ -1677,10 +1672,11 @@ INPUT ./images13/formulation-42-55-009.png
 INPUT ./images13/formulation-42-55-009.png
 INPUT ./images13/formulation-42-55-009.png
 INPUT ./images13/formulation-42-55-009.png
-INPUT ./images13/formulation-42-55-011.png
-INPUT ./images13/formulation-42-55-011.png
-INPUT ./images13/formulation-42-55-011.png
-INPUT ./images13/formulation-42-55-011.png
+INPUT ./images13/formulation-42-55-010.png
+INPUT ./images13/formulation-42-55-010.png
+INPUT ./images13/formulation-42-55-010.png
+INPUT ./images13/formulation-42-55-010.png
+INPUT ./images13/formulation-42-55-010.png
 INPUT ./images13/formulation-42-55-011.png
 INPUT ./images13/formulation-42-55-011.png
 INPUT ./images13/formulation-42-55-011.png
