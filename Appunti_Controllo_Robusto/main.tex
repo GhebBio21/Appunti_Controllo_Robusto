@@ -8884,4 +8884,1091 @@ L'esempio mostra che i pesi cambiano davvero il comportamento del sistema: un pe
 
 Questa parte del documento \`e una traduzione e rielaborazione estesa delle slide 72--78 del PDF ``Formulation of Control Problems'', caricato dall'utente come materiale di partenza nella directory \texttt{Slide}.
 
+% --- FRONTESPIZIO LEZIONE 16 ---
+\begin{coverpage}
+\centering
+{\Huge\bfseries Controllo Robusto\par}
+\vspace{0.4em}
+{\LARGE Traduzione in italiano e approfondimento\par}
+\vspace{0.5em}
+{\Large Zeri RHP multivariabili, LFT e formulazione generale del problema di controllo\par}
+\vfill
+\includegraphics[width=0.78\textwidth]{images16/h2hinf-01-24-001.png}
+\vfill
+\begin{focusbox}
+\textbf{Obiettivo del documento.} Questa parte chiude l'esempio sugli zeri a parte reale positiva nei sistemi MIMO e apre la formulazione generale del problema di controllo. L'idea \`e passare da schemi specifici di retroazione alla forma standard $P$-$K$: un impianto generalizzato $P$, un controllore $K$, ingressi esogeni $w$, uscite di prestazione $z$, segnali misurati $v$ e comandi $u$. Per descrivere in modo compatto questa chiusura di anello si introduce il linguaggio delle trasformazioni frazionarie lineari, o LFT.
+\end{focusbox}
+\vfill
+{\large Basato sulle slide del corso AA 2025/2026\par}
+\end{coverpage}
+
+\section{Lezione 16}
+
+\subsection{Visione d'insieme della lezione}
+
+La Lezione 15 si era fermata nel punto giusto: gli zeri RHP multivariabili non sono semplici zeri di singoli elementi della matrice $G(s)$, ma direzioni in cui la matrice di trasferimento perde rango. La Lezione 16 completa quell'esempio e poi cambia scala: non studia pi\`u solo un particolare schema di mixed sensitivity, ma introduce il linguaggio generale con cui si formulano i problemi di sintesi $\mathcal{H}_2$ e $\mathcal{H}_\infty$.
+
+La lezione ha quindi due blocchi principali:
+\begin{enumerate}
+    \item chiusura dell'esempio sugli zeri RHP MIMO, mostrando come il loro effetto possa essere spostato fra le uscite e perch\'e la norma $\mathcal{H}_\infty$ vede soprattutto la direzione peggiore;
+    \item introduzione della formulazione generale $P$-$K$, delle LFT e della costruzione della pianta generalizzata $P$ a partire da schemi a blocchi.
+\end{enumerate}
+
+\begin{keybox}
+\textbf{Idea guida.} Uno schema di controllo robusto si pu\`o sempre leggere come una mappa chiusa da ingressi esterni $w$ a uscite pesate $z$. La domanda di progetto diventa: scegliere $K$ in modo che la mappa chiusa $N(K)$ abbia norma piccola. Le LFT sono il modo compatto per scrivere proprio questa dipendenza di $N$ da $K$.
+\end{keybox}
+
+\subsection{Ritorno agli zeri RHP multivariabili}
+
+Riprendiamo l'esempio introdotto alla fine della Lezione 15. La pianta \`e
+$$
+G(s)=
+\frac{1}{(0.2s+1)(s+1)}
+\begin{bmatrix}
+1 & 1\\
+1+2s & 2
+\end{bmatrix}.
+$$
+Se si applica un gradino al solo primo ingresso, cio\`e
+$$
+u=
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix},
+$$
+la risposta non rivela in modo immediato la presenza di uno zero RHP. Lo stesso accade applicando un gradino al solo secondo ingresso,
+$$
+u=
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}.
+$$
+Le due risposte mostrano interazione fra i canali, ma non mostrano chiaramente una risposta inversa come ci si aspetterebbe da uno zero a parte reale positiva nel caso SISO.
+
+Il punto \`e che lo zero non vive necessariamente su un singolo canale. In questo esempio lo zero RHP compare quando si eccita una particolare combinazione di ingressi. Infatti, considerando la direzione
+$$
+u=
+\begin{bmatrix}
+1\\
+-1
+\end{bmatrix},
+$$
+la risposta mette in evidenza l'effetto dello zero: una delle uscite mostra una risposta inversa, mentre l'altra pu\`o perfino annullarsi per quella particolare combinazione.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/formulation-79-84-001.png}
+    \caption{Risposta in anello aperto ai singoli ingressi: lo zero RHP multivariabile non si riconosce guardando solo i canali separati.}
+\end{figure}
+
+\subsection{Direzioni dello zero e perdita di rango}
+
+La pianta ha uno zero a parte reale positiva in
+$$
+z=0.5.
+$$
+Infatti, in $s=0.5$ la matrice di trasferimento perde rango. La slide scrive la decomposizione SVD di $G(0.5)$ nella forma
+$$
+G(0.5)
+=
+\frac{1}{1.65}
+\begin{bmatrix}
+1 & 1\\
+2 & 2
+\end{bmatrix}
+=
+\begin{bmatrix}
+0.45 & 0.89\\
+0.89 & -0.45
+\end{bmatrix}
+\begin{bmatrix}
+1.92 & 0\\
+0 & 0
+\end{bmatrix}
+\begin{bmatrix}
+0.71 & 0.71\\
+0.71 & -0.71
+\end{bmatrix}^{H}.
+$$
+Il valore singolare nullo identifica la direzione di ingresso che viene annullata dalla pianta in corrispondenza dello zero. Dalla matrice $V$ si ricava
+$$
+v_z=
+\begin{bmatrix}
+0.71\\
+-0.71
+\end{bmatrix},
+$$
+mentre dalla matrice $U$ si ricava la direzione di uscita associata,
+$$
+u_z=
+\begin{bmatrix}
+0.89\\
+-0.45
+\end{bmatrix}.
+$$
+Quindi lo zero non \`e associato a un solo ingresso o a una sola uscita: coinvolge entrambe le combinazioni.
+
+Questa \`e la differenza essenziale rispetto al caso SISO. In SISO lo zero \`e una radice del numeratore e il suo effetto \`e visibile direttamente nel canale. In MIMO, invece, lo zero pu\`o essere nascosto rispetto agli esperimenti canale-per-canale, perch\'e riguarda una direzione nello spazio degli ingressi e una direzione nello spazio delle uscite.
+
+\begin{focusbox}
+\textbf{Lettura geometrica.} Dire che $G(z)$ perde rango significa dire che esiste una direzione non nulla $v_z$ tale che $G(z)v_z=0$. In quella direzione il sistema non riesce a trasmettere segnale. Se $z$ \`e nel semipiano destro, questa perdita direzionale impone limiti fondamentali alla risposta chiusa.
+\end{focusbox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/formulation-79-84-002.png}
+    \caption{SVD di $G(0.5)$: il valore singolare nullo rivela la direzione dello zero RHP multivariabile.}
+\end{figure}
+
+\subsection{Progetto \texorpdfstring{$S/KS$}{S/KS} per studiare l'effetto dello zero}
+
+Per capire come lo zero RHP influenza il sistema in anello chiuso, le slide considerano una sintesi $\mathcal{H}_\infty$ del problema pesato $S/KS$:
+$$
+N=
+\begin{bmatrix}
+W_P S\\
+W_u K S
+\end{bmatrix}.
+$$
+Qui $S$ misura la sensibilit\`a, quindi l'errore e la risposta ai disturbi; $KS$ misura l'azione di controllo generata dal riferimento o dai segnali esterni. L'obiettivo \`e minimizzare
+$$
+\|N(K)\|_\infty
+$$
+rispetto ai controllori stabilizzanti $K$.
+
+Nel caso dell'esempio si sceglie
+$$
+W_u=I,
+\qquad
+W_P=
+\begin{bmatrix}
+w_{P1} & 0\\
+0 & w_{P2}
+\end{bmatrix},
+$$
+con
+$$
+w_{P_i}(s)=
+\frac{s/M_i+\omega_{B_i}^{\ast}}
+{s+\omega_{B_i}^{\ast}A_i},
+\qquad
+A_i=10^{-4}.
+$$
+Come nelle lezioni precedenti, $M_i$ limita il picco ammesso della sensibilit\`a, $\omega_{B_i}^{\ast}$ impone una richiesta di banda sul canale $i$ e $A_i$ fissa l'errore desiderato a bassa frequenza.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/formulation-79-84-003.png}
+    \caption{Problema $S/KS$ usato per valutare l'effetto dello zero RHP sulla risposta chiusa.}
+\end{figure}
+
+\subsection{Tre scelte di progetto e spostamento dell'effetto dello zero}
+
+Le slide confrontano tre scelte dei pesi:
+$$
+\text{Design 1:}\qquad
+M_1=M_2=1.5,
+\qquad
+\omega_{B1}^{\ast}=\omega_{B2}^{\ast}=\frac{z}{2}=0.25,
+$$
+$$
+\text{Design 2:}\qquad
+M_1=M_2=1.5,
+\qquad
+\omega_{B1}^{\ast}=0.25,\quad
+\omega_{B2}^{\ast}=25,
+$$
+$$
+\text{Design 3:}\qquad
+M_1=M_2=1.5,
+\qquad
+\omega_{B1}^{\ast}=25,\quad
+\omega_{B2}^{\ast}=0.25.
+$$
+Nel primo progetto si chiede la stessa banda ai due canali. Nel secondo si rende molto pi\`u severa la richiesta sul secondo canale. Nel terzo si fa l'opposto: si rende molto pi\`u severa la richiesta sul primo canale.
+
+Il risultato importante \`e che, in un sistema MIMO, l'effetto deteriorante dello zero RHP pu\`o spesso essere spostato da un'uscita all'altra. Non significa che il limite sparisca: significa che si sceglie dove pagare il prezzo. Con il Design 2 si ottiene una risposta migliore in una direzione, accettando il peggioramento nell'altra. Con il Design 3 si pu\`o ottenere una risposta eccellente su $y_1$, senza risposta inversa evidente, ma al prezzo di una risposta molto scadente su $y_2$.
+
+Le slide riportano anche un dato numerico: per il Design 3 si ottiene
+$$
+\|N\|_\infty=6.73,
+$$
+mentre per il Design 2 il valore era circa
+$$
+\|N\|_\infty=2.92.
+$$
+Questo conferma che il terzo progetto compra il miglioramento di un canale con un peggioramento globale pi\`u severo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/formulation-79-84-004.png}
+    \caption{Tre scelte dei pesi: cambiando le bande richieste ai due canali si decide dove far ricadere l'effetto dello zero RHP.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/formulation-79-84-005.png}
+    \caption{Confronto fra progetti: i valori singolari di $S$ e le risposte al riferimento mostrano il compromesso direzionale imposto dallo zero.}
+\end{figure}
+
+\subsection{Zeri pinned e limite della norma \texorpdfstring{$\mathcal{H}_\infty$}{Hinf}}
+
+La prima osservazione delle slide \`e che lo spostamento dell'effetto dello zero non \`e sempre possibile. In alcuni sistemi MIMO lo zero \`e associato a uno specifico canale di uscita e non si pu\`o trasferire il suo effetto su un altro canale. In questo caso si parla di \emph{pinned zero}. Il termine indica uno zero ``inchiodato'' a una certa uscita: il progettista non pu\`o scegliere liberamente dove far comparire la risposta inversa o il degrado prestazionale.
+
+La seconda osservazione \`e pi\`u sottile e riguarda la norma $\mathcal{H}_\infty$. Nel Design 2 si ottiene un miglioramento molto grande nella direzione buona, cio\`e quella associata a $\underline{\sigma}(S)$, a fronte di un peggioramento minore nella direzione cattiva, associata a $\bar{\sigma}(S)$. Tuttavia la norma $\mathcal{H}_\infty$ guarda solo il massimo valore singolare, quindi vede soprattutto la direzione peggiore.
+
+Questo \`e un punto concettuale importante. La norma $\mathcal{H}_\infty$ \`e molto utile per garantire prestazioni worst-case, ma pu\`o rendere difficile valorizzare miglioramenti importanti nelle direzioni non peggiori. Per questo, nei problemi multivariabili, non basta guardare un solo numero: bisogna anche interpretare le direzioni singolari.
+
+\begin{keybox}
+\textbf{Messaggio da ricordare.} Gli zeri RHP MIMO impongono limiti direzionali. I pesi permettono di distribuire il prezzo fra i canali, ma non eliminano il vincolo fisico. Inoltre la norma $\mathcal{H}_\infty$ sintetizza tutto nel caso peggiore: ottima per garanzie robuste, meno descrittiva dei compromessi fra direzioni.
+\end{keybox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/formulation-79-84-006.png}
+    \caption{Osservazioni finali: pinned zeros e limite della norma $\mathcal{H}_\infty$ come misura basata sulla direzione peggiore.}
+\end{figure}
+
+\subsection{Dal problema specifico alla formulazione generale}
+
+La seconda parte della lezione apre il capitolo sulla formulazione generale del problema di controllo. Finora abbiamo scritto a mano diversi stack:
+$$
+\begin{bmatrix}
+W_P S\\
+W_uKS
+\end{bmatrix},
+\qquad
+\begin{bmatrix}
+W_uKS\\
+W_TT\\
+W_PS
+\end{bmatrix},
+$$
+oppure matrici chiuse da disturbi, riferimenti e rumore verso errori e comandi. La domanda naturale \`e: esiste un modo unico per rappresentare tutti questi casi?
+
+La risposta \`e la forma $P$-$K$, introdotta da Doyle. Si costruisce un impianto generalizzato $P$ con quattro famiglie di segnali:
+\begin{itemize}
+    \item $w$: ingressi esogeni, eventualmente pesati, come riferimenti, disturbi e rumore;
+    \item $z$: uscite esogene o uscite di prestazione, eventualmente pesate;
+    \item $u$: segnali di controllo prodotti dal controllore;
+    \item $v$: segnali misurati disponibili al controllore.
+\end{itemize}
+Il controllore riceve $v$ e genera $u$. L'interconnessione chiusa produce una mappa
+$$
+N(K):w\mapsto z.
+$$
+Il problema di sintesi consiste nel trovare un controllore stabilizzante $K$ che renda piccola una norma di questa mappa, per esempio
+$$
+\|N(K)\|_2
+\qquad\text{oppure}\qquad
+\|N(K)\|_\infty.
+$$
+
+\begin{focusbox}
+\textbf{Forma standard.} La formulazione $P$-$K$ separa due cose: $P$ contiene il modello, i pesi e la geometria del problema; $K$ \`e l'oggetto da progettare. Una volta chiuso l'anello, tutto ci\`o che interessa alla sintesi \`e la mappa $N(K)$ da $w$ a $z$.
+\end{focusbox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-002.png}
+    \caption{Forma generale $P$-$K$: il controllore usa $v$ per generare $u$ e ridurre l'effetto di $w$ su $z$.}
+\end{figure}
+
+\subsection{Trasformazioni frazionarie lineari: idea scalare}
+
+Per descrivere in modo compatto la dipendenza di $N$ da $K$, le slide introducono le \emph{linear fractional transformations}, abbreviate LFT. L'idea parte dal caso scalare. Una trasformazione del tipo
+$$
+F(s)=\frac{a+bs}{c+ds},
+\qquad
+a,b,c,d\in\mathbb{C},
+$$
+\`e detta trasformazione frazionaria lineare. Se $c\neq0$, essa pu\`o essere riscritta nella forma
+$$
+F(s)=\alpha+\beta s(1-\gamma s)^{-1},
+$$
+per opportuni $\alpha,\beta,\gamma\in\mathbb{C}$.
+
+Questa seconda forma \`e quella pi\`u utile per il controllo, perch\'e assomiglia a una mappa nominale pi\`u una correzione che passa attraverso una retroazione. In pratica, il termine $(1-\gamma s)^{-1}$ anticipa gi\`a il denominatore che nasce quando si chiude un loop.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-003.png}
+    \caption{LFT nel caso scalare: una funzione razionale di primo grado pu\`o essere vista come chiusura frazionaria.}
+\end{figure}
+
+\subsection{LFT inferiori e superiori}
+
+Il caso matriciale generalizza l'idea precedente. Sia $M$ una matrice complessa partizionata come
+$$
+M=
+\begin{bmatrix}
+M_{11} & M_{12}\\
+M_{21} & M_{22}
+\end{bmatrix}.
+$$
+Si definiscono due modi di chiudere una parte della matrice con un blocco esterno $\Delta$.
+
+La \emph{lower LFT} rispetto a $\Delta_\ell$ \`e
+$$
+F_\ell(M,\Delta_\ell)
+=
+M_{11}
++M_{12}\Delta_\ell
+\left(I-M_{22}\Delta_\ell\right)^{-1}
+M_{21},
+$$
+purch\'e l'inversa esista. Si chiama ``lower'' perch\'e, nella rappresentazione a blocchi, si chiude il loop sulla parte bassa dell'interconnessione.
+
+La \emph{upper LFT} rispetto a $\Delta_u$ \`e invece
+$$
+F_u(M,\Delta_u)
+=
+M_{22}
++M_{21}\Delta_u
+\left(I-M_{11}\Delta_u\right)^{-1}
+M_{12},
+$$
+anche qui sotto l'ipotesi che l'inversa esista. La matrice $M$ viene chiamata \emph{coefficient matrix}: contiene il sistema nominale e il modo in cui il blocco esterno si collega al resto.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-004.png}
+    \caption{Definizione di lower LFT: si chiude la parte inferiore della matrice partizionata con il blocco $\Delta_\ell$.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-005.png}
+    \caption{Definizione di upper LFT: si chiude la parte superiore dell'interconnessione con il blocco $\Delta_u$.}
+\end{figure}
+
+\subsection{Interpretazione delle LFT}
+
+Le LFT non sono solo una notazione compatta. La loro interpretazione fisica \`e molto utile:
+\begin{itemize}
+    \item $M_{11}$ rappresenta spesso la mappa nominale;
+    \item $\Delta$ rappresenta un'incertezza, una dinamica aggiuntiva oppure il controllore;
+    \item $M_{12}$, $M_{21}$ e $M_{22}$ descrivono come $\Delta$ entra e rientra nell'interconnessione.
+\end{itemize}
+
+Per esempio, se $\Delta$ rappresenta un'incertezza di modello, la LFT descrive tutte le piante perturbate ottenute chiudendo l'incertezza attorno al modello nominale. Se invece $\Delta=K$, la stessa formula descrive il sistema chiuso ottenuto collegando il controllore alla pianta generalizzata.
+
+Questa \`e la ragione per cui le LFT sono cos\`i centrali nel controllo robusto: permettono di trattare con lo stesso linguaggio sia l'incertezza sia la sintesi del controllore.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-006.png}
+    \caption{Le parole ``lower'' e ``upper'' derivano dal loop che viene chiuso nel diagramma a blocchi.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-007.png}
+    \caption{Interpretazione delle LFT: una mappa nominale viene perturbata o chiusa con un blocco esterno.}
+\end{figure}
+
+\subsection{Esempi di LFT}
+
+Le slide mostrano due esempi importanti. Il primo riguarda i polinomi. Un polinomio
+$$
+p(s)=a_0+a_1s+\cdots+a_ns^n
+$$
+pu\`o essere scritto come LFT rispetto a $sI_n$. L'idea \`e costruire una matrice $M$ con una struttura a catena, simile a una realizzazione in forma compagna, in modo che chiudendo il blocco $sI_n$ si generino le potenze successive di $s$.
+
+Il messaggio non \`e che convenga rappresentare ogni polinomio in questo modo, ma che le LFT sono abbastanza generali da contenere anche oggetti algebrici semplici. Lo stesso vale per polinomi multidimensionali, ad esempio in variabili $\delta_1,\delta_2$, che possono essere scritti come LFT rispetto a una matrice diagonale a blocchi
+$$
+\Delta=
+\begin{bmatrix}
+\delta_1 I & 0\\
+0 & \delta_2 I
+\end{bmatrix}.
+$$
+Questo sar\`a naturale quando le $\delta_i$ rappresentano parametri incerti.
+
+Il secondo esempio \`e ancora pi\`u importante per il controllo. Se un sistema ha realizzazione in spazio di stato
+$$
+\dot{x}=Ax+Bu,
+\qquad
+y=Cx+Du,
+$$
+allora la sua matrice di trasferimento \`e
+$$
+G(s)=D+C(sI-A)^{-1}B.
+$$
+Questa espressione pu\`o essere vista come una upper LFT della matrice
+$$
+\begin{bmatrix}
+A & B\\
+C & D
+\end{bmatrix}
+$$
+rispetto al blocco $\Delta=s^{-1}I$. Infatti
+$$
+D+C\,s^{-1}I\left(I-A\,s^{-1}I\right)^{-1}B
+=
+D+C(sI-A)^{-1}B.
+$$
+Quindi anche una realizzazione dinamica ordinaria \`e una LFT.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-008.png}
+    \caption{Esempio: un polinomio pu\`o essere rappresentato come LFT delle sue indeterminate.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-009.png}
+    \caption{Esempio centrale: una realizzazione in spazio di stato produce la funzione di trasferimento come LFT.}
+\end{figure}
+
+\subsection{Costruire la pianta generalizzata \texorpdfstring{$P$}{P}}
+
+Le routine di sintesi $\mathcal{H}_2$ e $\mathcal{H}_\infty$ in Matlab assumono che il problema sia gi\`a scritto nella forma generale. Questo significa che bisogna identificare:
+$$
+w,\qquad z,\qquad v,\qquad u.
+$$
+Una volta scelti questi segnali, si costruisce $P$ come sistema \emph{open-loop} che manda
+$$
+\begin{bmatrix}
+w\\
+u
+\end{bmatrix}
+\quad\longmapsto\quad
+\begin{bmatrix}
+z\\
+v
+\end{bmatrix}.
+$$
+La regola pratica delle slide \`e: per costruire $P$, bisogna rompere tutti i loop che entrano ed escono dal controllore $K$. In altre parole, $P$ non contiene $K$; contiene solo tutto ci\`o che sta attorno a $K$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-010.png}
+    \caption{Per ottenere $P$ si identificano $w,z,v,u$ e si apre l'anello nel punto occupato dal controllore.}
+\end{figure}
+
+\subsection{Esempio intermedio: schema Matlab con pesi}
+
+Prima dello schema classico a un grado di libert\`a, le slide mostrano un esempio molto operativo, pensato proprio per il collegamento con Matlab. L'obiettivo \`e trasformare uno schema a blocchi con pesi in una forma $P$-$K$.
+
+Gli ingressi esogeni sono
+$$
+w=
+\begin{bmatrix}
+d\\
+n
+\end{bmatrix},
+$$
+mentre le uscite di prestazione sono
+$$
+z=
+\begin{bmatrix}
+v\\
+u_f
+\end{bmatrix}.
+$$
+Qui $v$ \`e l'uscita pesata da $W_2$, mentre $u_f$ \`e il comando filtrato da $W_1$. Il segnale di misura che torna al controllore \`e indicato con $y$. Aprendo l'anello nel punto del controllore, la slide scrive
+$$
+\begin{bmatrix}
+z\\
+y
+\end{bmatrix}
+=
+P
+\begin{bmatrix}
+w\\
+u
+\end{bmatrix},
+$$
+con
+$$
+P=
+\begin{bmatrix}
+W_2G & 0 & W_2G\\
+0 & 0 & W_1\\
+-FG & -F & -FG
+\end{bmatrix}.
+$$
+La riga superiore dice che il disturbo $d$ e il comando $u$ attraversano la stessa dinamica $G$ e poi il peso $W_2$; la seconda riga pesa direttamente il comando con $W_1$; l'ultima riga descrive il ramo di misura filtrato da $F$ e con segno coerente con la retroazione.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-011.png}
+    \caption{Esempio di costruzione della pianta generalizzata da uno schema pesato, pronto per essere collegato in Matlab.}
+\end{figure}
+
+\subsection{Esempio: feedback a un grado di libert\`a}
+
+Consideriamo la configurazione classica a un grado di libert\`a. Gli ingressi esogeni sono:
+$$
+w=
+\begin{bmatrix}
+d\\
+r\\
+n
+\end{bmatrix},
+$$
+dove $d$ \`e un disturbo additivo sull'uscita, $r$ \`e il riferimento e $n$ \`e il rumore di misura. Si scelgono
+$$
+z=e=y-r,
+\qquad
+v=r-y_m=r-y-n.
+$$
+Supponendo
+$$
+y=Gu+d,
+\qquad
+y_m=y+n,
+$$
+si ottiene
+$$
+z=y-r=Gu+d-r,
+$$
+e quindi
+$$
+z=
+\begin{bmatrix}
+I & -I & 0
+\end{bmatrix}
+\begin{bmatrix}
+d\\
+r\\
+n
+\end{bmatrix}
+Gu.
+$$
+Allo stesso modo,
+$$
+v=r-y_m=r-Gu-d-n,
+$$
+cio\`e
+$$
+v=
+\begin{bmatrix}
+-I & I & -I
+\end{bmatrix}
+\begin{bmatrix}
+d\\
+r\\
+n
+\end{bmatrix}
+-Gu.
+$$
+La pianta generalizzata \`e quindi
+$$
+\begin{bmatrix}
+z\\
+v
+\end{bmatrix}
+=
+\underbrace{
+\begin{bmatrix}
+I & -I & 0 & G\\
+-I & I & -I & -G
+\end{bmatrix}}_{P}
+\begin{bmatrix}
+d\\
+r\\
+n\\
+u
+\end{bmatrix}.
+$$
+In forma partizionata,
+$$
+P_{11}=
+\begin{bmatrix}
+I & -I & 0
+\end{bmatrix},
+\quad
+P_{12}=G,
+\quad
+P_{21}=
+\begin{bmatrix}
+-I & I & -I
+\end{bmatrix},
+\quad
+P_{22}=-G.
+$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-012.png}
+    \caption{Scelta dei segnali nel feedback a un grado di libert\`a: $w=[d\ r\ n]^T$, $z=e$, $v=r-y_m$.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-013.png}
+    \caption{Costruzione esplicita di $P$ per lo schema a un grado di libert\`a.}
+\end{figure}
+
+\subsection{Chiudere il loop: da \texorpdfstring{$P$}{P} a \texorpdfstring{$N$}{N}}
+
+Una volta progettato il controllore, per analizzare la prestazione chiusa si assorbe $K$ nell'interconnessione. Si ottiene
+$$
+z=Nw.
+$$
+Per calcolare $N$, si parte dalla partizione
+$$
+\begin{bmatrix}
+z\\
+v
+\end{bmatrix}
+=
+\begin{bmatrix}
+P_{11} & P_{12}\\
+P_{21} & P_{22}
+\end{bmatrix}
+\begin{bmatrix}
+w\\
+u
+\end{bmatrix},
+$$
+e si usa l'equazione del controllore
+$$
+u=Kv.
+$$
+Eliminando $u$ e $v$ si ricava
+$$
+N
+=
+P_{11}
++P_{12}K(I-P_{22}K)^{-1}P_{21}
+=F_\ell(P,K).
+$$
+Questa \`e una lower LFT di $P$ rispetto a $K$. Il segno meno dentro l'inversa nasce dalla convenzione usata per scrivere la retroazione come chiusura positiva della LFT.
+
+Applicando questa formula all'esempio precedente:
+$$
+N
+=
+\begin{bmatrix}
+I & -I & 0
+\end{bmatrix}
++
+G K(I+GK)^{-1}
+\begin{bmatrix}
+-I & I & -I
+\end{bmatrix}.
+$$
+Usando
+$$
+S_o=(I+GK)^{-1},
+\qquad
+T_o=GK(I+GK)^{-1},
+\qquad
+I-T_o=S_o,
+$$
+si ottiene
+$$
+N=
+\begin{bmatrix}
+S_o & -S_o & -T_o
+\end{bmatrix}.
+$$
+Quindi
+$$
+z=Nw=S_od-S_or-T_on.
+$$
+Questa formula dice esattamente ci\`o che gi\`a conosciamo dalle lezioni precedenti: il disturbo in uscita e il riferimento passano attraverso $S_o$, mentre il rumore di misura passa attraverso $T_o$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-014.png}
+    \caption{La mappa chiusa $N$ si ottiene eliminando $u$ e $v$ e chiudendo la lower LFT $F_\ell(P,K)$.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-015.png}
+    \caption{La chiusura di $K$ attorno a $P$ \`e una lower LFT; con la convenzione della slide compare il termine $(I-P_{22}K)^{-1}$.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-016.png}
+    \caption{Per il feedback a un grado di libert\`a si recupera $N=[S_o\ -S_o\ -T_o]$.}
+\end{figure}
+
+\subsection{Problema stacked \texorpdfstring{$S/T/KS$}{S/T/KS}}
+
+Le slide tornano poi al problema di mixed sensitivity nella forma pi\`u completa. Si vogliono limitare:
+\begin{enumerate}
+    \item $\bar{\sigma}(S)$, per la prestazione;
+    \item $\bar{\sigma}(T)$, per robustezza e attenuazione del rumore;
+    \item $\bar{\sigma}(KS)$, per penalizzare ingressi di controllo troppo grandi.
+\end{enumerate}
+Queste richieste si raccolgono nello stack
+$$
+N(K)=
+\begin{bmatrix}
+W_uKS\\
+W_TT\\
+W_PS
+\end{bmatrix},
+$$
+e si cerca
+$$
+\min_K \|N(K)\|_\infty,
+$$
+con $K$ stabilizzante.
+
+Per ottenere questo stack dalla forma generale, si costruisce una pianta $P$ che mappa
+$$
+\begin{bmatrix}
+w\\
+u
+\end{bmatrix}
+\quad\mapsto\quad
+\begin{bmatrix}
+z\\
+v
+\end{bmatrix}.
+$$
+Nel caso mostrato dalle slide:
+$$
+z_1=W_u u,
+\qquad
+z_2=W_TGu,
+\qquad
+z_3=W_Pw+W_PGu,
+$$
+e
+$$
+v=-w-Gu.
+$$
+Quindi
+$$
+P=
+\begin{bmatrix}
+0 & W_u\\
+0 & W_TG\\
+W_P & W_PG\\
+-I & -G
+\end{bmatrix}.
+$$
+La partizione corrispondente \`e
+$$
+P_{11}=
+\begin{bmatrix}
+0\\
+0\\
+W_P
+\end{bmatrix},
+\quad
+P_{12}=
+\begin{bmatrix}
+W_u\\
+W_TG\\
+W_PG
+\end{bmatrix},
+\quad
+P_{21}=-I,
+\quad
+P_{22}=-G.
+$$
+Chiudendo con $u=Kv$:
+$$
+N=
+P_{11}
++P_{12}K(I+GK)^{-1}(-I).
+$$
+Usando
+$$
+S=(I+GK)^{-1},
+\qquad
+T=GKS,
+\qquad
+I-T=S,
+$$
+si trova
+$$
+N=
+\begin{bmatrix}
+-W_uKS\\
+-W_TT\\
+W_PS
+\end{bmatrix}.
+$$
+I segni meno sui primi due canali non cambiano la norma, ma sono utili per controllare la coerenza algebrica della chiusura.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-017.png}
+    \caption{Problema stacked $S/T/KS$: prestazione, robustezza e comando vengono raccolti in un unico $N(K)$.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-018.png}
+    \caption{Costruzione della pianta generalizzata per ottenere lo stack $S/T/KS$.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-019.png}
+    \caption{Partizione di $P$ nello stack $S/T/KS$: i blocchi $P_{11}$, $P_{12}$, $P_{21}$ e $P_{22}$ devono avere dimensioni compatibili con $K$.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-020.png}
+    \caption{Chiusura dello stack tramite LFT: si recuperano $W_uKS$, $W_TT$ e $W_PS$.}
+\end{figure}
+
+\subsection{Esempio a due gradi di libert\`a}
+
+L'ultimo esempio delle slide considera uno schema a due gradi di libert\`a. Gli ingressi esogeni sono
+$$
+w=
+\begin{bmatrix}
+d\\
+r\\
+n
+\end{bmatrix},
+$$
+mentre le uscite di prestazione e i segnali disponibili al controllore sono
+$$
+z=
+\begin{bmatrix}
+y-r\\
+u
+\end{bmatrix},
+\qquad
+v=
+\begin{bmatrix}
+r\\
+y_m
+\end{bmatrix}.
+$$
+Il controllore agisce su due informazioni: il riferimento $r$ e il segnale misurato $y_m$. Scrivendo
+$$
+K=
+\begin{bmatrix}
+K_1 & K_2
+\end{bmatrix},
+$$
+si ha
+$$
+u=K_1r+K_2y_m.
+$$
+Lo schema comprende anche una dinamica del disturbo $G_d$, per cui
+$$
+y=Gu+G_dd,
+\qquad
+y_m=y+n.
+$$
+
+Per costruire $P$ si apre il loop nel punto del controllore. La relazione fra
+$$
+\begin{bmatrix}
+w\\
+u
+\end{bmatrix}
+\quad\text{e}\quad
+\begin{bmatrix}
+z\\
+v
+\end{bmatrix}
+$$
+\`e
+$$
+\begin{bmatrix}
+y-r\\
+u\\
+r\\
+y_m
+\end{bmatrix}
+=
+\begin{bmatrix}
+G_d & -I & 0 & G\\
+0 & 0 & 0 & I\\
+0 & I & 0 & 0\\
+G_d & 0 & I & G
+\end{bmatrix}
+\begin{bmatrix}
+d\\
+r\\
+n\\
+u
+\end{bmatrix}.
+$$
+Dunque
+$$
+P=
+\begin{bmatrix}
+G_d & -I & 0 & G\\
+0 & 0 & 0 & I\\
+0 & I & 0 & 0\\
+G_d & 0 & I & G
+\end{bmatrix}.
+$$
+La slide insiste su un aspetto essenziale: anche in questo caso $P$ non contiene il controllore $K$. Contiene solo la pianta, la dinamica del disturbo, i sommatori e le scelte di segnali.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-021.png}
+    \caption{Esempio a due gradi di libert\`a: si scelgono $w$, $z$ e $v$ e si chiede di costruire $P$ e $N$.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-022.png}
+    \caption{Pianta generalizzata per lo schema a due gradi di libert\`a: il controllore \`e escluso da $P$.}
+\end{figure}
+
+\subsection{Mappa chiusa nello schema a due gradi di libert\`a}
+
+La mappa chiusa pu\`o essere ricavata direttamente dal diagramma oppure tramite
+$$
+N=F_\ell(P,K).
+$$
+Assumendo
+$$
+K=
+\begin{bmatrix}
+K_1 & K_2
+\end{bmatrix},
+$$
+la slide scrive
+$$
+\begin{bmatrix}
+y-r\\
+u
+\end{bmatrix}
+=
+\begin{bmatrix}
+I-GK_2 & 0\\
+0 & I-K_2G
+\end{bmatrix}^{-1}
+\begin{bmatrix}
+G_d & G(K_1+K_2)-I & GK_2\\
+K_2G_d & K_1+K_2 & K_2
+\end{bmatrix}
+\begin{bmatrix}
+d\\
+r\\
+n
+\end{bmatrix}.
+$$
+Questa \`e la matrice $N$ cercata.
+
+Il risultato mostra bene il senso dei due gradi di libert\`a. Il blocco $K_1$ agisce direttamente sul riferimento, quindi pu\`o modellare il tracking; il blocco $K_2$ chiude il feedback sulla misura e influenza stabilit\`a, rigetto dei disturbi e sensibilit\`a al rumore. La forma generale $P$-$K$ permette di tenere insieme questi due ruoli senza cambiare formalismo.
+
+Per usare la formula LFT, si partiziona $P$ come
+$$
+P_{11}=
+\begin{bmatrix}
+G_d & -I & 0\\
+0 & 0 & 0
+\end{bmatrix},
+\quad
+P_{12}=
+\begin{bmatrix}
+G\\
+I
+\end{bmatrix},
+$$
+$$
+P_{21}=
+\begin{bmatrix}
+0 & I & 0\\
+G_d & 0 & I
+\end{bmatrix},
+\quad
+P_{22}=
+\begin{bmatrix}
+0\\
+G
+\end{bmatrix}.
+$$
+Inserendo questi blocchi in
+$$
+N=P_{11}+P_{12}K(I-P_{22}K)^{-1}P_{21},
+$$
+si ottiene la stessa mappa chiusa trovata direttamente dal diagramma.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-023.png}
+    \caption{Mappa chiusa dello schema a due gradi di libert\`a e partizione di $P$ per usare la LFT.}
+\end{figure}
+
+\subsection{Problema inverso: ricavare \texorpdfstring{$P$}{P} da \texorpdfstring{$N$}{N}}
+
+L'ultima slide affronta il problema inverso. A volte si conosce gi\`a la mappa chiusa desiderata $N(K)$ e si vuole trovare una pianta generalizzata $P$ tale che
+$$
+N=F_\ell(P,K)
+=
+P_{11}+P_{12}K(I-P_{22}K)^{-1}P_{21}.
+$$
+In generale il modo pi\`u pulito resta costruire $P$ dal diagramma a blocchi. Se per\`o si vuole partire da $N$, le slide propongono una procedura pratica:
+\begin{enumerate}
+    \item porre $K=0$ in $N$ per ottenere $P_{11}$;
+    \item definire $Q=N-P_{11}$;
+    \item riscrivere $Q$ in modo che ogni termine abbia un fattore comune
+    $$
+    R=K(I-P_{22}K)^{-1};
+    $$
+    \item usare la fattorizzazione
+    $$
+    Q=P_{12}RP_{21}
+    $$
+    per ricavare $P_{12}$, $P_{22}$ e $P_{21}$ per ispezione.
+\end{enumerate}
+Questa procedura non sostituisce la comprensione fisica dello schema, ma aiuta quando lo stack $N$ \`e gi\`a stato scritto e si vuole tradurlo in una forma compatibile con le routine di sintesi.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images16/h2hinf-01-24-024.png}
+    \caption{Procedura inversa: partire da $N(K)$ e ricostruire una possibile pianta generalizzata $P$.}
+\end{figure}
+
+\subsection{Sintesi conclusiva della lezione}
+
+La Lezione 16 chiude il discorso sugli zeri RHP multivariabili e apre il linguaggio standard della sintesi robusta. Dal primo blocco bisogna ricordare che gli zeri MIMO sono direzionali: possono non comparire nei singoli canali, possono imporre una risposta inversa solo lungo certe combinazioni di ingresso e uscita, e in alcuni casi possono essere \emph{pinned} a un canale specifico.
+
+Dal secondo blocco bisogna ricordare la struttura $P$-$K$. Tutti i problemi trattati nelle lezioni precedenti possono essere riscritti come:
+$$
+\begin{bmatrix}
+z\\
+v
+\end{bmatrix}
+=
+P
+\begin{bmatrix}
+w\\
+u
+\end{bmatrix},
+\qquad
+u=Kv,
+\qquad
+z=N(K)w.
+$$
+La mappa chiusa \`e una lower LFT:
+$$
+N(K)=F_\ell(P,K)
+=
+P_{11}+P_{12}K(I-P_{22}K)^{-1}P_{21}.
+$$
+Questa formula \`e il ponte fra schemi a blocchi, pesi di progetto e algoritmi di sintesi $\mathcal{H}_2/\mathcal{H}_\infty$.
+
+\begin{keybox}
+\textbf{Messaggio operativo.} Prima di usare una routine di sintesi bisogna fare il lavoro concettuale: scegliere bene $w$, $z$, $v$ e $u$, costruire $P$ aprendo l'anello sul controllore, e verificare che la chiusura $F_\ell(P,K)$ produca davvero lo stack di prestazione desiderato.
+\end{keybox}
+
+\clearpage
+\phantomsection
+\section*{Appendice}
+\addcontentsline{toc}{section}{Appendice}
+
+\subsection*{Riferimento al materiale originale}
+\phantomsection
+\addcontentsline{toc}{subsection}{Riferimento al materiale originale}
+
+Questa parte del documento \`e una traduzione e rielaborazione estesa delle slide 79--84 del PDF ``Formulation of Control Problems'' e delle pagine 1--24 del PDF ``General Control Problem Formulation -- $\mathcal{H}_2/\mathcal{H}_\infty$ control synthesis'', caricati dall'utente come materiale di partenza nella directory \texttt{Slide}.
+
 \end{document}
