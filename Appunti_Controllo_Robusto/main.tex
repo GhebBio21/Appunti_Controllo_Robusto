@@ -8856,71 +8856,9 @@ Questo punto \`e molto pi\`u sottile del caso SISO. In SISO uno zero si vede dir
     \caption{Gli zeri MIMO si definiscono tramite perdita di rango di $G(z)$ e introducono limitazioni fondamentali al controllo.}
 \end{figure}
 
-\subsection{Sintesi conclusiva della lezione}
-
-La Lezione 15 completa il passaggio dalla scelta qualitativa dei pesi alla formulazione operativa del problema di sintesi. La mixed sensitivity costruisce uno stack $N$ che raccoglie pi\`u richieste:
-\begin{itemize}
-    \item $W_P S$ per controllare l'errore e la prestazione;
-    \item $W_u K S$ per limitare l'azione di controllo;
-    \item $W_T T$ per imporre roll-off e attenuazione del rumore ad alta frequenza.
-\end{itemize}
-
-Nel problema $S/KS$ ci si concentra sui primi due canali, scegliendo $W_P$ per sagomare la sensibilit\`a e $W_u$ per rendere fisicamente ragionevole il comando. Se i disturbi hanno una dinamica propria, \`e spesso meglio inserirla esplicitamente nello stack invece di forzare artificialmente il peso di prestazione.
-
-L'esempio mostra che i pesi cambiano davvero il comportamento del sistema: un peso pi\`u severo a bassa frequenza migliora il rigetto dei disturbi, ma pu\`o rendere il tracking pi\`u aggressivo. La lezione si chiude poi aprendo il tema degli zeri RHP multivariabili, che ricordano una cosa essenziale: non tutte le prestazioni desiderate sono realizzabili, anche con la migliore scelta dei pesi.
-
-\begin{keybox}
-\textbf{Messaggio operativo.} La sintesi $\mathcal{H}_\infty$ non sceglie da sola che cosa sia importante: lo leggiamo nei pesi. Per questo $W_P$, $W_u$ e $W_T$ devono essere scelti come specifiche di progetto, non come parametri decorativi.
-\end{keybox}
-
-\clearpage
-\phantomsection
-\section*{Appendice}
-\addcontentsline{toc}{section}{Appendice}
-
-\subsection*{Riferimento al materiale originale}
-\phantomsection
-\addcontentsline{toc}{subsection}{Riferimento al materiale originale}
-
-Questa parte del documento \`e una traduzione e rielaborazione estesa delle slide 72--78 del PDF ``Formulation of Control Problems'', caricato dall'utente come materiale di partenza nella directory \texttt{Slide}.
-
-% --- FRONTESPIZIO LEZIONE 16 ---
-\begin{coverpage}
-\centering
-{\Huge\bfseries Controllo Robusto\par}
-\vspace{0.4em}
-{\LARGE Traduzione in italiano e approfondimento\par}
-\vspace{0.5em}
-{\Large Zeri RHP multivariabili, LFT e formulazione generale del problema di controllo\par}
-\vfill
-\includegraphics[width=0.78\textwidth]{images16/h2hinf-01-24-001.png}
-\vfill
-\begin{focusbox}
-\textbf{Obiettivo del documento.} Questa parte chiude l'esempio sugli zeri a parte reale positiva nei sistemi MIMO e apre la formulazione generale del problema di controllo. L'idea \`e passare da schemi specifici di retroazione alla forma standard $P$-$K$: un impianto generalizzato $P$, un controllore $K$, ingressi esogeni $w$, uscite di prestazione $z$, segnali misurati $v$ e comandi $u$. Per descrivere in modo compatto questa chiusura di anello si introduce il linguaggio delle trasformazioni frazionarie lineari, o LFT.
-\end{focusbox}
-\vfill
-{\large Basato sulle slide del corso AA 2025/2026\par}
-\end{coverpage}
-
-\section{Lezione 16}
-
-\subsection{Visione d'insieme della lezione}
-
-La Lezione 15 si era fermata nel punto giusto: gli zeri RHP multivariabili non sono semplici zeri di singoli elementi della matrice $G(s)$, ma direzioni in cui la matrice di trasferimento perde rango. La Lezione 16 completa quell'esempio e poi cambia scala: non studia pi\`u solo un particolare schema di mixed sensitivity, ma introduce il linguaggio generale con cui si formulano i problemi di sintesi $\mathcal{H}_2$ e $\mathcal{H}_\infty$.
-
-La lezione ha quindi due blocchi principali:
-\begin{enumerate}
-    \item chiusura dell'esempio sugli zeri RHP MIMO, mostrando come il loro effetto possa essere spostato fra le uscite e perch\'e la norma $\mathcal{H}_\infty$ vede soprattutto la direzione peggiore;
-    \item introduzione della formulazione generale $P$-$K$, delle LFT e della costruzione della pianta generalizzata $P$ a partire da schemi a blocchi.
-\end{enumerate}
-
-\begin{keybox}
-\textbf{Idea guida.} Uno schema di controllo robusto si pu\`o sempre leggere come una mappa chiusa da ingressi esterni $w$ a uscite pesate $z$. La domanda di progetto diventa: scegliere $K$ in modo che la mappa chiusa $N(K)$ abbia norma piccola. Le LFT sono il modo compatto per scrivere proprio questa dipendenza di $N$ da $K$.
-\end{keybox}
-
 \subsection{Ritorno agli zeri RHP multivariabili}
 
-Riprendiamo l'esempio introdotto alla fine della Lezione 15. La pianta \`e
+Riprendiamo l'esempio appena introdotto sugli zeri RHP multivariabili. La pianta \`e
 $$
 G(s)=
 \frac{1}{(0.2s+1)(s+1)}
@@ -8959,7 +8897,7 @@ la risposta mette in evidenza l'effetto dello zero: una delle uscite mostra una 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.82\textwidth]{images16/formulation-79-84-001.png}
+    \includegraphics[width=0.82\textwidth]{images15/formulation-79-84-001.png}
     \caption{Risposta in anello aperto ai singoli ingressi: lo zero RHP multivariabile non si riconosce guardando solo i canali separati.}
 \end{figure}
 
@@ -9018,7 +8956,7 @@ Questa \`e la differenza essenziale rispetto al caso SISO. In SISO lo zero \`e u
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.82\textwidth]{images16/formulation-79-84-002.png}
+    \includegraphics[width=0.82\textwidth]{images15/formulation-79-84-002.png}
     \caption{SVD di $G(0.5)$: il valore singolare nullo rivela la direzione dello zero RHP multivariabile.}
 \end{figure}
 
@@ -9060,7 +8998,7 @@ Come nelle lezioni precedenti, $M_i$ limita il picco ammesso della sensibilit\`a
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.82\textwidth]{images16/formulation-79-84-003.png}
+    \includegraphics[width=0.82\textwidth]{images15/formulation-79-84-003.png}
     \caption{Problema $S/KS$ usato per valutare l'effetto dello zero RHP sulla risposta chiusa.}
 \end{figure}
 
@@ -9103,13 +9041,13 @@ Questo conferma che il terzo progetto compra il miglioramento di un canale con u
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.82\textwidth]{images16/formulation-79-84-004.png}
+    \includegraphics[width=0.82\textwidth]{images15/formulation-79-84-004.png}
     \caption{Tre scelte dei pesi: cambiando le bande richieste ai due canali si decide dove far ricadere l'effetto dello zero RHP.}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.82\textwidth]{images16/formulation-79-84-005.png}
+    \includegraphics[width=0.82\textwidth]{images15/formulation-79-84-005.png}
     \caption{Confronto fra progetti: i valori singolari di $S$ e le risposte al riferimento mostrano il compromesso direzionale imposto dallo zero.}
 \end{figure}
 
@@ -9127,13 +9065,77 @@ Questo \`e un punto concettuale importante. La norma $\mathcal{H}_\infty$ \`e mo
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.82\textwidth]{images16/formulation-79-84-006.png}
+    \includegraphics[width=0.82\textwidth]{images15/formulation-79-84-006.png}
     \caption{Osservazioni finali: pinned zeros e limite della norma $\mathcal{H}_\infty$ come misura basata sulla direzione peggiore.}
 \end{figure}
 
-\subsection{Dal problema specifico alla formulazione generale}
 
-La seconda parte della lezione apre il capitolo sulla formulazione generale del problema di controllo. Finora abbiamo scritto a mano diversi stack:
+\subsection{Sintesi conclusiva della lezione}
+
+La Lezione 15 completa il passaggio dalla scelta qualitativa dei pesi alla formulazione operativa del problema di sintesi. La mixed sensitivity costruisce uno stack $N$ che raccoglie pi\`u richieste:
+\begin{itemize}
+    \item $W_P S$ per controllare l'errore e la prestazione;
+    \item $W_u K S$ per limitare l'azione di controllo;
+    \item $W_T T$ per imporre roll-off e attenuazione del rumore ad alta frequenza.
+\end{itemize}
+
+Nel problema $S/KS$ ci si concentra sui primi due canali, scegliendo $W_P$ per sagomare la sensibilit\`a e $W_u$ per rendere fisicamente ragionevole il comando. Se i disturbi hanno una dinamica propria, \`e spesso meglio inserirla esplicitamente nello stack invece di forzare artificialmente il peso di prestazione.
+
+Gli esempi mostrano che i pesi cambiano davvero il comportamento del sistema: un peso pi\`u severo a bassa frequenza migliora il rigetto dei disturbi, ma pu\`o rendere il tracking pi\`u aggressivo. Il blocco finale sugli zeri RHP multivariabili completa il messaggio: non tutte le prestazioni desiderate sono realizzabili, e nei sistemi MIMO i limiti sono spesso direzionali. I pesi possono decidere dove pagare il prezzo, ma non possono cancellare lo zero.
+
+\begin{keybox}
+\textbf{Messaggio operativo.} La sintesi $\mathcal{H}_\infty$ non sceglie da sola che cosa sia importante: lo leggiamo nei pesi. Per questo $W_P$, $W_u$ e $W_T$ devono essere scelti come specifiche di progetto, non come parametri decorativi.
+\end{keybox}
+
+\clearpage
+\phantomsection
+\section*{Appendice}
+\addcontentsline{toc}{section}{Appendice}
+
+\subsection*{Riferimento al materiale originale}
+\phantomsection
+\addcontentsline{toc}{subsection}{Riferimento al materiale originale}
+
+Questa parte del documento \`e una traduzione e rielaborazione estesa delle slide 72--84 del PDF ``Formulation of Control Problems'', caricato dall'utente come materiale di partenza nella directory \texttt{Slide}.
+
+% --- FRONTESPIZIO LEZIONE 16 ---
+\begin{coverpage}
+\centering
+{\Huge\bfseries Controllo Robusto\par}
+\vspace{0.4em}
+{\LARGE Traduzione in italiano e approfondimento\par}
+\vspace{0.5em}
+{\Large Formulazione generale del problema di controllo, LFT e pianta generalizzata\par}
+\vfill
+\includegraphics[width=0.78\textwidth]{images16/h2hinf-01-24-001.png}
+\vfill
+\begin{focusbox}
+\textbf{Obiettivo del documento.} Questa parte apre la formulazione generale del problema di controllo. L'idea \`e passare da schemi specifici di retroazione alla forma standard $P$-$K$: un impianto generalizzato $P$, un controllore $K$, ingressi esogeni $w$, uscite di prestazione $z$, segnali misurati $v$ e comandi $u$. Per descrivere in modo compatto questa chiusura di anello si introduce il linguaggio delle trasformazioni frazionarie lineari, o LFT.
+\end{focusbox}
+\vfill
+{\large Basato sulle slide del corso AA 2025/2026\par}
+\end{coverpage}
+
+\section{Lezione 16}
+
+\subsection{Visione d'insieme della lezione}
+
+La Lezione 16 apre il capitolo sulla formulazione generale del problema di controllo. Dopo aver costruito diversi stack di mixed sensitivity nelle lezioni precedenti, ora si introduce una forma unica capace di rappresentare quei problemi in modo sistematico: la forma $P$-$K$.
+
+La lezione ha tre blocchi principali:
+\begin{enumerate}
+    \item formulazione generale del problema di controllo tramite ingressi esogeni $w$, uscite di prestazione $z$, misure $v$ e comandi $u$;
+    \item introduzione delle trasformazioni frazionarie lineari, o LFT, come linguaggio compatto per chiudere interconnessioni;
+    \item costruzione della pianta generalizzata $P$ in esempi a uno e due gradi di libert\`a, fino alla mappa chiusa $N=F_\ell(P,K)$.
+\end{enumerate}
+
+\begin{keybox}
+\textbf{Idea guida.} Uno schema di controllo robusto si pu\`o sempre leggere come una mappa chiusa da ingressi esterni $w$ a uscite pesate $z$. La domanda di progetto diventa: scegliere $K$ in modo che la mappa chiusa $N(K)$ abbia norma piccola. Le LFT sono il modo compatto per scrivere proprio questa dipendenza di $N$ da $K$.
+\end{keybox}
+
+\subsection{Formulazione generale del problema di controllo}
+
+Finora abbiamo scritto a mano diversi stack:
 $$
 \begin{bmatrix}
 W_P S\\
@@ -9438,7 +9440,7 @@ d\\
 r\\
 n
 \end{bmatrix}
-Gu.
+{}+Gu.
 $$
 Allo stesso modo,
 $$
@@ -9455,7 +9457,7 @@ d\\
 r\\
 n
 \end{bmatrix}
--Gu.
+{}-Gu.
 $$
 La pianta generalizzata \`e quindi
 $$
@@ -9929,9 +9931,7 @@ Questa procedura non sostituisce la comprensione fisica dello schema, ma aiuta q
 
 \subsection{Sintesi conclusiva della lezione}
 
-La Lezione 16 chiude il discorso sugli zeri RHP multivariabili e apre il linguaggio standard della sintesi robusta. Dal primo blocco bisogna ricordare che gli zeri MIMO sono direzionali: possono non comparire nei singoli canali, possono imporre una risposta inversa solo lungo certe combinazioni di ingresso e uscita, e in alcuni casi possono essere \emph{pinned} a un canale specifico.
-
-Dal secondo blocco bisogna ricordare la struttura $P$-$K$. Tutti i problemi trattati nelle lezioni precedenti possono essere riscritti come:
+La Lezione 16 introduce il linguaggio standard con cui si scrivono i problemi di sintesi robusta. Il punto centrale \`e la struttura $P$-$K$. Tutti i problemi trattati nelle lezioni precedenti possono essere riscritti come:
 $$
 \begin{bmatrix}
 z\\
@@ -9969,6 +9969,6 @@ Questa formula \`e il ponte fra schemi a blocchi, pesi di progetto e algoritmi d
 \phantomsection
 \addcontentsline{toc}{subsection}{Riferimento al materiale originale}
 
-Questa parte del documento \`e una traduzione e rielaborazione estesa delle slide 79--84 del PDF ``Formulation of Control Problems'' e delle pagine 1--24 del PDF ``General Control Problem Formulation -- $\mathcal{H}_2/\mathcal{H}_\infty$ control synthesis'', caricati dall'utente come materiale di partenza nella directory \texttt{Slide}.
+Questa parte del documento \`e una traduzione e rielaborazione estesa delle pagine 1--24 del PDF ``General Control Problem Formulation -- $\mathcal{H}_2/\mathcal{H}_\infty$ control synthesis'', caricato dall'utente come materiale di partenza nella directory \texttt{Slide}.
 
 \end{document}

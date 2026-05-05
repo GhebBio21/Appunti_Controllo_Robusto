@@ -279,29 +279,29 @@
 \contentsline {subsection}{\numberline {15.6}Esempio di progetto $S/KS$}{240}{subsection.15.6}%
 \contentsline {subsection}{\numberline {15.7}Lettura dei risultati dell'esempio}{241}{subsection.15.7}%
 \contentsline {subsection}{\numberline {15.8}Limiti imposti dagli zeri MIMO a parte reale positiva}{242}{subsection.15.8}%
-\contentsline {subsection}{\numberline {15.9}Sintesi conclusiva della lezione}{243}{subsection.15.9}%
-\contentsline {section}{Appendice}{244}{section*.223}%
-\contentsline {subsection}{Riferimento al materiale originale}{244}{section*.224}%
-\contentsline {section}{\numberline {16}Lezione 16}{246}{section.16}%
-\contentsline {subsection}{\numberline {16.1}Visione d'insieme della lezione}{246}{subsection.16.1}%
-\contentsline {subsection}{\numberline {16.2}Ritorno agli zeri RHP multivariabili}{246}{subsection.16.2}%
-\contentsline {subsection}{\numberline {16.3}Direzioni dello zero e perdita di rango}{247}{subsection.16.3}%
-\contentsline {subsection}{\numberline {16.4}Progetto $S/KS$ per studiare l'effetto dello zero}{248}{subsection.16.4}%
-\contentsline {subsection}{\numberline {16.5}Tre scelte di progetto e spostamento dell'effetto dello zero}{249}{subsection.16.5}%
-\contentsline {subsection}{\numberline {16.6}Zeri pinned e limite della norma $\mathcal {H}_\infty $}{250}{subsection.16.6}%
-\contentsline {subsection}{\numberline {16.7}Dal problema specifico alla formulazione generale}{251}{subsection.16.7}%
-\contentsline {subsection}{\numberline {16.8}Trasformazioni frazionarie lineari: idea scalare}{252}{subsection.16.8}%
-\contentsline {subsection}{\numberline {16.9}LFT inferiori e superiori}{253}{subsection.16.9}%
-\contentsline {subsection}{\numberline {16.10}Interpretazione delle LFT}{254}{subsection.16.10}%
-\contentsline {subsection}{\numberline {16.11}Esempi di LFT}{256}{subsection.16.11}%
-\contentsline {subsection}{\numberline {16.12}Costruire la pianta generalizzata $P$}{258}{subsection.16.12}%
-\contentsline {subsection}{\numberline {16.13}Esempio intermedio: schema Matlab con pesi}{258}{subsection.16.13}%
-\contentsline {subsection}{\numberline {16.14}Esempio: feedback a un grado di libert\`a}{259}{subsection.16.14}%
-\contentsline {subsection}{\numberline {16.15}Chiudere il loop: da $P$ a $N$}{261}{subsection.16.15}%
-\contentsline {subsection}{\numberline {16.16}Problema stacked $S/T/KS$}{263}{subsection.16.16}%
-\contentsline {subsection}{\numberline {16.17}Esempio a due gradi di libert\`a}{266}{subsection.16.17}%
-\contentsline {subsection}{\numberline {16.18}Mappa chiusa nello schema a due gradi di libert\`a}{268}{subsection.16.18}%
-\contentsline {subsection}{\numberline {16.19}Problema inverso: ricavare $P$ da $N$}{269}{subsection.16.19}%
-\contentsline {subsection}{\numberline {16.20}Sintesi conclusiva della lezione}{270}{subsection.16.20}%
-\contentsline {section}{Appendice}{271}{section*.254}%
-\contentsline {subsection}{Riferimento al materiale originale}{271}{section*.255}%
+\contentsline {subsection}{\numberline {15.9}Ritorno agli zeri RHP multivariabili}{243}{subsection.15.9}%
+\contentsline {subsection}{\numberline {15.10}Direzioni dello zero e perdita di rango}{244}{subsection.15.10}%
+\contentsline {subsection}{\numberline {15.11}Progetto $S/KS$ per studiare l'effetto dello zero}{245}{subsection.15.11}%
+\contentsline {subsection}{\numberline {15.12}Tre scelte di progetto e spostamento dell'effetto dello zero}{246}{subsection.15.12}%
+\contentsline {subsection}{\numberline {15.13}Zeri pinned e limite della norma $\mathcal {H}_\infty $}{247}{subsection.15.13}%
+\contentsline {subsection}{\numberline {15.14}Sintesi conclusiva della lezione}{248}{subsection.15.14}%
+\contentsline {section}{Appendice}{250}{section*.229}%
+\contentsline {subsection}{Riferimento al materiale originale}{250}{section*.230}%
+\contentsline {section}{\numberline {16}Lezione 16}{252}{section.16}%
+\contentsline {subsection}{\numberline {16.1}Visione d'insieme della lezione}{252}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}Formulazione generale del problema di controllo}{252}{subsection.16.2}%
+\contentsline {subsection}{\numberline {16.3}Trasformazioni frazionarie lineari: idea scalare}{253}{subsection.16.3}%
+\contentsline {subsection}{\numberline {16.4}LFT inferiori e superiori}{254}{subsection.16.4}%
+\contentsline {subsection}{\numberline {16.5}Interpretazione delle LFT}{255}{subsection.16.5}%
+\contentsline {subsection}{\numberline {16.6}Esempi di LFT}{257}{subsection.16.6}%
+\contentsline {subsection}{\numberline {16.7}Costruire la pianta generalizzata $P$}{259}{subsection.16.7}%
+\contentsline {subsection}{\numberline {16.8}Esempio intermedio: schema Matlab con pesi}{259}{subsection.16.8}%
+\contentsline {subsection}{\numberline {16.9}Esempio: feedback a un grado di libert\`a}{260}{subsection.16.9}%
+\contentsline {subsection}{\numberline {16.10}Chiudere il loop: da $P$ a $N$}{262}{subsection.16.10}%
+\contentsline {subsection}{\numberline {16.11}Problema stacked $S/T/KS$}{264}{subsection.16.11}%
+\contentsline {subsection}{\numberline {16.12}Esempio a due gradi di libert\`a}{267}{subsection.16.12}%
+\contentsline {subsection}{\numberline {16.13}Mappa chiusa nello schema a due gradi di libert\`a}{269}{subsection.16.13}%
+\contentsline {subsection}{\numberline {16.14}Problema inverso: ricavare $P$ da $N$}{270}{subsection.16.14}%
+\contentsline {subsection}{\numberline {16.15}Sintesi conclusiva della lezione}{271}{subsection.16.15}%
+\contentsline {section}{Appendice}{272}{section*.254}%
+\contentsline {subsection}{Riferimento al materiale originale}{272}{section*.255}%
