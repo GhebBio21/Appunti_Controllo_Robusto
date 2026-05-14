@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.18)  14 MAY 2026 11:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.18)  14 MAY 2026 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1133,7 +1133,7 @@ Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count392
 Package translations Info: no dictionary file `translations-basic-dictionary-it
 alian.trsl' found. on input line 101.
-<renders/page-01.png, id=1341, 845.559pt x 597.432pt>
+<renders/page-01.png, id=1438, 845.559pt x 597.432pt>
 File: renders/page-01.png Graphic file (type png)
 <use renders/page-01.png>
 Package pdftex.def Info: renders/page-01.png  used on input line 113.
@@ -1204,11 +1204,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-)
+ [10])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [10]
+ [11]
 File: renders/page-01.png Graphic file (type png)
 <use renders/page-01.png>
 Package pdftex.def Info: renders/page-01.png  used on input line 137.
@@ -1218,81 +1218,81 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [11{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-<renders/page-02.png, id=1745, 845.559pt x 597.432pt>
+) [12{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+<renders/page-02.png, id=1871, 845.559pt x 597.432pt>
 File: renders/page-02.png Graphic file (type png)
 <use renders/page-02.png>
 Package pdftex.def Info: renders/page-02.png  used on input line 157.
 (pdftex.def)             Requested size: 387.30254pt x 273.6552pt.
- [12 <./renders/page-02.png (PNG copy)>]
-<renders/page-03.png, id=1755, 845.559pt x 597.432pt>
+ [13 <./renders/page-02.png (PNG copy)>]
+<renders/page-03.png, id=1882, 845.559pt x 597.432pt>
 File: renders/page-03.png Graphic file (type png)
 <use renders/page-03.png>
 Package pdftex.def Info: renders/page-03.png  used on input line 185.
 (pdftex.def)             Requested size: 387.30254pt x 273.6552pt.
- [13{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc} <./re
+ [14{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc} <./re
 nders/page-03.png (PNG copy)>]
-<renders/page-04.png, id=1764, 845.559pt x 597.432pt>
+<renders/page-04.png, id=1890, 845.559pt x 597.432pt>
 File: renders/page-04.png Graphic file (type png)
 <use renders/page-04.png>
 Package pdftex.def Info: renders/page-04.png  used on input line 222.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<renders/page-05.png, id=1765, 845.559pt x 597.432pt>
+<renders/page-05.png, id=1891, 845.559pt x 597.432pt>
 File: renders/page-05.png Graphic file (type png)
 <use renders/page-05.png>
 Package pdftex.def Info: renders/page-05.png  used on input line 227.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
- [14 <./renders/page-04.png (PNG copy)> <./renders/page-05.png (PNG copy)>]
-<renders/page-06.png, id=1772, 845.559pt x 597.432pt>
+ [15 <./renders/page-04.png (PNG copy)> <./renders/page-05.png (PNG copy)>]
+<renders/page-06.png, id=1898, 845.559pt x 597.432pt>
 File: renders/page-06.png Graphic file (type png)
 <use renders/page-06.png>
 Package pdftex.def Info: renders/page-06.png  used on input line 301.
 (pdftex.def)             Requested size: 387.30254pt x 273.6552pt.
- [15 <./renders/page-06.png (PNG copy)>]
-<renders/page-07.png, id=1780, 845.559pt x 597.432pt>
+ [16 <./renders/page-06.png (PNG copy)>]
+<renders/page-07.png, id=1906, 845.559pt x 597.432pt>
 File: renders/page-07.png Graphic file (type png)
 <use renders/page-07.png>
 Package pdftex.def Info: renders/page-07.png  used on input line 336.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<renders/page-08.png, id=1781, 845.559pt x 597.432pt>
+<renders/page-08.png, id=1907, 845.559pt x 597.432pt>
 File: renders/page-08.png Graphic file (type png)
 <use renders/page-08.png>
 Package pdftex.def Info: renders/page-08.png  used on input line 341.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
 
-[16 <./renders/page-07.png (PNG copy)> <./renders/page-08.png (PNG copy)>]
-<renders/page-09.png, id=1788, 845.559pt x 597.432pt>
+[17 <./renders/page-07.png (PNG copy)> <./renders/page-08.png (PNG copy)>]
+<renders/page-09.png, id=1914, 845.559pt x 597.432pt>
 File: renders/page-09.png Graphic file (type png)
 <use renders/page-09.png>
 Package pdftex.def Info: renders/page-09.png  used on input line 387.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<renders/page-10.png, id=1789, 845.559pt x 597.432pt>
+<renders/page-10.png, id=1915, 845.559pt x 597.432pt>
 File: renders/page-10.png Graphic file (type png)
 <use renders/page-10.png>
 Package pdftex.def Info: renders/page-10.png  used on input line 392.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<renders/page-11.png, id=1790, 845.559pt x 597.432pt>
+<renders/page-11.png, id=1916, 845.559pt x 597.432pt>
 File: renders/page-11.png Graphic file (type png)
 <use renders/page-11.png>
 Package pdftex.def Info: renders/page-11.png  used on input line 418.
 (pdftex.def)             Requested size: 387.30254pt x 273.6552pt.
 
-[17 <./renders/page-09.png (PNG copy)> <./renders/page-10.png (PNG copy)>]
-<renders/page-12.png, id=1797, 845.559pt x 597.432pt>
+[18 <./renders/page-09.png (PNG copy)> <./renders/page-10.png (PNG copy)>]
+<renders/page-12.png, id=1923, 845.559pt x 597.432pt>
 File: renders/page-12.png Graphic file (type png)
 <use renders/page-12.png>
 Package pdftex.def Info: renders/page-12.png  used on input line 458.
 (pdftex.def)             Requested size: 354.23695pt x 250.29071pt.
 
-[18 <./renders/page-11.png (PNG copy)>] [19 <./renders/page-12.png (PNG copy)>]
-<mancanti/Screenshot 2026-03-18 alle 15.25.41.png, id=1811, 979.66pt x 689.5762
+[19 <./renders/page-11.png (PNG copy)>] [20 <./renders/page-12.png (PNG copy)>]
+<mancanti/Screenshot 2026-03-18 alle 15.25.41.png, id=1937, 979.66pt x 689.5762
 5pt>
 File: mancanti/Screenshot 2026-03-18 alle 15.25.41.png Graphic file (type png)
 <use mancanti/Screenshot 2026-03-18 alle 15.25.41.png>
 Package pdftex.def Info: mancanti/Screenshot 2026-03-18 alle 15.25.41.png  used
  on input line 487.
 (pdftex.def)             Requested size: 226.70963pt x 159.57774pt.
-<mancanti/Screenshot 2026-03-18 alle 15.26.06.png, id=1813, 973.6375pt x 691.58
+<mancanti/Screenshot 2026-03-18 alle 15.26.06.png, id=1939, 973.6375pt x 691.58
 376pt>
 File: mancanti/Screenshot 2026-03-18 alle 15.26.06.png Graphic file (type png)
 <use mancanti/Screenshot 2026-03-18 alle 15.26.06.png>
@@ -1305,617 +1305,617 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 493.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 493.
-[20 <./mancanti/Screenshot 2026-03-18 alle 15.25.41.png> <./mancanti/Screenshot
+[21 <./mancanti/Screenshot 2026-03-18 alle 15.25.41.png> <./mancanti/Screenshot
  2026-03-18 alle 15.26.06.png>]
-<mancanti/Screenshot 2026-03-18 alle 15.26.20.png, id=1822, 964.60374pt x 683.5
+<mancanti/Screenshot 2026-03-18 alle 15.26.20.png, id=1948, 964.60374pt x 683.5
 5376pt>
 File: mancanti/Screenshot 2026-03-18 alle 15.26.20.png Graphic file (type png)
 <use mancanti/Screenshot 2026-03-18 alle 15.26.20.png>
 Package pdftex.def Info: mancanti/Screenshot 2026-03-18 alle 15.26.20.png  used
  on input line 522.
 (pdftex.def)             Requested size: 226.70963pt x 160.656pt.
-<mancanti/Screenshot 2026-03-18 alle 15.26.35.png, id=1823, 961.5925pt x 681.54
+<mancanti/Screenshot 2026-03-18 alle 15.26.35.png, id=1949, 961.5925pt x 681.54
 625pt>
 File: mancanti/Screenshot 2026-03-18 alle 15.26.35.png Graphic file (type png)
 <use mancanti/Screenshot 2026-03-18 alle 15.26.35.png>
 Package pdftex.def Info: mancanti/Screenshot 2026-03-18 alle 15.26.35.png  used
  on input line 527.
 (pdftex.def)             Requested size: 226.70963pt x 160.68336pt.
- [21 <./mancanti/Screenshot 2026-03-18 alle 15.26.20.png> <./mancanti/Screensho
-t 2026-03-18 alle 15.26.35.png>] [22]
-<images/nyquist_imag_axis.png, id=1844, 845.559pt x 597.58257pt>
+ [22 <./mancanti/Screenshot 2026-03-18 alle 15.26.20.png> <./mancanti/Screensho
+t 2026-03-18 alle 15.26.35.png>] [23]
+<images/nyquist_imag_axis.png, id=1969, 845.559pt x 597.58257pt>
 File: images/nyquist_imag_axis.png Graphic file (type png)
 <use images/nyquist_imag_axis.png>
 Package pdftex.def Info: images/nyquist_imag_axis.png  used on input line 601.
 (pdftex.def)             Requested size: 387.30254pt x 273.72417pt.
- [23 <./images/nyquist_imag_axis.png (PNG copy)>]
-<images/nyquist_examples_pair.png, id=1853, 845.559pt x 597.58257pt>
+ [24 <./images/nyquist_imag_axis.png (PNG copy)>]
+<images/nyquist_examples_pair.png, id=1978, 845.559pt x 597.58257pt>
 File: images/nyquist_examples_pair.png Graphic file (type png)
 <use images/nyquist_examples_pair.png>
 Package pdftex.def Info: images/nyquist_examples_pair.png  used on input line 6
 46.
 (pdftex.def)             Requested size: 434.5298pt x 307.09737pt.
- [24]
-<images/example_2_over_sminus1.png, id=1859, 845.559pt x 597.58257pt>
+ [25]
+<images/example_2_over_sminus1.png, id=1986, 845.559pt x 597.58257pt>
 File: images/example_2_over_sminus1.png Graphic file (type png)
 <use images/example_2_over_sminus1.png>
 Package pdftex.def Info: images/example_2_over_sminus1.png  used on input line 
 666.
 (pdftex.def)             Requested size: 311.73026pt x 220.30878pt.
- [25 <./images/nyquist_examples_pair.png (PNG copy)>]
-<images/example_100_over_s_splus10_sq.png, id=1868, 845.559pt x 597.58257pt>
+ [26 <./images/nyquist_examples_pair.png (PNG copy)>]
+<images/example_100_over_s_splus10_sq.png, id=1994, 845.559pt x 597.58257pt>
 File: images/example_100_over_s_splus10_sq.png Graphic file (type png)
 <use images/example_100_over_s_splus10_sq.png>
 Package pdftex.def Info: images/example_100_over_s_splus10_sq.png  used on inpu
 t line 684.
 (pdftex.def)             Requested size: 321.17137pt x 226.98343pt.
- [26 <./images/example_2_over_sminus1.png (PNG copy)>]
-<images/example_1_over_splus1_s2plus1.png, id=1875, 845.559pt x 597.58257pt>
+ [27 <./images/example_2_over_sminus1.png (PNG copy)>]
+<images/example_1_over_splus1_s2plus1.png, id=2001, 845.559pt x 597.58257pt>
 File: images/example_1_over_splus1_s2plus1.png Graphic file (type png)
 <use images/example_1_over_splus1_s2plus1.png>
 Package pdftex.def Info: images/example_1_over_splus1_s2plus1.png  used on inpu
 t line 701.
 (pdftex.def)             Requested size: 330.61972pt x 233.65807pt.
 
-[27 <./images/example_100_over_s_splus10_sq.png (PNG copy)>]
-<images/example_s2plus100.png, id=1882, 845.559pt x 597.58257pt>
+[28 <./images/example_100_over_s_splus10_sq.png (PNG copy)>]
+<images/example_s2plus100.png, id=2008, 845.559pt x 597.58257pt>
 File: images/example_s2plus100.png Graphic file (type png)
 <use images/example_s2plus100.png>
 Package pdftex.def Info: images/example_s2plus100.png  used on input line 718.
 (pdftex.def)             Requested size: 321.17137pt x 226.98343pt.
- [28 <./images/example_1_over_splus1_s2plus1.png (PNG copy)> <./images/example_
+ [29 <./images/example_1_over_splus1_s2plus1.png (PNG copy)> <./images/example_
 s2plus100.png (PNG copy)>]
-<images/example_splus1_over_s_s10minus.png, id=1890, 845.559pt x 597.58257pt>
+<images/example_splus1_over_s_s10minus.png, id=2016, 845.559pt x 597.58257pt>
 File: images/example_splus1_over_s_s10minus.png Graphic file (type png)
 <use images/example_splus1_over_s_s10minus.png>
 Package pdftex.def Info: images/example_splus1_over_s_s10minus.png  used on inp
 ut line 735.
 (pdftex.def)             Requested size: 321.17137pt x 226.98343pt.
-<images/example_integrators.png, id=1891, 845.559pt x 597.58257pt>
+<images/example_integrators.png, id=2017, 845.559pt x 597.58257pt>
 File: images/example_integrators.png Graphic file (type png)
 <use images/example_integrators.png>
 Package pdftex.def Info: images/example_integrators.png  used on input line 753
 .
 (pdftex.def)             Requested size: 425.08147pt x 300.42273pt.
- [29 <./images/example_splus1_over_s_s10minus.png (PNG copy)>] [30 <./images/ex
+ [30 <./images/example_splus1_over_s_s10minus.png (PNG copy)>] [31 <./images/ex
 ample_integrators.png (PNG copy)>]
-<images/generalized_nyquist_intro.png, id=1909, 845.559pt x 597.58257pt>
+<images/generalized_nyquist_intro.png, id=2036, 845.559pt x 597.58257pt>
 File: images/generalized_nyquist_intro.png Graphic file (type png)
 <use images/generalized_nyquist_intro.png>
 Package pdftex.def Info: images/generalized_nyquist_intro.png  used on input li
 ne 790.
 (pdftex.def)             Requested size: 406.192pt x 287.07344pt.
- [31 <./images/generalized_nyquist_intro.png (PNG copy)>]
+ [32 <./images/generalized_nyquist_intro.png (PNG copy)>]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 832.
-<images/mimo_characteristic_loci.png, id=1918, 845.559pt x 597.58257pt>
+<images/mimo_characteristic_loci.png, id=2044, 845.559pt x 597.58257pt>
 File: images/mimo_characteristic_loci.png Graphic file (type png)
 <use images/mimo_characteristic_loci.png>
 Package pdftex.def Info: images/mimo_characteristic_loci.png  used on input lin
 e 868.
 (pdftex.def)             Requested size: 340.06805pt x 240.34183pt.
- [32]
-<images/mimo_example_ranges.png, id=1926, 845.559pt x 597.58257pt>
+ [33]
+<images/mimo_example_ranges.png, id=2052, 845.559pt x 597.58257pt>
 File: images/mimo_example_ranges.png Graphic file (type png)
 <use images/mimo_example_ranges.png>
 Package pdftex.def Info: images/mimo_example_ranges.png  used on input line 892
 .
 (pdftex.def)             Requested size: 368.40585pt x 260.36575pt.
- [33 <./images/mimo_characteristic_loci.png (PNG copy)>]
-<images/internal_stability_def.png, id=1933, 845.559pt x 597.58257pt>
+ [34 <./images/mimo_characteristic_loci.png (PNG copy)>]
+<images/internal_stability_def.png, id=2059, 845.559pt x 597.58257pt>
 File: images/internal_stability_def.png Graphic file (type png)
 <use images/internal_stability_def.png>
 Package pdftex.def Info: images/internal_stability_def.png  used on input line 
 911.
 (pdftex.def)             Requested size: 392.0231pt x 277.06148pt.
- [34 <./images/mimo_example_ranges.png (PNG copy)>]
-<images/internal_stability_matrix.png, id=1940, 845.559pt x 597.58257pt>
+ [35 <./images/mimo_example_ranges.png (PNG copy)>]
+<images/internal_stability_matrix.png, id=2066, 845.559pt x 597.58257pt>
 File: images/internal_stability_matrix.png Graphic file (type png)
 <use images/internal_stability_matrix.png>
 Package pdftex.def Info: images/internal_stability_matrix.png  used on input li
 ne 935.
 (pdftex.def)             Requested size: 387.30254pt x 273.72417pt.
- [35 <./images/internal_stability_def.png (PNG copy)>] [36 <./images/internal_s
-tability_matrix.png (PNG copy)>] [37]
-<images2/page-01.png, id=1960, 845.1575pt x 597.432pt>
+ [36 <./images/internal_stability_def.png (PNG copy)>] [37 <./images/internal_s
+tability_matrix.png (PNG copy)>] [38]
+<images2/page-01.png, id=2085, 845.1575pt x 597.432pt>
 File: images2/page-01.png Graphic file (type png)
 <use images2/page-01.png>
 Package pdftex.def Info: images2/page-01.png  used on input line 988.
 (pdftex.def)             Requested size: 368.40585pt x 260.42778pt.
- [38
+ [39
 
  <./images2/page-01.png (PNG copy)>]
 File: images2/page-01.png Graphic file (type png)
 <use images2/page-01.png>
 Package pdftex.def Info: images2/page-01.png  used on input line 1007.
 (pdftex.def)             Requested size: 368.40585pt x 260.42778pt.
- [39
+ [40
 
 ]
 File: images2/page-01.png Graphic file (type png)
 <use images2/page-01.png>
 Package pdftex.def Info: images2/page-01.png  used on input line 1040.
 (pdftex.def)             Requested size: 377.85419pt x 267.10986pt.
- [40]
-<images2/page-02.png, id=1977, 845.1575pt x 597.432pt>
+ [41]
+<images2/page-02.png, id=2103, 845.1575pt x 597.432pt>
 File: images2/page-02.png Graphic file (type png)
 <use images2/page-02.png>
 Package pdftex.def Info: images2/page-02.png  used on input line 1056.
 (pdftex.def)             Requested size: 368.40585pt x 260.42778pt.
-<images2/page-03.png, id=1978, 845.1575pt x 597.432pt>
+<images2/page-03.png, id=2104, 845.1575pt x 597.432pt>
 File: images2/page-03.png Graphic file (type png)
 <use images2/page-03.png>
 Package pdftex.def Info: images2/page-03.png  used on input line 1092.
 (pdftex.def)             Requested size: 368.40585pt x 260.42778pt.
- [41 <./images2/page-02.png (PNG copy)>]
-<images2/page-04.png, id=1985, 845.1575pt x 597.432pt>
+ [42 <./images2/page-02.png (PNG copy)>]
+<images2/page-04.png, id=2111, 845.1575pt x 597.432pt>
 File: images2/page-04.png Graphic file (type png)
 <use images2/page-04.png>
 Package pdftex.def Info: images2/page-04.png  used on input line 1124.
 (pdftex.def)             Requested size: 368.40585pt x 260.42778pt.
- [42 <./images2/page-03.png (PNG copy)>]
-<images2/page-05.png, id=1992, 845.1575pt x 597.432pt>
+ [43 <./images2/page-03.png (PNG copy)>]
+<images2/page-05.png, id=2119, 845.1575pt x 597.432pt>
 File: images2/page-05.png Graphic file (type png)
 <use images2/page-05.png>
 Package pdftex.def Info: images2/page-05.png  used on input line 1149.
 (pdftex.def)             Requested size: 231.43741pt x 163.59692pt.
-<images2/page-06.png, id=1993, 845.1575pt x 597.432pt>
+<images2/page-06.png, id=2120, 845.1575pt x 597.432pt>
 File: images2/page-06.png Graphic file (type png)
 <use images2/page-06.png>
 Package pdftex.def Info: images2/page-06.png  used on input line 1154.
 (pdftex.def)             Requested size: 231.43741pt x 163.59692pt.
- [43 <./images2/page-04.png (PNG copy)>]
-<images2/page-07.png, id=2001, 845.1575pt x 597.432pt>
+ [44 <./images2/page-04.png (PNG copy)>]
+<images2/page-07.png, id=2127, 845.1575pt x 597.432pt>
 File: images2/page-07.png Graphic file (type png)
 <use images2/page-07.png>
 Package pdftex.def Info: images2/page-07.png  used on input line 1180.
 (pdftex.def)             Requested size: 368.40585pt x 260.42778pt.
- [44 <./images2/page-05.png (PNG copy)> <./images2/page-06.png (PNG copy)>]
-<images2/page-09.png, id=2008, 845.1575pt x 597.432pt>
+ [45 <./images2/page-05.png (PNG copy)> <./images2/page-06.png (PNG copy)>]
+<images2/page-09.png, id=2134, 845.1575pt x 597.432pt>
 File: images2/page-09.png Graphic file (type png)
 <use images2/page-09.png>
 Package pdftex.def Info: images2/page-09.png  used on input line 1198.
 (pdftex.def)             Requested size: 330.61972pt x 233.71771pt.
- [45 <./images2/page-07.png (PNG copy)>]
-<images2/page-10.png, id=2018, 845.1575pt x 597.432pt>
+ [46 <./images2/page-07.png (PNG copy)>]
+<images2/page-10.png, id=2144, 845.1575pt x 597.432pt>
 File: images2/page-10.png Graphic file (type png)
 <use images2/page-10.png>
 Package pdftex.def Info: images2/page-10.png  used on input line 1225.
 (pdftex.def)             Requested size: 358.95752pt x 253.74571pt.
- [46 <./images2/page-09.png (PNG copy)>]
-<images2/page-11.png, id=2025, 845.1575pt x 597.432pt>
+ [47 <./images2/page-09.png (PNG copy)>]
+<images2/page-11.png, id=2151, 845.1575pt x 597.432pt>
 File: images2/page-11.png Graphic file (type png)
 <use images2/page-11.png>
 Package pdftex.def Info: images2/page-11.png  used on input line 1241.
 (pdftex.def)             Requested size: 358.95752pt x 253.74571pt.
- [47 <./images2/page-10.png (PNG copy)>]
-<images2/page-12.png, id=2032, 845.1575pt x 597.432pt>
+ [48 <./images2/page-10.png (PNG copy)>]
+<images2/page-12.png, id=2158, 845.1575pt x 597.432pt>
 File: images2/page-12.png Graphic file (type png)
 <use images2/page-12.png>
 Package pdftex.def Info: images2/page-12.png  used on input line 1255.
 (pdftex.def)             Requested size: 368.40585pt x 260.42778pt.
- [48 <./images2/page-11.png (PNG copy)>]
-<images2/page-13.png, id=2039, 845.1575pt x 597.432pt>
+ [49 <./images2/page-11.png (PNG copy)>]
+<images2/page-13.png, id=2166, 845.1575pt x 597.432pt>
 File: images2/page-13.png Graphic file (type png)
 <use images2/page-13.png>
 Package pdftex.def Info: images2/page-13.png  used on input line 1278.
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [49 <./images2/page-12.png (PNG copy)>]
-<images2/page-14.png, id=2050, 845.1575pt x 597.432pt>
+ [50 <./images2/page-12.png (PNG copy)>]
+<images2/page-14.png, id=2176, 845.1575pt x 597.432pt>
 File: images2/page-14.png Graphic file (type png)
 <use images2/page-14.png>
 Package pdftex.def Info: images2/page-14.png  used on input line 1299.
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [50 <./images2/page-13.png (PNG copy)>]
-<images2/page-15.png, id=2057, 845.1575pt x 597.432pt>
+ [51 <./images2/page-13.png (PNG copy)>]
+<images2/page-15.png, id=2183, 845.1575pt x 597.432pt>
 File: images2/page-15.png Graphic file (type png)
 <use images2/page-15.png>
 Package pdftex.def Info: images2/page-15.png  used on input line 1333.
 (pdftex.def)             Requested size: 231.43741pt x 163.59692pt.
-<images2/page-16.png, id=2058, 845.1575pt x 597.432pt>
+<images2/page-16.png, id=2184, 845.1575pt x 597.432pt>
 File: images2/page-16.png Graphic file (type png)
 <use images2/page-16.png>
 Package pdftex.def Info: images2/page-16.png  used on input line 1338.
 (pdftex.def)             Requested size: 231.43741pt x 163.59692pt.
- [51 <./images2/page-14.png (PNG copy)>]
-<images2/page-17.png, id=2066, 845.1575pt x 597.432pt>
+ [52 <./images2/page-14.png (PNG copy)>]
+<images2/page-17.png, id=2191, 845.1575pt x 597.432pt>
 File: images2/page-17.png Graphic file (type png)
 <use images2/page-17.png>
 Package pdftex.def Info: images2/page-17.png  used on input line 1371.
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [52 <./images2/page-15.png (PNG copy)> <./images2/page-16.png (PNG copy)>]
-<images2/page-18.png, id=2073, 845.1575pt x 597.432pt>
+ [53 <./images2/page-15.png (PNG copy)> <./images2/page-16.png (PNG copy)>]
+<images2/page-18.png, id=2198, 845.1575pt x 597.432pt>
 File: images2/page-18.png Graphic file (type png)
 <use images2/page-18.png>
 Package pdftex.def Info: images2/page-18.png  used on input line 1406.
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [53 <./images2/page-17.png (PNG copy)>]
-<images2/page-19.png, id=2080, 845.1575pt x 597.432pt>
+ [54 <./images2/page-17.png (PNG copy)>]
+<images2/page-19.png, id=2205, 845.1575pt x 597.432pt>
 File: images2/page-19.png Graphic file (type png)
 <use images2/page-19.png>
 Package pdftex.def Info: images2/page-19.png  used on input line 1443.
 (pdftex.def)             Requested size: 231.43741pt x 163.59692pt.
-<images2/page-20.png, id=2081, 845.1575pt x 597.432pt>
+<images2/page-20.png, id=2206, 845.1575pt x 597.432pt>
 File: images2/page-20.png Graphic file (type png)
 <use images2/page-20.png>
 Package pdftex.def Info: images2/page-20.png  used on input line 1448.
 (pdftex.def)             Requested size: 231.43741pt x 163.59692pt.
- [54 <./images2/page-18.png (PNG copy)>]
-<images2/page-21.png, id=2088, 845.1575pt x 597.432pt>
+ [55 <./images2/page-18.png (PNG copy)>]
+<images2/page-21.png, id=2215, 845.1575pt x 597.432pt>
 File: images2/page-21.png Graphic file (type png)
 <use images2/page-21.png>
 Package pdftex.def Info: images2/page-21.png  used on input line 1482.
 (pdftex.def)             Requested size: 231.43741pt x 163.59692pt.
-<images2/page-22.png, id=2089, 845.1575pt x 597.432pt>
+<images2/page-22.png, id=2216, 845.1575pt x 597.432pt>
 File: images2/page-22.png Graphic file (type png)
 <use images2/page-22.png>
 Package pdftex.def Info: images2/page-22.png  used on input line 1487.
 (pdftex.def)             Requested size: 231.43741pt x 163.59692pt.
- [55 <./images2/page-19.png (PNG copy)> <./images2/page-20.png (PNG copy)>] [56
- <./images2/page-21.png (PNG copy)> <./images2/page-22.png (PNG copy)>] [57] [5
-8
+ [56 <./images2/page-19.png (PNG copy)> <./images2/page-20.png (PNG copy)>] [57
+ <./images2/page-21.png (PNG copy)> <./images2/page-22.png (PNG copy)>] [58] [5
+9
 
-] [59]
-<images3/slide-01.png, id=2118, 845.559pt x 597.432pt>
+] [60]
+<images3/slide-01.png, id=2244, 845.559pt x 597.432pt>
 File: images3/slide-01.png Graphic file (type png)
 <use images3/slide-01.png>
 Package pdftex.def Info: images3/slide-01.png  used on input line 1599.
 (pdftex.def)             Requested size: 387.30254pt x 273.6552pt.
-<images3/slide-02.png, id=2119, 845.559pt x 597.432pt>
+<images3/slide-02.png, id=2245, 845.559pt x 597.432pt>
 File: images3/slide-02.png Graphic file (type png)
 <use images3/slide-02.png>
 Package pdftex.def Info: images3/slide-02.png  used on input line 1606.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<images3/slide-03.png, id=2120, 845.559pt x 597.432pt>
+<images3/slide-03.png, id=2246, 845.559pt x 597.432pt>
 File: images3/slide-03.png Graphic file (type png)
 <use images3/slide-03.png>
 Package pdftex.def Info: images3/slide-03.png  used on input line 1611.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
- [60 <./images3/slide-01.png (PNG copy)>] [61 <./images3/slide-02.png (PNG copy
+ [61 <./images3/slide-01.png (PNG copy)>] [62 <./images3/slide-02.png (PNG copy
 )> <./images3/slide-03.png (PNG copy)>]
-<images3/slide-04.png, id=2134, 845.559pt x 597.432pt>
+<images3/slide-04.png, id=2260, 845.559pt x 597.432pt>
 File: images3/slide-04.png Graphic file (type png)
 <use images3/slide-04.png>
 Package pdftex.def Info: images3/slide-04.png  used on input line 1668.
 (pdftex.def)             Requested size: 377.85419pt x 266.97311pt.
-<images3/slide-05.png, id=2135, 845.559pt x 597.432pt>
+<images3/slide-05.png, id=2261, 845.559pt x 597.432pt>
 File: images3/slide-05.png Graphic file (type png)
 <use images3/slide-05.png>
 Package pdftex.def Info: images3/slide-05.png  used on input line 1675.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<images3/slide-06.png, id=2136, 845.559pt x 597.432pt>
+<images3/slide-06.png, id=2262, 845.559pt x 597.432pt>
 File: images3/slide-06.png Graphic file (type png)
 <use images3/slide-06.png>
 Package pdftex.def Info: images3/slide-06.png  used on input line 1680.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
- [62 <./images3/slide-04.png (PNG copy)>]
-<images3/slide-07.png, id=2143, 845.559pt x 597.432pt>
+ [63 <./images3/slide-04.png (PNG copy)>]
+<images3/slide-07.png, id=2269, 845.559pt x 597.432pt>
 File: images3/slide-07.png Graphic file (type png)
 <use images3/slide-07.png>
 Package pdftex.def Info: images3/slide-07.png  used on input line 1689.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<images3/slide-08.png, id=2144, 845.559pt x 597.432pt>
+<images3/slide-08.png, id=2270, 845.559pt x 597.432pt>
 File: images3/slide-08.png Graphic file (type png)
 <use images3/slide-08.png>
 Package pdftex.def Info: images3/slide-08.png  used on input line 1694.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
- [63 <./images3/slide-05.png (PNG copy)> <./images3/slide-06.png (PNG copy)> <.
+ [64 <./images3/slide-05.png (PNG copy)> <./images3/slide-06.png (PNG copy)> <.
 /images3/slide-07.png (PNG copy)> <./images3/slide-08.png (PNG copy)>]
-<images3/slide-09.png, id=2152, 845.559pt x 597.432pt>
+<images3/slide-09.png, id=2278, 845.559pt x 597.432pt>
 File: images3/slide-09.png Graphic file (type png)
 <use images3/slide-09.png>
 Package pdftex.def Info: images3/slide-09.png  used on input line 1714.
 (pdftex.def)             Requested size: 368.40585pt x 260.30016pt.
- [64 <./images3/slide-09.png (PNG copy)>]
-<images3/slide-10.png, id=2159, 845.559pt x 597.432pt>
+ [65 <./images3/slide-09.png (PNG copy)>]
+<images3/slide-10.png, id=2285, 845.559pt x 597.432pt>
 File: images3/slide-10.png Graphic file (type png)
 <use images3/slide-10.png>
 Package pdftex.def Info: images3/slide-10.png  used on input line 1760.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<images3/slide-11.png, id=2160, 845.559pt x 597.432pt>
+<images3/slide-11.png, id=2286, 845.559pt x 597.432pt>
 File: images3/slide-11.png Graphic file (type png)
 <use images3/slide-11.png>
 Package pdftex.def Info: images3/slide-11.png  used on input line 1765.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<images3/slide-12.png, id=2161, 845.559pt x 597.432pt>
+<images3/slide-12.png, id=2287, 845.559pt x 597.432pt>
 File: images3/slide-12.png Graphic file (type png)
 <use images3/slide-12.png>
 Package pdftex.def Info: images3/slide-12.png  used on input line 1774.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<images3/slide-13.png, id=2162, 845.559pt x 597.432pt>
+<images3/slide-13.png, id=2288, 845.559pt x 597.432pt>
 File: images3/slide-13.png Graphic file (type png)
 <use images3/slide-13.png>
 Package pdftex.def Info: images3/slide-13.png  used on input line 1779.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
- [65 <./images3/slide-10.png (PNG copy)> <./images3/slide-11.png (PNG copy)> <.
+ [66 <./images3/slide-10.png (PNG copy)> <./images3/slide-11.png (PNG copy)> <.
 /images3/slide-12.png (PNG copy)> <./images3/slide-13.png (PNG copy)>]
-<images3/slide-14.png, id=2170, 845.559pt x 597.432pt>
+<images3/slide-14.png, id=2296, 845.559pt x 597.432pt>
 File: images3/slide-14.png Graphic file (type png)
 <use images3/slide-14.png>
 Package pdftex.def Info: images3/slide-14.png  used on input line 1820.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<images3/slide-15.png, id=2171, 845.559pt x 597.432pt>
+<images3/slide-15.png, id=2297, 845.559pt x 597.432pt>
 File: images3/slide-15.png Graphic file (type png)
 <use images3/slide-15.png>
 Package pdftex.def Info: images3/slide-15.png  used on input line 1825.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
- [66]
-<images3/slide-16.png, id=2177, 845.559pt x 597.432pt>
+ [67]
+<images3/slide-16.png, id=2304, 845.559pt x 597.432pt>
 File: images3/slide-16.png Graphic file (type png)
 <use images3/slide-16.png>
 Package pdftex.def Info: images3/slide-16.png  used on input line 1834.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<images3/slide-17.png, id=2178, 845.559pt x 597.432pt>
+<images3/slide-17.png, id=2305, 845.559pt x 597.432pt>
 File: images3/slide-17.png Graphic file (type png)
 <use images3/slide-17.png>
 Package pdftex.def Info: images3/slide-17.png  used on input line 1839.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<images3/slide-18.png, id=2179, 845.559pt x 597.432pt>
+<images3/slide-18.png, id=2306, 845.559pt x 597.432pt>
 File: images3/slide-18.png Graphic file (type png)
 <use images3/slide-18.png>
 Package pdftex.def Info: images3/slide-18.png  used on input line 1848.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<images3/slide-19.png, id=2180, 845.559pt x 597.432pt>
+<images3/slide-19.png, id=2307, 845.559pt x 597.432pt>
 File: images3/slide-19.png Graphic file (type png)
 <use images3/slide-19.png>
 Package pdftex.def Info: images3/slide-19.png  used on input line 1853.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
- [67 <./images3/slide-14.png (PNG copy)> <./images3/slide-15.png (PNG copy)> <.
+ [68 <./images3/slide-14.png (PNG copy)> <./images3/slide-15.png (PNG copy)> <.
 /images3/slide-16.png (PNG copy)> <./images3/slide-17.png (PNG copy)>]
-<images3/slide-20.png, id=2190, 845.559pt x 597.432pt>
+<images3/slide-20.png, id=2315, 845.559pt x 597.432pt>
 File: images3/slide-20.png Graphic file (type png)
 <use images3/slide-20.png>
 Package pdftex.def Info: images3/slide-20.png  used on input line 1862.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<images3/slide-21.png, id=2191, 845.559pt x 597.432pt>
+<images3/slide-21.png, id=2316, 845.559pt x 597.432pt>
 File: images3/slide-21.png Graphic file (type png)
 <use images3/slide-21.png>
 Package pdftex.def Info: images3/slide-21.png  used on input line 1867.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
- [68 <./images3/slide-18.png (PNG copy)> <./images3/slide-19.png (PNG copy)> <.
+ [69 <./images3/slide-18.png (PNG copy)> <./images3/slide-19.png (PNG copy)> <.
 /images3/slide-20.png (PNG copy)> <./images3/slide-21.png (PNG copy)>]
-<images3/slide-22.png, id=2199, 845.559pt x 597.432pt>
+<images3/slide-22.png, id=2324, 845.559pt x 597.432pt>
 File: images3/slide-22.png Graphic file (type png)
 <use images3/slide-22.png>
 Package pdftex.def Info: images3/slide-22.png  used on input line 1901.
 (pdftex.def)             Requested size: 377.85419pt x 266.97311pt.
-<images3/slide-23.png, id=2200, 845.559pt x 597.432pt>
+<images3/slide-23.png, id=2325, 845.559pt x 597.432pt>
 File: images3/slide-23.png Graphic file (type png)
 <use images3/slide-23.png>
 Package pdftex.def Info: images3/slide-23.png  used on input line 1908.
 (pdftex.def)             Requested size: 151.14456pt x 106.7856pt.
-<images3/slide-24.png, id=2201, 845.559pt x 597.432pt>
+<images3/slide-24.png, id=2326, 845.559pt x 597.432pt>
 File: images3/slide-24.png Graphic file (type png)
 <use images3/slide-24.png>
 Package pdftex.def Info: images3/slide-24.png  used on input line 1913.
 (pdftex.def)             Requested size: 151.14456pt x 106.7856pt.
-<images3/slide-25.png, id=2202, 845.559pt x 597.432pt>
+<images3/slide-25.png, id=2327, 845.559pt x 597.432pt>
 File: images3/slide-25.png Graphic file (type png)
 <use images3/slide-25.png>
 Package pdftex.def Info: images3/slide-25.png  used on input line 1918.
 (pdftex.def)             Requested size: 151.14456pt x 106.7856pt.
 
-[69 <./images3/slide-22.png (PNG copy)> <./images3/slide-23.png (PNG copy)> <./
+[70 <./images3/slide-22.png (PNG copy)> <./images3/slide-23.png (PNG copy)> <./
 images3/slide-24.png (PNG copy)> <./images3/slide-25.png (PNG copy)>]
-<images3/slide-26.png, id=2210, 845.559pt x 597.432pt>
+<images3/slide-26.png, id=2335, 845.559pt x 597.432pt>
 File: images3/slide-26.png Graphic file (type png)
 <use images3/slide-26.png>
 Package pdftex.def Info: images3/slide-26.png  used on input line 1941.
 (pdftex.def)             Requested size: 151.14456pt x 106.7856pt.
-<images3/slide-27.png, id=2211, 845.559pt x 597.432pt>
+<images3/slide-27.png, id=2336, 845.559pt x 597.432pt>
 File: images3/slide-27.png Graphic file (type png)
 <use images3/slide-27.png>
 Package pdftex.def Info: images3/slide-27.png  used on input line 1946.
 (pdftex.def)             Requested size: 151.14456pt x 106.7856pt.
-<images3/slide-28.png, id=2212, 845.559pt x 597.432pt>
+<images3/slide-28.png, id=2337, 845.559pt x 597.432pt>
 File: images3/slide-28.png Graphic file (type png)
 <use images3/slide-28.png>
 Package pdftex.def Info: images3/slide-28.png  used on input line 1951.
 (pdftex.def)             Requested size: 151.14456pt x 106.7856pt.
-<images3/slide-29.png, id=2213, 845.559pt x 597.432pt>
+<images3/slide-29.png, id=2338, 845.559pt x 597.432pt>
 File: images3/slide-29.png Graphic file (type png)
 <use images3/slide-29.png>
 Package pdftex.def Info: images3/slide-29.png  used on input line 1960.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
-<images3/slide-30.png, id=2214, 845.559pt x 597.432pt>
+<images3/slide-30.png, id=2339, 845.559pt x 597.432pt>
 File: images3/slide-30.png Graphic file (type png)
 <use images3/slide-30.png>
 Package pdftex.def Info: images3/slide-30.png  used on input line 1965.
 (pdftex.def)             Requested size: 226.70963pt x 160.1784pt.
- [70 <./images3/slide-26.png (PNG copy)> <./images3/slide-27.png (PNG copy)> <.
-/images3/slide-28.png (PNG copy)>] [71 <./images3/slide-29.png (PNG copy)> <./i
-mages3/slide-30.png (PNG copy)>] [72
+ [71 <./images3/slide-26.png (PNG copy)> <./images3/slide-27.png (PNG copy)> <.
+/images3/slide-28.png (PNG copy)>] [72 <./images3/slide-29.png (PNG copy)> <./i
+mages3/slide-30.png (PNG copy)>] [73
 
 ]
-<images4/slide-01.png, id=2232, 1690.315pt x 1194.4625pt>
+<images4/slide-01.png, id=2359, 1690.315pt x 1194.4625pt>
 File: images4/slide-01.png Graphic file (type png)
 <use images4/slide-01.png>
 Package pdftex.def Info: images4/slide-01.png  used on input line 2004.
 (pdftex.def)             Requested size: 368.40585pt x 260.32205pt.
- [73
+ [74
 
- <./images4/slide-01.png>] [74
+ <./images4/slide-01.png>] [75
 
 ]
 File: images4/slide-01.png Graphic file (type png)
 <use images4/slide-01.png>
 Package pdftex.def Info: images4/slide-01.png  used on input line 2064.
 (pdftex.def)             Requested size: 377.85419pt x 267.01099pt.
- [75]
-<images4/slide-02.png, id=2250, 1690.315pt x 1194.4625pt>
+ [76]
+<images4/slide-02.png, id=2376, 1690.315pt x 1194.4625pt>
 File: images4/slide-02.png Graphic file (type png)
 <use images4/slide-02.png>
 Package pdftex.def Info: images4/slide-02.png  used on input line 2127.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
-<images4/slide-03.png, id=2251, 1690.315pt x 1194.4625pt>
+<images4/slide-03.png, id=2377, 1690.315pt x 1194.4625pt>
 File: images4/slide-03.png Graphic file (type png)
 <use images4/slide-03.png>
 Package pdftex.def Info: images4/slide-03.png  used on input line 2132.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
- [76 <./images4/slide-02.png> <./images4/slide-03.png>]
-<images4/slide-04.png, id=2260, 1690.315pt x 1194.4625pt>
+ [77 <./images4/slide-02.png> <./images4/slide-03.png>]
+<images4/slide-04.png, id=2386, 1690.315pt x 1194.4625pt>
 File: images4/slide-04.png Graphic file (type png)
 <use images4/slide-04.png>
 Package pdftex.def Info: images4/slide-04.png  used on input line 2181.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
-<images4/slide-05.png, id=2261, 1690.315pt x 1194.4625pt>
+<images4/slide-05.png, id=2387, 1690.315pt x 1194.4625pt>
 File: images4/slide-05.png Graphic file (type png)
 <use images4/slide-05.png>
 Package pdftex.def Info: images4/slide-05.png  used on input line 2186.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
- [77 <./images4/slide-04.png> <./images4/slide-05.png>] [78]
-<images4/slide-06.png, id=2275, 1690.315pt x 1194.4625pt>
+ [78 <./images4/slide-04.png> <./images4/slide-05.png>] [79]
+<images4/slide-06.png, id=2402, 1690.315pt x 1194.4625pt>
 File: images4/slide-06.png Graphic file (type png)
 <use images4/slide-06.png>
 Package pdftex.def Info: images4/slide-06.png  used on input line 2265.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
-<images4/slide-07.png, id=2276, 1690.315pt x 1194.4625pt>
+<images4/slide-07.png, id=2403, 1690.315pt x 1194.4625pt>
 File: images4/slide-07.png Graphic file (type png)
 <use images4/slide-07.png>
 Package pdftex.def Info: images4/slide-07.png  used on input line 2270.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
-<images4/slide-08.png, id=2277, 1690.315pt x 1194.4625pt>
+<images4/slide-08.png, id=2404, 1690.315pt x 1194.4625pt>
 File: images4/slide-08.png Graphic file (type png)
 <use images4/slide-08.png>
 Package pdftex.def Info: images4/slide-08.png  used on input line 2280.
 (pdftex.def)             Requested size: 340.06805pt x 240.30989pt.
- [79 <./images4/slide-06.png> <./images4/slide-07.png>]
-<images4/slide-09.png, id=2287, 1690.315pt x 1194.4625pt>
+ [80 <./images4/slide-06.png> <./images4/slide-07.png>]
+<images4/slide-09.png, id=2413, 1690.315pt x 1194.4625pt>
 File: images4/slide-09.png Graphic file (type png)
 <use images4/slide-09.png>
 Package pdftex.def Info: images4/slide-09.png  used on input line 2321.
 (pdftex.def)             Requested size: 377.85419pt x 267.01099pt.
-[80 <./images4/slide-08.png>]
-<images4/slide-10.png, id=2299, 1690.315pt x 1194.4625pt>
+[81 <./images4/slide-08.png>]
+<images4/slide-10.png, id=2425, 1690.315pt x 1194.4625pt>
 File: images4/slide-10.png Graphic file (type png)
 <use images4/slide-10.png>
 Package pdftex.def Info: images4/slide-10.png  used on input line 2363.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
-<images4/slide-11.png, id=2300, 1690.315pt x 1194.4625pt>
+<images4/slide-11.png, id=2426, 1690.315pt x 1194.4625pt>
 File: images4/slide-11.png Graphic file (type png)
 <use images4/slide-11.png>
 Package pdftex.def Info: images4/slide-11.png  used on input line 2368.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
- [81 <./images4/slide-09.png>] [82 <./images4/slide-10.png> <./images4/slide-11
+ [82 <./images4/slide-09.png>] [83 <./images4/slide-10.png> <./images4/slide-11
 .png>]
-<images4/slide-12.png, id=2316, 1690.315pt x 1194.4625pt>
+<images4/slide-12.png, id=2442, 1690.315pt x 1194.4625pt>
 File: images4/slide-12.png Graphic file (type png)
 <use images4/slide-12.png>
 Package pdftex.def Info: images4/slide-12.png  used on input line 2467.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
-<images4/slide-13.png, id=2317, 1690.315pt x 1194.4625pt>
+<images4/slide-13.png, id=2443, 1690.315pt x 1194.4625pt>
 File: images4/slide-13.png Graphic file (type png)
 <use images4/slide-13.png>
 Package pdftex.def Info: images4/slide-13.png  used on input line 2472.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
- [83 <./images4/slide-12.png> <./images4/slide-13.png>]
-<images4/slide-mimo-weights-001.png, id=2326, 845.1575pt x 597.23125pt>
+ [84 <./images4/slide-12.png> <./images4/slide-13.png>]
+<images4/slide-mimo-weights-001.png, id=2452, 845.1575pt x 597.23125pt>
 File: images4/slide-mimo-weights-001.png Graphic file (type png)
 <use images4/slide-mimo-weights-001.png>
 Package pdftex.def Info: images4/slide-mimo-weights-001.png  used on input line
  2533.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images4/slide-mimo-weights-002.png, id=2327, 845.1575pt x 597.23125pt>
+<images4/slide-mimo-weights-002.png, id=2453, 845.1575pt x 597.23125pt>
 File: images4/slide-mimo-weights-002.png Graphic file (type png)
 <use images4/slide-mimo-weights-002.png>
 Package pdftex.def Info: images4/slide-mimo-weights-002.png  used on input line
  2538.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [84 <./images4/slide-mimo-weights-001.png> <./images4/slide-mimo-weights-002.p
+ [85 <./images4/slide-mimo-weights-001.png> <./images4/slide-mimo-weights-002.p
 ng>]
-<images4/slide-mimo-weights-003.png, id=2336, 845.1575pt x 597.23125pt>
+<images4/slide-mimo-weights-003.png, id=2462, 845.1575pt x 597.23125pt>
 File: images4/slide-mimo-weights-003.png Graphic file (type png)
 <use images4/slide-mimo-weights-003.png>
 Package pdftex.def Info: images4/slide-mimo-weights-003.png  used on input line
  2590.
 (pdftex.def)             Requested size: 368.40585pt x 260.34027pt.
- [85 <./images4/slide-mimo-weights-003.png>]
-<images4/slide-14.png, id=2344, 1690.315pt x 1194.4625pt>
+ [86 <./images4/slide-mimo-weights-003.png>]
+<images4/slide-14.png, id=2469, 1690.315pt x 1194.4625pt>
 File: images4/slide-14.png Graphic file (type png)
 <use images4/slide-14.png>
 Package pdftex.def Info: images4/slide-14.png  used on input line 2637.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
-<images4/slide-15.png, id=2345, 1690.315pt x 1194.4625pt>
+<images4/slide-15.png, id=2470, 1690.315pt x 1194.4625pt>
 File: images4/slide-15.png Graphic file (type png)
 <use images4/slide-15.png>
 Package pdftex.def Info: images4/slide-15.png  used on input line 2642.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
- [86 <./images4/slide-14.png> <./images4/slide-15.png>] [87]
-<images4/slide-16.png, id=2359, 1690.315pt x 1194.4625pt>
+ [87 <./images4/slide-14.png> <./images4/slide-15.png>] [88]
+<images4/slide-16.png, id=2484, 1690.315pt x 1194.4625pt>
 File: images4/slide-16.png Graphic file (type png)
 <use images4/slide-16.png>
 Package pdftex.def Info: images4/slide-16.png  used on input line 2755.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
-<images4/slide-17.png, id=2360, 1690.315pt x 1194.4625pt>
+<images4/slide-17.png, id=2485, 1690.315pt x 1194.4625pt>
 File: images4/slide-17.png Graphic file (type png)
 <use images4/slide-17.png>
 Package pdftex.def Info: images4/slide-17.png  used on input line 2760.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
- [88 <./images4/slide-16.png> <./images4/slide-17.png>]
-<images4/slide-18.png, id=2372, 1690.315pt x 1194.4625pt>
+ [89 <./images4/slide-16.png> <./images4/slide-17.png>]
+<images4/slide-18.png, id=2498, 1690.315pt x 1194.4625pt>
 File: images4/slide-18.png Graphic file (type png)
 <use images4/slide-18.png>
 Package pdftex.def Info: images4/slide-18.png  used on input line 2822.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
-<images4/slide-19.png, id=2373, 1690.315pt x 1194.4625pt>
+<images4/slide-19.png, id=2499, 1690.315pt x 1194.4625pt>
 File: images4/slide-19.png Graphic file (type png)
 <use images4/slide-19.png>
 Package pdftex.def Info: images4/slide-19.png  used on input line 2827.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
- [89] [90 <./images4/slide-18.png> <./images4/slide-19.png>]
-<images4/slide-20.png, id=2388, 1690.315pt x 1194.4625pt>
+ [90] [91 <./images4/slide-18.png> <./images4/slide-19.png>]
+<images4/slide-20.png, id=2515, 1690.315pt x 1194.4625pt>
 File: images4/slide-20.png Graphic file (type png)
 <use images4/slide-20.png>
 Package pdftex.def Info: images4/slide-20.png  used on input line 2882.
 (pdftex.def)             Requested size: 368.40585pt x 260.32205pt.
 
-[91 <./images4/slide-20.png>]
-<images4/slide-21.png, id=2397, 1690.315pt x 1194.4625pt>
+[92 <./images4/slide-20.png>]
+<images4/slide-21.png, id=2523, 1690.315pt x 1194.4625pt>
 File: images4/slide-21.png Graphic file (type png)
 <use images4/slide-21.png>
 Package pdftex.def Info: images4/slide-21.png  used on input line 2923.
 (pdftex.def)             Requested size: 368.40585pt x 260.32205pt.
- [92 <./images4/slide-21.png>]
-<images4/slide-22.png, id=2405, 1690.315pt x 1194.4625pt>
+ [93 <./images4/slide-21.png>]
+<images4/slide-22.png, id=2531, 1690.315pt x 1194.4625pt>
 File: images4/slide-22.png Graphic file (type png)
 <use images4/slide-22.png>
 Package pdftex.def Info: images4/slide-22.png  used on input line 2955.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
-<images4/slide-23.png, id=2406, 1690.315pt x 1194.4625pt>
+<images4/slide-23.png, id=2532, 1690.315pt x 1194.4625pt>
 File: images4/slide-23.png Graphic file (type png)
 <use images4/slide-23.png>
 Package pdftex.def Info: images4/slide-23.png  used on input line 2960.
 (pdftex.def)             Requested size: 226.70963pt x 160.18837pt.
- [93 <./images4/slide-22.png> <./images4/slide-23.png>] [94] [95] [96
+ [94 <./images4/slide-22.png> <./images4/slide-23.png>] [95] [96] [97
 
 ]
-<images5/norms-01x-001.png, id=2430, 845.1575pt x 597.23125pt>
+<images5/norms-01x-001.png, id=2557, 845.1575pt x 597.23125pt>
 File: images5/norms-01x-001.png Graphic file (type png)
 <use images5/norms-01x-001.png>
 Package pdftex.def Info: images5/norms-01x-001.png  used on input line 3095.
 (pdftex.def)             Requested size: 368.40585pt x 260.34027pt.
- [97
+ [98
 
- <./images5/norms-01x-001.png>] [98
+ <./images5/norms-01x-001.png>] [99
 
 ]
-<images5/intro-12x-001.png, id=2441, 845.1575pt x 597.23125pt>
+<images5/intro-12x-001.png, id=2567, 845.1575pt x 597.23125pt>
 File: images5/intro-12x-001.png Graphic file (type png)
 <use images5/intro-12x-001.png>
 Package pdftex.def Info: images5/intro-12x-001.png  used on input line 3151.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images5/intro-12x-002.png, id=2442, 845.1575pt x 597.23125pt>
+<images5/intro-12x-002.png, id=2568, 845.1575pt x 597.23125pt>
 File: images5/intro-12x-002.png Graphic file (type png)
 <use images5/intro-12x-002.png>
 Package pdftex.def Info: images5/intro-12x-002.png  used on input line 3156.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [99 <./images5/intro-12x-001.png> <./images5/intro-12x-002.png>]
-<images5/intro-12x-003.png, id=2449, 845.1575pt x 597.23125pt>
+ [100 <./images5/intro-12x-001.png> <./images5/intro-12x-002.png>]
+<images5/intro-12x-003.png, id=2575, 845.1575pt x 597.23125pt>
 File: images5/intro-12x-003.png Graphic file (type png)
 <use images5/intro-12x-003.png>
 Package pdftex.def Info: images5/intro-12x-003.png  used on input line 3194.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images5/intro-12x-004.png, id=2450, 845.1575pt x 597.23125pt>
+<images5/intro-12x-004.png, id=2576, 845.1575pt x 597.23125pt>
 File: images5/intro-12x-004.png Graphic file (type png)
 <use images5/intro-12x-004.png>
 Package pdftex.def Info: images5/intro-12x-004.png  used on input line 3199.
@@ -1925,368 +1925,368 @@ File: images5/norms-01x-001.png Graphic file (type png)
 Package pdftex.def Info: images5/norms-01x-001.png  used on input line 3213.
 (pdftex.def)             Requested size: 368.40585pt x 260.34027pt.
 
-[100 <./images5/intro-12x-003.png> <./images5/intro-12x-004.png>]
-<images5/norms-01x-002.png, id=2457, 845.1575pt x 597.23125pt>
+[101 <./images5/intro-12x-003.png> <./images5/intro-12x-004.png>]
+<images5/norms-01x-002.png, id=2583, 845.1575pt x 597.23125pt>
 File: images5/norms-01x-002.png Graphic file (type png)
 <use images5/norms-01x-002.png>
 Package pdftex.def Info: images5/norms-01x-002.png  used on input line 3247.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images5/norms-01x-003.png, id=2458, 845.1575pt x 597.23125pt>
+<images5/norms-01x-003.png, id=2584, 845.1575pt x 597.23125pt>
 File: images5/norms-01x-003.png Graphic file (type png)
 <use images5/norms-01x-003.png>
 Package pdftex.def Info: images5/norms-01x-003.png  used on input line 3252.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [101]
-<images5/norms-01x-004.png, id=2466, 845.1575pt x 597.23125pt>
+ [102]
+<images5/norms-01x-004.png, id=2591, 845.1575pt x 597.23125pt>
 File: images5/norms-01x-004.png Graphic file (type png)
 <use images5/norms-01x-004.png>
 Package pdftex.def Info: images5/norms-01x-004.png  used on input line 3282.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
 
-[102 <./images5/norms-01x-002.png> <./images5/norms-01x-003.png>]
-<images5/norms-01x-005.png, id=2473, 845.1575pt x 597.23125pt>
+[103 <./images5/norms-01x-002.png> <./images5/norms-01x-003.png>]
+<images5/norms-01x-005.png, id=2599, 845.1575pt x 597.23125pt>
 File: images5/norms-01x-005.png Graphic file (type png)
 <use images5/norms-01x-005.png>
 Package pdftex.def Info: images5/norms-01x-005.png  used on input line 3314.
 (pdftex.def)             Requested size: 396.74365pt x 280.36154pt.
- [103 <./images5/norms-01x-004.png>]
-<images5/norms-01x-006.png, id=2481, 845.1575pt x 597.23125pt>
+ [104 <./images5/norms-01x-004.png>]
+<images5/norms-01x-006.png, id=2606, 845.1575pt x 597.23125pt>
 File: images5/norms-01x-006.png Graphic file (type png)
 <use images5/norms-01x-006.png>
 Package pdftex.def Info: images5/norms-01x-006.png  used on input line 3345.
 (pdftex.def)             Requested size: 396.74365pt x 280.36154pt.
- [104 <./images5/norms-01x-005.png>]
-<images5/norms-01x-007.png, id=2489, 845.1575pt x 597.23125pt>
+ [105 <./images5/norms-01x-005.png>]
+<images5/norms-01x-007.png, id=2615, 845.1575pt x 597.23125pt>
 File: images5/norms-01x-007.png Graphic file (type png)
 <use images5/norms-01x-007.png>
 Package pdftex.def Info: images5/norms-01x-007.png  used on input line 3387.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images5/norms-01x-008.png, id=2490, 845.1575pt x 597.23125pt>
+<images5/norms-01x-008.png, id=2616, 845.1575pt x 597.23125pt>
 File: images5/norms-01x-008.png Graphic file (type png)
 <use images5/norms-01x-008.png>
 Package pdftex.def Info: images5/norms-01x-008.png  used on input line 3392.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [105 <./images5/norms-01x-006.png>]
-<images5/norms-01x-009.png, id=2497, 845.1575pt x 597.23125pt>
+ [106 <./images5/norms-01x-006.png>]
+<images5/norms-01x-009.png, id=2623, 845.1575pt x 597.23125pt>
 File: images5/norms-01x-009.png Graphic file (type png)
 <use images5/norms-01x-009.png>
 Package pdftex.def Info: images5/norms-01x-009.png  used on input line 3456.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images5/norms-01x-010.png, id=2498, 845.1575pt x 597.23125pt>
+<images5/norms-01x-010.png, id=2624, 845.1575pt x 597.23125pt>
 File: images5/norms-01x-010.png Graphic file (type png)
 <use images5/norms-01x-010.png>
 Package pdftex.def Info: images5/norms-01x-010.png  used on input line 3461.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [106 <./images5/norms-01x-007.png> <./images5/norms-01x-008.png>] [107 <./imag
-es5/norms-01x-009.png> <./images5/norms-01x-010.png>] [108
+ [107 <./images5/norms-01x-007.png> <./images5/norms-01x-008.png>] [108 <./imag
+es5/norms-01x-009.png> <./images5/norms-01x-010.png>] [109
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 3498.
-<images6/norms-11-32-005.png, id=2516, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-005.png, id=2643, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-005.png Graphic file (type png)
 <use images6/norms-11-32-005.png>
 Package pdftex.def Info: images6/norms-11-32-005.png  used on input line 3500.
 (pdftex.def)             Requested size: 368.40585pt x 260.34027pt.
 
-[109
+[110
 
  <./images6/norms-11-32-005.png>]
-<images6/norms-11-32-001.png, id=2522, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-001.png, id=2648, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-001.png Graphic file (type png)
 <use images6/norms-11-32-001.png>
 Package pdftex.def Info: images6/norms-11-32-001.png  used on input line 3545.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images6/norms-11-32-002.png, id=2523, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-002.png, id=2649, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-002.png Graphic file (type png)
 <use images6/norms-11-32-002.png>
 Package pdftex.def Info: images6/norms-11-32-002.png  used on input line 3550.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [110
+ [111
 
 ]
-<images6/norms-11-32-003.png, id=2529, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-003.png, id=2655, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-003.png Graphic file (type png)
 <use images6/norms-11-32-003.png>
 Package pdftex.def Info: images6/norms-11-32-003.png  used on input line 3587.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images6/norms-11-32-004.png, id=2530, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-004.png, id=2656, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-004.png Graphic file (type png)
 <use images6/norms-11-32-004.png>
 Package pdftex.def Info: images6/norms-11-32-004.png  used on input line 3592.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [111 <./images6/norms-11-32-001.png> <./images6/norms-11-32-002.png>]
+ [112 <./images6/norms-11-32-001.png> <./images6/norms-11-32-002.png>]
 File: images6/norms-11-32-005.png Graphic file (type png)
 <use images6/norms-11-32-005.png>
 Package pdftex.def Info: images6/norms-11-32-005.png  used on input line 3628.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [112 <./images6/norms-11-32-003.png> <./images6/norms-11-32-004.png>]
-<images6/norms-11-32-006.png, id=2543, 845.1575pt x 597.23125pt>
+ [113 <./images6/norms-11-32-003.png> <./images6/norms-11-32-004.png>]
+<images6/norms-11-32-006.png, id=2669, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-006.png Graphic file (type png)
 <use images6/norms-11-32-006.png>
 Package pdftex.def Info: images6/norms-11-32-006.png  used on input line 3651.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images6/norms-11-32-007.png, id=2544, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-007.png, id=2670, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-007.png Graphic file (type png)
 <use images6/norms-11-32-007.png>
 Package pdftex.def Info: images6/norms-11-32-007.png  used on input line 3656.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [113]
-<images6/norms-11-32-008.png, id=2551, 845.1575pt x 597.23125pt>
+ [114]
+<images6/norms-11-32-008.png, id=2677, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-008.png Graphic file (type png)
 <use images6/norms-11-32-008.png>
 Package pdftex.def Info: images6/norms-11-32-008.png  used on input line 3694.
 (pdftex.def)             Requested size: 368.40585pt x 260.34027pt.
- [114 <./images6/norms-11-32-006.png> <./images6/norms-11-32-007.png>]
-<images6/norms-11-32-009.png, id=2558, 845.1575pt x 597.23125pt>
+ [115 <./images6/norms-11-32-006.png> <./images6/norms-11-32-007.png>]
+<images6/norms-11-32-009.png, id=2685, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-009.png Graphic file (type png)
 <use images6/norms-11-32-009.png>
 Package pdftex.def Info: images6/norms-11-32-009.png  used on input line 3701.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images6/norms-11-32-010.png, id=2559, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-010.png, id=2686, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-010.png Graphic file (type png)
 <use images6/norms-11-32-010.png>
 Package pdftex.def Info: images6/norms-11-32-010.png  used on input line 3706.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [115 <./images6/norms-11-32-008.png> <./images6/norms-11-32-009.png> <./images
+ [116 <./images6/norms-11-32-008.png> <./images6/norms-11-32-009.png> <./images
 6/norms-11-32-010.png>]
-<images6/norms-11-32-011.png, id=2568, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-011.png, id=2694, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-011.png Graphic file (type png)
 <use images6/norms-11-32-011.png>
 Package pdftex.def Info: images6/norms-11-32-011.png  used on input line 3745.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images6/norms-11-32-012.png, id=2569, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-012.png, id=2695, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-012.png Graphic file (type png)
 <use images6/norms-11-32-012.png>
 Package pdftex.def Info: images6/norms-11-32-012.png  used on input line 3750.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images6/norms-11-32-013.png, id=2570, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-013.png, id=2696, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-013.png Graphic file (type png)
 <use images6/norms-11-32-013.png>
 Package pdftex.def Info: images6/norms-11-32-013.png  used on input line 3783.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images6/norms-11-32-014.png, id=2571, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-014.png, id=2697, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-014.png Graphic file (type png)
 <use images6/norms-11-32-014.png>
 Package pdftex.def Info: images6/norms-11-32-014.png  used on input line 3788.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [116 <./images6/norms-11-32-011.png> <./images6/norms-11-32-012.png>] [117 <./
+ [117 <./images6/norms-11-32-011.png> <./images6/norms-11-32-012.png>] [118 <./
 images6/norms-11-32-013.png> <./images6/norms-11-32-014.png>]
-<images6/norms-11-32-015.png, id=2585, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-015.png, id=2710, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-015.png Graphic file (type png)
 <use images6/norms-11-32-015.png>
 Package pdftex.def Info: images6/norms-11-32-015.png  used on input line 3848.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images6/norms-11-32-016.png, id=2586, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-016.png, id=2711, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-016.png Graphic file (type png)
 <use images6/norms-11-32-016.png>
 Package pdftex.def Info: images6/norms-11-32-016.png  used on input line 3853.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images6/norms-11-32-017.png, id=2587, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-017.png, id=2712, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-017.png Graphic file (type png)
 <use images6/norms-11-32-017.png>
 Package pdftex.def Info: images6/norms-11-32-017.png  used on input line 3870.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [118 <./images6/norms-11-32-015.png> <./images6/norms-11-32-016.png>] [119 <./
+ [119 <./images6/norms-11-32-015.png> <./images6/norms-11-32-016.png>] [120 <./
 images6/norms-11-32-017.png>]
-<images6/norms-11-32-018.png, id=2600, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-018.png, id=2725, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-018.png Graphic file (type png)
 <use images6/norms-11-32-018.png>
 Package pdftex.def Info: images6/norms-11-32-018.png  used on input line 3919.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images6/norms-11-32-019.png, id=2601, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-019.png, id=2726, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-019.png Graphic file (type png)
 <use images6/norms-11-32-019.png>
 Package pdftex.def Info: images6/norms-11-32-019.png  used on input line 3924.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images6/norms-11-32-020.png, id=2602, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-020.png, id=2727, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-020.png Graphic file (type png)
 <use images6/norms-11-32-020.png>
 Package pdftex.def Info: images6/norms-11-32-020.png  used on input line 3933.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images6/norms-11-32-021.png, id=2603, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-021.png, id=2728, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-021.png Graphic file (type png)
 <use images6/norms-11-32-021.png>
 Package pdftex.def Info: images6/norms-11-32-021.png  used on input line 3938.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images6/norms-11-32-022.png, id=2604, 845.1575pt x 597.23125pt>
+<images6/norms-11-32-022.png, id=2729, 845.1575pt x 597.23125pt>
 File: images6/norms-11-32-022.png Graphic file (type png)
 <use images6/norms-11-32-022.png>
 Package pdftex.def Info: images6/norms-11-32-022.png  used on input line 3946.
 (pdftex.def)             Requested size: 321.17137pt x 226.95934pt.
- [120 <./images6/norms-11-32-018.png> <./images6/norms-11-32-019.png> <./images
-6/norms-11-32-020.png> <./images6/norms-11-32-021.png>] [121 <./images6/norms-1
-1-32-022.png>] [122
+ [121 <./images6/norms-11-32-018.png> <./images6/norms-11-32-019.png> <./images
+6/norms-11-32-020.png> <./images6/norms-11-32-021.png>] [122 <./images6/norms-1
+1-32-022.png>] [123
 
 ]
-<images8/norms-new-33-53-005.png, id=2624, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-005.png, id=2750, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-005.png Graphic file (type png)
 <use images8/norms-new-33-53-005.png>
 Package pdftex.def Info: images8/norms-new-33-53-005.png  used on input line 39
 92.
 (pdftex.def)             Requested size: 368.40585pt x 260.34027pt.
 
-[123
+[124
 
- <./images8/norms-new-33-53-005.png>] [124
+ <./images8/norms-new-33-53-005.png>] [125
 
 ]
-<images8/norms-new-33-53-001.png, id=2634, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-001.png, id=2760, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-001.png Graphic file (type png)
 <use images8/norms-new-33-53-001.png>
 Package pdftex.def Info: images8/norms-new-33-53-001.png  used on input line 40
 57.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [125 <./images8/norms-new-33-53-001.png>]
-<images8/norms-new-33-53-002.png, id=2641, 845.1575pt x 597.23125pt>
+ [126 <./images8/norms-new-33-53-001.png>]
+<images8/norms-new-33-53-002.png, id=2767, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-002.png Graphic file (type png)
 <use images8/norms-new-33-53-002.png>
 Package pdftex.def Info: images8/norms-new-33-53-002.png  used on input line 41
 23.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [126 <./images8/norms-new-33-53-002.png>]
+ [127 <./images8/norms-new-33-53-002.png>]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-<images8/norms-new-33-53-003.png, id=2648, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-003.png, id=2775, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-003.png Graphic file (type png)
 <use images8/norms-new-33-53-003.png>
 Package pdftex.def Info: images8/norms-new-33-53-003.png  used on input line 41
 90.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images8/norms-new-33-53-004.png, id=2649, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-004.png, id=2776, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-004.png Graphic file (type png)
 <use images8/norms-new-33-53-004.png>
 Package pdftex.def Info: images8/norms-new-33-53-004.png  used on input line 41
 95.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [127]
+ [128]
 File: images8/norms-new-33-53-005.png Graphic file (type png)
 <use images8/norms-new-33-53-005.png>
 Package pdftex.def Info: images8/norms-new-33-53-005.png  used on input line 42
 39.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images8/norms-new-33-53-006.png, id=2659, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-006.png, id=2785, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-006.png Graphic file (type png)
 <use images8/norms-new-33-53-006.png>
 Package pdftex.def Info: images8/norms-new-33-53-006.png  used on input line 42
 44.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [128 <./images8/norms-new-33-53-003.png> <./images8/norms-new-33-53-004.png>]
-<images8/norms-new-33-53-007.png, id=2667, 845.1575pt x 597.23125pt>
+ [129 <./images8/norms-new-33-53-003.png> <./images8/norms-new-33-53-004.png>]
+<images8/norms-new-33-53-007.png, id=2793, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-007.png Graphic file (type png)
 <use images8/norms-new-33-53-007.png>
 Package pdftex.def Info: images8/norms-new-33-53-007.png  used on input line 42
 79.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [129 <./images8/norms-new-33-53-006.png>] [130 <./images8/norms-new-33-53-007.
+ [130 <./images8/norms-new-33-53-006.png>] [131 <./images8/norms-new-33-53-007.
 png>]
-<images8/norms-new-33-53-008.png, id=2683, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-008.png, id=2809, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-008.png Graphic file (type png)
 <use images8/norms-new-33-53-008.png>
 Package pdftex.def Info: images8/norms-new-33-53-008.png  used on input line 43
 37.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images8/norms-new-33-53-009.png, id=2684, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-009.png, id=2810, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-009.png Graphic file (type png)
 <use images8/norms-new-33-53-009.png>
 Package pdftex.def Info: images8/norms-new-33-53-009.png  used on input line 43
 42.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [131 <./images8/norms-new-33-53-008.png> <./images8/norms-new-33-53-009.png>]
-<images8/norms-new-33-53-010.png, id=2691, 845.1575pt x 597.23125pt>
+ [132 <./images8/norms-new-33-53-008.png> <./images8/norms-new-33-53-009.png>]
+<images8/norms-new-33-53-010.png, id=2817, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-010.png Graphic file (type png)
 <use images8/norms-new-33-53-010.png>
 Package pdftex.def Info: images8/norms-new-33-53-010.png  used on input line 44
 21.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images8/norms-new-33-53-011.png, id=2692, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-011.png, id=2818, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-011.png Graphic file (type png)
 <use images8/norms-new-33-53-011.png>
 Package pdftex.def Info: images8/norms-new-33-53-011.png  used on input line 44
 26.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images8/norms-new-33-53-012.png, id=2693, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-012.png, id=2819, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-012.png Graphic file (type png)
 <use images8/norms-new-33-53-012.png>
 Package pdftex.def Info: images8/norms-new-33-53-012.png  used on input line 44
 34.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [132 <./images8/norms-new-33-53-010.png> <./images8/norms-new-33-53-011.png>] 
-[133 <./images8/norms-new-33-53-012.png>]
-<images8/norms-new-33-53-013.png, id=2709, 845.1575pt x 597.23125pt>
+ [133 <./images8/norms-new-33-53-010.png> <./images8/norms-new-33-53-011.png>] 
+[134 <./images8/norms-new-33-53-012.png>]
+<images8/norms-new-33-53-013.png, id=2834, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-013.png Graphic file (type png)
 <use images8/norms-new-33-53-013.png>
 Package pdftex.def Info: images8/norms-new-33-53-013.png  used on input line 44
 87.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images8/norms-new-33-53-014.png, id=2710, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-014.png, id=2835, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-014.png Graphic file (type png)
 <use images8/norms-new-33-53-014.png>
 Package pdftex.def Info: images8/norms-new-33-53-014.png  used on input line 44
 92.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images8/norms-new-33-53-015.png, id=2711, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-015.png, id=2836, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-015.png Graphic file (type png)
 <use images8/norms-new-33-53-015.png>
 Package pdftex.def Info: images8/norms-new-33-53-015.png  used on input line 45
 00.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [134 <./images8/norms-new-33-53-013.png> <./images8/norms-new-33-53-014.png> <
+ [135 <./images8/norms-new-33-53-013.png> <./images8/norms-new-33-53-014.png> <
 ./images8/norms-new-33-53-015.png>]
-<images8/norms-new-33-53-016.png, id=2719, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-016.png, id=2844, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-016.png Graphic file (type png)
 <use images8/norms-new-33-53-016.png>
 Package pdftex.def Info: images8/norms-new-33-53-016.png  used on input line 45
 31.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [135 <./images8/norms-new-33-53-016.png>]
-<images8/norms-new-33-53-017.png, id=2726, 845.1575pt x 597.23125pt>
+ [136 <./images8/norms-new-33-53-016.png>]
+<images8/norms-new-33-53-017.png, id=2851, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-017.png Graphic file (type png)
 <use images8/norms-new-33-53-017.png>
 Package pdftex.def Info: images8/norms-new-33-53-017.png  used on input line 45
 86.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [136 <./images8/norms-new-33-53-017.png>] [137]
-<images8/norms-new-33-53-018.png, id=2742, 845.1575pt x 597.23125pt>
+ [137 <./images8/norms-new-33-53-017.png>] [138]
+<images8/norms-new-33-53-018.png, id=2868, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-018.png Graphic file (type png)
 <use images8/norms-new-33-53-018.png>
 Package pdftex.def Info: images8/norms-new-33-53-018.png  used on input line 46
 97.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images8/norms-new-33-53-019.png, id=2743, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-019.png, id=2869, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-019.png Graphic file (type png)
 <use images8/norms-new-33-53-019.png>
 Package pdftex.def Info: images8/norms-new-33-53-019.png  used on input line 47
 02.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images8/norms-new-33-53-020.png, id=2744, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-020.png, id=2870, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-020.png Graphic file (type png)
 <use images8/norms-new-33-53-020.png>
 Package pdftex.def Info: images8/norms-new-33-53-020.png  used on input line 47
 11.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images8/norms-new-33-53-021.png, id=2745, 845.1575pt x 597.23125pt>
+<images8/norms-new-33-53-021.png, id=2871, 845.1575pt x 597.23125pt>
 File: images8/norms-new-33-53-021.png Graphic file (type png)
 <use images8/norms-new-33-53-021.png>
 Package pdftex.def Info: images8/norms-new-33-53-021.png  used on input line 47
 16.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [138 <./images8/norms-new-33-53-018.png> <./images8/norms-new-33-53-019.png> <
-./images8/norms-new-33-53-020.png> <./images8/norms-new-33-53-021.png>] [139] [
-140
+ [139 <./images8/norms-new-33-53-018.png> <./images8/norms-new-33-53-019.png> <
+./images8/norms-new-33-53-020.png> <./images8/norms-new-33-53-021.png>] [140] [
+141
 
 ]
-<images9/norms-new-54-59-001.png, id=2764, 845.1575pt x 597.23125pt>
+<images9/norms-new-54-59-001.png, id=2890, 845.1575pt x 597.23125pt>
 File: images9/norms-new-54-59-001.png Graphic file (type png)
 <use images9/norms-new-54-59-001.png>
 Package pdftex.def Info: images9/norms-new-54-59-001.png  used on input line 47
 94.
 (pdftex.def)             Requested size: 368.40585pt x 260.34027pt.
 
-[141
+[142
 
- <./images9/norms-new-54-59-001.png>] [142
+ <./images9/norms-new-54-59-001.png>] [143
 
 ]
 File: images9/norms-new-54-59-001.png Graphic file (type png)
@@ -2294,54 +2294,54 @@ File: images9/norms-new-54-59-001.png Graphic file (type png)
 Package pdftex.def Info: images9/norms-new-54-59-001.png  used on input line 48
 79.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [143]
-<images9/norms-new-54-59-002.png, id=2780, 845.1575pt x 597.23125pt>
+ [144]
+<images9/norms-new-54-59-002.png, id=2906, 845.1575pt x 597.23125pt>
 File: images9/norms-new-54-59-002.png Graphic file (type png)
 <use images9/norms-new-54-59-002.png>
 Package pdftex.def Info: images9/norms-new-54-59-002.png  used on input line 49
 25.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [144 <./images9/norms-new-54-59-002.png>]
-<images9/norms-new-54-59-003.png, id=2787, 845.1575pt x 597.23125pt>
+ [145 <./images9/norms-new-54-59-002.png>]
+<images9/norms-new-54-59-003.png, id=2914, 845.1575pt x 597.23125pt>
 File: images9/norms-new-54-59-003.png Graphic file (type png)
 <use images9/norms-new-54-59-003.png>
 Package pdftex.def Info: images9/norms-new-54-59-003.png  used on input line 49
 71.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [145 <./images9/norms-new-54-59-003.png>]
-<images9/norms-new-54-59-004.png, id=2795, 845.1575pt x 597.23125pt>
+ [146 <./images9/norms-new-54-59-003.png>]
+<images9/norms-new-54-59-004.png, id=2921, 845.1575pt x 597.23125pt>
 File: images9/norms-new-54-59-004.png Graphic file (type png)
 <use images9/norms-new-54-59-004.png>
 Package pdftex.def Info: images9/norms-new-54-59-004.png  used on input line 50
 10.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [146 <./images9/norms-new-54-59-004.png>]
-<images9/norms-new-54-59-005.png, id=2802, 845.1575pt x 597.23125pt>
+ [147 <./images9/norms-new-54-59-004.png>]
+<images9/norms-new-54-59-005.png, id=2928, 845.1575pt x 597.23125pt>
 File: images9/norms-new-54-59-005.png Graphic file (type png)
 <use images9/norms-new-54-59-005.png>
 Package pdftex.def Info: images9/norms-new-54-59-005.png  used on input line 50
 53.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [147 <./images9/norms-new-54-59-005.png>]
-<images9/norms-new-54-59-006.png, id=2809, 845.1575pt x 597.23125pt>
+ [148 <./images9/norms-new-54-59-005.png>]
+<images9/norms-new-54-59-006.png, id=2935, 845.1575pt x 597.23125pt>
 File: images9/norms-new-54-59-006.png Graphic file (type png)
 <use images9/norms-new-54-59-006.png>
 Package pdftex.def Info: images9/norms-new-54-59-006.png  used on input line 51
 05.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [148 <./images9/norms-new-54-59-006.png>] [149
+ [149 <./images9/norms-new-54-59-006.png>] [150
 
 ]
-<images10/norms-new-60-76-001.png, id=2822, 845.1575pt x 597.23125pt>
+<images10/norms-new-60-76-001.png, id=2947, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-001.png Graphic file (type png)
 <use images10/norms-new-60-76-001.png>
 Package pdftex.def Info: images10/norms-new-60-76-001.png  used on input line 5
 147.
 (pdftex.def)             Requested size: 368.40585pt x 260.34027pt.
- [150
+ [151
 
  <./images10/norms-new-60-76-001.png>]
-[151
+[152
 
 ]
 File: images10/norms-new-60-76-001.png Graphic file (type png)
@@ -2349,29 +2349,29 @@ File: images10/norms-new-60-76-001.png Graphic file (type png)
 Package pdftex.def Info: images10/norms-new-60-76-001.png  used on input line 5
 225.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [152]
-<images10/norms-new-60-76-002.png, id=2839, 845.1575pt x 597.23125pt>
+ [153]
+<images10/norms-new-60-76-002.png, id=2964, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-002.png Graphic file (type png)
 <use images10/norms-new-60-76-002.png>
 Package pdftex.def Info: images10/norms-new-60-76-002.png  used on input line 5
 249.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [153 <./images10/norms-new-60-76-002.png>]
-<images10/norms-new-60-76-003.png, id=2846, 845.1575pt x 597.23125pt>
+ [154 <./images10/norms-new-60-76-002.png>]
+<images10/norms-new-60-76-003.png, id=2972, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-003.png Graphic file (type png)
 <use images10/norms-new-60-76-003.png>
 Package pdftex.def Info: images10/norms-new-60-76-003.png  used on input line 5
 316.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images10/norms-new-60-76-004.png, id=2847, 845.1575pt x 597.23125pt>
+<images10/norms-new-60-76-004.png, id=2973, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-004.png Graphic file (type png)
 <use images10/norms-new-60-76-004.png>
 Package pdftex.def Info: images10/norms-new-60-76-004.png  used on input line 5
 321.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [154 <./images10/norms-new-60-76-003.png> <./images10/norms-new-60-76-004.png>
+ [155 <./images10/norms-new-60-76-003.png> <./images10/norms-new-60-76-004.png>
 ]
-<images10/norms-new-60-76-005.png, id=2854, 845.1575pt x 597.23125pt>
+<images10/norms-new-60-76-005.png, id=2980, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-005.png Graphic file (type png)
 <use images10/norms-new-60-76-005.png>
 Package pdftex.def Info: images10/norms-new-60-76-005.png  used on input line 5
@@ -2382,248 +2382,248 @@ Underfull \hbox (badness 10000) in paragraph at lines 5377--5377
 []\T1/lmr/m/n/10 (+20) (a) |Cal-co-lo di-ret-to del-la nor-ma tra-mi-te
  []
 
-<images10/norms-new-60-76-006.png, id=2855, 845.1575pt x 597.23125pt>
+<images10/norms-new-60-76-006.png, id=2981, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-006.png Graphic file (type png)
 <use images10/norms-new-60-76-006.png>
 Package pdftex.def Info: images10/norms-new-60-76-006.png  used on input line 5
 381.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-[155 <./images10/norms-new-60-76-005.png> <./images10/norms-new-60-76-006.png>]
-<images10/norms-new-60-76-007.png, id=2862, 845.1575pt x 597.23125pt>
+[156 <./images10/norms-new-60-76-005.png> <./images10/norms-new-60-76-006.png>]
+<images10/norms-new-60-76-007.png, id=2988, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-007.png Graphic file (type png)
 <use images10/norms-new-60-76-007.png>
 Package pdftex.def Info: images10/norms-new-60-76-007.png  used on input line 5
 462.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images10/norms-new-60-76-008.png, id=2863, 845.1575pt x 597.23125pt>
+<images10/norms-new-60-76-008.png, id=2989, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-008.png Graphic file (type png)
 <use images10/norms-new-60-76-008.png>
 Package pdftex.def Info: images10/norms-new-60-76-008.png  used on input line 5
 467.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-[156 <./images10/norms-new-60-76-007.png> <./images10/norms-new-60-76-008.png>]
-<images10/norms-new-60-76-009.png, id=2870, 845.1575pt x 597.23125pt>
+[157 <./images10/norms-new-60-76-007.png> <./images10/norms-new-60-76-008.png>]
+<images10/norms-new-60-76-009.png, id=2997, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-009.png Graphic file (type png)
 <use images10/norms-new-60-76-009.png>
 Package pdftex.def Info: images10/norms-new-60-76-009.png  used on input line 5
 548.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images10/norms-new-60-76-010.png, id=2871, 845.1575pt x 597.23125pt>
+<images10/norms-new-60-76-010.png, id=2998, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-010.png Graphic file (type png)
 <use images10/norms-new-60-76-010.png>
 Package pdftex.def Info: images10/norms-new-60-76-010.png  used on input line 5
 553.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-[157 <./images10/norms-new-60-76-009.png> <./images10/norms-new-60-76-010.png>]
-<images10/norms-new-60-76-011.png, id=2879, 845.1575pt x 597.23125pt>
+[158 <./images10/norms-new-60-76-009.png> <./images10/norms-new-60-76-010.png>]
+<images10/norms-new-60-76-011.png, id=3005, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-011.png Graphic file (type png)
 <use images10/norms-new-60-76-011.png>
 Package pdftex.def Info: images10/norms-new-60-76-011.png  used on input line 5
 634.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images10/norms-new-60-76-012.png, id=2880, 845.1575pt x 597.23125pt>
+<images10/norms-new-60-76-012.png, id=3006, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-012.png Graphic file (type png)
 <use images10/norms-new-60-76-012.png>
 Package pdftex.def Info: images10/norms-new-60-76-012.png  used on input line 5
 639.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-[158 <./images10/norms-new-60-76-011.png> <./images10/norms-new-60-76-012.png>]
-<images10/norms-new-60-76-013.png, id=2887, 845.1575pt x 597.23125pt>
+[159 <./images10/norms-new-60-76-011.png> <./images10/norms-new-60-76-012.png>]
+<images10/norms-new-60-76-013.png, id=3013, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-013.png Graphic file (type png)
 <use images10/norms-new-60-76-013.png>
 Package pdftex.def Info: images10/norms-new-60-76-013.png  used on input line 5
 695.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
-[159 <./images10/norms-new-60-76-013.png>]
-<images10/norms-new-60-76-014.png, id=2894, 845.1575pt x 597.23125pt>
+[160 <./images10/norms-new-60-76-013.png>]
+<images10/norms-new-60-76-014.png, id=3020, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-014.png Graphic file (type png)
 <use images10/norms-new-60-76-014.png>
 Package pdftex.def Info: images10/norms-new-60-76-014.png  used on input line 5
 752.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [160 <./images10/norms-new-60-76-014.png>]
-<images10/norms-new-60-76-015.png, id=2901, 845.1575pt x 597.23125pt>
+ [161 <./images10/norms-new-60-76-014.png>]
+<images10/norms-new-60-76-015.png, id=3027, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-015.png Graphic file (type png)
 <use images10/norms-new-60-76-015.png>
 Package pdftex.def Info: images10/norms-new-60-76-015.png  used on input line 5
 784.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [161 <./images10/norms-new-60-76-015.png>]
-<images10/norms-new-60-76-016.png, id=2908, 845.1575pt x 597.23125pt>
+ [162 <./images10/norms-new-60-76-015.png>]
+<images10/norms-new-60-76-016.png, id=3034, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-016.png Graphic file (type png)
 <use images10/norms-new-60-76-016.png>
 Package pdftex.def Info: images10/norms-new-60-76-016.png  used on input line 5
 828.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [162 <./images10/norms-new-60-76-016.png>]
-<images10/norms-new-60-76-017.png, id=2915, 845.1575pt x 597.23125pt>
+ [163 <./images10/norms-new-60-76-016.png>]
+<images10/norms-new-60-76-017.png, id=3042, 845.1575pt x 597.23125pt>
 File: images10/norms-new-60-76-017.png Graphic file (type png)
 <use images10/norms-new-60-76-017.png>
 Package pdftex.def Info: images10/norms-new-60-76-017.png  used on input line 5
 904.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [163 <./images10/norms-new-60-76-017.png>] [164] [165
+ [164 <./images10/norms-new-60-76-017.png>] [165] [166
 
 ]
-<images11/formulation-01-21-001.png, id=2933, 845.1575pt x 597.23125pt>
+<images11/formulation-01-21-001.png, id=3059, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-001.png Graphic file (type png)
 <use images11/formulation-01-21-001.png>
 Package pdftex.def Info: images11/formulation-01-21-001.png  used on input line
  5935.
 (pdftex.def)             Requested size: 368.40585pt x 260.34027pt.
- [166
+ [167
 
  <./images11/formulation-01-21-001.png>]
-<images11/formulation-01-21-002.png, id=2938, 845.1575pt x 597.23125pt>
+<images11/formulation-01-21-002.png, id=3064, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-002.png Graphic file (type png)
 <use images11/formulation-01-21-002.png>
 Package pdftex.def Info: images11/formulation-01-21-002.png  used on input line
  5975.
 (pdftex.def)             Requested size: 151.14456pt x 106.8044pt.
-<images11/formulation-01-21-003.png, id=2939, 845.1575pt x 597.23125pt>
+<images11/formulation-01-21-003.png, id=3065, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-003.png Graphic file (type png)
 <use images11/formulation-01-21-003.png>
 Package pdftex.def Info: images11/formulation-01-21-003.png  used on input line
  5980.
 (pdftex.def)             Requested size: 151.14456pt x 106.8044pt.
-<images11/formulation-01-21-005.png, id=2940, 845.1575pt x 597.23125pt>
+<images11/formulation-01-21-005.png, id=3066, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-005.png Graphic file (type png)
 <use images11/formulation-01-21-005.png>
 Package pdftex.def Info: images11/formulation-01-21-005.png  used on input line
  5985.
 (pdftex.def)             Requested size: 151.14456pt x 106.8044pt.
- [167
+ [168
 
 ]
-<images11/formulation-01-21-004.png, id=2947, 845.1575pt x 597.23125pt>
+<images11/formulation-01-21-004.png, id=3072, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-004.png Graphic file (type png)
 <use images11/formulation-01-21-004.png>
 Package pdftex.def Info: images11/formulation-01-21-004.png  used on input line
  6025.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [168 <./images11/formulation-01-21-002.png> <./images11/formulation-01-21-003.
+ [169 <./images11/formulation-01-21-002.png> <./images11/formulation-01-21-003.
 png> <./images11/formulation-01-21-005.png>]
-<images11/formulation-01-21-006.png, id=2954, 845.1575pt x 597.23125pt>
+<images11/formulation-01-21-006.png, id=3080, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-006.png Graphic file (type png)
 <use images11/formulation-01-21-006.png>
 Package pdftex.def Info: images11/formulation-01-21-006.png  used on input line
  6052.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [169 <./images11/formulation-01-21-004.png>]
-<images11/formulation-01-21-007.png, id=2962, 845.1575pt x 597.23125pt>
+ [170 <./images11/formulation-01-21-004.png>]
+<images11/formulation-01-21-007.png, id=3087, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-007.png Graphic file (type png)
 <use images11/formulation-01-21-007.png>
 Package pdftex.def Info: images11/formulation-01-21-007.png  used on input line
  6072.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [170 <./images11/formulation-01-21-006.png>]
-<images11/formulation-01-21-008.png, id=2969, 845.1575pt x 597.23125pt>
+ [171 <./images11/formulation-01-21-006.png>]
+<images11/formulation-01-21-008.png, id=3094, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-008.png Graphic file (type png)
 <use images11/formulation-01-21-008.png>
 Package pdftex.def Info: images11/formulation-01-21-008.png  used on input line
  6114.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images11/formulation-01-21-009.png, id=2970, 845.1575pt x 597.23125pt>
+<images11/formulation-01-21-009.png, id=3095, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-009.png Graphic file (type png)
 <use images11/formulation-01-21-009.png>
 Package pdftex.def Info: images11/formulation-01-21-009.png  used on input line
  6119.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [171 <./images11/formulation-01-21-007.png>]
-<images11/formulation-01-21-010.png, id=2977, 845.1575pt x 597.23125pt>
+ [172 <./images11/formulation-01-21-007.png>]
+<images11/formulation-01-21-010.png, id=3103, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-010.png Graphic file (type png)
 <use images11/formulation-01-21-010.png>
 Package pdftex.def Info: images11/formulation-01-21-010.png  used on input line
  6140.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images11/formulation-01-21-011.png, id=2978, 845.1575pt x 597.23125pt>
+<images11/formulation-01-21-011.png, id=3104, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-011.png Graphic file (type png)
 <use images11/formulation-01-21-011.png>
 Package pdftex.def Info: images11/formulation-01-21-011.png  used on input line
  6145.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [172 <./images11/formulation-01-21-008.png> <./images11/formulation-01-21-009.
+ [173 <./images11/formulation-01-21-008.png> <./images11/formulation-01-21-009.
 png> <./images11/formulation-01-21-010.png> <./images11/formulation-01-21-011.p
 ng>]
-<images11/formulation-01-21-012.png, id=2986, 845.1575pt x 597.23125pt>
+<images11/formulation-01-21-012.png, id=3112, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-012.png Graphic file (type png)
 <use images11/formulation-01-21-012.png>
 Package pdftex.def Info: images11/formulation-01-21-012.png  used on input line
  6168.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [173 <./images11/formulation-01-21-012.png>]
-<images11/formulation-01-21-013.png, id=2993, 845.1575pt x 597.23125pt>
+ [174 <./images11/formulation-01-21-012.png>]
+<images11/formulation-01-21-013.png, id=3119, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-013.png Graphic file (type png)
 <use images11/formulation-01-21-013.png>
 Package pdftex.def Info: images11/formulation-01-21-013.png  used on input line
  6196.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images11/formulation-01-21-014.png, id=2994, 845.1575pt x 597.23125pt>
+<images11/formulation-01-21-014.png, id=3120, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-014.png Graphic file (type png)
 <use images11/formulation-01-21-014.png>
 Package pdftex.def Info: images11/formulation-01-21-014.png  used on input line
  6201.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images11/formulation-01-21-015.png, id=2995, 845.1575pt x 597.23125pt>
+<images11/formulation-01-21-015.png, id=3121, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-015.png Graphic file (type png)
 <use images11/formulation-01-21-015.png>
 Package pdftex.def Info: images11/formulation-01-21-015.png  used on input line
  6252.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [174 <./images11/formulation-01-21-013.png> <./images11/formulation-01-21-014.
+ [175 <./images11/formulation-01-21-013.png> <./images11/formulation-01-21-014.
 png>]
-<images11/formulation-01-21-016.png, id=3002, 845.1575pt x 597.23125pt>
+<images11/formulation-01-21-016.png, id=3129, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-016.png Graphic file (type png)
 <use images11/formulation-01-21-016.png>
 Package pdftex.def Info: images11/formulation-01-21-016.png  used on input line
  6290.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [175 <./images11/formulation-01-21-015.png>]
-<images11/formulation-01-21-017.png, id=3010, 845.1575pt x 597.23125pt>
+ [176 <./images11/formulation-01-21-015.png>]
+<images11/formulation-01-21-017.png, id=3136, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-017.png Graphic file (type png)
 <use images11/formulation-01-21-017.png>
 Package pdftex.def Info: images11/formulation-01-21-017.png  used on input line
  6311.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [176 <./images11/formulation-01-21-016.png>]
-<images11/formulation-01-21-018.png, id=3017, 845.1575pt x 597.23125pt>
+ [177 <./images11/formulation-01-21-016.png>]
+<images11/formulation-01-21-018.png, id=3143, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-018.png Graphic file (type png)
 <use images11/formulation-01-21-018.png>
 Package pdftex.def Info: images11/formulation-01-21-018.png  used on input line
  6358.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [177 <./images11/formulation-01-21-017.png>]
-<images11/formulation-01-21-019.png, id=3024, 845.1575pt x 597.23125pt>
+ [178 <./images11/formulation-01-21-017.png>]
+<images11/formulation-01-21-019.png, id=3150, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-019.png Graphic file (type png)
 <use images11/formulation-01-21-019.png>
 Package pdftex.def Info: images11/formulation-01-21-019.png  used on input line
  6419.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [178 <./images11/formulation-01-21-018.png>] [179 <./images11/formulation-01-2
+ [179 <./images11/formulation-01-21-018.png>] [180 <./images11/formulation-01-2
 1-019.png>]
-<images11/formulation-01-21-020.png, id=3037, 845.1575pt x 597.23125pt>
+<images11/formulation-01-21-020.png, id=3163, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-020.png Graphic file (type png)
 <use images11/formulation-01-21-020.png>
 Package pdftex.def Info: images11/formulation-01-21-020.png  used on input line
  6475.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
-<images11/formulation-01-21-021.png, id=3038, 845.1575pt x 597.23125pt>
+<images11/formulation-01-21-021.png, id=3164, 845.1575pt x 597.23125pt>
 File: images11/formulation-01-21-021.png Graphic file (type png)
 <use images11/formulation-01-21-021.png>
 Package pdftex.def Info: images11/formulation-01-21-021.png  used on input line
  6526.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [180 <./images11/formulation-01-21-020.png>] [181 <./images11/formulation-01-2
-1-021.png>] [182] [183
+ [181 <./images11/formulation-01-21-020.png>] [182 <./images11/formulation-01-2
+1-021.png>] [183] [184
 
 ]
-<images12/formulation-22-41-001.png, id=3062, 845.1575pt x 597.23125pt>
+<images12/formulation-22-41-001.png, id=3188, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-001.png Graphic file (type png)
 <use images12/formulation-22-41-001.png>
 Package pdftex.def Info: images12/formulation-22-41-001.png  used on input line
  6572.
 (pdftex.def)             Requested size: 368.40585pt x 260.34027pt.
- [184
+ [185
 
  <./images12/formulation-22-41-001.png>]
 File: images12/formulation-22-41-001.png Graphic file (type png)
@@ -2631,155 +2631,155 @@ File: images12/formulation-22-41-001.png Graphic file (type png)
 Package pdftex.def Info: images12/formulation-22-41-001.png  used on input line
  6648.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [185
+ [186
 
 ]
-<images12/formulation-22-41-002.png, id=3073, 845.1575pt x 597.23125pt>
+<images12/formulation-22-41-002.png, id=3198, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-002.png Graphic file (type png)
 <use images12/formulation-22-41-002.png>
 Package pdftex.def Info: images12/formulation-22-41-002.png  used on input line
  6708.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images12/formulation-22-41-003.png, id=3074, 845.1575pt x 597.23125pt>
+<images12/formulation-22-41-003.png, id=3199, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-003.png Graphic file (type png)
 <use images12/formulation-22-41-003.png>
 Package pdftex.def Info: images12/formulation-22-41-003.png  used on input line
  6713.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [186]
-<images12/formulation-22-41-004.png, id=3084, 845.1575pt x 597.23125pt>
+ [187]
+<images12/formulation-22-41-004.png, id=3210, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-004.png Graphic file (type png)
 <use images12/formulation-22-41-004.png>
 Package pdftex.def Info: images12/formulation-22-41-004.png  used on input line
  6737.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [187 <./images12/formulation-22-41-002.png> <./images12/formulation-22-41-003.
+ [188 <./images12/formulation-22-41-002.png> <./images12/formulation-22-41-003.
 png>]
-<images12/formulation-22-41-005.png, id=3092, 845.1575pt x 597.23125pt>
+<images12/formulation-22-41-005.png, id=3218, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-005.png Graphic file (type png)
 <use images12/formulation-22-41-005.png>
 Package pdftex.def Info: images12/formulation-22-41-005.png  used on input line
  6757.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [188 <./images12/formulation-22-41-004.png>]
-<images12/formulation-22-41-006.png, id=3099, 845.1575pt x 597.23125pt>
+ [189 <./images12/formulation-22-41-004.png>]
+<images12/formulation-22-41-006.png, id=3225, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-006.png Graphic file (type png)
 <use images12/formulation-22-41-006.png>
 Package pdftex.def Info: images12/formulation-22-41-006.png  used on input line
  6789.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
 
-[189 <./images12/formulation-22-41-005.png>]
-<images12/formulation-22-41-007.png, id=3106, 845.1575pt x 597.23125pt>
+[190 <./images12/formulation-22-41-005.png>]
+<images12/formulation-22-41-007.png, id=3232, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-007.png Graphic file (type png)
 <use images12/formulation-22-41-007.png>
 Package pdftex.def Info: images12/formulation-22-41-007.png  used on input line
  6820.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [190 <./images12/formulation-22-41-006.png>]
-<images12/formulation-22-41-008.png, id=3113, 845.1575pt x 597.23125pt>
+ [191 <./images12/formulation-22-41-006.png>]
+<images12/formulation-22-41-008.png, id=3239, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-008.png Graphic file (type png)
 <use images12/formulation-22-41-008.png>
 Package pdftex.def Info: images12/formulation-22-41-008.png  used on input line
  6878.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [191 <./images12/formulation-22-41-007.png>]
-<images12/formulation-22-41-009.png, id=3120, 845.1575pt x 597.23125pt>
+ [192 <./images12/formulation-22-41-007.png>]
+<images12/formulation-22-41-009.png, id=3246, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-009.png Graphic file (type png)
 <use images12/formulation-22-41-009.png>
 Package pdftex.def Info: images12/formulation-22-41-009.png  used on input line
  6922.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [192 <./images12/formulation-22-41-008.png>] [193 <./images12/formulation-22-4
+ [193 <./images12/formulation-22-41-008.png>] [194 <./images12/formulation-22-4
 1-009.png>]
-<images12/formulation-22-41-010.png, id=3134, 845.1575pt x 597.23125pt>
+<images12/formulation-22-41-010.png, id=3260, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-010.png Graphic file (type png)
 <use images12/formulation-22-41-010.png>
 Package pdftex.def Info: images12/formulation-22-41-010.png  used on input line
  7003.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images12/formulation-22-41-011.png, id=3135, 845.1575pt x 597.23125pt>
+<images12/formulation-22-41-011.png, id=3261, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-011.png Graphic file (type png)
 <use images12/formulation-22-41-011.png>
 Package pdftex.def Info: images12/formulation-22-41-011.png  used on input line
  7008.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images12/formulation-22-41-012.png, id=3136, 845.1575pt x 597.23125pt>
+<images12/formulation-22-41-012.png, id=3262, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-012.png Graphic file (type png)
 <use images12/formulation-22-41-012.png>
 Package pdftex.def Info: images12/formulation-22-41-012.png  used on input line
  7035.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [194 <./images12/formulation-22-41-010.png> <./images12/formulation-22-41-011.
+ [195 <./images12/formulation-22-41-010.png> <./images12/formulation-22-41-011.
 png>]
-<images12/formulation-22-41-013.png, id=3143, 845.1575pt x 597.23125pt>
+<images12/formulation-22-41-013.png, id=3269, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-013.png Graphic file (type png)
 <use images12/formulation-22-41-013.png>
 Package pdftex.def Info: images12/formulation-22-41-013.png  used on input line
  7089.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images12/formulation-22-41-014.png, id=3144, 845.1575pt x 597.23125pt>
+<images12/formulation-22-41-014.png, id=3270, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-014.png Graphic file (type png)
 <use images12/formulation-22-41-014.png>
 Package pdftex.def Info: images12/formulation-22-41-014.png  used on input line
  7094.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
 
-[195 <./images12/formulation-22-41-012.png>]
-<images12/formulation-22-41-015.png, id=3151, 845.1575pt x 597.23125pt>
+[196 <./images12/formulation-22-41-012.png>]
+<images12/formulation-22-41-015.png, id=3277, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-015.png Graphic file (type png)
 <use images12/formulation-22-41-015.png>
 Package pdftex.def Info: images12/formulation-22-41-015.png  used on input line
  7139.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [196 <./images12/formulation-22-41-013.png> <./images12/formulation-22-41-014.
+ [197 <./images12/formulation-22-41-013.png> <./images12/formulation-22-41-014.
 png>]
-<images12/formulation-22-41-016.png, id=3158, 845.1575pt x 597.23125pt>
+<images12/formulation-22-41-016.png, id=3284, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-016.png Graphic file (type png)
 <use images12/formulation-22-41-016.png>
 Package pdftex.def Info: images12/formulation-22-41-016.png  used on input line
  7197.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images12/formulation-22-41-017.png, id=3159, 845.1575pt x 597.23125pt>
+<images12/formulation-22-41-017.png, id=3285, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-017.png Graphic file (type png)
 <use images12/formulation-22-41-017.png>
 Package pdftex.def Info: images12/formulation-22-41-017.png  used on input line
  7202.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [197 <./images12/formulation-22-41-015.png>]
-<images12/formulation-22-41-018.png, id=3166, 845.1575pt x 597.23125pt>
+ [198 <./images12/formulation-22-41-015.png>]
+<images12/formulation-22-41-018.png, id=3292, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-018.png Graphic file (type png)
 <use images12/formulation-22-41-018.png>
 Package pdftex.def Info: images12/formulation-22-41-018.png  used on input line
  7258.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [198 <./images12/formulation-22-41-016.png> <./images12/formulation-22-41-017.
+ [199 <./images12/formulation-22-41-016.png> <./images12/formulation-22-41-017.
 png>]
-<images12/formulation-22-41-019.png, id=3173, 845.1575pt x 597.23125pt>
+<images12/formulation-22-41-019.png, id=3300, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-019.png Graphic file (type png)
 <use images12/formulation-22-41-019.png>
 Package pdftex.def Info: images12/formulation-22-41-019.png  used on input line
  7320.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [199 <./images12/formulation-22-41-018.png>]
-<images12/formulation-22-41-020.png, id=3181, 845.1575pt x 597.23125pt>
+ [200 <./images12/formulation-22-41-018.png>]
+<images12/formulation-22-41-020.png, id=3307, 845.1575pt x 597.23125pt>
 File: images12/formulation-22-41-020.png Graphic file (type png)
 <use images12/formulation-22-41-020.png>
 Package pdftex.def Info: images12/formulation-22-41-020.png  used on input line
  7359.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [200 <./images12/formulation-22-41-019.png>] [201 <./images12/formulation-22-4
+ [201 <./images12/formulation-22-41-019.png>] [202 <./images12/formulation-22-4
 1-020.png>]
-[202
+[203
 
 ]
-<images13/formulation-42-55-001.png, id=3200, 845.1575pt x 597.23125pt>
+<images13/formulation-42-55-001.png, id=3325, 845.1575pt x 597.23125pt>
 File: images13/formulation-42-55-001.png Graphic file (type png)
 <use images13/formulation-42-55-001.png>
 Package pdftex.def Info: images13/formulation-42-55-001.png  used on input line
  7398.
 (pdftex.def)             Requested size: 368.40585pt x 260.34027pt.
- [203
+ [204
 
  <./images13/formulation-42-55-001.png>]
 File: images13/formulation-42-55-001.png Graphic file (type png)
@@ -2787,120 +2787,120 @@ File: images13/formulation-42-55-001.png Graphic file (type png)
 Package pdftex.def Info: images13/formulation-42-55-001.png  used on input line
  7430.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [204
+ [205
 
 ]
-<images13/formulation-42-55-002.png, id=3210, 845.1575pt x 597.23125pt>
+<images13/formulation-42-55-002.png, id=3336, 845.1575pt x 597.23125pt>
 File: images13/formulation-42-55-002.png Graphic file (type png)
 <use images13/formulation-42-55-002.png>
 Package pdftex.def Info: images13/formulation-42-55-002.png  used on input line
  7452.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [205]
-<images13/formulation-42-55-003.png, id=3222, 845.1575pt x 597.23125pt>
+ [206]
+<images13/formulation-42-55-003.png, id=3348, 845.1575pt x 597.23125pt>
 File: images13/formulation-42-55-003.png Graphic file (type png)
 <use images13/formulation-42-55-003.png>
 Package pdftex.def Info: images13/formulation-42-55-003.png  used on input line
  7481.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [206 <./images13/formulation-42-55-002.png>] [207 <./images13/formulation-42-5
+ [207 <./images13/formulation-42-55-002.png>] [208 <./images13/formulation-42-5
 5-003.png>]
-<images13/formulation-42-55-004.png, id=3235, 845.1575pt x 597.23125pt>
+<images13/formulation-42-55-004.png, id=3361, 845.1575pt x 597.23125pt>
 File: images13/formulation-42-55-004.png Graphic file (type png)
 <use images13/formulation-42-55-004.png>
 Package pdftex.def Info: images13/formulation-42-55-004.png  used on input line
  7520.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
-<images13/formulation-42-55-005.png, id=3236, 845.1575pt x 597.23125pt>
+<images13/formulation-42-55-005.png, id=3362, 845.1575pt x 597.23125pt>
 File: images13/formulation-42-55-005.png Graphic file (type png)
 <use images13/formulation-42-55-005.png>
 Package pdftex.def Info: images13/formulation-42-55-005.png  used on input line
  7547.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
 
-[208 <./images13/formulation-42-55-004.png>] [209 <./images13/formulation-42-55
+[209 <./images13/formulation-42-55-004.png>] [210 <./images13/formulation-42-55
 -005.png>]
-<images13/formulation-42-55-006.png, id=3249, 845.1575pt x 597.23125pt>
+<images13/formulation-42-55-006.png, id=3375, 845.1575pt x 597.23125pt>
 File: images13/formulation-42-55-006.png Graphic file (type png)
 <use images13/formulation-42-55-006.png>
 Package pdftex.def Info: images13/formulation-42-55-006.png  used on input line
  7616.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
-<images13/formulation-42-55-007.png, id=3250, 845.1575pt x 597.23125pt>
+<images13/formulation-42-55-007.png, id=3376, 845.1575pt x 597.23125pt>
 File: images13/formulation-42-55-007.png Graphic file (type png)
 <use images13/formulation-42-55-007.png>
 Package pdftex.def Info: images13/formulation-42-55-007.png  used on input line
  7649.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [210 <./images13/formulation-42-55-006.png>]
-<images13/formulation-42-55-008.png, id=3257, 845.1575pt x 597.23125pt>
+ [211 <./images13/formulation-42-55-006.png>]
+<images13/formulation-42-55-008.png, id=3384, 845.1575pt x 597.23125pt>
 File: images13/formulation-42-55-008.png Graphic file (type png)
 <use images13/formulation-42-55-008.png>
 Package pdftex.def Info: images13/formulation-42-55-008.png  used on input line
  7687.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [211 <./images13/formulation-42-55-007.png>]
-<images13/formulation-42-55-009.png, id=3265, 845.1575pt x 597.23125pt>
+ [212 <./images13/formulation-42-55-007.png>]
+<images13/formulation-42-55-009.png, id=3391, 845.1575pt x 597.23125pt>
 File: images13/formulation-42-55-009.png Graphic file (type png)
 <use images13/formulation-42-55-009.png>
 Package pdftex.def Info: images13/formulation-42-55-009.png  used on input line
  7715.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [212 <./images13/formulation-42-55-008.png>]
-<images13/formulation-42-55-010.png, id=3272, 845.1575pt x 597.23125pt>
+ [213 <./images13/formulation-42-55-008.png>]
+<images13/formulation-42-55-010.png, id=3398, 845.1575pt x 597.23125pt>
 File: images13/formulation-42-55-010.png Graphic file (type png)
 <use images13/formulation-42-55-010.png>
 Package pdftex.def Info: images13/formulation-42-55-010.png  used on input line
  7733.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [213 <./images13/formulation-42-55-009.png>]
-<images13/formulation-42-55-011.png, id=3283, 845.1575pt x 597.23125pt>
+ [214 <./images13/formulation-42-55-009.png>]
+<images13/formulation-42-55-011.png, id=3409, 845.1575pt x 597.23125pt>
 File: images13/formulation-42-55-011.png Graphic file (type png)
 <use images13/formulation-42-55-011.png>
 Package pdftex.def Info: images13/formulation-42-55-011.png  used on input line
  7759.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [214 <./images13/formulation-42-55-010.png>]
-[215 <./images13/formulation-42-55-011.png>]
-<images13/formulation-42-55-012.png, id=3296, 845.1575pt x 597.23125pt>
+ [215 <./images13/formulation-42-55-010.png>]
+[216 <./images13/formulation-42-55-011.png>]
+<images13/formulation-42-55-012.png, id=3422, 845.1575pt x 597.23125pt>
 File: images13/formulation-42-55-012.png Graphic file (type png)
 <use images13/formulation-42-55-012.png>
 Package pdftex.def Info: images13/formulation-42-55-012.png  used on input line
  7827.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [216 <./images13/formulation-42-55-012.png>]
-<images13/formulation-42-55-013.png, id=3304, 845.1575pt x 597.23125pt>
+ [217 <./images13/formulation-42-55-012.png>]
+<images13/formulation-42-55-013.png, id=3430, 845.1575pt x 597.23125pt>
 File: images13/formulation-42-55-013.png Graphic file (type png)
 <use images13/formulation-42-55-013.png>
 Package pdftex.def Info: images13/formulation-42-55-013.png  used on input line
  7882.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images13/formulation-42-55-014.png, id=3305, 845.1575pt x 597.23125pt>
+<images13/formulation-42-55-014.png, id=3431, 845.1575pt x 597.23125pt>
 File: images13/formulation-42-55-014.png Graphic file (type png)
 <use images13/formulation-42-55-014.png>
 Package pdftex.def Info: images13/formulation-42-55-014.png  used on input line
  7887.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [217 <./images13/formulation-42-55-013.png> <./images13/formulation-42-55-014.
-png>] [218] [219
+ [218 <./images13/formulation-42-55-013.png> <./images13/formulation-42-55-014.
+png>] [219] [220
 
 ]
-<images14/formulation-56-71-011.png, id=3323, 845.1575pt x 597.23125pt>
+<images14/formulation-56-71-011.png, id=3448, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-011.png Graphic file (type png)
 <use images14/formulation-56-71-011.png>
 Package pdftex.def Info: images14/formulation-56-71-011.png  used on input line
  7957.
 (pdftex.def)             Requested size: 368.40585pt x 260.34027pt.
- [220
+ [221
 
  <./images14/formulation-56-71-011.png>]
-<images14/formulation-56-71-001.png, id=3328, 845.1575pt x 597.23125pt>
+<images14/formulation-56-71-001.png, id=3454, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-001.png Graphic file (type png)
 <use images14/formulation-56-71-001.png>
 Package pdftex.def Info: images14/formulation-56-71-001.png  used on input line
  8027.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images14/formulation-56-71-002.png, id=3329, 845.1575pt x 597.23125pt>
+<images14/formulation-56-71-002.png, id=3455, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-002.png Graphic file (type png)
 <use images14/formulation-56-71-002.png>
 Package pdftex.def Info: images14/formulation-56-71-002.png  used on input line
@@ -2911,117 +2911,117 @@ Underfull \hbox (badness 10000) in paragraph at lines 8033--8033
 []\T1/lmr/m/n/10 (+20) (b) |La spe-ci-fi-ca nor-ma-liz-za-ta di-ven-ta
  []
 
-[221
+[222
 
 ]
-<images14/formulation-56-71-003.png, id=3338, 845.1575pt x 597.23125pt>
+<images14/formulation-56-71-003.png, id=3464, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-003.png Graphic file (type png)
 <use images14/formulation-56-71-003.png>
 Package pdftex.def Info: images14/formulation-56-71-003.png  used on input line
  8060.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [222 <./images14/formulation-56-71-001.png> <./images14/formulation-56-71-002.
-png>] [223 <./images14/formulation-56-71-003.png>]
-<images14/formulation-56-71-004.png, id=3352, 845.1575pt x 597.23125pt>
+ [223 <./images14/formulation-56-71-001.png> <./images14/formulation-56-71-002.
+png>] [224 <./images14/formulation-56-71-003.png>]
+<images14/formulation-56-71-004.png, id=3478, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-004.png Graphic file (type png)
 <use images14/formulation-56-71-004.png>
 Package pdftex.def Info: images14/formulation-56-71-004.png  used on input line
  8129.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images14/formulation-56-71-005.png, id=3353, 845.1575pt x 597.23125pt>
+<images14/formulation-56-71-005.png, id=3479, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-005.png Graphic file (type png)
 <use images14/formulation-56-71-005.png>
 Package pdftex.def Info: images14/formulation-56-71-005.png  used on input line
  8134.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [224 <./images14/formulation-56-71-004.png> <./images14/formulation-56-71-005.
+ [225 <./images14/formulation-56-71-004.png> <./images14/formulation-56-71-005.
 png>]
-<images14/formulation-56-71-006.png, id=3360, 845.1575pt x 597.23125pt>
+<images14/formulation-56-71-006.png, id=3486, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-006.png Graphic file (type png)
 <use images14/formulation-56-71-006.png>
 Package pdftex.def Info: images14/formulation-56-71-006.png  used on input line
  8182.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [225 <./images14/formulation-56-71-006.png>]
-<images14/formulation-56-71-007.png, id=3367, 845.1575pt x 597.23125pt>
+ [226 <./images14/formulation-56-71-006.png>]
+<images14/formulation-56-71-007.png, id=3493, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-007.png Graphic file (type png)
 <use images14/formulation-56-71-007.png>
 Package pdftex.def Info: images14/formulation-56-71-007.png  used on input line
  8213.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [226 <./images14/formulation-56-71-007.png>]
-<images14/formulation-56-71-008.png, id=3374, 845.1575pt x 597.23125pt>
+ [227 <./images14/formulation-56-71-007.png>]
+<images14/formulation-56-71-008.png, id=3500, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-008.png Graphic file (type png)
 <use images14/formulation-56-71-008.png>
 Package pdftex.def Info: images14/formulation-56-71-008.png  used on input line
  8256.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images14/formulation-56-71-009.png, id=3375, 845.1575pt x 597.23125pt>
+<images14/formulation-56-71-009.png, id=3501, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-009.png Graphic file (type png)
 <use images14/formulation-56-71-009.png>
 Package pdftex.def Info: images14/formulation-56-71-009.png  used on input line
  8261.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images14/formulation-56-71-010.png, id=3376, 845.1575pt x 597.23125pt>
+<images14/formulation-56-71-010.png, id=3502, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-010.png Graphic file (type png)
 <use images14/formulation-56-71-010.png>
 Package pdftex.def Info: images14/formulation-56-71-010.png  used on input line
  8300.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
 
-[227 <./images14/formulation-56-71-008.png> <./images14/formulation-56-71-009.p
+[228 <./images14/formulation-56-71-008.png> <./images14/formulation-56-71-009.p
 ng>]
 File: images14/formulation-56-71-011.png Graphic file (type png)
 <use images14/formulation-56-71-011.png>
 Package pdftex.def Info: images14/formulation-56-71-011.png  used on input line
  8340.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [228 <./images14/formulation-56-71-010.png>]
-<images14/formulation-56-71-012.png, id=3394, 845.1575pt x 597.23125pt>
+ [229 <./images14/formulation-56-71-010.png>]
+<images14/formulation-56-71-012.png, id=3521, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-012.png Graphic file (type png)
 <use images14/formulation-56-71-012.png>
 Package pdftex.def Info: images14/formulation-56-71-012.png  used on input line
  8363.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [229] [230 <./images14/formulation-56-71-012.png>]
-<images14/formulation-56-71-013.png, id=3408, 845.1575pt x 597.23125pt>
+ [230] [231 <./images14/formulation-56-71-012.png>]
+<images14/formulation-56-71-013.png, id=3534, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-013.png Graphic file (type png)
 <use images14/formulation-56-71-013.png>
 Package pdftex.def Info: images14/formulation-56-71-013.png  used on input line
  8412.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
-<images14/formulation-56-71-014.png, id=3409, 845.1575pt x 597.23125pt>
+<images14/formulation-56-71-014.png, id=3535, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-014.png Graphic file (type png)
 <use images14/formulation-56-71-014.png>
 Package pdftex.def Info: images14/formulation-56-71-014.png  used on input line
  8435.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [231 <./images14/formulation-56-71-013.png>]
-<images14/formulation-56-71-015.png, id=3416, 845.1575pt x 597.23125pt>
+ [232 <./images14/formulation-56-71-013.png>]
+<images14/formulation-56-71-015.png, id=3542, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-015.png Graphic file (type png)
 <use images14/formulation-56-71-015.png>
 Package pdftex.def Info: images14/formulation-56-71-015.png  used on input line
  8480.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
-<images14/formulation-56-71-016.png, id=3417, 845.1575pt x 597.23125pt>
+<images14/formulation-56-71-016.png, id=3543, 845.1575pt x 597.23125pt>
 File: images14/formulation-56-71-016.png Graphic file (type png)
 <use images14/formulation-56-71-016.png>
 Package pdftex.def Info: images14/formulation-56-71-016.png  used on input line
  8485.
 (pdftex.def)             Requested size: 226.70963pt x 160.20659pt.
- [232 <./images14/formulation-56-71-014.png>] [233 <./images14/formulation-56-7
-1-015.png> <./images14/formulation-56-71-016.png>] [234
+ [233 <./images14/formulation-56-71-014.png>] [234 <./images14/formulation-56-7
+1-015.png> <./images14/formulation-56-71-016.png>] [235
 
 ]
-<images15/formulation-72-78-001.png, id=3439, 845.1575pt x 597.23125pt>
+<images15/formulation-72-78-001.png, id=3565, 845.1575pt x 597.23125pt>
 File: images15/formulation-72-78-001.png Graphic file (type png)
 <use images15/formulation-72-78-001.png>
 Package pdftex.def Info: images15/formulation-72-78-001.png  used on input line
  8537.
 (pdftex.def)             Requested size: 368.40585pt x 260.34027pt.
- [235
+ [236
 
- <./images15/formulation-72-78-001.png>] [236
+ <./images15/formulation-72-78-001.png>] [237
 
 ]
 File: images15/formulation-72-78-001.png Graphic file (type png)
@@ -3029,402 +3029,655 @@ File: images15/formulation-72-78-001.png Graphic file (type png)
 Package pdftex.def Info: images15/formulation-72-78-001.png  used on input line
  8624.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [237]
-<images15/formulation-72-78-002.png, id=3462, 845.1575pt x 597.23125pt>
+ [238]
+<images15/formulation-72-78-002.png, id=3588, 845.1575pt x 597.23125pt>
 File: images15/formulation-72-78-002.png Graphic file (type png)
 <use images15/formulation-72-78-002.png>
 Package pdftex.def Info: images15/formulation-72-78-002.png  used on input line
  8669.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [238 <./images15/formulation-72-78-002.png>]
-<images15/formulation-72-78-003.png, id=3469, 845.1575pt x 597.23125pt>
+ [239 <./images15/formulation-72-78-002.png>]
+<images15/formulation-72-78-003.png, id=3595, 845.1575pt x 597.23125pt>
 File: images15/formulation-72-78-003.png Graphic file (type png)
 <use images15/formulation-72-78-003.png>
 Package pdftex.def Info: images15/formulation-72-78-003.png  used on input line
  8717.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [239 <./images15/formulation-72-78-003.png>]
-<images15/formulation-72-78-004.png, id=3476, 845.1575pt x 597.23125pt>
+ [240 <./images15/formulation-72-78-003.png>]
+<images15/formulation-72-78-004.png, id=3602, 845.1575pt x 597.23125pt>
 File: images15/formulation-72-78-004.png Graphic file (type png)
 <use images15/formulation-72-78-004.png>
 Package pdftex.def Info: images15/formulation-72-78-004.png  used on input line
  8747.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
- [240 <./images15/formulation-72-78-004.png>]
-<images15/formulation-72-78-005.png, id=3483, 845.1575pt x 597.23125pt>
+ [241 <./images15/formulation-72-78-004.png>]
+<images15/formulation-72-78-005.png, id=3610, 845.1575pt x 597.23125pt>
 File: images15/formulation-72-78-005.png Graphic file (type png)
 <use images15/formulation-72-78-005.png>
 Package pdftex.def Info: images15/formulation-72-78-005.png  used on input line
  8802.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
-<images15/formulation-72-78-006.png, id=3484, 845.1575pt x 597.23125pt>
+<images15/formulation-72-78-006.png, id=3611, 845.1575pt x 597.23125pt>
 File: images15/formulation-72-78-006.png Graphic file (type png)
 <use images15/formulation-72-78-006.png>
 Package pdftex.def Info: images15/formulation-72-78-006.png  used on input line
  8823.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
 
-[241 <./images15/formulation-72-78-005.png>] [242 <./images15/formulation-72-78
+[242 <./images15/formulation-72-78-005.png>] [243 <./images15/formulation-72-78
 -006.png>]
-<images15/formulation-72-78-007.png, id=3498, 845.1575pt x 597.23125pt>
+<images15/formulation-72-78-007.png, id=3624, 845.1575pt x 597.23125pt>
 File: images15/formulation-72-78-007.png Graphic file (type png)
 <use images15/formulation-72-78-007.png>
 Package pdftex.def Info: images15/formulation-72-78-007.png  used on input line
  8855.
 (pdftex.def)             Requested size: 387.30254pt x 273.69083pt.
-<images15/formulation-79-84-001.png, id=3499, 845.1575pt x 597.432pt>
+<images15/formulation-79-84-001.png, id=3625, 845.1575pt x 597.432pt>
 File: images15/formulation-79-84-001.png Graphic file (type png)
 <use images15/formulation-79-84-001.png>
 Package pdftex.def Info: images15/formulation-79-84-001.png  used on input line
  8900.
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [243 <./images15/formulation-72-78-007.png>] [244 <./images15/formulation-79-8
+ [244 <./images15/formulation-72-78-007.png>] [245 <./images15/formulation-79-8
 4-001.png>]
-<images15/formulation-79-84-002.png, id=3512, 845.1575pt x 597.432pt>
+<images15/formulation-79-84-002.png, id=3638, 845.1575pt x 597.432pt>
 File: images15/formulation-79-84-002.png Graphic file (type png)
 <use images15/formulation-79-84-002.png>
 Package pdftex.def Info: images15/formulation-79-84-002.png  used on input line
  8959.
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
-<images15/formulation-79-84-003.png, id=3513, 845.1575pt x 597.432pt>
+<images15/formulation-79-84-003.png, id=3639, 845.1575pt x 597.432pt>
 File: images15/formulation-79-84-003.png Graphic file (type png)
 <use images15/formulation-79-84-003.png>
 Package pdftex.def Info: images15/formulation-79-84-003.png  used on input line
  9001.
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [245 <./images15/formulation-79-84-002.png>]
-<images15/formulation-79-84-004.png, id=3520, 845.1575pt x 597.432pt>
+ [246 <./images15/formulation-79-84-002.png>]
+<images15/formulation-79-84-004.png, id=3646, 845.1575pt x 597.432pt>
 File: images15/formulation-79-84-004.png Graphic file (type png)
 <use images15/formulation-79-84-004.png>
 Package pdftex.def Info: images15/formulation-79-84-004.png  used on input line
  9044.
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [246 <./images15/formulation-79-84-003.png>]
-<images15/formulation-79-84-005.png, id=3527, 845.1575pt x 597.432pt>
+ [247 <./images15/formulation-79-84-003.png>]
+<images15/formulation-79-84-005.png, id=3654, 845.1575pt x 597.432pt>
 File: images15/formulation-79-84-005.png Graphic file (type png)
 <use images15/formulation-79-84-005.png>
 Package pdftex.def Info: images15/formulation-79-84-005.png  used on input line
  9050.
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [247 <./images15/formulation-79-84-004.png> <./images15/formulation-79-84-005.
+ [248 <./images15/formulation-79-84-004.png> <./images15/formulation-79-84-005.
 png>]
-<images15/formulation-79-84-006.png, id=3537, 845.1575pt x 597.432pt>
+<images15/formulation-79-84-006.png, id=3662, 845.1575pt x 597.432pt>
 File: images15/formulation-79-84-006.png Graphic file (type png)
 <use images15/formulation-79-84-006.png>
 Package pdftex.def Info: images15/formulation-79-84-006.png  used on input line
  9068.
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [248 <./images15/formulation-79-84-006.png>] [249] [250
+ [249 <./images15/formulation-79-84-006.png>] [250] [251
 
 ]
-<images16/h2hinf-01-24-001.png, id=3554, 845.1575pt x 597.432pt>
+<images16/h2hinf-01-24-001.png, id=3679, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-001.png Graphic file (type png)
 <use images16/h2hinf-01-24-001.png>
 Package pdftex.def Info: images16/h2hinf-01-24-001.png  used on input line 9110
 .
 (pdftex.def)             Requested size: 368.40585pt x 260.42778pt.
- [251
+ [252
 
  <./images16/h2hinf-01-24-001.png>]
-<images16/h2hinf-01-24-002.png, id=3559, 845.1575pt x 597.432pt>
+<images16/h2hinf-01-24-002.png, id=3684, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-002.png Graphic file (type png)
 <use images16/h2hinf-01-24-002.png>
 Package pdftex.def Info: images16/h2hinf-01-24-002.png  used on input line 9177
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [252
+ [253
 
 ]
-<images16/h2hinf-01-24-003.png, id=3568, 845.1575pt x 597.432pt>
+<images16/h2hinf-01-24-003.png, id=3695, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-003.png Graphic file (type png)
 <use images16/h2hinf-01-24-003.png>
 Package pdftex.def Info: images16/h2hinf-01-24-003.png  used on input line 9199
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [253 <./images16/h2hinf-01-24-002.png>]
-<images16/h2hinf-01-24-004.png, id=3576, 845.1575pt x 597.432pt>
+ [254 <./images16/h2hinf-01-24-002.png>]
+<images16/h2hinf-01-24-004.png, id=3702, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-004.png Graphic file (type png)
 <use images16/h2hinf-01-24-004.png>
 Package pdftex.def Info: images16/h2hinf-01-24-004.png  used on input line 9239
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [254 <./images16/h2hinf-01-24-003.png>]
-<images16/h2hinf-01-24-005.png, id=3583, 845.1575pt x 597.432pt>
+ [255 <./images16/h2hinf-01-24-003.png>]
+<images16/h2hinf-01-24-005.png, id=3709, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-005.png Graphic file (type png)
 <use images16/h2hinf-01-24-005.png>
 Package pdftex.def Info: images16/h2hinf-01-24-005.png  used on input line 9245
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [255 <./images16/h2hinf-01-24-004.png> <./images16/h2hinf-01-24-005.png>]
-<images16/h2hinf-01-24-006.png, id=3591, 845.1575pt x 597.432pt>
+ [256 <./images16/h2hinf-01-24-004.png> <./images16/h2hinf-01-24-005.png>]
+<images16/h2hinf-01-24-006.png, id=3717, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-006.png Graphic file (type png)
 <use images16/h2hinf-01-24-006.png>
 Package pdftex.def Info: images16/h2hinf-01-24-006.png  used on input line 9264
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
-<images16/h2hinf-01-24-007.png, id=3592, 845.1575pt x 597.432pt>
+<images16/h2hinf-01-24-007.png, id=3718, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-007.png Graphic file (type png)
 <use images16/h2hinf-01-24-007.png>
 Package pdftex.def Info: images16/h2hinf-01-24-007.png  used on input line 9270
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [256 <./images16/h2hinf-01-24-006.png>]
-<images16/h2hinf-01-24-008.png, id=3599, 845.1575pt x 597.432pt>
+ [257 <./images16/h2hinf-01-24-006.png>]
+<images16/h2hinf-01-24-008.png, id=3725, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-008.png Graphic file (type png)
 <use images16/h2hinf-01-24-008.png>
 Package pdftex.def Info: images16/h2hinf-01-24-008.png  used on input line 9319
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [257 <./images16/h2hinf-01-24-007.png>]
-<images16/h2hinf-01-24-009.png, id=3606, 845.1575pt x 597.432pt>
+ [258 <./images16/h2hinf-01-24-007.png>]
+<images16/h2hinf-01-24-009.png, id=3732, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-009.png Graphic file (type png)
 <use images16/h2hinf-01-24-009.png>
 Package pdftex.def Info: images16/h2hinf-01-24-009.png  used on input line 9325
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [258 <./images16/h2hinf-01-24-008.png> <./images16/h2hinf-01-24-009.png>]
-<images16/h2hinf-01-24-010.png, id=3614, 845.1575pt x 597.432pt>
+ [259 <./images16/h2hinf-01-24-008.png> <./images16/h2hinf-01-24-009.png>]
+<images16/h2hinf-01-24-010.png, id=3741, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-010.png Graphic file (type png)
 <use images16/h2hinf-01-24-010.png>
 Package pdftex.def Info: images16/h2hinf-01-24-010.png  used on input line 9351
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [259 <./images16/h2hinf-01-24-010.png>]
-<images16/h2hinf-01-24-011.png, id=3622, 845.1575pt x 597.432pt>
+ [260 <./images16/h2hinf-01-24-010.png>]
+<images16/h2hinf-01-24-011.png, id=3748, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-011.png Graphic file (type png)
 <use images16/h2hinf-01-24-011.png>
 Package pdftex.def Info: images16/h2hinf-01-24-011.png  used on input line 9401
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [260 <./images16/h2hinf-01-24-011.png>]
-<images16/h2hinf-01-24-012.png, id=3629, 845.1575pt x 597.432pt>
+ [261 <./images16/h2hinf-01-24-011.png>]
+<images16/h2hinf-01-24-012.png, id=3755, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-012.png Graphic file (type png)
 <use images16/h2hinf-01-24-012.png>
 Package pdftex.def Info: images16/h2hinf-01-24-012.png  used on input line 9500
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
-<images16/h2hinf-01-24-013.png, id=3630, 845.1575pt x 597.432pt>
+<images16/h2hinf-01-24-013.png, id=3756, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-013.png Graphic file (type png)
 <use images16/h2hinf-01-24-013.png>
 Package pdftex.def Info: images16/h2hinf-01-24-013.png  used on input line 9506
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [261 <./images16/h2hinf-01-24-012.png>]
-<images16/h2hinf-01-24-014.png, id=3637, 845.1575pt x 597.432pt>
+ [262 <./images16/h2hinf-01-24-012.png>]
+<images16/h2hinf-01-24-014.png, id=3763, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-014.png Graphic file (type png)
 <use images16/h2hinf-01-24-014.png>
 Package pdftex.def Info: images16/h2hinf-01-24-014.png  used on input line 9582
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [262 <./images16/h2hinf-01-24-013.png>]
-<images16/h2hinf-01-24-015.png, id=3644, 845.1575pt x 597.432pt>
+ [263 <./images16/h2hinf-01-24-013.png>]
+<images16/h2hinf-01-24-015.png, id=3770, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-015.png Graphic file (type png)
 <use images16/h2hinf-01-24-015.png>
 Package pdftex.def Info: images16/h2hinf-01-24-015.png  used on input line 9588
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
-<images16/h2hinf-01-24-016.png, id=3645, 845.1575pt x 597.432pt>
+<images16/h2hinf-01-24-016.png, id=3771, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-016.png Graphic file (type png)
 <use images16/h2hinf-01-24-016.png>
 Package pdftex.def Info: images16/h2hinf-01-24-016.png  used on input line 9594
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [263 <./images16/h2hinf-01-24-014.png> <./images16/h2hinf-01-24-015.png>] [264
+ [264 <./images16/h2hinf-01-24-014.png> <./images16/h2hinf-01-24-015.png>] [265
  <./images16/h2hinf-01-24-016.png>]
-<images16/h2hinf-01-24-017.png, id=3663, 845.1575pt x 597.432pt>
+<images16/h2hinf-01-24-017.png, id=3789, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-017.png Graphic file (type png)
 <use images16/h2hinf-01-24-017.png>
 Package pdftex.def Info: images16/h2hinf-01-24-017.png  used on input line 9702
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
-<images16/h2hinf-01-24-018.png, id=3664, 845.1575pt x 597.432pt>
+<images16/h2hinf-01-24-018.png, id=3790, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-018.png Graphic file (type png)
 <use images16/h2hinf-01-24-018.png>
 Package pdftex.def Info: images16/h2hinf-01-24-018.png  used on input line 9708
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [265 <./images16/h2hinf-01-24-017.png>]
-<images16/h2hinf-01-24-019.png, id=3672, 845.1575pt x 597.432pt>
+ [266 <./images16/h2hinf-01-24-017.png>]
+<images16/h2hinf-01-24-019.png, id=3797, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-019.png Graphic file (type png)
 <use images16/h2hinf-01-24-019.png>
 Package pdftex.def Info: images16/h2hinf-01-24-019.png  used on input line 9714
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
-<images16/h2hinf-01-24-020.png, id=3673, 845.1575pt x 597.432pt>
+<images16/h2hinf-01-24-020.png, id=3798, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-020.png Graphic file (type png)
 <use images16/h2hinf-01-24-020.png>
 Package pdftex.def Info: images16/h2hinf-01-24-020.png  used on input line 9720
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [266 <./images16/h2hinf-01-24-018.png> <./images16/h2hinf-01-24-019.png>] [267
+ [267 <./images16/h2hinf-01-24-018.png> <./images16/h2hinf-01-24-019.png>] [268
  <./images16/h2hinf-01-24-020.png>]
-<images16/h2hinf-01-24-021.png, id=3687, 845.1575pt x 597.432pt>
+<images16/h2hinf-01-24-021.png, id=3813, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-021.png Graphic file (type png)
 <use images16/h2hinf-01-24-021.png>
 Package pdftex.def Info: images16/h2hinf-01-24-021.png  used on input line 9815
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
-<images16/h2hinf-01-24-022.png, id=3688, 845.1575pt x 597.432pt>
+<images16/h2hinf-01-24-022.png, id=3814, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-022.png Graphic file (type png)
 <use images16/h2hinf-01-24-022.png>
 Package pdftex.def Info: images16/h2hinf-01-24-022.png  used on input line 9821
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [268 <./images16/h2hinf-01-24-021.png>]
-<images16/h2hinf-01-24-023.png, id=3695, 845.1575pt x 597.432pt>
+ [269 <./images16/h2hinf-01-24-021.png>]
+<images16/h2hinf-01-24-023.png, id=3821, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-023.png Graphic file (type png)
 <use images16/h2hinf-01-24-023.png>
 Package pdftex.def Info: images16/h2hinf-01-24-023.png  used on input line 9898
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [269 <./images16/h2hinf-01-24-022.png>]
-<images16/h2hinf-01-24-024.png, id=3702, 845.1575pt x 597.432pt>
+ [270 <./images16/h2hinf-01-24-022.png>]
+<images16/h2hinf-01-24-024.png, id=3828, 845.1575pt x 597.432pt>
 File: images16/h2hinf-01-24-024.png Graphic file (type png)
 <use images16/h2hinf-01-24-024.png>
 Package pdftex.def Info: images16/h2hinf-01-24-024.png  used on input line 9928
 .
 (pdftex.def)             Requested size: 387.30254pt x 273.78282pt.
- [270 <./images16/h2hinf-01-24-023.png>] [271 <./images16/h2hinf-01-24-024.png>
-] [272
+ [271 <./images16/h2hinf-01-24-023.png>] [272 <./images16/h2hinf-01-24-024.png>
+] [273
 
 ]
-<images17/h2hinf-25-42-007.png, id=3725, 845.10732pt x 597.13087pt>
+<images17/h2hinf-25-42-007.png, id=3851, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-007.png Graphic file (type png)
 <use images17/h2hinf-25-42-007.png>
 Package pdftex.def Info: images17/h2hinf-25-42-007.png  used on input line 9983
 .
 (pdftex.def)             Requested size: 368.40585pt x 260.30563pt.
- [273
+ [274
 
- <./images17/h2hinf-25-42-007.png>] [274
+ <./images17/h2hinf-25-42-007.png>] [275
 
 ]
-<images17/h2hinf-25-42-001.png, id=3741, 845.10732pt x 597.13087pt>
+<images17/h2hinf-25-42-001.png, id=3867, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-001.png Graphic file (type png)
 <use images17/h2hinf-25-42-001.png>
 Package pdftex.def Info: images17/h2hinf-25-42-001.png  used on input line 1009
 7.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [275 <./images17/h2hinf-25-42-001.png>]
-<images17/h2hinf-25-42-002.png, id=3748, 845.10732pt x 597.13087pt>
+ [276 <./images17/h2hinf-25-42-001.png>]
+<images17/h2hinf-25-42-002.png, id=3874, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-002.png Graphic file (type png)
 <use images17/h2hinf-25-42-002.png>
 Package pdftex.def Info: images17/h2hinf-25-42-002.png  used on input line 1018
 5.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [276]
-<images17/h2hinf-25-42-003.png, id=3754, 845.10732pt x 597.13087pt>
+ [277]
+<images17/h2hinf-25-42-003.png, id=3881, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-003.png Graphic file (type png)
 <use images17/h2hinf-25-42-003.png>
 Package pdftex.def Info: images17/h2hinf-25-42-003.png  used on input line 1026
 4.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [277 <./images17/h2hinf-25-42-002.png>]
-<images17/h2hinf-25-42-004.png, id=3762, 845.10732pt x 597.13087pt>
+ [278 <./images17/h2hinf-25-42-002.png>]
+<images17/h2hinf-25-42-004.png, id=3888, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-004.png Graphic file (type png)
 <use images17/h2hinf-25-42-004.png>
 Package pdftex.def Info: images17/h2hinf-25-42-004.png  used on input line 1033
 5.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [278 <./images17/h2hinf-25-42-003.png>]
+ [279 <./images17/h2hinf-25-42-003.png>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 10339.
 
-<images17/h2hinf-25-42-005.png, id=3769, 845.10732pt x 597.13087pt>
+<images17/h2hinf-25-42-005.png, id=3895, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-005.png Graphic file (type png)
 <use images17/h2hinf-25-42-005.png>
 Package pdftex.def Info: images17/h2hinf-25-42-005.png  used on input line 1039
 4.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [279 <./images17/h2hinf-25-42-004.png>]
-<images17/h2hinf-25-42-006.png, id=3778, 845.10732pt x 597.13087pt>
+ [280 <./images17/h2hinf-25-42-004.png>]
+<images17/h2hinf-25-42-006.png, id=3903, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-006.png Graphic file (type png)
 <use images17/h2hinf-25-42-006.png>
 Package pdftex.def Info: images17/h2hinf-25-42-006.png  used on input line 1040
 0.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [280 <./images17/h2hinf-25-42-005.png> <./images17/h2hinf-25-42-006.png>]
+ [281 <./images17/h2hinf-25-42-005.png> <./images17/h2hinf-25-42-006.png>]
 File: images17/h2hinf-25-42-007.png Graphic file (type png)
 <use images17/h2hinf-25-42-007.png>
 Package pdftex.def Info: images17/h2hinf-25-42-007.png  used on input line 1047
 1.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
-<images17/h2hinf-25-42-008.png, id=3786, 845.10732pt x 597.13087pt>
+<images17/h2hinf-25-42-008.png, id=3911, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-008.png Graphic file (type png)
 <use images17/h2hinf-25-42-008.png>
 Package pdftex.def Info: images17/h2hinf-25-42-008.png  used on input line 1047
 7.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [281]
-<images17/h2hinf-25-42-009.png, id=3793, 845.10732pt x 597.13087pt>
+ [282]
+<images17/h2hinf-25-42-009.png, id=3918, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-009.png Graphic file (type png)
 <use images17/h2hinf-25-42-009.png>
 Package pdftex.def Info: images17/h2hinf-25-42-009.png  used on input line 1054
 4.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [282 <./images17/h2hinf-25-42-008.png>]
-<images17/h2hinf-25-42-010.png, id=3800, 845.10732pt x 597.13087pt>
+ [283 <./images17/h2hinf-25-42-008.png>]
+<images17/h2hinf-25-42-010.png, id=3926, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-010.png Graphic file (type png)
 <use images17/h2hinf-25-42-010.png>
 Package pdftex.def Info: images17/h2hinf-25-42-010.png  used on input line 1055
 0.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [283 <./images17/h2hinf-25-42-009.png> <./images17/h2hinf-25-42-010.png>]
-<images17/h2hinf-25-42-011.png, id=3809, 845.10732pt x 597.13087pt>
+ [284 <./images17/h2hinf-25-42-009.png> <./images17/h2hinf-25-42-010.png>]
+<images17/h2hinf-25-42-011.png, id=3935, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-011.png Graphic file (type png)
 <use images17/h2hinf-25-42-011.png>
 Package pdftex.def Info: images17/h2hinf-25-42-011.png  used on input line 1059
 6.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [284 <./images17/h2hinf-25-42-011.png>]
-<images17/h2hinf-25-42-012.png, id=3816, 845.10732pt x 597.13087pt>
+ [285 <./images17/h2hinf-25-42-011.png>]
+<images17/h2hinf-25-42-012.png, id=3942, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-012.png Graphic file (type png)
 <use images17/h2hinf-25-42-012.png>
 Package pdftex.def Info: images17/h2hinf-25-42-012.png  used on input line 1062
 2.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [285 <./images17/h2hinf-25-42-012.png>]
-<images17/h2hinf-25-42-013.png, id=3825, 845.10732pt x 597.13087pt>
+ [286 <./images17/h2hinf-25-42-012.png>]
+<images17/h2hinf-25-42-013.png, id=3951, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-013.png Graphic file (type png)
 <use images17/h2hinf-25-42-013.png>
 Package pdftex.def Info: images17/h2hinf-25-42-013.png  used on input line 1067
 7.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
-<images17/h2hinf-25-42-014.png, id=3826, 845.10732pt x 597.13087pt>
+<images17/h2hinf-25-42-014.png, id=3952, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-014.png Graphic file (type png)
 <use images17/h2hinf-25-42-014.png>
 Package pdftex.def Info: images17/h2hinf-25-42-014.png  used on input line 1068
 3.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [286 <./images17/h2hinf-25-42-013.png>] [287 <./images17/h2hinf-25-42-014.png>
+ [287 <./images17/h2hinf-25-42-013.png>] [288 <./images17/h2hinf-25-42-014.png>
 ]
-<images17/h2hinf-25-42-015.png, id=3839, 845.10732pt x 597.13087pt>
+<images17/h2hinf-25-42-015.png, id=3965, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-015.png Graphic file (type png)
 <use images17/h2hinf-25-42-015.png>
 Package pdftex.def Info: images17/h2hinf-25-42-015.png  used on input line 1075
 8.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
-<images17/h2hinf-25-42-016.png, id=3840, 845.10732pt x 597.13087pt>
+<images17/h2hinf-25-42-016.png, id=3966, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-016.png Graphic file (type png)
 <use images17/h2hinf-25-42-016.png>
 Package pdftex.def Info: images17/h2hinf-25-42-016.png  used on input line 1076
 4.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [288 <./images17/h2hinf-25-42-015.png> <./images17/h2hinf-25-42-016.png>]
-<images17/h2hinf-25-42-017.png, id=3848, 845.10732pt x 597.13087pt>
+ [289 <./images17/h2hinf-25-42-015.png> <./images17/h2hinf-25-42-016.png>]
+<images17/h2hinf-25-42-017.png, id=3975, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-017.png Graphic file (type png)
 <use images17/h2hinf-25-42-017.png>
 Package pdftex.def Info: images17/h2hinf-25-42-017.png  used on input line 1080
 6.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [289 <./images17/h2hinf-25-42-017.png>]
-<images17/h2hinf-25-42-018.png, id=3856, 845.10732pt x 597.13087pt>
+ [290 <./images17/h2hinf-25-42-017.png>]
+<images17/h2hinf-25-42-018.png, id=3982, 845.10732pt x 597.13087pt>
 File: images17/h2hinf-25-42-018.png Graphic file (type png)
 <use images17/h2hinf-25-42-018.png>
 Package pdftex.def Info: images17/h2hinf-25-42-018.png  used on input line 1088
 4.
 (pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
- [290 <./images17/h2hinf-25-42-018.png>] [291] [292
+ [291 <./images17/h2hinf-25-42-018.png>] [292] [293
+
+]
+<images18/h2hinf-43-77-001.png, id=3999, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-001.png Graphic file (type png)
+<use images18/h2hinf-43-77-001.png>
+Package pdftex.def Info: images18/h2hinf-43-77-001.png  used on input line 1092
+6.
+(pdftex.def)             Requested size: 368.40585pt x 260.30563pt.
+ [294
+
+ <./images18/h2hinf-43-77-001.png>]
+File: images18/h2hinf-43-77-001.png Graphic file (type png)
+<use images18/h2hinf-43-77-001.png>
+Package pdftex.def Info: images18/h2hinf-43-77-001.png  used on input line 1100
+5.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+
+[295
+
+]
+<images18/h2hinf-43-77-002.png, id=4013, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-002.png Graphic file (type png)
+<use images18/h2hinf-43-77-002.png>
+Package pdftex.def Info: images18/h2hinf-43-77-002.png  used on input line 1105
+6.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [296]
+<images18/h2hinf-43-77-003.png, id=4024, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-003.png Graphic file (type png)
+<use images18/h2hinf-43-77-003.png>
+Package pdftex.def Info: images18/h2hinf-43-77-003.png  used on input line 1111
+5.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [297 <./images18/h2hinf-43-77-002.png>]
+<images18/h2hinf-43-77-004.png, id=4031, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-004.png Graphic file (type png)
+<use images18/h2hinf-43-77-004.png>
+Package pdftex.def Info: images18/h2hinf-43-77-004.png  used on input line 1114
+4.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [298 <./images18/h2hinf-43-77-003.png>]
+<images18/h2hinf-43-77-005.png, id=4038, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-005.png Graphic file (type png)
+<use images18/h2hinf-43-77-005.png>
+Package pdftex.def Info: images18/h2hinf-43-77-005.png  used on input line 1118
+6.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [299 <./images18/h2hinf-43-77-004.png>]
+<images18/h2hinf-43-77-006.png, id=4045, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-006.png Graphic file (type png)
+<use images18/h2hinf-43-77-006.png>
+Package pdftex.def Info: images18/h2hinf-43-77-006.png  used on input line 1119
+2.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [300 <./images18/h2hinf-43-77-005.png> <./images18/h2hinf-43-77-006.png>]
+<images18/h2hinf-43-77-007.png, id=4054, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-007.png Graphic file (type png)
+<use images18/h2hinf-43-77-007.png>
+Package pdftex.def Info: images18/h2hinf-43-77-007.png  used on input line 1122
+9.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [301 <./images18/h2hinf-43-77-007.png>]
+<images18/h2hinf-43-77-008.png, id=4062, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-008.png Graphic file (type png)
+<use images18/h2hinf-43-77-008.png>
+Package pdftex.def Info: images18/h2hinf-43-77-008.png  used on input line 1129
+7.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+<images18/h2hinf-43-77-009.png, id=4063, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-009.png Graphic file (type png)
+<use images18/h2hinf-43-77-009.png>
+Package pdftex.def Info: images18/h2hinf-43-77-009.png  used on input line 1130
+3.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [302 <./images18/h2hinf-43-77-008.png>]
+<images18/h2hinf-43-77-010.png, id=4070, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-010.png Graphic file (type png)
+<use images18/h2hinf-43-77-010.png>
+Package pdftex.def Info: images18/h2hinf-43-77-010.png  used on input line 1138
+1.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [303 <./images18/h2hinf-43-77-009.png>]
+<images18/h2hinf-43-77-011.png, id=4077, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-011.png Graphic file (type png)
+<use images18/h2hinf-43-77-011.png>
+Package pdftex.def Info: images18/h2hinf-43-77-011.png  used on input line 1138
+7.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+<images18/h2hinf-43-77-012.png, id=4078, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-012.png Graphic file (type png)
+<use images18/h2hinf-43-77-012.png>
+Package pdftex.def Info: images18/h2hinf-43-77-012.png  used on input line 1139
+3.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [304 <./images18/h2hinf-43-77-010.png> <./images18/h2hinf-43-77-011.png>]
+<images18/h2hinf-43-77-013.png, id=4086, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-013.png Graphic file (type png)
+<use images18/h2hinf-43-77-013.png>
+Package pdftex.def Info: images18/h2hinf-43-77-013.png  used on input line 1139
+9.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [305 <./images18/h2hinf-43-77-012.png> <./images18/h2hinf-43-77-013.png>]
+<images18/h2hinf-43-77-014.png, id=4094, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-014.png Graphic file (type png)
+<use images18/h2hinf-43-77-014.png>
+Package pdftex.def Info: images18/h2hinf-43-77-014.png  used on input line 1144
+5.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+<images18/h2hinf-43-77-015.png, id=4095, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-015.png Graphic file (type png)
+<use images18/h2hinf-43-77-015.png>
+Package pdftex.def Info: images18/h2hinf-43-77-015.png  used on input line 1145
+1.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+
+[306 <./images18/h2hinf-43-77-014.png>]
+<images18/h2hinf-43-77-016.png, id=4102, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-016.png Graphic file (type png)
+<use images18/h2hinf-43-77-016.png>
+Package pdftex.def Info: images18/h2hinf-43-77-016.png  used on input line 1148
+6.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [307 <./images18/h2hinf-43-77-015.png>]
+<images18/h2hinf-43-77-017.png, id=4110, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-017.png Graphic file (type png)
+<use images18/h2hinf-43-77-017.png>
+Package pdftex.def Info: images18/h2hinf-43-77-017.png  used on input line 1149
+2.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+[308 <./images18/h2hinf-43-77-016.png> <./images18/h2hinf-43-77-017.png>]
+<images18/h2hinf-43-77-018.png, id=4118, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-018.png Graphic file (type png)
+<use images18/h2hinf-43-77-018.png>
+Package pdftex.def Info: images18/h2hinf-43-77-018.png  used on input line 1155
+6.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+<images18/h2hinf-43-77-019.png, id=4119, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-019.png Graphic file (type png)
+<use images18/h2hinf-43-77-019.png>
+Package pdftex.def Info: images18/h2hinf-43-77-019.png  used on input line 1156
+2.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+
+[309 <./images18/h2hinf-43-77-018.png>]
+<images18/h2hinf-43-77-020.png, id=4130, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-020.png Graphic file (type png)
+<use images18/h2hinf-43-77-020.png>
+Package pdftex.def Info: images18/h2hinf-43-77-020.png  used on input line 1156
+8.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [310 <./images18/h2hinf-43-77-019.png> <./images18/h2hinf-43-77-020.png>]
+<images18/h2hinf-43-77-021.png, id=4138, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-021.png Graphic file (type png)
+<use images18/h2hinf-43-77-021.png>
+Package pdftex.def Info: images18/h2hinf-43-77-021.png  used on input line 1167
+2.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [311]
+<images18/h2hinf-43-77-022.png, id=4148, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-022.png Graphic file (type png)
+<use images18/h2hinf-43-77-022.png>
+Package pdftex.def Info: images18/h2hinf-43-77-022.png  used on input line 1167
+8.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+<images18/h2hinf-43-77-023.png, id=4149, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-023.png Graphic file (type png)
+<use images18/h2hinf-43-77-023.png>
+Package pdftex.def Info: images18/h2hinf-43-77-023.png  used on input line 1168
+4.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [312 <./images18/h2hinf-43-77-021.png> <./images18/h2hinf-43-77-022.png>]
+<images18/h2hinf-43-77-024.png, id=4157, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-024.png Graphic file (type png)
+<use images18/h2hinf-43-77-024.png>
+Package pdftex.def Info: images18/h2hinf-43-77-024.png  used on input line 1169
+0.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [313 <./images18/h2hinf-43-77-023.png> <./images18/h2hinf-43-77-024.png>]
+<images18/h2hinf-43-77-025.png, id=4166, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-025.png Graphic file (type png)
+<use images18/h2hinf-43-77-025.png>
+Package pdftex.def Info: images18/h2hinf-43-77-025.png  used on input line 1175
+1.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+<images18/h2hinf-43-77-026.png, id=4167, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-026.png Graphic file (type png)
+<use images18/h2hinf-43-77-026.png>
+Package pdftex.def Info: images18/h2hinf-43-77-026.png  used on input line 1175
+7.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [314 <./images18/h2hinf-43-77-025.png>]
+<images18/h2hinf-43-77-027.png, id=4174, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-027.png Graphic file (type png)
+<use images18/h2hinf-43-77-027.png>
+Package pdftex.def Info: images18/h2hinf-43-77-027.png  used on input line 1182
+1.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [315 <./images18/h2hinf-43-77-026.png>]
+<images18/h2hinf-43-77-028.png, id=4182, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-028.png Graphic file (type png)
+<use images18/h2hinf-43-77-028.png>
+Package pdftex.def Info: images18/h2hinf-43-77-028.png  used on input line 1182
+7.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [316 <./images18/h2hinf-43-77-027.png> <./images18/h2hinf-43-77-028.png>]
+<images18/h2hinf-43-77-029.png, id=4190, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-029.png Graphic file (type png)
+<use images18/h2hinf-43-77-029.png>
+Package pdftex.def Info: images18/h2hinf-43-77-029.png  used on input line 1190
+1.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+<images18/h2hinf-43-77-030.png, id=4191, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-030.png Graphic file (type png)
+<use images18/h2hinf-43-77-030.png>
+Package pdftex.def Info: images18/h2hinf-43-77-030.png  used on input line 1190
+7.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [317 <./images18/h2hinf-43-77-029.png>]
+<images18/h2hinf-43-77-031.png, id=4198, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-031.png Graphic file (type png)
+<use images18/h2hinf-43-77-031.png>
+Package pdftex.def Info: images18/h2hinf-43-77-031.png  used on input line 1193
+9.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [318 <./images18/h2hinf-43-77-030.png>]
+<images18/h2hinf-43-77-032.png, id=4205, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-032.png Graphic file (type png)
+<use images18/h2hinf-43-77-032.png>
+Package pdftex.def Info: images18/h2hinf-43-77-032.png  used on input line 1194
+5.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [319 <./images18/h2hinf-43-77-031.png> <./images18/h2hinf-43-77-032.png>]
+<images18/h2hinf-43-77-033.png, id=4214, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-033.png Graphic file (type png)
+<use images18/h2hinf-43-77-033.png>
+Package pdftex.def Info: images18/h2hinf-43-77-033.png  used on input line 1197
+9.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [320 <./images18/h2hinf-43-77-033.png>]
+<images18/h2hinf-43-77-034.png, id=4221, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-034.png Graphic file (type png)
+<use images18/h2hinf-43-77-034.png>
+Package pdftex.def Info: images18/h2hinf-43-77-034.png  used on input line 1201
+9.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [321 <./images18/h2hinf-43-77-034.png>]
+<images18/h2hinf-43-77-035.png, id=4228, 845.10732pt x 597.13087pt>
+File: images18/h2hinf-43-77-035.png Graphic file (type png)
+<use images18/h2hinf-43-77-035.png>
+Package pdftex.def Info: images18/h2hinf-43-77-035.png  used on input line 1207
+6.
+(pdftex.def)             Requested size: 387.30254pt x 273.65393pt.
+ [322 <./images18/h2hinf-43-77-035.png>] [323
 
 ]
 
@@ -3435,14 +3688,14 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0B8F5EBF982D2613F265FDD64E57B77E;79361.
+(rerunfilecheck)             Checksum: 29DBDA76DE1F6FD29DDABE66DA7EF52F;84456.
  ) 
 Here is how much of TeX's memory you used:
- 41770 strings out of 467525
- 885532 string characters out of 5418982
- 1244069 words of memory out of 5000000
- 68730 multiletter control sequences out of 15000+600000
- 741970 words of font info for 330 fonts, out of 8000000 for 9000
+ 42159 strings out of 467525
+ 896282 string characters out of 5418982
+ 1246558 words of memory out of 5000000
+ 69008 multiletter control sequences out of 15000+600000
+ 742252 words of font info for 333 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,14n,108p,1001b,1224s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb></usr/l
@@ -3470,10 +3723,10 @@ live/2026/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2026/
 texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2026/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (292 pages, 38562403 bytes).
+Output written on main.pdf (323 pages, 40641407 bytes).
 PDF statistics:
- 4209 PDF objects out of 4296 (max. 8388607)
- 3457 compressed objects within 35 object streams
- 933 named destinations out of 1000 (max. 500000)
- 62669 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 4596 PDF objects out of 5155 (max. 8388607)
+ 3775 compressed objects within 38 object streams
+ 1038 named destinations out of 1200 (max. 500000)
+ 63036 words of extra memory for PDF output out of 74296 (max. 10000000)
 

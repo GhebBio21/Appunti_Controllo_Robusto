@@ -10914,4 +10914,1196 @@ I punti principali sono:
 
 Questa parte del documento \`e una traduzione e rielaborazione estesa delle pagine 25--42 del PDF ``General Control Problem Formulation -- $\mathcal{H}_2/\mathcal{H}_\infty$ control synthesis'', caricato dall'utente come materiale di partenza nella directory \texttt{Slide}.
 
+% --- FRONTESPIZIO LEZIONE 18 ---
+\begin{coverpage}
+\centering
+{\Huge\bfseries Controllo Robusto\par}
+\vspace{0.4em}
+{\LARGE Traduzione in italiano e approfondimento\par}
+\vspace{0.5em}
+{\Large Sintesi ottima $\mathcal{H}_2$, Riccati, output feedback e controllo LQG\par}
+\vfill
+\includegraphics[width=0.78\textwidth]{images18/h2hinf-43-77-001.png}
+\vfill
+\begin{focusbox}
+\textbf{Obiettivo del documento.} Questa parte sviluppa la sintesi ottima $\mathcal{H}_2$ nella forma $P$-$K$. Si parte dal caso con stato completamente misurato, si ricava il problema di feedback di stato tramite equazioni di Riccati, si introduce il problema duale di stima, si combina tutto nell'output feedback ottimo e si mostra il collegamento con il controllo LQG, incluso il caso con azione integrale.
+\end{focusbox}
+\vfill
+{\large Basato sulle slide del corso AA 2025/2026\par}
+\end{coverpage}
+
+\section{Lezione 18}
+
+\subsection{Visione d'insieme della lezione}
+
+La Lezione 17 ha chiuso la parte geometrica della formulazione generale: pianta generalizzata, controllore dinamico, mappa chiusa e principio di separazione. La Lezione 18 entra nel cuore della sintesi $\mathcal{H}_2$. L'idea \`e trasformare il problema di minimizzazione
+$$
+\min_K \|T_{zw}\|_2
+=
+\min_K\|F_\ell(P,K)\|_2
+$$
+in equazioni algebriche di Riccati.
+
+Il percorso \`e ordinato in tre passaggi:
+\begin{enumerate}
+    \item prima si risolve il problema con stato disponibile, cio\`e il problema di \emph{state feedback};
+    \item poi si risolve il problema duale di stima dello stato, cio\`e il progetto dell'osservatore;
+    \item infine si combinano feedback e osservatore per ottenere l'output feedback ottimo $\mathcal{H}_2$ e il controllo LQG.
+\end{enumerate}
+
+\begin{keybox}
+\textbf{Idea guida.} Nel caso $\mathcal{H}_2$ la separazione non \`e solo un'intuizione: il controllore ottimo si costruisce risolvendo due problemi di Riccati indipendenti, uno di regolazione e uno di stima.
+\end{keybox}
+
+\subsection{Norma \texorpdfstring{$\mathcal{H}_2$}{H2} e risposta impulsiva}
+
+Consideriamo la pianta generalizzata nella forma standard
+$$
+\left[
+\begin{array}{c}
+\dot{x}\\
+z\\
+v
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c|cc}
+A & B_1 & B_2\\
+\hline
+C_1 & 0 & D_{12}\\
+C_2 & D_{21} & 0
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x\\
+w\\
+u
+\end{array}
+\right].
+$$
+Le ipotesi $D_{11}=0$ e $D_{22}=0$ sono tipiche nella presentazione teorica: evitano un passaggio diretto da $w$ a $z$ e un'algebra loop immediata fra $u$ e $v$.
+
+Il problema $\mathcal{H}_2$ consiste nel trovare un controllore $K(s)$ che minimizzi
+$$
+\|T_{zw}(s)\|_2
+=
+\|F_\ell(P(s),K(s))\|_2.
+$$
+Se $T_{zw}$ ha $m$ ingressi e se $z_i(t)$ \`e la risposta impulsiva all'ingresso $i$-esimo, allora
+$$
+\|T_{zw}\|_2^2
+=
+\sum_{i=1}^{m}
+\int_0^\infty z_i^T(t)z_i(t)\,dt.
+$$
+Quindi la norma $\mathcal{H}_2$ misura l'energia totale delle risposte impulsive da $w$ a $z$. \`E una misura naturale quando $w$ rappresenta disturbi energetici o rumori bianchi normalizzati.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-001.png}
+    \caption{Problema ottimo $\mathcal{H}_2$: minimizzare la norma della mappa chiusa $T_{zw}=F_\ell(P,K)$.}
+\end{figure}
+
+\subsection{Problema \texorpdfstring{$\mathcal{H}_2$}{H2} con feedback di stato}
+
+Cominciamo dal caso pi\`u semplice: lo stato $x(t)$ \`e completamente disponibile al controllore. In questo caso il segnale misurato \`e direttamente
+$$
+v=x,
+$$
+e si cerca una legge di controllo statica
+$$
+u(t)=-Kx(t).
+$$
+La pianta generalizzata usata per questo problema \`e
+$$
+\left[
+\begin{array}{c}
+\dot{x}\\
+z\\
+v
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c|cc}
+A & B_1 & B_2\\
+\hline
+C_1 & 0 & D_{12}\\
+I & 0 & 0
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x\\
+w\\
+u
+\end{array}
+\right].
+$$
+Le slide assumono:
+\begin{enumerate}
+    \item $(A,C_1)$ senza modi inosservabili sull'asse immaginario;
+    \item $(A,B_2)$ stabilizzabile;
+    \item $D_{12}^TD_{12}>0$;
+    \item $D_{12}^TC_1=0$.
+\end{enumerate}
+Le ultime due ipotesi semplificano molto l'algebra: il peso sul comando \`e non singolare e non c'\`e termine incrociato fra stato e comando nell'uscita di prestazione.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-002.png}
+    \caption{Sintesi $\mathcal{H}_2$ con stato disponibile: il controllore usa direttamente $x(t)$.}
+\end{figure}
+
+\subsection{Mappa chiusa con feedback di stato}
+
+Sostituendo
+$$
+u=-Kx
+$$
+nelle equazioni di stato si ottiene
+$$
+\dot{x}
+=
+(A-B_2K)x+B_1w,
+$$
+e l'uscita di prestazione diventa
+$$
+z=(C_1-D_{12}K)x.
+$$
+In Laplace:
+$$
+x(s)=
+\left(sI-A+B_2K\right)^{-1}B_1w(s),
+$$
+quindi
+$$
+T_{zw}(s)
+=
+(C_1-D_{12}K)
+\left(sI-A+B_2K\right)^{-1}B_1.
+$$
+Il problema \`e ora: scegliere $K$ in modo che $A-B_2K$ sia stabile e che la norma $\mathcal{H}_2$ di questa mappa sia minima.
+
+Se $Y$ \`e il gramiano di controllabilit\`a del sistema chiuso, allora
+$$
+(A-B_2K)Y+Y(A-B_2K)^T+B_1B_1^T=0,
+\qquad
+Y=Y^T>0,
+$$
+e
+$$
+\|T_{zw}\|_2^2
+=
+\operatorname{tr}\!\left[
+(C_1-D_{12}K)Y(C_1-D_{12}K)^T
+\right].
+$$
+Questo porta al problema di ottimizzazione:
+$$
+\min_{K,Y}
+\operatorname{tr}\!\left[
+(C_1-D_{12}K)Y(C_1-D_{12}K)^T
+\right]
+$$
+soggetto alla Lyapunov precedente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-003.png}
+    \caption{Con feedback di stato, la mappa $T_{zw}$ dipende da $A-B_2K$ e da $C_1-D_{12}K$.}
+\end{figure}
+
+\subsection{Formulazione duale con gramiano di osservabilit\`a}
+
+La stessa norma pu\`o essere calcolata usando il gramiano di osservabilit\`a $X$. In questo caso
+$$
+(A-B_2K)^TX+X(A-B_2K)
++(C_1-D_{12}K)^T(C_1-D_{12}K)=0,
+$$
+con
+$$
+X=X^T>0,
+$$
+e
+$$
+\|T_{zw}\|_2^2
+=
+\operatorname{tr}\!\left(B_1^TXB_1\right).
+$$
+La formulazione duale \`e quella pi\`u comoda per ricavare la formula esplicita del guadagno ottimo $K$, perch\'e il guadagno entra direttamente nella Lyapunov dell'osservabilit\`a.
+
+\begin{focusbox}
+\textbf{Due modi di vedere lo stesso costo.} Con $Y$ si misura quanta energia entra negli stati dal disturbo $w$; con $X$ si misura quanta energia degli stati viene vista dall'uscita $z$. Per sistemi stabili i due calcoli danno la stessa norma $\mathcal{H}_2$.
+\end{focusbox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-004.png}
+    \caption{Formulazione equivalente con gramiano di osservabilit\`a $X$.}
+\end{figure}
+
+\subsection{Approccio con moltiplicatori di Lagrange}
+
+Le slide ricavano il guadagno ottimo usando un approccio a moltiplicatori di Lagrange. Si considera l'ottimizzazione con gramiano $X$ e si introduce una matrice simmetrica di moltiplicatori $\Lambda=\Lambda^T$. L'Hamiltoniana scalare \`e, in forma compatta,
+$$
+\mathcal{H}
+=
+\operatorname{tr}(B_1^TXB_1)
++
+\operatorname{tr}
+\left[
+\Lambda
+\left(
+(A-B_2K)^TX+X(A-B_2K)
++(C_1-D_{12}K)^T(C_1-D_{12}K)
+\right)
+\right].
+$$
+Le condizioni necessarie rispetto a $K$, $X$ e $\Lambda$ producono:
+$$
+\frac{\partial\mathcal{H}}{\partial K}=0,
+\qquad
+\frac{\partial\mathcal{H}}{\partial X}=0,
+\qquad
+\frac{\partial\mathcal{H}}{\partial\Lambda}=0.
+$$
+La terza condizione recupera la Lyapunov di osservabilit\`a. La prima condizione d\`a, usando $D_{12}^TC_1=0$,
+$$
+-B_2^TX+D_{12}^TD_{12}K=0.
+$$
+Quindi
+$$
+K=
+\left(D_{12}^TD_{12}\right)^{-1}B_2^TX.
+$$
+Questa \`e la formula attesa: il feedback \`e proporzionale al gramiano di osservabilit\`a ottimo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-005.png}
+    \caption{Impostazione tramite moltiplicatori di Lagrange per il problema $\mathcal{H}_2$ con feedback di stato.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-006.png}
+    \caption{Condizioni necessarie e formula del guadagno $K$ in funzione della soluzione $X$.}
+\end{figure}
+
+\subsection{Equazione algebrica di Riccati per il feedback}
+
+Sostituendo
+$$
+K=
+\left(D_{12}^TD_{12}\right)^{-1}B_2^TX
+$$
+nell'equazione di Lyapunov si ottiene l'equazione algebrica di Riccati
+$$
+A^TX+XA
+-XB_2\left(D_{12}^TD_{12}\right)^{-1}B_2^TX
++C_1^TC_1=0.
+$$
+La soluzione cercata \`e quella semidefinita positiva che rende stabile
+$$
+A-B_2K.
+$$
+La matrice Hamiltoniana associata \`e
+$$
+H_X=
+\begin{bmatrix}
+A & -B_2\left(D_{12}^TD_{12}\right)^{-1}B_2^T\\
+-C_1^TC_1 & -A^T
+\end{bmatrix}.
+$$
+Questa matrice \`e importante perch\'e le soluzioni stabilizzanti dell'equazione di Riccati possono essere calcolate a partire dal suo sottospazio invariante stabile.
+
+\begin{keybox}
+\textbf{Messaggio operativo.} Il problema $\mathcal{H}_2$ con stato misurato si riduce a una Riccati. Una volta trovata $X$, il controllore \`e semplicemente $u=-Kx$ con $K=(D_{12}^TD_{12})^{-1}B_2^TX$.
+\end{keybox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-007.png}
+    \caption{Equazione algebrica di Riccati e matrice Hamiltoniana per il feedback di stato.}
+\end{figure}
+
+\subsection{Collegamento con il problema LQ}
+
+Le slide mostrano poi che il problema $\mathcal{H}_2$ con feedback di stato contiene il problema classico lineare-quadratico. Consideriamo una pianta
+$$
+\dot{x}=Ax+Bu+Tw_d,
+\qquad
+y=Cx+w_n.
+$$
+Nel problema LQ si assume lo stato disponibile e si vuole minimizzare
+$$
+J_{\mathrm{LQ}}
+=
+\lim_{T\to\infty}
+\frac{1}{T}
+\int_0^T
+\left[
+x^T(t)M^TQMx(t)+u^T(t)Ru(t)
+\right]dt,
+$$
+dove
+$$
+Q=Q^T>0,
+\qquad
+R=R^T>0.
+$$
+Si costruisce allora una pianta generalizzata con
+$$
+z=
+\begin{bmatrix}
+Q^{1/2}Mx\\
+R^{1/2}u
+\end{bmatrix}.
+$$
+In questa forma
+$$
+C_1=
+\begin{bmatrix}
+Q^{1/2}M\\
+0
+\end{bmatrix},
+\qquad
+D_{12}=
+\begin{bmatrix}
+0\\
+R^{1/2}
+\end{bmatrix}.
+$$
+Quindi
+$$
+C_1^TC_1=M^TQM,
+\qquad
+D_{12}^TD_{12}=R.
+$$
+La Riccati $\mathcal{H}_2$ diventa la Riccati LQR:
+$$
+A^TX+XA-XBR^{-1}B^TX+M^TQM=0,
+$$
+e
+$$
+K=R^{-1}B^TX.
+$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-008.png}
+    \caption{Il problema $\mathcal{H}_2$ con feedback di stato si riduce al classico problema LQ.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-009.png}
+    \caption{Pianta generalizzata per il costo LQ: si pesano combinazioni di stato e comando.}
+\end{figure}
+
+\subsection{Esempio: doppio integratore}
+
+Le slide propongono un esempio elementare:
+$$
+\dot{x}_1=x_2,
+\qquad
+\dot{x}_2=u+d=u+w.
+$$
+In forma di stato:
+$$
+\dot{x}
+=
+\begin{bmatrix}
+0 & 1\\
+0 & 0
+\end{bmatrix}x
++
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}u
++
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}w.
+$$
+Si assume che lo stato sia disponibile per il controllo. L'uscita virtuale da mantenere piccola \`e composta dalla posizione e dal comando:
+$$
+z=
+\begin{bmatrix}
+x_1\\
+u
+\end{bmatrix}.
+$$
+Quindi
+$$
+C_1=
+\begin{bmatrix}
+1 & 0\\
+0 & 0
+\end{bmatrix},
+\qquad
+D_{12}=
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}.
+$$
+La Riccati restituisce la soluzione stabilizzante
+$$
+X=
+\begin{bmatrix}
+\sqrt{2} & 1\\
+1 & \sqrt{2}
+\end{bmatrix},
+$$
+e il guadagno
+$$
+K=
+\left(D_{12}^TD_{12}\right)^{-1}B_2^TX
+=
+\begin{bmatrix}
+1 & \sqrt{2}
+\end{bmatrix}.
+$$
+La legge di controllo ottima \`e quindi
+$$
+u(t)=-x_1(t)-\sqrt{2}\,x_2(t).
+$$
+Il segno \`e quello della convenzione $u=-Kx$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-010.png}
+    \caption{Esempio di doppio integratore: modello in forma di stato e stato disponibile al controllore.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-011.png}
+    \caption{Uscita virtuale $z=[x_1\ u]^T$ e matrici della pianta generalizzata per il doppio integratore.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-012.png}
+    \caption{Risoluzione della Riccati per l'esempio del doppio integratore.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-013.png}
+    \caption{Guadagno ottimo $K=[1\ \sqrt{2}]$ per il doppio integratore.}
+\end{figure}
+
+\subsection{Problema duale: stima dello stato}
+
+Passiamo ora al problema di stima. Qui non vogliamo direttamente scegliere $u$, ma ricostruire lo stato $x(t)$ a partire da misure rumorose. Si considera
+$$
+\dot{x}=Ax+B_1w+B_2u,
+\qquad
+y=C_2x+D_{21}w.
+$$
+L'osservatore \`e
+$$
+\dot{\hat{x}}
+=
+A\hat{x}+B_2u+L(y-\hat{y}),
+\qquad
+\hat{y}=C_2\hat{x}.
+$$
+Il guadagno $L$ deve essere scelto in modo da rendere stabile l'errore di stima e minimizzare l'influenza di $w$ su tale errore.
+
+Definiamo
+$$
+e=x-\hat{x}.
+$$
+Allora
+$$
+\dot{e}
+=
+(A-LC_2)e+(B_1-LD_{21})w.
+$$
+Se l'uscita da rendere piccola \`e
+$$
+z=C_1e,
+$$
+la mappa da $w$ a $z$ \`e
+$$
+T_{zw}(s)
+=
+C_1(sI-A+LC_2)^{-1}(B_1-LD_{21}).
+$$
+Il problema di stima $\mathcal{H}_2$ consiste nel trovare $L$ tale che $A-LC_2$ sia Hurwitz e $\|T_{zw}\|_2$ sia minima.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-014.png}
+    \caption{Problema di stima: l'osservatore usa $y$ per ricostruire lo stato $x$.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-015.png}
+    \caption{Dinamica dell'errore di stima e trasferimento da $w$ a $z=C_1e$.}
+\end{figure}
+
+\subsection{Sintesi \texorpdfstring{$\mathcal{H}_2$}{H2} dello stimatore}
+
+Usando il gramiano di osservabilit\`a $Y$ della mappa di errore, la norma pu\`o essere scritta come
+$$
+\|T_{zw}\|_2^2
+=
+\operatorname{tr}\!\left[
+(B_1-LD_{21})^T
+Y
+(B_1-LD_{21})
+\right],
+$$
+dove
+$$
+(A-LC_2)^TY+Y(A-LC_2)+C_1^TC_1<0.
+$$
+In modo duale, con il gramiano di controllabilit\`a $X_e$:
+$$
+(A-LC_2)X_e+X_e(A-LC_2)^T
++(B_1-LD_{21})(B_1-LD_{21})^T<0,
+$$
+e
+$$
+\|T_{zw}\|_2^2
+=
+\operatorname{tr}(C_1X_eC_1^T).
+$$
+La forma \`e la stessa del feedback di stato, ma con matrici trasposte e ruoli scambiati. Questo \`e il principio di dualit\`a.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-016.png}
+    \caption{Problema $\mathcal{H}_2$ di stima scritto con il gramiano di osservabilit\`a.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-017.png}
+    \caption{Dualit\`a fra problema di feedback di stato e problema di stima.}
+\end{figure}
+
+\subsection{Riccati per lo stimatore}
+
+La pianta generalizzata per il problema di stima si ottiene per dualit\`a:
+$$
+\left[
+\begin{array}{c}
+\dot{x}\\
+z\\
+v
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c|cc}
+A & B_1 & B_2\\
+\hline
+C_1 & 0 & 0\\
+C_2 & D_{21} & 0
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x\\
+w\\
+u
+\end{array}
+\right].
+$$
+Le ipotesi duali sono:
+\begin{enumerate}
+    \item $(A,B_1)$ senza modi incontrollabili sull'asse immaginario;
+    \item $(A,C_2)$ rilevabile;
+    \item $D_{21}D_{21}^T>0$;
+    \item $B_1D_{21}^T=0$.
+\end{enumerate}
+Il guadagno ottimo dello stimatore \`e
+$$
+L=YC_2^T(D_{21}D_{21}^T)^{-1},
+$$
+dove $Y=Y^T\geq0$ risolve
+$$
+AY+YA^T
+-YC_2^T(D_{21}D_{21}^T)^{-1}C_2Y
++B_1B_1^T=0.
+$$
+La matrice Hamiltoniana associata pu\`o essere scritta come
+$$
+H_Y=
+\begin{bmatrix}
+A^T & -C_2^T(D_{21}D_{21}^T)^{-1}C_2\\
+-B_1B_1^T & -A
+\end{bmatrix}.
+$$
+La soluzione stabilizzante \`e quella che rende stabile
+$$
+A-LC_2.
+$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-018.png}
+    \caption{Pianta generalizzata e ipotesi per il problema $\mathcal{H}_2$ di stima.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-019.png}
+    \caption{Guadagno dello stimatore e Riccati duale per la matrice $Y$.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-020.png}
+    \caption{Hamiltoniana del problema di stima e valore minimo del costo.}
+\end{figure}
+
+\subsection{Output feedback ottimo \texorpdfstring{$\mathcal{H}_2$}{H2}}
+
+Le slide arrivano poi al caso completo: lo stato non \`e misurato, quindi il controllore deve stimarlo e usare la stima per controllare. Il risultato \`e notevole:
+
+\begin{quote}
+Il problema $\mathcal{H}_2$ di output feedback si separa in due problemi LQ indipendenti: uno di feedback di stato e uno di stima.
+\end{quote}
+
+La pianta generale \`e
+$$
+\left[
+\begin{array}{c}
+\dot{x}\\
+z\\
+v
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c|cc}
+A & B_1 & B_2\\
+\hline
+C_1 & 0 & D_{12}\\
+C_2 & D_{21} & 0
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x\\
+w\\
+u
+\end{array}
+\right].
+$$
+Si assumono:
+\begin{enumerate}
+    \item assenza di modi incontrollabili e inosservabili sull'asse immaginario per la parte rilevante;
+    \item $(A,B_2,C_2)$ stabilizzabile e rilevabile;
+    \item $D_{12}^TD_{12}>0$ e $D_{21}D_{21}^T>0$;
+    \item $D_{12}^TC_1=0$ e $B_1D_{21}^T=0$.
+\end{enumerate}
+
+Il controllore ottimo ha la forma osservatore-feedback:
+$$
+\dot{\hat{x}}
+=
+A\hat{x}+B_2u+L(v-C_2\hat{x}),
+\qquad
+u=-K\hat{x}.
+$$
+In forma di trasferimento:
+$$
+K_{\mathrm{of}}(s)
+=
+-K
+\left(sI-A+B_2K+LC_2\right)^{-1}L.
+$$
+Equivalente realizzazione:
+$$
+\left[
+\begin{array}{c}
+\dot{\hat{x}}\\
+u
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c|c}
+A-B_2K-LC_2 & L\\
+\hline
+-K & 0
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+\hat{x}\\
+v
+\end{array}
+\right].
+$$
+I guadagni sono
+$$
+K=(D_{12}^TD_{12})^{-1}B_2^TX,
+\qquad
+L=YC_2^T(D_{21}D_{21}^T)^{-1},
+$$
+dove $X$ e $Y$ risolvono le due Riccati gi\`a viste:
+$$
+A^TX+XA-XB_2(D_{12}^TD_{12})^{-1}B_2^TX+C_1^TC_1=0,
+$$
+$$
+AY+YA^T-YC_2^T(D_{21}D_{21}^T)^{-1}C_2Y+B_1B_1^T=0.
+$$
+
+\begin{keybox}
+\textbf{Principio di separazione $\mathcal{H}_2$.} Il feedback ottimo $K$ e il guadagno di stima $L$ possono essere calcolati indipendentemente. Il controllore finale li combina nella struttura osservatore-feedback.
+\end{keybox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-021.png}
+    \caption{Il problema $\mathcal{H}_2$ di output feedback come combinazione di due problemi LQ.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-022.png}
+    \caption{Ipotesi standard per il problema $\mathcal{H}_2$ di output feedback.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-023.png}
+    \caption{Realizzazione del controllore ottimo $\mathcal{H}_2$ come osservatore pi\`u feedback sulla stima.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-024.png}
+    \caption{Le due Riccati indipendenti e le Hamiltoniane associate.}
+\end{figure}
+
+\subsection{Valore minimo e ipotesi rilassate}
+
+Il valore minimo del costo $\mathcal{H}_2$ pu\`o essere scritto come somma di due contributi: uno legato al feedback di stato e uno legato all'errore di stima. Con le convenzioni delle slide:
+$$
+\|T_{zw}\|_2^2
+=
+\operatorname{tr}(B_1^TXB_1)
++
+\operatorname{tr}\!\left[
+(D_{12}^TD_{12})K\,Y\,K^T
+\right].
+$$
+Il primo termine \`e il costo che si avrebbe usando lo stato vero; il secondo misura il prezzo dovuto al fatto che si usa una stima.
+
+Le ultime ipotesi di ortogonalit\`a,
+$$
+D_{12}^TC_1=0,
+\qquad
+B_1D_{21}^T=0,
+$$
+non sono indispensabili. Se non valgono, compaiono termini incrociati nelle Riccati.
+
+Per il feedback di stato, ponendo
+$$
+R=D_{12}^TD_{12},
+\qquad
+S=C_1^TD_{12},
+$$
+la Riccati generale diventa
+$$
+A^TX+XA
+-(XB_2+S)R^{-1}(B_2^TX+S^T)
++C_1^TC_1=0,
+$$
+e
+$$
+K=R^{-1}(B_2^TX+D_{12}^TC_1).
+$$
+Per lo stimatore, ponendo
+$$
+V=D_{21}D_{21}^T,
+\qquad
+N=B_1D_{21}^T,
+$$
+si ha
+$$
+AY+YA^T
+-(YC_2^T+N)V^{-1}(C_2Y+N^T)
++B_1B_1^T=0,
+$$
+e
+$$
+L=(YC_2^T+B_1D_{21}^T)V^{-1}.
+$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-025.png}
+    \caption{Valore minimo del costo $\mathcal{H}_2$ per il controllore di output feedback.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-026.png}
+    \caption{Caso con ipotesi di ortogonalit\`a rilassate: compaiono termini incrociati nelle Riccati.}
+\end{figure}
+
+\subsection{Controllo Linear-Quadratic-Gaussian}
+
+Le slide collegano ora la sintesi $\mathcal{H}_2$ al controllo LQG. Nel controllo LQG classico si assume che:
+\begin{itemize}
+    \item la dinamica sia lineare e nota;
+    \item i disturbi di processo e i rumori di misura siano gaussiani, bianchi e con covarianze note;
+    \item il costo sia quadratico.
+\end{itemize}
+La pianta \`e
+$$
+\dot{x}=Ax+Bu+Tw_d,
+\qquad
+y=Cx+w_n,
+$$
+dove $w_d$ \`e il rumore di processo e $w_n$ il rumore di misura. Si assume, nel caso non correlato,
+$$
+\mathbb{E}
+\left[
+\begin{bmatrix}
+w_d(t)\\
+w_n(t)
+\end{bmatrix}
+\begin{bmatrix}
+w_d(\tau)\\
+w_n(\tau)
+\end{bmatrix}^T
+\right]
+=
+\begin{bmatrix}
+W & 0\\
+0 & V
+\end{bmatrix}
+\delta(t-\tau).
+$$
+Il costo da minimizzare \`e
+$$
+J_{\mathrm{LQG}}
+=
+\lim_{T\to\infty}
+\frac{1}{T}
+\mathbb{E}
+\left[
+\int_0^T
+\left(
+q^T(t)Qq(t)+u^T(t)Ru(t)
+\right)dt
+\right],
+$$
+dove
+$$
+q=Mx,
+\qquad
+Q=Q^T>0,
+\qquad
+R=R^T>0.
+$$
+Il nome LQG viene proprio da qui: modello \emph{lineare}, costo \emph{quadratico}, rumori \emph{gaussiani}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-027.png}
+    \caption{Impostazione del controllo LQG: dinamica lineare, rumore di processo e rumore di misura gaussiani.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-028.png}
+    \caption{Costo quadratico LQG e interpretazione del nome Linear-Quadratic-Gaussian.}
+\end{figure}
+
+\subsection{LQG come problema \texorpdfstring{$\mathcal{H}_2$}{H2}}
+
+Il punto chiave \`e riscrivere LQG come un problema $\mathcal{H}_2$. Prima si definisce
+$$
+z=
+\begin{bmatrix}
+Q^{1/2}q\\
+R^{1/2}u
+\end{bmatrix}
+=
+\begin{bmatrix}
+Q^{1/2}Mx\\
+R^{1/2}u
+\end{bmatrix}.
+$$
+Poi si rappresentano i rumori come funzioni di un ingresso bianco normalizzato $w$:
+$$
+\begin{bmatrix}
+w_d\\
+w_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+W^{1/2} & 0\\
+0 & V^{1/2}
+\end{bmatrix}w.
+$$
+Con questa scelta, il costo LQG coincide con la norma $\mathcal{H}_2$ della mappa chiusa:
+$$
+J_{\mathrm{LQG}}
+=
+\|T_{zw}\|_2^2
+=
+\|F_\ell(P,K)\|_2^2.
+$$
+La pianta generalizzata diventa
+$$
+\left[
+\begin{array}{c}
+\dot{x}\\
+z\\
+v
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c|cc}
+A & \begin{array}{cc}TW^{1/2} & 0\end{array} & B\\
+\hline
+\begin{array}{c}Q^{1/2}M\\0\end{array}
+& 0
+& \begin{array}{c}0\\R^{1/2}\end{array}\\
+C & \begin{array}{cc}0 & V^{1/2}\end{array} & 0
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x\\
+w\\
+u
+\end{array}
+\right].
+$$
+
+\begin{focusbox}
+\textbf{Traduzione concettuale.} LQG diventa $\mathcal{H}_2$ quando i rumori gaussiani vengono visti come ingressi bianchi normalizzati e il costo quadratico viene visto come energia dell'uscita virtuale $z$.
+\end{focusbox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-029.png}
+    \caption{Primo passo: definire l'uscita virtuale $z$ e normalizzare i rumori tramite le loro covarianze.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-030.png}
+    \caption{Pianta generalizzata che riscrive LQG come problema $\mathcal{H}_2$.}
+\end{figure}
+
+\subsection{Guadagni LQG}
+
+Il guadagno di feedback di stato, indicato nelle slide come $K_c$, \`e
+$$
+K_c=R^{-1}B^TX,
+$$
+dove $X=X^T>0$ risolve
+$$
+A^TX+XA-XBR^{-1}B^TX+M^TQM=0.
+$$
+Il guadagno dello stimatore, cio\`e il guadagno di Kalman, \`e
+$$
+K_f=YC^TV^{-1},
+$$
+dove $Y=Y^T>0$ risolve
+$$
+YA^T+AY-YC^TV^{-1}CY+TWT^T=0.
+$$
+La prima Riccati \`e quella del regolatore LQ; la seconda \`e quella del filtro di Kalman. Il controllore LQG \`e la combinazione delle due.
+
+Le condizioni di esistenza richiedono stabilizzabilit\`a e rilevabilit\`a:
+\begin{itemize}
+    \item $(A,B,Q^{1/2}M)$ deve essere stabilizzabile/rilevabile nel senso richiesto dal problema LQ;
+    \item $(A,TW^{1/2},C)$ deve essere stabilizzabile/rilevabile nel senso richiesto dal problema di stima.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-031.png}
+    \caption{Riccati LQ e Riccati di Kalman: guadagni $K_c$ e $K_f$.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-032.png}
+    \caption{Condizioni di esistenza e metodo Hamiltoniano per risolvere le equazioni di Riccati.}
+\end{figure}
+
+\subsection{Metodo Hamiltoniano per la Riccati}
+
+Le equazioni di Riccati possono essere risolte tramite matrici Hamiltoniane. Per una Riccati del tipo
+$$
+A^TP+PA-PBR^{-1}B^TP+Q=0,
+$$
+la matrice Hamiltoniana \`e
+$$
+H=
+\begin{bmatrix}
+A & -BR^{-1}B^T\\
+-Q & -A^T
+\end{bmatrix}.
+$$
+Se $H$ non ha autovalori sull'asse immaginario, si ordinano gli autovettori in modo che i primi $n$ corrispondano agli autovalori a parte reale negativa:
+$$
+U=
+\begin{bmatrix}
+U_1\\
+U_2
+\end{bmatrix}.
+$$
+La soluzione stabilizzante della Riccati \`e
+$$
+P=U_2U_1^{-1}.
+$$
+Questa costruzione spiega perch\'e la scelta della soluzione giusta della Riccati non \`e arbitraria: serve quella associata al sottospazio stabile della Hamiltoniana.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-033.png}
+    \caption{Soluzione della Riccati tramite sottospazio invariante stabile della matrice Hamiltoniana.}
+\end{figure}
+
+\subsection{Regolatore LQG}
+
+Il regolatore LQG ha la struttura:
+$$
+\dot{\hat{x}}
+=
+A\hat{x}+Bu+K_f(y-C\hat{x}),
+\qquad
+u=-K_c\hat{x}.
+$$
+Sostituendo $u=-K_c\hat{x}$:
+$$
+\dot{\hat{x}}
+=
+(A-BK_c-K_fC)\hat{x}+K_fy,
+$$
+quindi una realizzazione del controllore \`e
+$$
+K_{\mathrm{LQG}}(s)
+=
+\left[
+\begin{array}{c|c}
+A-BK_c-K_fC & K_f\\
+\hline
+-K_c & 0
+\end{array}
+\right].
+$$
+Il controllore ha lo stesso grado della pianta: contiene un osservatore dello stato della pianta e applica su quello il feedback LQ.
+
+\begin{keybox}
+\textbf{LQG in una frase.} Il regolatore LQG \`e ``filtro di Kalman + LQR'': il filtro stima lo stato, l'LQR controlla la stima.
+\end{keybox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-034.png}
+    \caption{Regolatore LQG: stima ottima dello stato pi\`u feedback LQ sulla stima.}
+\end{figure}
+
+\subsection{LQG con azione integrale}
+
+L'ultima slide mostra una variante molto usata in pratica: aggiungere azione integrale. L'obiettivo \`e migliorare il comportamento a regime, per esempio eliminare offset su riferimenti costanti o disturbi costanti.
+
+Si costruisce una pianta aumentata introducendo uno stato integrale. Se lo stato integrale accumula l'uscita o l'errore, una forma tipica \`e
+$$
+x_a=
+\begin{bmatrix}
+x\\
+\xi
+\end{bmatrix},
+\qquad
+\dot{\xi}=Cx.
+$$
+La dinamica aumentata diventa
+$$
+\dot{x}_a=A_ax_a+B_au+T_aw_d,
+$$
+con
+$$
+A_a=
+\begin{bmatrix}
+A & 0\\
+C & 0
+\end{bmatrix},
+\qquad
+B_a=
+\begin{bmatrix}
+B\\
+0
+\end{bmatrix},
+\qquad
+T_a=
+\begin{bmatrix}
+T\\
+0
+\end{bmatrix}.
+$$
+Poi si applica lo stesso progetto LQG alla pianta aumentata. Il guadagno LQ agisce sia sullo stato stimato sia sullo stato integrale:
+$$
+K_a=
+\begin{bmatrix}
+K_c & K_i
+\end{bmatrix}.
+$$
+Il controllore finale ha lo stesso ordine della pianta aumentata, quindi include sia l'osservatore sia la dinamica integrale.
+
+\begin{focusbox}
+\textbf{Perch\'e serve l'integratore.} Il LQG puro ottimizza una risposta media rispetto a rumori modellati, ma non garantisce automaticamente errore nullo a regime rispetto a segnali costanti. L'azione integrale aggiunge questa propriet\`a strutturale.
+\end{focusbox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images18/h2hinf-43-77-035.png}
+    \caption{Regolatore LQG con azione integrale: si progetta un LQG sulla pianta aumentata.}
+\end{figure}
+
+\subsection{Sintesi conclusiva della lezione}
+
+La Lezione 18 costruisce il ponte fra la formulazione generale $P$-$K$ e gli algoritmi classici di sintesi ottima. Il problema $\mathcal{H}_2$ non resta una minimizzazione astratta: sotto ipotesi standard diventa una coppia di equazioni algebriche di Riccati.
+
+I messaggi principali sono:
+\begin{itemize}
+    \item la norma $\mathcal{H}_2$ misura l'energia delle risposte impulsive da $w$ a $z$;
+    \item con stato disponibile, il feedback ottimo \`e $u=-Kx$ e $K$ si ottiene da una Riccati;
+    \item il problema di stima \`e il duale del problema di feedback di stato;
+    \item l'output feedback ottimo $\mathcal{H}_2$ combina un feedback LQ e uno stimatore di Kalman;
+    \item LQG \`e una formulazione probabilistica che si riscrive come problema $\mathcal{H}_2$;
+    \item l'azione integrale si ottiene progettando il regolatore sulla pianta aumentata.
+\end{itemize}
+
+\begin{keybox}
+\textbf{Messaggio operativo.} Quando un problema di controllo robusto viene portato nella forma generalizzata corretta, le scelte di costo, rumore, pesi e misure diventano matrici precise nelle Riccati. La teoria funziona bene solo se la costruzione di $P$ rappresenta davvero ci\`o che vogliamo ottimizzare.
+\end{keybox}
+
+\clearpage
+\phantomsection
+\section*{Appendice}
+\addcontentsline{toc}{section}{Appendice}
+
+\subsection*{Riferimento al materiale originale}
+\phantomsection
+\addcontentsline{toc}{subsection}{Riferimento al materiale originale}
+
+Questa parte del documento \`e una traduzione e rielaborazione estesa delle pagine 43--77 del PDF ``General Control Problem Formulation -- $\mathcal{H}_2/\mathcal{H}_\infty$ control synthesis'', caricato dall'utente come materiale di partenza nella directory \texttt{Slide}.
+
 \end{document}
