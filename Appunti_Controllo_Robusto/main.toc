@@ -305,3 +305,21 @@
 \contentsline {subsection}{\numberline {16.15}Sintesi conclusiva della lezione}{271}{subsection.16.15}%
 \contentsline {section}{Appendice}{272}{section*.254}%
 \contentsline {subsection}{Riferimento al materiale originale}{272}{section*.255}%
+\contentsline {section}{\numberline {17}Lezione 17}{274}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Visione d'insieme della lezione}{274}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}Ricavare $P$ da $N$: sensibilit\`a pesata}{274}{subsection.17.2}%
+\contentsline {subsection}{\numberline {17.3}Ricavare $P$ da uno stack di mixed sensitivity}{275}{subsection.17.3}%
+\contentsline {subsection}{\numberline {17.4}Esempio con disturbo come ingresso esogeno}{277}{subsection.17.4}%
+\contentsline {subsection}{\numberline {17.5}Esempio con riferimento come ingresso esogeno}{278}{subsection.17.5}%
+\contentsline {subsection}{\numberline {17.6}Aggiungere $T$: il problema risolto da \texttt {mixsyn}}{279}{subsection.17.6}%
+\contentsline {subsection}{\numberline {17.7}Realizzazione della pianta generalizzata}{281}{subsection.17.7}%
+\contentsline {subsection}{\numberline {17.8}Dal modello di stato alla matrice di trasferimento}{282}{subsection.17.8}%
+\contentsline {subsection}{\numberline {17.9}Problemi ottimi $\mathcal {H}_2$ e $\mathcal {H}_\infty $}{283}{subsection.17.9}%
+\contentsline {subsection}{\numberline {17.10}Problema subottimo $\mathcal {H}_\infty $}{284}{subsection.17.10}%
+\contentsline {subsection}{\numberline {17.11}Struttura del controllore: osservatore e feedback di stato}{285}{subsection.17.11}%
+\contentsline {subsection}{\numberline {17.12}Matrice di trasferimento chiusa}{287}{subsection.17.12}%
+\contentsline {subsection}{\numberline {17.13}Caso osservatore-feedback}{289}{subsection.17.13}%
+\contentsline {subsection}{\numberline {17.14}Principio di separazione}{289}{subsection.17.14}%
+\contentsline {subsection}{\numberline {17.15}Sintesi conclusiva della lezione}{290}{subsection.17.15}%
+\contentsline {section}{Appendice}{292}{section*.274}%
+\contentsline {subsection}{Riferimento al materiale originale}{292}{section*.275}%

@@ -9971,4 +9971,947 @@ Questa formula \`e il ponte fra schemi a blocchi, pesi di progetto e algoritmi d
 
 Questa parte del documento \`e una traduzione e rielaborazione estesa delle pagine 1--24 del PDF ``General Control Problem Formulation -- $\mathcal{H}_2/\mathcal{H}_\infty$ control synthesis'', caricato dall'utente come materiale di partenza nella directory \texttt{Slide}.
 
+% --- FRONTESPIZIO LEZIONE 17 ---
+\begin{coverpage}
+\centering
+{\Huge\bfseries Controllo Robusto\par}
+\vspace{0.4em}
+{\LARGE Traduzione in italiano e approfondimento\par}
+\vspace{0.5em}
+{\Large Sintesi ottima $\mathcal{H}_2/\mathcal{H}_\infty$, realizzazione generalizzata e principio di separazione\par}
+\vfill
+\includegraphics[width=0.78\textwidth]{images17/h2hinf-25-42-007.png}
+\vfill
+\begin{focusbox}
+\textbf{Obiettivo del documento.} Questa parte continua la formulazione generale $P$-$K$. Prima si mostra come ricavare una pianta generalizzata $P$ a partire da una mappa chiusa desiderata $N(K)$; poi si passa alla realizzazione in spazio di stato, alla definizione dei problemi ottimi $\mathcal{H}_2$ e $\mathcal{H}_\infty$, alla struttura del controllore dinamico e al principio di separazione fra feedback di stato e osservatore.
+\end{focusbox}
+\vfill
+{\large Basato sulle slide del corso AA 2025/2026\par}
+\end{coverpage}
+
+\section{Lezione 17}
+
+\subsection{Visione d'insieme della lezione}
+
+La Lezione 16 ha introdotto la forma generale del problema di controllo:
+$$
+\begin{bmatrix}
+z\\
+v
+\end{bmatrix}
+=
+P
+\begin{bmatrix}
+w\\
+u
+\end{bmatrix},
+\qquad
+u=Kv,
+\qquad
+N(K)=F_\ell(P,K).
+$$
+La Lezione 17 riparte da qui e rende questa formulazione pi\`u operativa.
+
+Il percorso delle slide 25--42 \`e il seguente:
+\begin{enumerate}
+    \item ricavare una possibile pianta generalizzata $P$ partendo da uno stack $N(K)$ gi\`a noto;
+    \item riconoscere le diverse piante $P$ associate a problemi $S/KS$, $S/T/KS$ e \texttt{mixsyn};
+    \item scrivere $P$ in forma di stato e identificare le matrici $A,B_1,B_2,C_1,C_2,D_{ij}$;
+    \item definire i problemi ottimi e subottimi $\mathcal{H}_2$ e $\mathcal{H}_\infty$;
+    \item descrivere la struttura del controllore dinamico basato su osservatore e feedback di stato;
+    \item arrivare al principio di separazione.
+\end{enumerate}
+
+\begin{keybox}
+\textbf{Idea guida.} La pianta generalizzata non \`e solo un diagramma a blocchi comodo: \`e l'oggetto matematico che entra negli algoritmi di sintesi. Scegliere $P$ significa scegliere che cosa il controllore deve vedere, che cosa pu\`o comandare e quali uscite pesate devono diventare piccole.
+\end{keybox}
+
+\subsection{Ricavare \texorpdfstring{$P$}{P} da \texorpdfstring{$N$}{N}: sensibilit\`a pesata}
+
+La prima slide riprende la procedura inversa introdotta alla fine della lezione precedente: dato uno stack chiuso $N(K)$, vogliamo trovare una pianta generalizzata $P$ tale che
+$$
+N(K)=F_\ell(P,K)
+=
+P_{11}+P_{12}K(I-P_{22}K)^{-1}P_{21}.
+$$
+L'esempio pi\`u semplice \`e la sensibilit\`a pesata:
+$$
+N(K)=w_P S=w_P(I+GK)^{-1},
+$$
+dove $w_P$ \`e un peso scalare.
+
+Il primo blocco si ottiene ponendo $K=0$:
+$$
+P_{11}=N(0)=w_P I.
+$$
+Poi si definisce
+$$
+Q=N-P_{11}.
+$$
+Usando
+$$
+S-I=-GK(I+GK)^{-1},
+$$
+si ha
+$$
+Q=w_P(S-I)
+=-w_PGK(I+GK)^{-1}.
+$$
+Il fattore comune da riconoscere \`e
+$$
+R=K(I+GK)^{-1}.
+$$
+Per far comparire questo stesso denominatore nella LFT bisogna scegliere
+$$
+P_{22}=-G,
+$$
+perch\'e
+$$
+K(I-P_{22}K)^{-1}=K(I+GK)^{-1}.
+$$
+A questo punto
+$$
+Q=-w_PG R,
+$$
+quindi una scelta naturale \`e
+$$
+P_{12}=-w_PG,
+\qquad
+P_{21}=I.
+$$
+Otteniamo cos\`i
+$$
+P=
+\begin{bmatrix}
+w_P I & -w_PG\\
+I & -G
+\end{bmatrix}.
+$$
+
+\begin{focusbox}
+\textbf{Lettura del risultato.} La riga superiore costruisce l'uscita pesata $z$; la riga inferiore costruisce il segnale $v$ dato al controllore. La scelta $P_{22}=-G$ codifica il denominatore chiuso $I+GK$.
+\end{focusbox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-001.png}
+    \caption{Procedura inversa applicata alla sensibilit\`a pesata: da $N=w_PS$ si ricava una pianta generalizzata compatibile.}
+\end{figure}
+
+\subsection{Ricavare \texorpdfstring{$P$}{P} da uno stack di mixed sensitivity}
+
+La slide successiva applica la stessa idea allo stack
+$$
+N(K)=
+\begin{bmatrix}
+W_uKS\\
+W_TT\\
+W_PS
+\end{bmatrix},
+\qquad
+S=(I+GK)^{-1},
+\qquad
+T=GKS.
+$$
+Ponendo $K=0$ si ottiene
+$$
+P_{11}=
+\begin{bmatrix}
+0\\
+0\\
+W_P
+\end{bmatrix}.
+$$
+Il resto dello stack \`e
+$$
+Q=N-P_{11}
+=
+\begin{bmatrix}
+W_uK(I+GK)^{-1}\\
+W_TGK(I+GK)^{-1}\\
+W_P(S-I)
+\end{bmatrix}.
+$$
+Poich\'e
+$$
+W_P(S-I)=-W_PGK(I+GK)^{-1},
+$$
+si vede ancora il fattore comune
+$$
+R=K(I+GK)^{-1},
+\qquad
+P_{22}=-G.
+$$
+Quindi si pu\`o scrivere
+$$
+Q=
+\begin{bmatrix}
+W_u\\
+W_TG\\
+-W_PG
+\end{bmatrix}
+R,
+$$
+e una scelta possibile \`e
+$$
+P_{12}=
+\begin{bmatrix}
+W_u\\
+W_TG\\
+-W_PG
+\end{bmatrix},
+\qquad
+P_{21}=I.
+$$
+La pianta generalizzata diventa
+$$
+P=
+\begin{bmatrix}
+0 & W_u\\
+0 & W_TG\\
+W_P & -W_PG\\
+I & -G
+\end{bmatrix}.
+$$
+
+Questa forma \`e leggermente diversa da altre piante generalizzate viste in precedenza, ma rappresenta lo stesso tipo di specifica. Nei problemi di norma, cambiare alcuni segni o distribuire fattori fra $P_{12}$ e $P_{21}$ pu\`o non cambiare il valore della norma chiusa. La cosa importante \`e che la LFT finale produca lo stack desiderato.
+
+\begin{keybox}
+\textbf{Non unicit\`a di $P$.} Dato $N(K)$, i blocchi $P_{11}$ e $P_{22}$ sono vincolati dalla parte costante e dal denominatore della LFT. I blocchi $P_{12}$ e $P_{21}$ invece non sono unici: un fattore scalare o matriciale invertibile pu\`o essere spostato da un lato all'altro senza cambiare il prodotto.
+\end{keybox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-002.png}
+    \caption{Derivazione di $P$ a partire dallo stack $[W_uKS\ \ W_TT\ \ W_PS]^T$.}
+\end{figure}
+
+\subsection{Esempio con disturbo come ingresso esogeno}
+
+Le slide tornano poi a una costruzione pi\`u fisica, partendo dal diagramma a blocchi. Nel primo esempio l'unico ingresso esogeno \`e un disturbo
+$$
+w=d,
+$$
+e il riferimento \`e posto a zero. Si scelgono due uscite di prestazione:
+$$
+z=
+\begin{bmatrix}
+z_1\\
+z_2
+\end{bmatrix},
+\qquad
+z_1=W_1y,
+\qquad
+z_2=-W_2u.
+$$
+Il segnale misurato dal controllore \`e
+$$
+v=-y.
+$$
+Con
+$$
+y=Gu+d,
+$$
+la pianta generalizzata che manda $[w\ u]^T$ in $[z_1\ z_2\ v]^T$ \`e
+$$
+\begin{bmatrix}
+z_1\\
+z_2\\
+v
+\end{bmatrix}
+=
+\underbrace{
+\begin{bmatrix}
+W_1 & W_1G\\
+0 & -W_2\\
+-I & -G
+\end{bmatrix}}_{P}
+\begin{bmatrix}
+w\\
+u
+\end{bmatrix}.
+$$
+Quindi
+$$
+P_{11}=
+\begin{bmatrix}
+W_1\\
+0
+\end{bmatrix},
+\quad
+P_{12}=
+\begin{bmatrix}
+W_1G\\
+-W_2
+\end{bmatrix},
+\quad
+P_{21}=-I,
+\quad
+P_{22}=-G.
+$$
+Chiudendo il loop si ottiene
+$$
+F_\ell(P,K)=
+\begin{bmatrix}
+W_1S\\
+W_2KS
+\end{bmatrix}.
+$$
+Il primo canale pesa l'effetto del disturbo sull'uscita, mentre il secondo pesa lo sforzo di controllo necessario a rigettarlo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-003.png}
+    \caption{Problema $S/KS$ in regolazione: il disturbo $d$ \`e l'ingresso esogeno e il riferimento \`e nullo.}
+\end{figure}
+
+\subsection{Esempio con riferimento come ingresso esogeno}
+
+Nel secondo esempio l'ingresso esogeno \`e il riferimento:
+$$
+w=r.
+$$
+Si considera l'errore
+$$
+e=r-y,
+$$
+e si scelgono
+$$
+z_1=W_1e=W_1(r-y),
+\qquad
+z_2=W_2u,
+\qquad
+v=e=r-y.
+$$
+Poich\'e $y=Gu$, la pianta generalizzata \`e
+$$
+\begin{bmatrix}
+z_1\\
+z_2\\
+v
+\end{bmatrix}
+=
+\underbrace{
+\begin{bmatrix}
+W_1 & -W_1G\\
+0 & W_2\\
+I & -G
+\end{bmatrix}}_{P}
+\begin{bmatrix}
+w\\
+u
+\end{bmatrix}.
+$$
+In questo caso
+$$
+P_{11}=
+\begin{bmatrix}
+W_1\\
+0
+\end{bmatrix},
+\quad
+P_{12}=
+\begin{bmatrix}
+-W_1G\\
+W_2
+\end{bmatrix},
+\quad
+P_{21}=I,
+\quad
+P_{22}=-G.
+$$
+La LFT restituisce
+$$
+F_\ell(P,K)=
+\begin{bmatrix}
+W_1S\\
+W_2KS
+\end{bmatrix}.
+$$
+La differenza rispetto al caso precedente \`e nei segni e nel significato di $w$: ora il controllore deve inseguire un riferimento, non rigettare un disturbo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-004.png}
+    \caption{Problema $S/KS$ in tracking: il riferimento $r$ \`e l'ingresso esogeno.}
+\end{figure}
+
+\subsection{Aggiungere \texorpdfstring{$T$}{T}: il problema risolto da \texttt{mixsyn}}
+
+La slide successiva aggiunge anche la sagomatura della funzione di sensibilit\`a complementare. Si prendono
+$$
+w=r,
+\qquad
+v=e=r-y,
+$$
+e si definiscono tre uscite di prestazione:
+$$
+z_1=W_1e=W_1S w,
+\qquad
+z_2=W_2u=W_2KS w,
+\qquad
+z_3=W_3y=W_3T w.
+$$
+Questo \`e il problema tipico risolto dal comando Matlab \texttt{mixsyn}: si vuole rendere piccola $S$ dove conta la precisione, limitare $KS$ dove conta lo sforzo di controllo, e rendere piccola $T$ dove contano rumore e robustezza ad alta frequenza.
+
+La pianta generalizzata fra ingressi $[w\ u]^T$ e uscite $[z_1\ z_2\ z_3\ v]^T$ \`e
+$$
+\begin{bmatrix}
+z_1\\
+z_2\\
+z_3\\
+v
+\end{bmatrix}
+=
+\underbrace{
+\begin{bmatrix}
+W_1 & -W_1G\\
+0 & W_2\\
+0 & W_3G\\
+I & -G
+\end{bmatrix}}_{P}
+\begin{bmatrix}
+w\\
+u
+\end{bmatrix}.
+$$
+La mappa chiusa \`e
+$$
+F_\ell(P,K)=
+\begin{bmatrix}
+W_1S\\
+W_2KS\\
+W_3T
+\end{bmatrix}.
+$$
+
+\begin{focusbox}
+\textbf{Collegamento con i pesi.} In questa notazione $W_1$ \`e il peso sulla sensibilit\`a, $W_2$ il peso sul comando e $W_3$ il peso sulla sensibilit\`a complementare. La scelta dei pesi determina il compromesso fra tracking, uso degli attuatori e attenuazione del rumore.
+\end{focusbox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-005.png}
+    \caption{Tracking con pesi su $S$ e $KS$: la forma $P$-$K$ esplicita ingressi e uscite usate da Matlab.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-006.png}
+    \caption{Problema $S/KS/T$ associato a \texttt{mixsyn}: lo stack chiuso \`e $[W_1S\ \ W_2KS\ \ W_3T]^T$.}
+\end{figure}
+
+\subsection{Realizzazione della pianta generalizzata}
+
+Dopo gli esempi a blocchi, le slide passano alla forma di stato. Nel problema generale si considera una pianta generalizzata LTI propria e razionale:
+$$
+\begin{bmatrix}
+z(s)\\
+v(s)
+\end{bmatrix}
+=
+P(s)
+\begin{bmatrix}
+w(s)\\
+u(s)
+\end{bmatrix},
+\qquad
+P(s)=
+\begin{bmatrix}
+P_{11}(s) & P_{12}(s)\\
+P_{21}(s) & P_{22}(s)
+\end{bmatrix}.
+$$
+Qui:
+\begin{itemize}
+    \item $w$ raccoglie gli ingressi esogeni, spesso gi\`a normalizzati o pesati;
+    \item $z$ raccoglie le uscite di prestazione da rendere piccole;
+    \item $v$ raccoglie i segnali disponibili al controllore;
+    \item $u$ \`e il comando generato dal controllore.
+\end{itemize}
+
+Una realizzazione in spazio di stato di $P$ \`e
+$$
+\begin{aligned}
+\dot{x}(t)&=Ax(t)+B_1w(t)+B_2u(t),\\
+z(t)&=C_1x(t)+D_{11}w(t)+D_{12}u(t),\\
+v(t)&=C_2x(t)+D_{21}w(t)+D_{22}u(t).
+\end{aligned}
+$$
+In forma compatta:
+$$
+\left[
+\begin{array}{c}
+\dot{x}\\
+z\\
+v
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c|cc}
+A & B_1 & B_2\\
+\hline
+C_1 & D_{11} & D_{12}\\
+C_2 & D_{21} & D_{22}
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x\\
+w\\
+u
+\end{array}
+\right].
+$$
+Questa realizzazione spesso contiene la pianta fisica aumentata con pesi dinamici. Per questo le dimensioni degli stati di $P$ possono essere maggiori delle dimensioni degli stati della sola pianta nominale.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-007.png}
+    \caption{Forma generale della pianta $P$: ingressi esogeni, comandi, uscite di prestazione e misure disponibili.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-008.png}
+    \caption{Significato dei segnali $w,z,v,u$ nella formulazione generale del problema di sintesi.}
+\end{figure}
+
+\subsection{Dal modello di stato alla matrice di trasferimento}
+
+Applicando la trasformata di Laplace all'equazione di stato, con condizioni iniziali nulle, si ottiene
+$$
+sx(s)=Ax(s)+B_1w(s)+B_2u(s),
+$$
+quindi
+$$
+x(s)=(sI-A)^{-1}B_1w(s)+(sI-A)^{-1}B_2u(s).
+$$
+Sostituendo nelle equazioni di uscita:
+$$
+\begin{bmatrix}
+z(s)\\
+v(s)
+\end{bmatrix}
+=
+\left(
+\begin{bmatrix}
+C_1\\
+C_2
+\end{bmatrix}
+(sI-A)^{-1}
+\begin{bmatrix}
+B_1 & B_2
+\end{bmatrix}
++
+\begin{bmatrix}
+D_{11} & D_{12}\\
+D_{21} & D_{22}
+\end{bmatrix}
+\right)
+\begin{bmatrix}
+w(s)\\
+u(s)
+\end{bmatrix}.
+$$
+In modo equivalente:
+$$
+P(s)=
+\begin{bmatrix}
+P_{11}(s) & P_{12}(s)\\
+P_{21}(s) & P_{22}(s)
+\end{bmatrix}
+=
+\begin{bmatrix}
+C_1\\
+C_2
+\end{bmatrix}
+(sI-A)^{-1}
+\begin{bmatrix}
+B_1 & B_2
+\end{bmatrix}
++
+\begin{bmatrix}
+D_{11} & D_{12}\\
+D_{21} & D_{22}
+\end{bmatrix}.
+$$
+Questa \`e la forma che collega la notazione a blocchi della LFT alla rappresentazione usata dagli algoritmi numerici.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-009.png}
+    \caption{Dalla realizzazione in spazio di stato alla matrice di trasferimento della pianta generalizzata.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-010.png}
+    \caption{Partizione di $P(s)$ nei blocchi $P_{11},P_{12},P_{21},P_{22}$ e relativo diagramma a blocchi.}
+\end{figure}
+
+\subsection{Problemi ottimi \texorpdfstring{$\mathcal{H}_2$}{H2} e \texorpdfstring{$\mathcal{H}_\infty$}{Hinf}}
+
+Una volta fissata la pianta generalizzata $P$, la sintesi consiste nel scegliere un controllore proprio, reale e razionale $K(s)$ che chiuda l'anello in modo ammissibile. Qui \emph{ammissibile} significa almeno che il sistema chiuso sia ben posto e internamente stabile.
+
+La mappa chiusa da $w$ a $z$ \`e
+$$
+T_{zw}(s)=F_\ell(P(s),K(s)).
+$$
+Il problema ottimo $\mathcal{H}_2$ consiste nel trovare $K(s)$ che minimizza
+$$
+\|T_{zw}\|_2
+=
+\|F_\ell(P,K)\|_2.
+$$
+Questa norma misura una prestazione energetica media: \`e naturale quando gli ingressi esogeni sono interpretati come rumori bianchi o segnali stocastici.
+
+Il problema ottimo $\mathcal{H}_\infty$ consiste invece nel trovare $K(s)$ che minimizza
+$$
+\|T_{zw}\|_\infty
+=
+\|F_\ell(P,K)\|_\infty.
+$$
+Il valore minimo viene indicato con
+$$
+\gamma_{\mathrm{opt}}.
+$$
+Questa norma misura la massima amplificazione in frequenza:
+$$
+\|T_{zw}\|_\infty
+=
+\sup_\omega \bar{\sigma}\!\left(T_{zw}(j\omega)\right).
+$$
+Per sistemi stabili, essa coincide anche con il guadagno indotto $L_2$:
+$$
+\|T_{zw}\|_\infty
+=
+\sup_{w\neq0}
+\frac{\|z\|_2}{\|w\|_2}.
+$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-011.png}
+    \caption{Definizione dei problemi ottimi $\mathcal{H}_2$ e $\mathcal{H}_\infty$ nella forma $P$-$K$.}
+\end{figure}
+
+\subsection{Problema subottimo \texorpdfstring{$\mathcal{H}_\infty$}{Hinf}}
+
+In pratica trovare esattamente $\gamma_{\mathrm{opt}}$ pu\`o essere difficile. Per questo si formula spesso il problema subottimo:
+
+\begin{quote}
+Dato un valore $\gamma>\gamma_{\mathrm{opt}}$, trovare un controllore ammissibile $K(s)$ tale che
+$$
+\|T_{zw}\|_\infty
+=
+\|F_\ell(P,K)\|_\infty
+\leq \gamma.
+$$
+\end{quote}
+
+Questo modo di ragionare \`e molto importante negli algoritmi $\mathcal{H}_\infty$. Invece di chiedere subito il migliore valore possibile, si fissa una soglia $\gamma$ e si verifica se esiste un controllore che la soddisfa. Poi si riduce progressivamente $\gamma$ fino ad avvicinarsi al valore ottimo.
+
+\begin{focusbox}
+\textbf{Interpretazione di $\gamma$.} Se $\|T_{zw}\|_\infty\leq\gamma$, allora nessun ingresso esogeno $w$ di energia finita pu\`o produrre un'uscita di prestazione $z$ con energia amplificata pi\`u di $\gamma$. Il progetto $\mathcal{H}_\infty$ \`e quindi una garanzia worst-case.
+\end{focusbox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-012.png}
+    \caption{Problema subottimo $\mathcal{H}_\infty$: dato $\gamma$, si cerca un controllore con norma chiusa non superiore a $\gamma$.}
+\end{figure}
+
+\subsection{Struttura del controllore: osservatore e feedback di stato}
+
+Le slide introducono poi la struttura tipica del controllore dinamico. L'idea \`e combinare due sottosistemi:
+\begin{enumerate}
+    \item un osservatore che ricostruisce una stima $\hat{x}(t)$ dello stato;
+    \item una legge di feedback di stato applicata alla stima.
+\end{enumerate}
+
+Per evitare ambiguit\`a, indichiamo con $K_x$ il guadagno di feedback di stato, mentre $K(s)$ resta la matrice di trasferimento del controllore. L'osservatore di Luenberger ha la forma
+$$
+\dot{\hat{x}}(t)
+=
+A\hat{x}(t)+B_2u(t)+L\bigl(v(t)-C_2\hat{x}(t)\bigr),
+$$
+dove $L$ \`e il guadagno dell'osservatore. La legge di controllo \`e
+$$
+u(t)=-K_x\hat{x}(t).
+$$
+Sostituendo nella dinamica dell'osservatore:
+$$
+\dot{\hat{x}}(t)
+=
+\left(A-B_2K_x-LC_2\right)\hat{x}(t)+Lv(t).
+$$
+In Laplace:
+$$
+\hat{x}(s)
+=
+\left(sI-A+B_2K_x+LC_2\right)^{-1}Lv(s),
+$$
+e dunque
+$$
+u(s)
+=
+-K_x\hat{x}(s)
+=
+K(s)v(s),
+$$
+con
+$$
+K(s)
+=
+-K_x\left(sI-A+B_2K_x+LC_2\right)^{-1}L.
+$$
+
+\begin{keybox}
+\textbf{Punto delicato.} Le matrici $A,B_2,C_2$ usate qui sono quelle della pianta generalizzata, non necessariamente quelle della sola pianta fisica. Se i pesi dinamici aggiungono stati, anche il controllore li vede nella realizzazione aumentata.
+\end{keybox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-013.png}
+    \caption{Struttura del controllore: osservatore di stato pi\`u feedback sulla stima $\hat{x}$.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-014.png}
+    \caption{Funzione di trasferimento del controllore dinamico ottenuta dalla struttura osservatore-feedback.}
+\end{figure}
+
+\subsection{Matrice di trasferimento chiusa}
+
+Consideriamo ora un controllore dinamico generico
+$$
+\begin{aligned}
+\dot{x}_K(t)&=A_Kx_K(t)+B_Kv(t),\\
+u(t)&=C_Kx_K(t)+D_Kv(t).
+\end{aligned}
+$$
+Usiamo, come nelle slide successive, il caso standard
+$$
+D_{11}=0,
+\qquad
+D_{22}=0,
+$$
+per cui
+$$
+\begin{aligned}
+\dot{x}(t)&=Ax(t)+B_1w(t)+B_2u(t),\\
+z(t)&=C_1x(t)+D_{12}u(t),\\
+v(t)&=C_2x(t)+D_{21}w(t).
+\end{aligned}
+$$
+Lo stato chiuso \`e
+$$
+x_{\mathrm{cl}}(t)=
+\begin{bmatrix}
+x(t)\\
+x_K(t)
+\end{bmatrix}.
+$$
+Sostituendo le equazioni del controllore in quelle della pianta si ottiene una realizzazione chiusa
+$$
+\begin{aligned}
+\dot{x}_{\mathrm{cl}}(t)&=A_{\mathrm{cl}}x_{\mathrm{cl}}(t)+B_{\mathrm{cl}}w(t),\\
+z(t)&=C_{\mathrm{cl}}x_{\mathrm{cl}}(t)+D_{\mathrm{cl}}w(t),
+\end{aligned}
+$$
+con
+$$
+A_{\mathrm{cl}}=
+\begin{bmatrix}
+A+B_2D_KC_2 & B_2C_K\\
+B_KC_2 & A_K
+\end{bmatrix},
+$$
+$$
+B_{\mathrm{cl}}=
+\begin{bmatrix}
+B_1+B_2D_KD_{21}\\
+B_KD_{21}
+\end{bmatrix},
+\qquad
+C_{\mathrm{cl}}=
+\begin{bmatrix}
+C_1+D_{12}D_KC_2 & D_{12}C_K
+\end{bmatrix},
+$$
+$$
+D_{\mathrm{cl}}=D_{12}D_KD_{21}.
+$$
+La matrice di trasferimento chiusa \`e quindi
+$$
+T_{zw}(s)
+=
+C_{\mathrm{cl}}(sI-A_{\mathrm{cl}})^{-1}B_{\mathrm{cl}}
++D_{\mathrm{cl}}.
+$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-015.png}
+    \caption{Controllore dinamico generale e costruzione della realizzazione chiusa da $w$ a $z$.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-016.png}
+    \caption{Matrici $A_{\mathrm{cl}},B_{\mathrm{cl}},C_{\mathrm{cl}},D_{\mathrm{cl}}$ e trasferimento chiuso $T_{zw}$.}
+\end{figure}
+
+\subsection{Caso osservatore-feedback}
+
+Per un controllore basato su osservatore si ha
+$$
+D_K=0,
+\qquad
+A_K=A-B_2K_x-LC_2,
+\qquad
+B_K=L,
+\qquad
+C_K=-K_x.
+$$
+Sostituendo nelle formule precedenti:
+$$
+A_{\mathrm{cl}}=
+\begin{bmatrix}
+A & -B_2K_x\\
+LC_2 & A-B_2K_x-LC_2
+\end{bmatrix},
+$$
+$$
+B_{\mathrm{cl}}=
+\begin{bmatrix}
+B_1\\
+LD_{21}
+\end{bmatrix},
+\qquad
+C_{\mathrm{cl}}=
+\begin{bmatrix}
+C_1 & -D_{12}K_x
+\end{bmatrix},
+\qquad
+D_{\mathrm{cl}}=0.
+$$
+Questa forma mette in evidenza che il sistema chiuso contiene due dinamiche accoppiate: la dinamica dello stato reale $x$ e la dinamica della stima $\hat{x}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-017.png}
+    \caption{Realizzazione chiusa nel caso di controllore basato su osservatore, con $D_K=0$.}
+\end{figure}
+
+\subsection{Principio di separazione}
+
+L'ultima slide mostra che, con un cambiamento di coordinate, la struttura osservatore-feedback diventa triangolare. Definiamo l'errore di stima
+$$
+e(t)=x(t)-\hat{x}(t),
+$$
+e usiamo il nuovo stato
+$$
+x_n(t)=
+\begin{bmatrix}
+x(t)\\
+e(t)
+\end{bmatrix}.
+$$
+La trasformazione fra le coordinate originali $[x\ \hat{x}]^T$ e le nuove coordinate \`e
+$$
+\begin{bmatrix}
+x\\
+\hat{x}
+\end{bmatrix}
+=
+\underbrace{
+\begin{bmatrix}
+I & 0\\
+I & -I
+\end{bmatrix}}_{P_t}
+\begin{bmatrix}
+x\\
+e
+\end{bmatrix},
+\qquad
+P_t^{-1}=P_t.
+$$
+Nelle nuove coordinate la matrice di stato diventa
+$$
+A_n
+=
+P_t^{-1}A_{\mathrm{cl}}P_t
+=
+\begin{bmatrix}
+A-B_2K_x & B_2K_x\\
+0 & A-LC_2
+\end{bmatrix}.
+$$
+La matrice \`e triangolare a blocchi, quindi i suoi autovalori sono l'unione degli autovalori dei due blocchi diagonali:
+$$
+\lambda(A_n)
+=
+\lambda(A-B_2K_x)
+\cup
+\lambda(A-LC_2).
+$$
+Questo \`e il \emph{principio di separazione}: i poli scelti con il feedback di stato, assumendo lo stato disponibile, sono indipendenti dai poli scelti con l'osservatore, assumendo il controllore fissato.
+
+Le altre matrici nelle nuove coordinate diventano, nella forma mostrata dalle slide,
+$$
+B_n=
+\begin{bmatrix}
+B_1\\
+B_1-LD_{21}
+\end{bmatrix},
+\qquad
+C_n=
+\begin{bmatrix}
+C_1-D_{12}K_x & D_{12}K_x
+\end{bmatrix}.
+$$
+
+\begin{focusbox}
+\textbf{Significato progettuale.} Per controllori osservatore-feedback, si pu\`o pensare separatamente a due problemi: scegliere $K_x$ per stabilizzare e sagomare la dinamica di controllo, e scegliere $L$ per rendere stabile e veloce la stima. Nel problema $\mathcal{H}_2/\mathcal{H}_\infty$ moderno questa idea resta utile, anche se le formule ottime sono pi\`u vincolate dalle prestazioni pesate.
+\end{focusbox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images17/h2hinf-25-42-018.png}
+    \caption{Principio di separazione: dopo il cambio di coordinate, la dinamica di feedback e quella dell'osservatore compaiono sui blocchi diagonali.}
+\end{figure}
+
+\subsection{Sintesi conclusiva della lezione}
+
+La Lezione 17 rende concreta la formulazione generale. Da un lato, mostra che gli stack usati nelle lezioni precedenti possono essere riscritti come lower LFT di una pianta generalizzata $P$. Dall'altro, traduce la stessa idea in spazio di stato, preparando il terreno agli algoritmi di sintesi $\mathcal{H}_2$ e $\mathcal{H}_\infty$.
+
+I punti principali sono:
+\begin{itemize}
+    \item da $N(K)$ si pu\`o ricostruire una possibile $P$, ma la scelta non \`e unica;
+    \item esempi diversi, come regolazione e tracking, cambiano i segni e i segnali, ma producono gli stessi oggetti fondamentali $S$, $T$ e $KS$;
+    \item la pianta generalizzata in forma di stato contiene modello, pesi e interconnessioni;
+    \item il problema $\mathcal{H}_\infty$ subottimo cerca un controllore con $\|F_\ell(P,K)\|_\infty\leq\gamma$;
+    \item un controllore osservatore-feedback combina stima dello stato e feedback sulla stima;
+    \item il principio di separazione spiega perch\'e, in quella struttura, dinamica di controllo e dinamica di osservazione possono essere studiate come due blocchi distinti.
+\end{itemize}
+
+\begin{keybox}
+\textbf{Messaggio operativo.} Prima di parlare di algoritmo $\mathcal{H}_2$ o $\mathcal{H}_\infty$, bisogna essere capaci di costruire la $P$ giusta. La qualit\`a del progetto dipende da come traduciamo requisiti, pesi, disturbi e misure nella mappa chiusa $w\mapsto z$.
+\end{keybox}
+
+\clearpage
+\phantomsection
+\section*{Appendice}
+\addcontentsline{toc}{section}{Appendice}
+
+\subsection*{Riferimento al materiale originale}
+\phantomsection
+\addcontentsline{toc}{subsection}{Riferimento al materiale originale}
+
+Questa parte del documento \`e una traduzione e rielaborazione estesa delle pagine 25--42 del PDF ``General Control Problem Formulation -- $\mathcal{H}_2/\mathcal{H}_\infty$ control synthesis'', caricato dall'utente come materiale di partenza nella directory \texttt{Slide}.
+
 \end{document}
